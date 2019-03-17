@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" charset="UTF-8">
+	<title>8周年慶</title>
+	
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/fancybox/jquery.fancybox.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/loading/loading.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/customScrollbar/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+
+	<!-- javscript -->
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/loading/loading.js"></script>
+	<script type="text/javascript" src="assets/js/customScrollbar/jquery.mCustomScrollbar.js"></script>
+	<script type="text/javascript" src="assets/js/fancybox/jquery.fancybox.pack.js"></script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="stars">
+			<i class="animated fadeInOut infinite"></i>
+		</div>
+		<img class="bg" src="assets/images/bg-top.png" alt="">
+		<nav>
+			<a class="logo" href="http://yb6886.com/" target="_blank"><img src="assets/images/logo.png" alt=""></a>
+			<a class="btns-square btns-home" target="_blank" href="http://yb6886.com/"></a>
+			<a class="btns-square btns-service" href=""></a>
+		</nav>
+		<div>
+			<img class="title animated zoomInUp" src="assets/images/title.png" alt="">
+		</div>
+	</header>
+	<nav class="menu animated fadeIn">
+		<a class="active" data-page="history">
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-youbo.png" alt="">
+				<h6><strong>16-17</strong>优博前进历程</h6>
+			</div>
+		</a>
+		<a data-page="vip">
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-crown.png" alt="">
+				<h6><strong>王者对抗</strong>VIP争霸万元金</h6>
+			</div>
+		</a>
+		<a data-page="betting">
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-money.png" alt="">
+				<h6><strong>注单夺千金</strong>中奖无极限</h6>
+			</div>
+		</a>
+		<a data-page="mobile" class="hiding">
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-phone.png" alt="">
+				<h6><strong>即将开放</strong>敬请期待</h6>
+			</div>
+		</a>
+		<a data-page="app">
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-gift.png" alt="">
+				<h6><strong>APP奖金爆击</strong>登入抽大奖</h6>
+			</div>
+		</a>
+	</nav>
+	<div class="main animated">
+		<!-- ajax page -->
+	</div>
+	<footer class="footer">
+		<div class="clearfix">
+			<table>
+				<tr>
+					<th>YOUBO</th>
+					<td>Life Is All About To Be Enjoyed</td>
+				</tr>
+				<tr>
+					<th>优　博</th>
+					<td>精采娱乐 成就自我</td>
+				</tr>
+			</table>
+			<a href=""><img src="assets/images/footer.png" alt=""></a>
+		</div>
+	</footer>
+	<div class="floating" href="">
+		<a class="btns-square btns-home" href="http://yb6886.com/" target="_blank"></a>
+		<a class="btns-square btns-service" href=""></a>
+		<i></i>
+		<a class="btns-square btns-slidetop" href=""></a>
+	</div>
+	<div class="hide">
+		<div id="login">
+			<div class="popWindow">
+				<div class="wrap" >
+					<table class="formStyle">
+						<tr>
+							<th width="120"><b>会员帐号：</b></th>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><a class="btns-default" href="">登入</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>	
+
+
+
+	var islogin = true; //尚未登入（示意）
+
+	$(function(){
+
+		/*loading*/
+		function loading(visible){
+			if(visible){
+				$('.div_loading').stop(true,false).fadeIn(250);
+				load = true;
+			}else{
+				$('.div_loading').stop(true,false).fadeOut(250);
+				load = false;
+			}
+		}
+
+		/*service*/
+		function onlineService() {
+			var url = 'https://liveperson.lp2chat.com/u2bet/';
+			window.open(url, 'newwindow', 'width=840,height=600');
+		}
+		$('.btns-service').on('click', function(event) {
+			event.preventDefault();
+			onlineService();
+		});
+
+
+		/*floating*/
+		$('.btns-slidetop').click(function(event) {
+			event.preventDefault();
+			$('html,body').stop(true,false).animate({ scrollTop:0 },800);
+		});
+		function floatFun() {
+			var stageY = $(window).scrollTop();
+			$(".floating").stop(true, false).delay(350).animate({ top: stageY + $(window).height() / 2 }, 'slow');
+			return false;
+		}
+		//floatFun();
+
+		/*inlinePop*/
+		$(document).on('click', '.btns-inlinePop', function(event) {
+			event.preventDefault();
+			var href = $(this).attr('href');
+			var checklogin = Boolean($(this).attr('checklogin'));
+			if(checklogin && !islogin) href = '#login';
+			if(Boolean(href)) $.fancybox({ type:'inline', href:href });
+		});
+
+		/*page*/
+		var navFun = function(){
+			var $this = this;
+
+			this.goPage = function(page){
+				$('.main').removeClass('fadeIn');
+				$.post(page+'.html',{},function(rt,callback){
+					loading(false);
+					$('.main').html(rt).addClass('fadeIn');
+					if($.isFunction(callback)) callback();
+				})				
+			}
+
+			this.init = function(){
+				$this.goPage('history');
+				$('.menu').on('click','a', function(event) {
+					event.preventDefault();
+					loading(true);
+					var page = $(this).attr('data-page');
+					$(this).addClass('active').siblings('a').removeClass('active');
+					$('html,body').stop(true,false).animate({ scrollTop:$('.menu').offset().top },800);
+					$this.goPage(page);
+				});
+			}
+		}
+
+		var navObj = new navFun();
+			navObj.init();
+
+		/*star*/
+		function stars(){
+			var num = 50;
+			var $col = $(".stars > i");
+			for(var i = 0; i < num; i++){
+				var delay = Math.round(Math.random() * (20 - 1) + 1)*100;				
+				setTimeout(function(){
+					var rx = Math.round(Math.random() * ($('.stars').width() - 1) + 1);
+					var ry = Math.round(Math.random() * ($('.stars').height() - 1) + 1);
+					var size = Math.round(Math.random() * (10 - 1) + 1)/10;	
+					$col.clone().appendTo('.stars').css({ left:rx, top:ry, transform:'scale('+size+')' });
+				},delay);
+			}
+		}
+		stars();
+
+		/*scroll*/
+		$(window).scroll(function(){
+			floatFun();
+		});	
+
+		/*window resize*/
+		$(window).resize(function(){
+			if($(window).width() >=1000){
+
+			}
+		});
+
+
+	});
+</script>

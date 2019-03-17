@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="yes">
+    <title></title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrap clearfix">
+            <a href="javascript:void(0)" class="logo" onclick="pageObj.home();"></a>
+            <div class="btn-box">
+                <a href="javascript:void(0)" target="_blank" class="btn-child rule" onclick="pageObj.cs();"></a>
+                <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+            </div>
+        </div>
+    </div>
+    <section class="">
+        <div class="wrap">
+            <div class="top-title">
+                <img src="assets/images/title.png" alt="">
+            </div>
+            <div class="step-box">
+                <div>
+                    <a href="javascript:void(0)" target="_blank" class="step-btn step1"></a>
+                    <span><img src="assets/images/arrow.png" alt=""></span>
+                    <a href="javascript:void(0)" target="_blank" class="step-btn step2"></a>
+                    <span><img src="assets/images/arrow.png" alt=""></span>
+                    <a href="javascript:void(0)" target="_blank" class="step-btn step3"></a>
+                </div>
+                <p class="gif-btn">
+                    <img src="assets/images/btn_g.gif" alt="">
+                </p>
+            </div>
+            <div class="content-box">
+                <p>
+                    <img src="assets/images/btn6.jpg" alt="">
+                </p>
+                <ul class="con-01">
+                    <li>Bạn cần có tối thiểu 1 khoản nạp tiền <span class="red">300.000 trở lên</span> mới có thể rút tiền, khoản tiền nạp cần đạt 1 lần cược hiệu lực</li>
+                    <li>Tiền thưởng 128.000 cần trải qua 5 lần cược hiệu lực trước khi rút tiền</li>
+                </ul>
+            </div>
+            <div class="content-box1">
+                <p>
+                    <img src="assets/images/btn7.jpg" alt="">
+                </p>
+                <ul class="con-02">
+                    <li>Khuyến mãi này chỉ áp dụng cho các thành viên đăng ký thông qua mã đại lý <span class="red">100181</span></li>
+                    <li>Thành viên bắt buộc hoàn thành xác nhận số điện thoại và Email mới có thể nhận thưởng</li>
+                    <li>Mỗi địa chỉ email, mỗi sđt, mỗi tài khoản ngân hàng, địa chỉ IP chỉ được nhận thưởng 1 lần. Nếu phát hiện thành 
+                        viên cố tình đăng ký nhiều tài khoản để kiếm lời thì DUBAI PALACE có quyền không phát thưởng.
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap">Copyright © 2018 DUBAI PALACE All Rights Reserved.</div>   
+    </footer>
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function(){
+    // 是否有登入
+    var isLogin = true;
+    // 存款餘額
+    var isLogin = 1;
+    var fn = {
+        home: function(){
+            window.open("https://www.486486.com/ag/100181");
+        },
+        cs: function(){
+            var url = 'http://liveperson.lp2chat.com/dbpvn/';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        btnChk: function(){
+            var _this = this;
+            $('.step1').on('click',function(){
+                window.open("https://486486.com/page/faq/39");
+            });
+            $('.step2').on('click',function(){
+                window.open("https://486486.com/page/faq/108");
+            });
+            $('.step3').on('click',function(){
+               fn.cs();
+            });
+            $('.gif-btn').on('click',function(){
+               fn.home();
+            });
+        },
+        init: function(){
+            var _this = this;
+            _this.btnChk();
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);                
+            });       
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

@@ -1,0 +1,644 @@
+/*------------------------*\
+           共用
+\*------------------------*/
+body {position: relative;}
+img {max-width: 100%; border-style: none;}
+a, 
+a:hover, 
+a:focus {text-decoration: none;}
+.wrap {max-width: 1175px; margin: 0 auto;}
+.left {float: left;}
+.right {float: right;}
+.none {display: none;}
+.mb{display: none;}
+.pc{display: block;}
+/* scrollbar */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {border-radius: 4px; margin: 0px 0px 5px 0;}
+::-webkit-scrollbar-thumb {border-radius: 4px; background: #06183e;}
+::-webkit-scrollbar-thumb:hover {background: #2059c4;}
+/*------------------------*\
+           loading
+\*------------------------*/
+.loading {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+}
+.double-bounce1, 
+.double-bounce2 {
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ccc;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce {
+  0%,100% {-webkit-transform: scale(0);}
+  50% {-webkit-transform: scale(1);}
+}
+@keyframes sk-bounce {
+  0%,100% {transform: scale(0);-webkit-transform: scale(0);}
+  50% {transform: scale(1);-webkit-transform: scale(1);}
+}
+
+/*------------------------*\
+           內容
+\*------------------------*/
+.header {
+  width: 100%;
+  margin: 0 auto 538px;
+  background: rgba(68, 97, 151, 0.8);
+}
+.header .logo {
+  float: left;
+  width: 140px;
+  height: 45px;
+  margin: 2px 0 2px 10px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+.header .btn-box {float: right; margin-right: 10px;}
+.header .btn-child {
+  width: 120px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 50px; 
+  color: #fff;
+  font-size: 18px;
+}
+.header .btn-box a:hover{ background: #2059c4; color: #fcee0d;}
+
+/*------------------------*\
+          section
+\*------------------------*/
+.bg{
+  width: 100%;  
+  padding-bottom: 25vmin;
+  background: url(../images/bg.jpg) no-repeat top center;
+  background-size: cover;
+}
+.topbox-bg{
+  width: 100%;
+  background: rgba(31,58,105,0.8);
+  padding: 2% 2% 1% 2%;
+}
+.topbox-bg ul li{
+  width: 32%;
+  height: 175px;
+  float: left;
+  margin-right: 1.5%;
+  margin-bottom: 1%;
+  display: block;
+  cursor: pointer;
+  background: #133a83;
+  border: 1px solid #0c1f46;
+  padding: 20px 12px;
+}
+.topbox-bg ul li:nth-of-type(3n){margin-right: 0;}
+
+.rk_bg,
+.godeye_bg,
+.souvenir_bg,
+.football_bg,
+.novice_bg,
+.bargain_bg{width:358px; height: 135px; margin: 0 auto;}
+
+.rk_bg{background: url(../images/rk.png)no-repeat top center; background-size: cover;}
+.godeye_bg{background: url(../images/eye.png)no-repeat top center; background-size: cover;}
+.souvenir_bg{background: url(../images/souvenir.png)no-repeat top center; background-size: cover;}
+.football_bg{background: url(../images/football.png)no-repeat top center; background-size: cover;}
+.novice_bg{background: url(../images/novice.png)no-repeat top center; background-size: cover;}
+.bargain_bg{background: url(../images/bargain.png)no-repeat top center; background-size: cover;}
+
+.topbox-bg ul li:hover{background: #2059c4;border: 1px solid #4579db;}
+.topbox-bg ul li:hover .rk_bg{background: url(../images/rk.png)no-repeat bottom center; background-size: cover;}
+.topbox-bg ul li:hover .godeye_bg{background: url(../images/eye.png)no-repeat bottom center; background-size: cover;}
+.topbox-bg ul li:hover .souvenir_bg{background: url(../images/souvenir.png)no-repeat bottom center; background-size: cover;}
+.topbox-bg ul li:hover .football_bg{background: url(../images/football.png)no-repeat bottom center; background-size: cover;}
+.topbox-bg ul li:hover .novice_bg{background: url(../images/novice.png)no-repeat bottom center; background-size: cover;}
+.topbox-bg ul li:hover .bargain_bg{background: url(../images/bargain.png)no-repeat bottom center; background-size: cover;}
+
+/*------------------------*\
+          區塊詳細內容
+\*------------------------*/
+.btmbox{display: block;}
+.btn-style,
+.btn-style-2{
+  text-align: center;
+  color: #342701;
+  background: #f0ba19;
+  font-size: 2.5vmin;
+  font-weight: bold;
+  border: 1px solid #ffff32; 
+  letter-spacing: 2px;
+}
+.btn-style{width: 25vmin; height: 8vmin;}
+.btn-style-2{    
+  margin-right: 0.8vmin;
+  /*width: 25.5vmin;*/
+  width: 12.95vw;
+  height: 5vmin;
+}
+.btn-style:hover,
+.btn-style-2:hover{
+  color: #fff;
+  background: #176ba8;
+  border: 1px solid #58deff; 
+}
+.rk-content,
+.eye-content,
+.sr-content,
+.fb-content,
+.ne-content,
+.bn-content{ width: 100%; margin-top: 90px;}
+
+.rk-content{
+  height: 100vh;
+  background: url(../images/rk_content.png) no-repeat top center; 
+  background-size: contain;
+  padding: 79vmin 0vmin 0 88vmin;
+}
+.eye-content{
+  height: 60vh;
+  background: url(../images/eye_content.png) no-repeat top center; 
+  background-size: contain;
+  padding: 45.5vmin 0 0 88vmin;
+}
+.sr-content{
+  height: 66vh;
+  background: url(../images/sr_content.png) no-repeat top center; 
+  background-size: contain;
+  /*padding: 43.5vmin 0 0 10.3vmin;*/
+  padding: 22vw 0 0 4.65vw;
+}
+.fb-content{
+  height: 68vh;
+  background: url(../images/fb_content.png) no-repeat top center; 
+  background-size: contain;
+  padding: 54.5vmin 0 0 88.5vmin;
+}
+.ne-content{
+  height: 53vh;
+  background: url(../images/ne_content.png) no-repeat top center; 
+  background-size: contain;
+  padding: 41vmin 0 0 88.5vmin;
+}
+.bn-content{
+  height: 66vh;
+  background: url(../images/bn_content.png) no-repeat top center; 
+  background-size: contain;
+  padding: 54vmin 0 0 88.5vmin;
+}
+
+.rk-content div,
+.eye-content div,
+.sr-content div,
+.fb-content div,
+.ne-content div,
+.bn-content div{margin: 0 auto; text-align: left;}
+
+/*------------------------*\
+          float-nav
+\*------------------------*/
+.f-nav{
+  position: fixed;
+  top: 0;
+  right: 1%;
+  -webkit-transform: translate3d(-15%, 40%, 0);
+  transform: translate3d(-15%, 40%, 0);
+  display: block
+  /* width: 17px;
+  height: 80vh; */
+  /* background: url(../images/float_nav.png) no-repeat top center; */
+  /* background-size: contain; */
+}
+.f-nav li{cursor: pointer;}
+.f-nav li div{
+  text-align: right;
+  color: #fff;
+  font-size: 2vmin;
+  margin: 4vmin 1vmin;
+  position: relative;
+  width: 250px;
+  line-height: 35px;
+}
+.f-nav li:first-child div::after{
+  content:'';
+  background: url(../images/round_top.png) no-repeat top center;
+  bottom: -62px;
+}
+.f-nav li:last-child div::after{
+  content:'';
+  background: url(../images/round_btm.png) no-repeat top center;
+  top: -21px;
+}
+.f-nav li.nav-style div::after{
+  content:'';
+  background: url(../images/round_1.png) no-repeat top center;
+  top:-19px;
+}
+.f-nav li:last-child div::after,
+.f-nav li:first-child div::after,
+.f-nav li.nav-style div::after{
+  width: 34px;
+  height: 400px;
+  right: -35px;
+  position: absolute;
+}
+.f-nav li:hover div,
+.f-nav li.active div{font-size: 30px;color: #fffc03;}
+.f-nav [data-id="rk"]:hover div::before,
+.f-nav [data-id="rk"].active div::before{
+  content: '';
+  background: url(../images/icon_1.png) no-repeat top center;
+  width: 67px;
+  height: 68px;
+  position: absolute;
+  top: -15px;
+  left: 30px;
+}
+.f-nav [data-id="godeye"]:hover div::before,
+.f-nav [data-id="godeye"].active div::before{
+  content: '';
+  background: url(../images/icon_2.png) no-repeat top center;
+  width: 53px;
+  height: 62px;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+}
+.f-nav [data-id="souvenir"]:hover div::before,
+.f-nav [data-id="souvenir"].active div::before{
+  content: '';
+  background: url(../images/icon_3.png) no-repeat top center;
+  width: 79px;
+  height: 54px;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+.f-nav [data-id="football"]:hover div::before,
+.f-nav [data-id="football"].active div::before{
+  content: '';
+  background: url(../images/icon_4.png) no-repeat top center;
+  width: 58px;
+  height: 62px;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
+.f-nav [data-id="novice"]:hover div::before,
+.f-nav [data-id="novice"].active div::before{
+  content: '';
+  background: url(../images/icon_5.png) no-repeat top center;
+  width: 53px;
+  height: 56px;
+  position: absolute;
+  top: -10px;
+  left: 45px;
+}
+.f-nav [data-id="bargain"]:hover div::before,
+.f-nav [data-id="bargain"].active div::before{
+  content: '';
+  background: url(../images/icon_6.png) no-repeat top center;
+  width: 67px;
+  height: 55px;
+  position: absolute;
+  top: -10px;
+  left: 25px;
+}
+
+/*------------------------*\
+            footer
+\*------------------------*/
+footer {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+}
+footer .right{margin: 5px 5px 0 0; width: 265px; height: 35px;}
+footer .left{margin: 5px 0 0 5px; display: block;}
+
+/*------------------------*\
+            彈窗
+\*------------------------*/
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.close_btn {
+  top: -50px;
+  right: 5px;
+  width: 16vmin;
+  height: 5vmin;
+  cursor: pointer;
+  position: absolute;
+  background: url(../images/close.png) no-repeat top center;
+  background-size: cover;
+  z-index: 100;
+}
+  
+#mdWindow .btn-style,
+#mdWindow .btn-style-2{
+  text-align: center;
+  color: #342701;
+  background: #f0ba19;
+  font-size: 3.5vmin;
+  font-weight: bold;
+  border: 1px solid #ffff32; 
+  letter-spacing: 2px;
+}
+#mdWindow .btn-style{ height: 7vmin;}
+#mdWindow .btn-style-2{    
+  margin-right: 0.8vmin;
+  margin-bottom: 23vmin;
+  width: 31.4vmin;
+  height: 5vmin;
+}
+#mdWindow .btn-style-2:nth-of-type(3),
+#mdWindow .btn-style-2:nth-of-type(4){margin-bottom: 0;}
+
+#mdWindow .rk-btn{width: 97%;}
+#mdWindow .eye-btn{width: 95%; height: 7vmin;}
+#mdWindow .fb-btn{width: 98%; height: 7vmin;}
+#mdWindow .ne-btn{width: 95%; height: 7vmin;}
+#mdWindow .bn-btn{width: 98%; height: 7vmin;}
+
+.f-rk{
+  width: 74vmin;
+  height: 90vmin;
+  background: url(../images/m_rk.png) no-repeat top center;
+  background-size: cover;
+  padding: 82vmin 0 0 5vmin;
+}
+
+.f-eye{
+  width: 95vmin;
+  height: 75vmin;
+  background: url(../images/m_eye.png) no-repeat top center;
+  background-size: cover;
+  padding: 62vmin 0 0 2vmin;
+}
+.f-sr{
+  width: 74vmin;
+  height: 88vmin;
+  background: url(../images/m_sr.png) no-repeat top center;
+  background-size: cover;
+  padding: 35vmin 0 0 6.3vmin;
+}
+.f-fb{
+  width: 87vmin;
+  height: 79vmin;
+  background: url(../images/m_fb.png) no-repeat top center;
+  background-size: cover;
+  padding: 70vmin 0 0 5vmin;
+}
+.f-ne{
+  width: 88vmin;
+  height: 66vmin;
+  background: url(../images/m_ne.png) no-repeat top center;
+  background-size: cover;
+  padding: 56vmin 0 0 2vmin;
+}
+.f-bn{
+  width: 88vmin;
+  height: 66vmin;
+  background: url(../images/m_bn.png) no-repeat top center;
+  background-size: cover;
+  padding: 56vmin 0 0 4vmin;
+}
+
+/*------------------------*\
+          Media
+\*------------------------*/
+@media screen and (max-width: 1366px){
+  .rk-content{padding: 88vmin 0vmin 0 122vmin;}
+  .eye-content{padding: 48.5vmin 0 0 119vmin;}
+  .sr-content{padding: 43.5vmin 0 0 38.5vmin;}
+  .fb-content{padding: 55vmin 0 0 104vmin;}
+  .ne-content{padding: 41.5vmin 0 0 117.5vmin;}
+  .bn-content{padding: 54vmin 0 0 117vmin;}
+  .btn-style-2 {margin-right: 0.5vmin;}
+}
+@media screen and (max-width: 1280px){
+  /* .topbox-bg ul li {height: 26vmin;} */
+  .rk-content{padding: 88vmin 0vmin 0 118vmin;}
+  .eye-content{padding: 48.5vmin 0 0 115vmin;}
+  .sr-content{padding: 43.5vmin 0 0 34.3vmin;}
+  .fb-content{padding: 55vmin 0 0 113vmin;}
+  .ne-content{padding: 41.5vmin 0 0 113.5vmin;}
+  .bn-content{padding: 54vmin 0 0 113vmin;}
+  .btn-style-2 {margin-right: 0.5vmin;}
+}
+@media screen and (max-width: 1024px){
+  .bg{background: url(../images/mobile_bg.jpg) no-repeat top center; background-size: cover;}
+  .header .btn-child {width: 14vmin; height: 3vmin;}
+  .topbox-bg {
+    width: 85%;
+    margin: 0 auto;
+    padding: 2% 1% 1% 2%;
+  }
+  .topbox-bg ul li {width: 48.5%;}
+  .topbox-bg ul li:nth-of-type(2n){margin-right:0;}
+  .topbox-bg ul li:nth-of-type(3n){margin-right: 1.5%;}
+  .btmbox, .f-nav{display: none;}
+  
+}
+@media screen and (max-width: 768px){
+  footer .right{
+    float: none; 
+    text-align: center; 
+    width: 55%;
+    margin: 0 auto;
+  }
+  footer .left{display: none;}
+  .mb{display: block;}
+  .pc{display: none;}
+  .header .btn-box{margin-right:0;}
+  .header .btn-child {
+    height: auto; 
+    padding: 4vmin;
+    line-height: 0;
+    background: #002d78;
+  }
+  .bg{
+    height: 100vh;
+    background: url(../images/mobile_bg.jpg) no-repeat top center;
+    background-size: cover;
+  }
+  .header {margin: 0 auto 50vmin;}
+  .topbox-bg ul li {height: 19.7vmin;}
+  .rk_bg, 
+  .godeye_bg,
+  .souvenir_bg, 
+  .football_bg,
+  .novice_bg, 
+  .bargain_bg {width: 36vmin;height: 13.8vmin;}
+  .header .btn-box a:hover{background: #002d78; color: #fff;}
+}
+@media screen and (max-width: 640px){
+  .header {margin: 0 auto 48vmin;}
+  .header .btn-box{margin-right:1px;}
+  .topbox-bg ul li {height: 17vmin; padding: 1vmin 0.5vmin;}
+}
+@media screen and (max-width: 480px){
+  #mdWindow .btn-style-2{    
+    margin-bottom: 28vmin;
+    width: 39.4vmin;
+    height: 7vmin;
+  }
+  /* #mdWindow .ne-btn{height: 11vmin;}
+  #mdWindow .bn-btn{height: 10vmin;} */
+
+  .header {margin: 0 auto 52vmin;}
+  .header .btn-child{font-size: 12px; padding: 5.1vmin 4vmin;}
+  .topbox-bg {width: 90%;}
+  .topbox-bg ul li {height: 26.7vmin;padding: 6vmin 0.5vmin;}
+  .rk_bg, 
+  .godeye_bg, 
+  .souvenir_bg,
+  .football_bg, 
+  .novice_bg, 
+  .bargain_bg {width: 39vmin; height: 13.8vmin;}
+  .f-rk{    
+    width: 95vmin;
+    height: 113vmin;
+    padding: 105vmin 0 0 6vmin;
+  }
+  .f-sr {
+    width: 92vmin;
+    height: 110vmin;
+    padding: 44vmin 0 0 7.3vmin;
+  }
+  .f-fb {
+    width: 92vmin;
+    height: 82vmin;
+    padding: 73vmin 0 0 5vmin;
+  }
+  .f-ne {
+    width: 95vmin;
+    height: 73vmin;
+    padding: 60vmin 0 0 2vmin;
+  }
+  .f-bn {
+    width: 94vmin;
+    height: 72vmin;
+    padding: 60vmin 0 0 4vmin;
+  }
+}
+@media screen and (max-width: 424px){
+  .header {margin: 0 auto 48vmin;}
+  .header .btn-child {padding: 6.1vmin 3vmin; margin-right: -4px;}
+}
+@media screen and (max-width: 414px){
+  .header .btn-box {margin-right: 5px;}
+  .header .btn-child {padding: 6.1vmin 4vmin;}
+  .close_btn {top: -35px; right: 0;}
+  .topbox-bg ul li {height: 20.8vmin;margin-bottom: 2%;padding: 3vmin 0.5vmin;}
+  .f-rk {
+    width: 93vmin;
+    height: 115vmin;
+    padding: 105vmin 0 0 6vmin;
+  }
+  .f-eye{
+    width: 85vmin;
+    height: 68vmin;
+    padding: 56vmin 0 0 2vmin;
+  }
+  .f-sr {
+    width: 92vmin;
+    height: 111vmin;
+    padding: 44.5vmin 0 0 7.3vmin;
+  }
+  .f-fb {
+    width: 92vmin;
+    height: 83vmin;
+    padding: 73vmin 0 0 5vmin;
+  }
+  .f-ne {
+    width: 89vmin;
+    height: 68vmin;
+    padding: 56vmin 0 0 2vmin;
+  }
+  .f-bn {
+    width: 89vmin;
+    height: 69vmin;
+    padding: 57vmin 0 0 4vmin;
+  }
+}
+@media screen and (max-width: 375px){
+  .header .logo {width: 36vmin;height: 11vmin;}
+  .header .btn-box {margin-right: 5px;}
+  .header .btn-child {padding: 6.5vmin 0vmin;margin-right: -5px;}
+  .f-rk {height: 111vmin; padding: 102vmin 0 0 6vmin; background-size: contain;}
+  .f-eye {width: 94vmin; height: 73vmin;padding: 60vmin 0 0 2vmin;}
+}
+@media screen and (max-width: 360px){
+
+}
+@media screen and (max-width: 320px){
+  #mdWindow .ne-btn {height: 9vmin;}
+  .header {margin: 0 auto 40vmin;}
+  .header .btn-box {margin-right: 6px;}
+  .f-rk{height: 115vmin; padding: 103vmin 0 0 6vmin;}
+  .f-eye{width: 93vmin;height: 73vmin; padding: 60vmin 0 0px 3vmin;}
+  .f-sr{height: 112vmin;}
+  .f-ne{width: 90vmin; height: 70vmin; padding: 58vmin 0 0 2vmin;}
+  .f-bn{width: 95vmin; height: 73vmin; padding: 61vmin 0 0 4vmin;}
+}
+@media screen and (height: 812px){
+  .header { margin: 0 auto 50vmin;}
+  .topbox-bg ul li {
+    width: 100%;
+    height: 18.8vmin;
+    margin-bottom: 2%;
+    padding: 0.5vmin 0.5vmin;
+  }
+  .rk_bg, .godeye_bg, 
+  .souvenir_bg, .football_bg, 
+  .novice_bg, .bargain_bg {width: 46vmin;height: 17.8vmin;}
+}
+@media screen and (height: 667px){
+  .header { margin: 0 auto 52vmin;}
+}
+@media screen and (height: 568px){
+  .header { margin: 0 auto 50vmin;}
+}
+@media screen and (height: 541px){
+  #mdWindow .ne-btn {height: 8vmin;}
+  .bg {height: 105vh;}
+  .f-ne {padding: 58vmin 0 0 2vmin;}
+  .header {margin: 0 auto 10em;}
+}

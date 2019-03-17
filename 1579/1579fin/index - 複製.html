@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国庆、中秋双重奏</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="wrap clearfix">
+                <a href="http://youbo5555.com/" target="_blank" class="logo"></a>
+                <div class="btn-box">
+                    <a href="http://youbo5555.com/" target="_blank" class="btn-child home"></a>
+                    <a href="https://liveperson.lp2chat.com/u2bet/" class="btn-child cus" onclick=""></a>
+                </div>
+            </div>
+        </nav>
+        <div class="top_btn">
+            <div data-id="Na" class="Btn n_day"></div>
+            <div data-id="Lo" class="Btn love"></div>
+            <div data-id="Vi" class="Btn vip"></div>
+        </div>
+    </header>
+
+    <!-- 盛世國慶 -->
+    <section id="Na" class="bg">
+        <div class="wrap clearfix">
+            <div class="title"></div>
+            <div class="gift">
+                <div class="gifts01">
+                    <button type="button" id="Apply" class="apply_btn"></button>
+                </div>
+                <div class="gifts02">
+                    <button type="button" id="Apply" class="apply_btn"></button>
+                </div>
+            </div>
+            <div class="rule">
+                <img src="assets/images/rule01.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- 濃情密意 -->
+    <section id="Lo" class="bg02">
+        <div class="wrap">
+            <div class="title"></div>
+            <div class="pre01">
+                <a href="https://liveperson.lp2chat.com/u2bet/" target="_blank" class="apply_btn apply"></a>
+            </div>
+            <div class="pre02">
+                <a href="http://evt.yobo66.me/form/59bb4e67b67fe" target="_blank" class="sign_btn"></a>
+            </div>
+            <div class="rule">
+                <img src="assets/images/rule02.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP -->
+    <section id="Vi" class="bg03">
+        <div class="wrap">
+            <div class="title"></div>
+            <div class="pre03">
+                <a href="https://liveperson.lp2chat.com/u2bet/" target="_blank" class="receive_btn"></a>
+            </div>
+            <div class="rule">
+                <img src="assets/images/rule03.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- bg -->
+
+    <footer>
+        <div class="wrap clearfix">
+            <div class="footer_txt"></div>
+            <div class="footer_url"></div>  
+        </div>
+    </footer>
+
+    <!-- 浮動式窗 -->
+    <div class="float_win">
+        <div class="float_t"></div>
+        <div data-id="Na" class="Btn float01"></div>
+        <div data-id="Lo" class="Btn float02"></div>
+        <div data-id="Vi" class="Btn float03"></div>
+        <div data-id="gt" class="Btn top"></div>
+    </div>
+
+    <!-- 彈跳視窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <!-- 立即報名 -->
+    <div id="mdWindow" class="popbox sign">
+
+        <!-- 會員登入 -->
+        <div class="login none">
+            <input type="text" id="member" value="">
+            <button type="button" class="login_btn"></button>
+            <div class="close_btn popclose"></div>
+        </div>
+
+        <!-- 收件資訊 -->
+        <div class="recevie none">
+            <form action="">
+                <div class="requier bk1">
+                    <label for="">
+                        <span>收件人姓名</span>
+                        <input type="text" name="q1" class="cls-ipt" id="name" value="">
+                    </label>
+                    <label for="">
+                        <span>收件人手机</span>
+                        <input type="text" name="q2" class="cls-ipt" id="yphone" value="">
+                    </label>
+                </div>
+                <div class="requier bk2">
+                    <p>收件人地址</p>
+                    <label for="">
+                        <span>省份</span>
+                        <input type="text" name="q3" class="cls-ipt" value="">
+                    </label>
+                    <label for="">
+                        <span>县区</span>
+                        <input type="text" name="q4" class="cls-ipt" value="">
+                    </label>
+                    <label for="">
+                        <span>城市</span>
+                        <input type="text" name="q5" class="cls-ipt" value="">
+                    </label>
+                    <label for="">
+                        <span>街道</span>
+                        <input type="text" name="q6" class="cls-ipt" value="">
+                    </label>
+                </div>
+                <div class="requier bk3">
+                    <p>详细地址</p>
+                    <label for="">
+                        <textarea name="" class="cls-ipt" id="Add" cols="30" rows="10" value=""></textarea>
+                    </label>
+                </div>
+                <button type="button" class="form_btn sent_btn"></button>
+            </form>
+            <div class="close_btn popclose"></div>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script>
+$(function() {
+    //關閉彈窗 & 遮罩
+    $('.popclose').on('click',function(){
+        $('#mdWindow > div').addClass('none');
+        $('.popbox').fadeOut(300);
+    });
+    //清空帳號和留言欄位內容
+    var reset = function(){
+        $('.member').val('');
+    }
+});
+
+function reload(){
+    var  $body = $('html, body')
+    $body.scrollTop(0);
+}
+reload();
+function cs() {
+    var url = 'https://liveperson.lp2chat.com/u2bet/';
+    window.open(url, 'newwindow', 'width=800,height=600');
+}
+function move(speed){
+    $('.float_win').stop().animate({
+        "top": $(window).scrollTop() + 350
+    }, speed);
+}
+move(500);
+
+var indexFn = function(){
+    var fn = {
+        login: function(){
+            var acc = $('input[name="acc"]');
+            if( acc.val() == '' ){
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                acc.focus();
+                return false;
+            }
+
+            sendFun.post('{burl}login', {acc: acc},{
+                //會員登入成功時
+                onSuccess: function(res){
+                    account = acc;
+                    Login();
+                },
+                onFail: function(res){
+                    popup.alert(res.title, res.msg);
+                }
+            });
+        },
+
+        cs: function() {
+            var url = '{cs_link}';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+
+        //收件视窗判断
+        jud: function(){
+            var ck = true;
+            $('.requier input[type=text]').each(function(index, val){
+                var text = $('.cls-ipt').val();
+                if( text == '' ){
+                    $(this).prev().addClass('not_check');
+                    $('#Add').parent().prev().addClass('not_check');
+                    ck = false; 
+                }
+            });     
+            return ck; 
+        },
+
+        init: function(){
+            var _this = this;
+
+            //視窗連結
+            $('.Btn').on('click',function(){
+                var id = $(this).attr('data-id');
+                var top;
+                top = id == 'gt' && 0 || id == 'a' && $('#a').offset().top + 220 || $('#'+ id ).offset().top
+                $('html, body').animate({'scrollTop': top },500);
+            });
+
+
+            $('.float_win').hide();
+            $(window).scroll(function(){  
+                var wintop = $(window).scrollTop();  
+                var fw = $('.float_win');
+                if( wintop < $('#Na').offset().top -350){
+                    fw.hide();
+                    move(500);
+                }else{
+                    fw.show();
+                    move(500);
+                }
+            });
+
+            /*點擊商品下方的按鈕(立即申請)打開會員登入視窗*/
+            $('#Apply').on('click',function(){
+                $('.login').removeClass('none');
+                $('#mdOverlay, #mdWindow').fadeIn(500);
+            });
+
+            //關閉會員登入視窗 打開收件视窗
+            $('.login_btn').on('click',function(){
+                $('.login').addClass('none');
+                $('.recevie').removeClass('none');
+                $('#mdOverlay, #mdWindow').fadeIn(500);
+            });
+
+            //點擊送出按鈕時，呼叫jud()收件视窗判断
+            $('.form_btn').on('click',function(){
+                $('.not_check').removeClass('not_check');
+                var ck = jud(); 
+                if( !ck ){
+                    alert('您有资料尚未填写！');
+                    return false;
+                }else{
+                    alert('谢谢您的参与！礼品将于申请后三周内以优博站内信通知您货单号！');
+                    $('.recevie').addClass('none');
+                    $('#mdOverlay, #mdWindow').fadeOut(500);
+                }
+            });
+        }
+
+    };
+    fn.init();
+    return fn;
+}
+var indexfn = new indexFn();
+
+//会员输入帐号判断是否为VIP 且滿足投注量3,000,000
+function VIP(){
+    var a;
+    var b;
+    
+    if( a == 99 ){  //非VIP會員
+        alert('很抱歉，您并非VIP会员，推荐您可申请【太阳能充电宝】！若有任何疑问，请至优博在线客服询问！');
+        reset();
+        return false;
+
+    }else if( a == 100 ){ //已有申请记录
+        alert('感谢您对本活动的支持！我们将于近日寄出礼品！请特别留意优博站内信，寄出时将会通知您货单号！');
+        reset();
+        return false;
+
+    }else if( a == 101 ){ //满足投注量3,000,000
+
+        //会员输入帐号是否满足投注量10,000
+        if( b == true ){
+            Login();
+        }else{
+            alert('很抱歉您的有效投注尚未满足申请条件！');
+        }
+
+    }else{
+        alert('请输入会员帐号！');
+        reset();
+        return false;
+    }
+}
+
+//一般會員
+function normal(){
+    //会员输入帐号是否满足投注量10,000
+    switch (key) {
+        //已满足
+        case 101:
+            Login();
+            break;
+        //未滿足
+        case 102:
+            alert('很抱歉您的有效投注尚未满足申请条件！');
+            reset();
+            break;
+
+        //已有申请记录
+        case 103:
+            alert('感谢您对本活动的支持！我们将于近日寄出礼品！请特别留意优博站内信，寄出时将会通知您货单号！');
+            reset();
+            break;
+    }
+}
+</script>
+</html>

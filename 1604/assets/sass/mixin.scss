@@ -1,0 +1,151 @@
+// 通用樣式
+@mixin bg_jpg($i){
+    background-image: url(../images/#{$i}.jpg);
+}
+@mixin bg_png($i){
+    background-image: url(../images/#{$i}.png);
+}
+@mixin btn_style($width,$height,$b){
+    width: $width;
+    height: $height;
+    background: url(../images/#{$b}.png) no-repeat top center;
+}
+@mixin bg_style_P($width ,$height,$path){
+    background-image: url(../images/#{$path}.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: $width;
+    height: $height;
+}
+@mixin bg_style_J($path, $width ,$height){
+    background-image: url(../images/#{$path}.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: $width;
+    height: $height;
+}
+//文字大小與顏色
+@mixin font_style($size,$color){ 
+    font-size: $size; 
+    color: $color;
+}
+//寬與高
+@mixin wh($M_width,$M_height){ 
+    width: $M_width; 
+    height: $M_height;
+}
+//Wrap
+@mixin Wrap($w_width){
+    width: $w_width; 
+    margin: 0 auto ;
+}
+//活動頁header
+@mixin nav_style($padding){
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: $padding;
+}
+//LOGO
+@mixin Logo($img,$imgWidth,$imgHeight){
+    .logo{
+        float: left;
+        width: $imgWidth;
+        height: $imgHeight;
+        background: url(../images/#{$img}.png) no-repeat top center;
+        background-size: cover;
+    }
+}
+//header選單
+@mixin Btn($btn_width,$btn_height){
+    .btn-box{
+        float: right;
+        width: $btn_width;
+        height: $btn_height;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+//header子選單
+@mixin Btn_child{
+    .btn-child{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+//彈窗
+// <div id="mdOverlay" class="popbox"></div>
+@mixin mdOverlay{
+    #mdOverlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        position: fixed;
+        z-index: 97;
+        background: rgba(0, 0, 0, 0.97);
+        display: none;
+    }
+}
+//<div id="mdWindow" class="popbox sign">
+//<div class="close_btn popclose"></div>
+//</div>
+@mixin mdWindow{
+    #mdWindow {
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        z-index: 98;
+        transform: translate3d(-50%, -50%, 0);
+        display: none;
+    }
+}
+//關閉按鈕
+@mixin Close($png, $top, $right){
+    .close_btn {
+        background: url(../images/#{$png}.png) no-repeat top center;
+        background-size: cover;
+        width: 64px;
+        height: 60px;
+        position: absolute;
+        top: $top;
+        right: $right;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+@mixin media {
+    @media screen and(max-width: 1366px){}
+    @media screen and(max-width: 1024px){}
+    @media screen and(max-width: 768px){}
+    @media screen and(max-width: 480px){}
+}
+//extend
+%btn_wh{
+    width: 101px;
+    height: 39px;
+}
+%bg_style{
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+%bg_cover{
+    background-size: cover;
+}
+%btn_Pos{
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+%btn_Pos_hover{
+    background-position: top;
+}
+%home{
+    content: '|';  
+    color: #000;
+    width: 1px;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}

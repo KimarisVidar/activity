@@ -1,0 +1,111 @@
+@import "mixin";
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg.jpg);
+    background-position: center 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+}
+/*-- 共用 --*/
+p{margin: 0 0 5px 0;}
+input[type=radio], input[type=checkbox]{display: none;}
+input + i{
+    display: inline-block; 
+    vertical-align: text-bottom;
+    position: relative;
+}
+input:checked + i::before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url(../images/radio_checked.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+label{ cursor: pointer; width: 33%; font-weight: 500;}
+label > span{display: inline; font-size: 16px;}
+form > div {margin-bottom: 25px;}
+select{padding: 0 0 5px 0; color: #000;}
+section{width: 100%; height: auto;}
+.none{display: none;}
+.wrap{max-width: 1000px;  margin:0 auto; }
+.else{border-bottom: 1px solid #000; width: 38%; background: transparent;}
+.left{width: 1%; vertical-align: top;}
+.right{width:95%;}
+.left,.right{display: inline-block; vertical-align: top;}
+.text{width: 100%;}
+.not_check::before{
+    content: '*';
+    font-size: 30px;
+    color: #f00;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -17px;
+}
+/*-- 共用 end--*/
+#Animate{}
+#main{}
+#qa_block{}
+#finished{}
+.start_btn{}
+.require > p{position: relative;}
+header{
+    @include Header-style(0px);
+    @include Logo( logo, 252px, 59px);
+    margin-bottom: 3.5vw;
+}
+.member_id{ @include Id_btn(); }
+.member_btn{ @include member_Btn(); }
+
+/*-- 問卷樣式 --*/
+.qa_box{width: 100%; padding: 10px;}
+.qa_list{width: 100%; margin: 0 auto;}
+.qa_list ul li{display: inline-block; vertical-align: middle;}
+.inside_title{font-size: 18px; font-weight: 600;}
+
+.q15 label, .q16 label, .q18 label{width: 49%;}
+.q21 label{width: 55%;}
+
+footer{width: 100%; text-align: center; border: 1px solid #000; padding: 10px 0;}
+footer .f_txt{}
+
+/*-- 規則彈窗 --*/
+@include mdOverlay; 
+@include mdWindow;
+
+
+
+/*-- 新增CSS請寫在此段下方 --*/
+
+/*-- 解析度 1680 1440 請勿在此下方新增CSS --*/
+@media screen and (max-width: 1366px){}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 990px){}
+@media screen and (max-width: 768px){
+    input:checked + i::before{top: 3px;}
+    label{ font-size: 16px; width: 49%;}
+    .q21 label{ width: 100%; }
+}
+@media screen and (max-width: 640px){
+    .q8 label,.q9 label,.q15 label,
+    .q16 label,.q17 label,.q18 label{ width: 100%; }
+}
+@media screen and (max-width: 480px){
+    input:checked + i::before{top: 3px;}
+    label{width: 100%;}
+    label > span{font-size: 3.2vw;}
+    .qa_title{font-size: 3.5vw;}
+}
+@media screen and (max-width: 414px){
+    label > span, select{font-size: 4vw;}
+    .qa_title{font-size: 4.2vw;}
+    .q21 > label:first-child > span{width: 93%;}
+}
+@media screen and (max-width: 375px){}
+@media screen and (max-width: 360px){}
+@media screen and (max-width: 320px){}

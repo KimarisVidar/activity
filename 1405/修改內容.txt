@@ -1,0 +1,67 @@
+已修改如下 ：
+
+html 檔案
+
+1.修改圖片檔名
+
+<section class="sec_1 animated fadeIn">
+	<div class="container">
+		<nav class="clearfix">
+			<div class="sliderTo wow fadeIn" rel="1"><span class="_flash"></span><img src="assets/images/nav_btn_1.png" alt=""></div>
+			
+			<!-- 修改-->
+			<div class="sliderTo wow fadeIn" rel="2" data-wow-delay=".4s"><span class="_flash"></span><img src="assets/images/nav_btn_4.png" alt=""></div>
+			<div class="sliderTo wow fadeIn" rel="3" data-wow-delay=".8s"><span class="_flash"></span><img src="assets/images/nav_btn_2.png" alt=""></div>
+			<!-- 修改-->
+
+		</nav>
+	</div>
+</section>
+
+2.修改連結 & 刪除不使用
+
+<section class="sec_3 animated fadeIn">
+	<div class="container wow fadeInUp">
+		<div class="sec_head"><img src="assets/images/sec2_title.png" alt=""></div>
+		<span>
+			<img src="assets/images/sec2_content.png" alt="">
+
+			<!-- 不使用 -->
+			<i class="btn_prizes"><a href="http://www.jshxxcl.com/2years/" target="_blank">?我?看</a></i>
+			<i class="btn_prizes"><a href="http://www.jshxxcl.com/2years/" target="_blank">?我?看</a></i>
+
+			<!-- 修改連結 -->
+			<i><a href="http://evt.jshbonus.com/form/5949c86726a05" target="_blank"><span class="_flash"></span><img src="assets/images/application_btn.png" alt=""></a></i>
+
+		</span>
+	</div>
+</section>
+
+CSS檔修改
+
+13行 .sec_2 { background: url(images/bg_piece2.png) no-repeat top center; height: 2302px; }
+
+42行 .sec_3 .sec_head { padding-top: 129px; }
+
+43行 .sec_3 span { position: relative; top: -15px; display: block; }
+
+49行 刪除
+
+50~52行修改成以下樣式
+.sec_3 i:nth-of-type(1) { right: 135px; bottom: 370px; margin-bottom: 0px; } /*-- 修改 --*/
+.sec_3 i:nth-of-type(1) > a { position: relative; display: inline-block; height: 100%; }
+.sec_3 i:nth-of-type(1) > a ._flash { 
+	position: absolute; 
+	width: 252px; 
+	height: 101px; 
+	top: 0; left: 50%; 
+	transform: translateX(-50%); 
+	-webkit-clip-path: polygon(6% 0, 94% 0, 100% 15%, 100% 85%, 94% 100%, 6% 100%, 0 85%, 0 15%); clip-path: polygon(6% 0, 94% 0, 100% 15%, 100% 85%, 94% 100%, 6% 100%, 0 85%, 0 15%); 
+}
+
+
+
+
+
+
+

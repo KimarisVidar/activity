@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>金沙会两周年庆</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css?v1">
+</head>
+<body>
+	<article>
+		<header class="animated fadeInDown">
+			<div class="container clearfix">
+				<div class="logo"><a href="http://dj2111.com/" target="_blank"><img src="assets/images/logo.png" alt=""></a></div>
+				<ul class="head_nav">
+					<li class="_home">
+						<a href="http://dj2111.com/" target="_blank">
+							<span>首&nbsp;&nbsp;页</span><span>HOME</span>
+						</a>
+					</li>
+					<li class="_cs">
+						<a href="javascript:void(0)" onclick="cs();">
+							<span>客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服</span><span>SERVICE</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<section class="sec_1 animated fadeIn">
+			<div class="container">
+				<nav class="clearfix">
+					<div class="sliderTo wow fadeIn" rel="1"><span class="_flash"></span><img src="assets/images/nav_btn_1.png" alt=""></div>
+
+					<!-- 修改圖片檔名 -->
+					<div class="sliderTo wow fadeIn" rel="2" data-wow-delay=".4s"><span class="_flash"></span><img src="assets/images/nav_btn_4.png" alt=""></div>
+					<div class="sliderTo wow fadeIn" rel="3" data-wow-delay=".8s"><span class="_flash"></span><img src="assets/images/nav_btn_2.png" alt=""></div>
+					<!-- 修改圖片檔名 end-->
+
+				</nav>
+			</div>
+		</section>
+		<section class="sec_2 animated fadeIn">
+			<div class="container wow fadeInUp">
+				<div class="sec_head"><img src="assets/images/sec1_title.png" alt=""></div>
+				<span><img src="assets/images/sec1_content_1.png" alt=""></span>
+				<span><img src="assets/images/sec1_content_2.png" alt=""></span>
+				<span><a href="reward.html" target="_blank"><span class="_flash"></span><img src="assets/images/sign_btn.png" alt=""></a></span>
+				<span><img src="assets/images/sec1_content_3.png" alt=""></span>
+				<span>
+					<img src="assets/images/sec1_content_4.png" alt="">
+					<i><a href="reward.html" target="_blank"><img src="assets/images/sec1_content_4_btn.png" alt="" onmouseover="this.src='assets/images/sec1_content_4_btn_h.png'" onmouseout="this.src='assets/images/sec1_content_4_btn.png'"></a></i>
+				</span>
+			</div>
+		</section>
+		<section class="sec_3 animated fadeIn">
+			<div class="container wow fadeInUp">
+				<div class="sec_head"><img src="assets/images/sec2_title.png" alt=""></div>
+				<span>
+					<img src="assets/images/sec2_content.png" alt="">
+
+					<!-- 不使用 -->
+					<!--<i class="btn_prizes"><a href="http://www.jshxxcl.com/2years/" target="_blank">点我观看</a></i>
+					<i class="btn_prizes"><a href="http://www.jshxxcl.com/2years/" target="_blank">点我观看</a></i>-->
+
+					<!-- 修改連結 -->
+					<i><a href="http://evt.jshbonus.com/form/5949c86726a05" target="_blank"><span class="_flash"></span><img src="assets/images/application_btn.png" alt=""></a></i>
+
+				</span>
+			</div>
+		</section>
+		<section class="sec_4 animated fadeIn">
+			<div class="container wow fadeInUp" data-wow-duration="1.5s">
+				<div class="sec_head"><img src="assets/images/sec3_title.png" alt=""></div>
+				<span><img src="assets/images/sec3_content_1.png" alt=""></span>
+				<span><a href="http://evt.jshbonus.com/form/591a8e3766458" target="_blank"><span class="_flash"></span><img src="assets/images/sign_btn.png" alt=""></a></span>
+				<span><img src="assets/images/sec3_content_2.png" alt=""></span>
+				<span><a href="http://evt.jshbonus.com/form/591a8e3766458" target="_blank"><span class="_flash"></span><img src="assets/images/sign_btn.png" alt=""></a></span>
+			</div>
+		</section>
+		<footer>Copyright © 金沙会 Reserved</footer>
+	</article>
+	<div class="floatslider animated fadeInUp">
+		<section class="float_1">
+			<a href="javascript:void(0);" class="sliderTo" rel="1"></a>
+			<a href="javascript:void(0);" class="sliderTo" rel="2"></a>
+			<a href="javascript:void(0);" class="sliderTo" rel="3"></a>
+		</section>
+		<section class="float_2">
+			<a href="javascript:void(0);" onclick="cs();"></a>
+			<a href="javascript:void(0);" onclick="gotop();"></a>
+		</section>
+	</div>
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/wow.min.js"></script>
+
+<script>
+	function cs() {
+	    var url = 'https://messenger.providesupport.com/messenger/0n6xvlivgq25e01zpfa6hfr82r.html';
+	    window.open(url, 'newwindow', 'width=800,height=600');
+	}
+
+	function gotop(){
+		$('body,html').animate({
+			'scrollTop': 50
+		},800,'linear',function(){
+			$('body,html').delay(100).animate({
+				'scrollTop': 0
+			},1000,'linear');
+		});
+	}
+
+	var fun = function(){
+		var $this = this;
+		var that = $('body');
+
+		var sliderTo = function(){
+			$('.sliderTo',that).click(function(event) {
+				var page = $(this).attr('rel')*1 + 1;
+				var h = $('.sec_'+page,that).offset().top
+				var _h = $('.sec_'+page,that).offset().top - 50
+				$('body,html').animate({
+					'scrollTop': _h
+				},800,'linear',function(){
+					$('body,html').delay(150).animate({
+						'scrollTop': h
+					},500,'linear');
+				});
+
+					
+			});
+		}
+
+		var float = function(){
+			var _def = 1356;
+			var _hale = ($(window).height() - $('.floatslider').height()) / 2;
+			var scroll_top = $(window).scrollTop();
+
+			var floatslider = function(){
+				console.log(scroll_top,(_def - _hale))
+				if(scroll_top > (_def - _hale)){
+					$('.floatslider').stop().animate({
+						'top': scroll_top + _hale
+					},500);
+				}else{
+					$('.floatslider').stop().animate({
+						'top': _def
+					},500);
+					
+				}
+			}
+			
+			floatslider();
+
+			$(window).scroll(function(event) {
+				scroll_top = $(window).scrollTop();
+				floatslider();
+			});
+		}
+
+		var init = function(){
+			sliderTo();
+			float();
+		}
+
+		init();
+	}
+
+	var pfun = new fun();
+	new WOW().init();
+</script>
+	
+</html>

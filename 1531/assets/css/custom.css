@@ -1,0 +1,516 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  margin: 0 auto;
+  padding: 0;
+  outline: 0;
+  position: relative;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+a {cursor: pointer; text-decoration: none; display: block;}
+a:hover, a:focus {text-decoration: none;box-shadow: none;}
+*:focus {outline: 0;}
+img {width: 100%;height: auto;}
+button {background-color: transparent;border: 0;}
+
+/*-- 共用 --*/
+p.Select > label{font-size: 1vw;}
+select{color: #000; padding: 0 0 5px 0;}
+label > input + span{display: inline-block;}
+label > input + span::before{
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/radio.png) no-repeat top center;
+  background-size: cover;
+  position: relative;
+  top: 3px;
+  left: -4px;
+}
+label > input:checked + span::before{
+  background: url(../images/radio_checked.png) no-repeat top center;
+}
+.none{display: none;}
+.block{display: none;}
+.yellow{ color: #fec800;}
+.btn:active {box-shadow: none;}
+.wrap {max-width: 1000px;margin: 0 auto;}
+.red {color: #f00;}
+.Select input{display: none;}
+.offer_block label{width: 100%;}
+.not_check::before{
+  content: '*';
+  font-size: 30px;
+  color: #f00;
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: -17px;
+}
+
+.else_option {
+  width: 50%;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+  margin-left: 0px;
+  display: inline-block !important;
+  font-size: 1.2vw;
+}
+.qa_btn {
+  width: 19vw;
+  height: 55px;
+  color: #000;
+  font-size: 1.2vw;
+  letter-spacing: 5px;
+  background: #f6dc68;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-weight: 600;
+  box-shadow: 2px 2px 1px #000;
+}
+.icon {
+  width: 413px;
+  height: 100px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+/*-- 背景圖 --*/
+.bg {width: 100%;}
+header {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0px;
+  margin-bottom: 3.5vw;
+}
+header .logo {
+  float: left;
+  width: 215px;
+  height: 77px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+header .btn-box {
+  float: right;
+  width: 21%;
+  height: 70px;
+  text-align: center;
+}
+header .btn-child {display: inline-block; vertical-align: middle;}
+header .rule {
+  background-image: url(../images/rule_btn.png);
+  background-size: cover;
+}
+header .rule:hover {background-position: bottom;}
+header .home {
+  background-image: url(../images/home_btn.png);
+  background-size: cover;
+}
+header .home:hover {background-position: bottom;}
+header .cus {
+  background-image: url(../images/cus_btn.png);
+  background-size: cover;
+}
+header .cus:hover {background-position: bottom;}
+header .rule, header .home, header .cus {
+  width: 63px;
+  height: 67px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/*-- 輸入會員帳號 --*/
+#main {width: 100%;margin-bottom: 66px; display: none;}
+#main .title {
+  background-image: url(../images/title_bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+}
+#main .member_id {
+  width: 19vw;
+  height: 55px;
+  font-size: 1vw;
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
+  display: block;
+  margin: 0 auto 0.5vw;
+  padding: 0 10px;
+}
+/*-- 輸入會員帳號 end --*/
+
+/*-- 問卷區塊 --*/
+#question_block .title {
+  width: 489px;
+  height: 132px;
+  margin: 0 auto;
+}
+.cus_top, .money_top, .integrat_top, .offer_top{
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.cus_top {
+  background-image: url(../images/cus_title.png);
+  background-size: cover;
+}
+.money_top {
+  background-image: url(../images/money_title.png);
+  background-size: cover;
+}
+.integrat_top {
+  background-image: url(../images/integrat_title.png);
+  background-size: cover;
+}
+.offer_top {
+  background-image: url(../images/offer_title.png);
+  background-size: cover;
+}
+
+.qa_content {
+  max-width: 1000px;
+  height: auto;
+  padding: 2.2vw 2.6vw;
+  border: 1px solid #989898;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 1vw;
+}
+.qa_content > div{margin-bottom: 0.5vw;}
+.qa_content > div > div.inside_title {
+  font-size: 0.9vw;
+  color: #ffea75;
+  /* color: #f7a70d; */
+  font-weight: 600;
+  margin-bottom: 0.5vw;
+  letter-spacing: 2px;
+  position: relative;
+}
+.qa_content > div > .Select {
+  font-size: 0.9vw;
+  color: #fff;
+  width: 33%;
+  display: inline-block;
+}
+.qa_content > div > .Select label {font-weight: normal;}
+
+.cus_block .s1 .Select {width: 100%;}
+.cus_block .s1 .Select .else_option{width: 43%;}
+.cus_block .s2 .Select {width: 49%;}
+.cus_block .s2 .Select .q7_else{width: 35%;}
+.cus_block .s3 .Select{width: 100%;}
+.cus_block .Select .q5_else{width: 190%;}
+.money_block .s2 .Select {width: 100%;}
+.money_block .s1 .Select .q13_else{width: 34%;}
+.money_block .s2 .Select .q11_else{width: 34%;}
+.money_block .s2 .Select .q12_else{width: 34%;}
+.money_block .s2 .Select .q14_else{width: 35%;}
+.money_block .s2 .Select .q15_else{width: 200%;}
+.money_block .s1 p:nth-of-type(1) {width: 100%; font-size: 1.2vw;}
+.offer_block .s1 .Select {width: 49%;}
+.integrat_block .s1 .Select {width: 100%;}
+.integrat_block .s1 .Select .q21_else{width: 200%;}
+.cus_icon {background-image: url(../images/num_icon01.png);}
+.money_icon {background-image: url(../images/num_icon02.png);}
+.integrat_icon {background-image: url(../images/num_icon03.png);}
+.offer_icon {background-image: url(../images/num_icon04.png);}
+
+/*-- 完成頁面 --*/
+#finished{margin: 0 0 147px;}
+#finished .qa_btn{width: 28vw; font-size: 1.25vw;}
+#finished .title {
+  background-image: url(../images/fin_top.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  max-width: 990px;
+  height: 330px;
+  margin: 0 auto;
+}
+.finished_content{
+  max-width: 990px;
+  height: auto;
+  padding: 2.2vw 2.6vw;
+  border: 1px solid #989898;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 1vw;
+}
+.finished_content > div{
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  line-height: 38px;
+}
+/*-- 完成頁面 end --*/
+
+footer {
+  width: 100%;
+  background-color: #0a0a0a;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+footer div {display: flex;font-size: 14px;color: #fff;}
+footer p {
+  width: 33%;
+  margin: 0; 
+  justify-content: space-between;
+  align-items: center;
+}
+footer .txt {text-align: left;}
+footer .copyright {text-align: center;}
+footer .url {text-align: right;}
+
+/*-- 彈跳視窗 --*/
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+
+.close_btn {
+  background: url(../images/close_btn.png) no-repeat top center;
+  background-size: cover;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 6.5vw;
+  right: -1.5vw;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.rule_title {
+  width: 20vw;
+  height: 6.25vw;
+  margin: 0 auto;
+  background-image: url(../images/rule_title.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rule_content {
+  width: 47vw;
+  height: 26vw;
+  margin: 0 auto;
+  background-image: url(../images/rule_content.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-- 新增CSS請寫在此段下方 --*/
+
+
+/*-- 請勿在此下方新增CSS --*/
+@media screen and (max-width: 1366px) {
+
+  .not_check::before{top: -7px;}
+  .qa_btn{width: 30vw;}
+  .qa_content > div > div.inside_title{ font-size: 1.7vw;}
+  .close_btn {top: 9vw;right: -2vw;}
+  #main .member_id, #main .qa_btn {width: 29vw;}
+  label > input + span{font-size: 1.2vw;}
+  footer .copyright {width: 55vw;margin: 0 auto;}
+}
+
+@media screen and (max-width: 1024px){
+
+  .rule_content {width: 69.2vw; height: 38.5vw;}
+  .rule_title {width: 25vw;height: 6.30vw;}
+  .close_btn {top: 7vw; right: -3vw;}
+  .qa_btn{width: 42vw; font-size: 2.2vw;}
+  .qa_content{width: 90%; margin: 0 auto 1vw;}
+  .money_block .s2 .Select .q11_else,
+  .money_block .s1 .Select .q13_else,
+  .money_block .s2 .Select .q14_else,
+  .cus_block .s1 .Select .else_option{width: 30%;}
+  .cus_block .Select .q5_else {width: 54vw;}
+  .money_block .s2 .Select .q12_else {width: 28%;}
+  p.Select > label{font-size: 1.6vw;}
+  #finished .qa_btn{font-size: 2.2vw;}
+  #main .member_id, #main .qa_btn {width: 37vw;font-size: 2.2vw;}
+  label > input + span, .qa_content form .Select label{font-size: 1.6vw;}
+  footer .copyright {width: 73vw;}
+  
+}
+
+@media screen and (max-width: 990px){
+
+  .cus_block .s1 .Select {width: 100%;}
+  .qa_content{width: 90%; margin: 0 auto 1vw;}
+  .qa_content form .Select{width: 24%;}
+  #main .title {width: 100%;}
+  #main .qa_btn {font-size: 2.2vw;}
+  #main .member_id, #main .qa_btn {width: 55%;}
+  header .btn-box {width: 30%;}
+}
+
+
+@media screen and (max-width: 768px){
+  .txt, .url {display: none;}
+  .rule_content {
+    width: 84vw;
+    height: 109vw; 
+    background-image: url(../images/mobile/rule_content.png);
+  }
+  .rule_title {width: 33vw; height: 10.3vw;}
+  .finished_content{margin-bottom: 6vw;}
+  .qa_btn{width: 64vw; font-size: 2.8vw;}
+  .qa_content > div > div.inside_title{font-size: 2vw;}
+  .qa_content > div > .Select {width: 32%;}
+  .close_btn {top: 12vw; right: 2vw;}
+  .integrat_block .s1 .Select{width: 32%;}
+  .integrat_block .s2 .Select {width: 32%;}
+  .integrat_block .s3 .Select{width: 33%;}
+  .money_block .s2 .Select .q11_else,
+  .money_block .s1 .Select .q13_else,
+  .money_block .s2 .Select .q14_else,
+  .cus_block .s1 .Select .else_option{width: 36%;}
+  .cus_block .s2 .Select .q7_else {width: 37%;}
+  .else_option{width: 45%;}
+  #finished .title{height: 33vw;}
+  #finished .qa_btn{font-size: 3.2vw;width: 43vw;}
+  #main .title {
+    background-size: contain;
+    width: 100%;
+    height: 96vw;
+    background-image: url(../images/mobile/bg.png);
+  }
+  #main .member_id, #main .qa_btn {width: 75%;}
+  #main .member_id {margin: 0 auto 2.5vw;font-size: 3vw;}
+  #main .qa_btn {font-size: 3.2vw;}
+  label > input + span , .qa_content form .Select label{font-size: 2vw;}
+  header .logo {margin-left: 10px;}
+  header .btn-box {margin-right: 10px; width: 30%;}
+  header .btn-box {width: 35%;}
+  footer .copyright {display: block;width: 100%;}
+}
+
+@media screen and (max-width: 640px){
+  .qa_content{padding: 2.2vw 4.6vw;}
+  .cus_block .s2 .Select {width: 100%;}
+  .qa_content > div > .Select {width: 49%;}
+}
+
+
+@media screen and (max-width: 480px){
+  
+  .close_btn {top: 19vw;right: 5vw;}
+  .rule_content {
+    width: 90vw;
+    height: 65vh;
+    background-size: contain;
+  }
+  .rule_title {width: 53vw;height: 10vh;}
+  .qa_content{padding: 2.2vw 3.6vw; margin: 0 auto 4vw;}
+  .qa_content > div >.inside_title {font-size: 3vw;}
+  .qa_btn {width: 90%;font-size: 5.8vw;}
+  #finished .qa_btn {font-size: 5.2vw;width: 85vw;}
+  #question_block .title{width: 78vw;height: 20vw;}
+  header .btn-box {width: 46%;}
+
+}
+
+@media screen and (max-width: 414px){
+
+  .rule_title {width: 55vw;}
+  .finished_content > div{font-size: 5vw;}
+  .close_btn {top: 19vw;right: 2vw;}
+  .cus_block .s1 .Select {width: 100%;}
+  .cus_block .s1 .Select .else_option {width: 75%;}
+  .cus_block .Select .q5_else {width: 77vw;}
+  .offer_block form > div:nth-of-type(1) .Select{ width: 100%;}
+  .integrat_block .s1 .Select .q21_else {width: 225%;}
+  .qa_content > div > .Select {width: 49%;}
+  .q20_elset,.q17_else{width: 150%;}
+  .money_block .s2 .Select .q11_else, 
+  .money_block .s1 .Select .q13_else, 
+  .money_block .s2 .Select .q14_else {width: 100%;}
+  .money_block .s2 .Select .q15_else {width: 150%;}
+  .money_block .s2 .Select .q12_else { width: 75%;}
+  #finished .title {height: 40vw;}
+  #main .qa_btn {font-size: 5.2vw;}
+  #main .member_id, #main .qa_btn {width: 95%;}
+  header .logo {width: 44vw;background-size: contain;}
+  header .rule, header .home, header .cus {
+    width: 14vw;
+    height: 15vw;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 375px){
+
+  header .rule,header .home,header .cus {width: 14vw;height: 14vw; }
+  .q3_else, .q8_else,
+  .q9_else, .q20_else,
+  .q17_else, .q19_else,
+  .q21_else{ width:72vw;}
+  .money_block .s2 .Select .q11_else, 
+  .money_block .s2 .Select .q12_else,
+  .money_block .s1 .Select .q13_else, 
+  .money_block .s2 .Select .q14_else, 
+  .money_block .s2 .Select .q15_else{width: 72vw;}
+  .integrat_block .s1 .Select .q21_else {width: 72vw;}
+  .cus_block .s2 .Select .q7_else {width: 95%;}
+  .icon{width: 100vw; height: 22vw;}
+  .qa_content > div > .Select{width: 100% !important;}
+  .q2_else{width: 100%;}
+  .q25_else{width: 95%;}
+}
+
+@media screen and (max-width: 360px){
+
+  .qa_content form .Select{width: 100% !important;}
+  .icon{width: 100vw; height: 23vw;}
+  .finished_content>div {font-size: 4vw; letter-spacing: 3px; }
+}
+
+@media screen and (max-width: 320px){
+  
+  .qa_btn {width: 85%;}
+  .qa_content{ width: 85%; padding: 2.2vw 6.6vw;}
+  .qa_content form .Select {width: 95%;}
+  .offer_block .s1 .Select{width: 100%;}
+  .icon{width: 90vw; height: 23vw;}
+  .else_option {width: 64%;}
+  #main {margin-bottom: 12vw; }
+  header {margin-bottom: -3.5vw;}
+  header .logo {width: 44vw;}
+  header .btn-box {width: 49%;}
+  footer {padding: 10px 0;}
+}

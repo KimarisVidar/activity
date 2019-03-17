@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>聯絡我們 - 捷睿</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/js/fullPage/jquery.fullPage.css">
+
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<!-- for IE -->
+	<script type="text/javascript" href="assets/js/respond.min.js"></script>
+</head>
+<body>
+
+	<nav>
+		<div href="javascript:void(0);" class="bar clearfix">
+			<a href="javascript:void(0);" class="logo" rel=""></a>
+			<a href="javascript:void(0);" class="meun" rel="">
+				<div class="meun_bg_top"></div>
+				<div class="meun_bg"></div>
+				<div class="meun_bg_bottom"></div>
+			</a>
+		</div>
+		<div class="nav-animation"></div>
+
+		<div class="nav-bg">
+			<ul class="animated">
+				<li>
+					<a href="index.html" rel="">
+						<p>公司簡介</p>
+						<p>ABOUT</p>
+					</a>
+				</li>
+				<li>
+					<a href="work.html" rel="">
+						<p>營運項目</p>
+						<p>WORK</p>
+					</a>
+				</li>
+				<li>
+					<a href="benefits.html" rel="">
+						<p>公司福利</p>
+						<p>BENEFITS</p>
+					</a>
+				</li>
+				<li>
+					<a href="vibe.html" rel="">
+						<p>工作環境</p>
+						<p>VIBE</p>
+					</a>
+				</li>
+				<li>
+					<a href="careers.html" rel="">
+						<p>人才招募</p>
+						<p>CAREERS</p>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html" rel="">
+						<p>聯絡我們</p>
+						<p>CONTACT</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 上方選單及LOGO end -->
+	<div id="contact" class="content-block">
+		<section id="firstPage" class="section ct-01">
+			<div class="contact-block">
+				<div class="ct-01-title">
+					<p>聯絡我們</p>
+					<p>contact us</p>
+				</div>
+				<div class="gray-line"></div>
+				<div class="ct-01-text">
+					<p>台中市西屯區市政北二路238號14樓之1</p>
+					<p>14F.-1, No.238, Shizheng N. 2nd Rd. Xitun Dist.<br>
+					Taichung City 407, Taiwan (R.O.C.)</p>
+				</div>
+
+				<div class="ct-01-list">
+					<div class="time">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<p>平日 週一至周五 / AM9-PM6</p>
+					</div>
+					<div class="phone">
+						<i class="fa fa-phone-square" aria-hidden="true"></i>
+						<p>04-2258-1116</p>
+					</div>
+					<div class="mail">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<p>jr88hr@gmail.com</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="location">
+				<img src="assets/images/location-pic02.png">
+				<img class=" animated bounce" src="assets/images/location-pic01.png">
+			</div>
+			<div class="arrow">
+				<i class="fa fa-angle-down animated infinite fadeInDown" aria-hidden="true"></i>
+			</div>
+		</section>
+
+		<section id="secondPage" class="section ct-02">
+			<div class="form-block">
+				<form class="clearfix">
+					<div class="ct-02-title">
+						<p>線上留言</p>
+						<p>We're Listening</p>
+					</div>
+					
+					<input class="name" type="text" id="name" name="" placeholder="姓名">
+					<p class="caps-lock"><span>尚未填寫</span></p>
+
+					<input class="number" type="text" id="phone" name="" placeholder="電話">
+					<p class="caps-lock"><span>尚未填寫</span></p>
+
+					<input class="mail" type="email" id="mail" name="" placeholder="E-mail">
+					<p class="caps-lock"><span>尚未填寫</span></p>
+
+					<textarea class="" name="message" id="masg" value="" placeholder="聯絡內容與備註"></textarea>
+					<p class="caps-lock"><span>尚未填寫</span></p>
+
+					<button type="button" class="form-btn" value="">送出</button>
+				</form>
+			</div>
+			<footer>
+				<div>Copyright © 捷睿廣告行銷 Reserved</div>
+			</footer>
+		</section>
+	</div>
+	
+</body>
+<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/wow/wow.js"></script>
+<script src="assets/js/jquery.easing.1.3.js"></script>
+<script src="assets/js/fullPage/jquery.fullPage.js"></script>
+<script>
+$(function (){
+
+	
+
+	$('#contact').fullpage();
+
+	$(".form-btn").on("click",function(){
+		$(this).css({"background":"#000","color":"#ffcd38"})
+	});
+
+	$(window).resize(function () {
+		var CK_btn = $(".meun, .nav-animation")
+		CK_btn.click(function () {
+			var wh = $(window).height();
+			var h = $(".nav-bg ul").height();
+			var a;
+			if (wh > h) {
+				a = "18vw";
+			}else {
+				a = (wh - h) / 2;
+			}
+			$(".open .nav-bg").css({ "top": a });
+		});
+		// if( wh <= 414){
+		// 	$("#contact .ct-01 .location").css({display:"none"});
+		// 	$("#contact .ct-01").css({
+		// 		background-image:"url(images/contact-bg.png)"
+		// 	});
+
+		// }
+	});
+
+	//網頁重整置頂
+	function w_reload(){
+		var  $body = $('html, body')
+		$body.scrollTop(0);
+	}
+	w_reload();
+
+	//選單事件
+	$(".meun, .nav-animation").click(function(){
+		$(".meun").toggleClass("toggle")
+		$("nav").toggleClass("open")
+		$(".nav-animation").toggleClass("nav-active")
+		$(".nav-bg ul").toggleClass("fadeInDown")
+	})
+
+});
+
+</script>
+</html>

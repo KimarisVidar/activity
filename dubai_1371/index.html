@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" charset="UTF-8">
+	<title>Document</title>
+	
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+
+	<!-- javscript -->
+	<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+	<header id="header" class="clearfix animated fadeInDown">
+		<img src="assets/images/logo.png" alt="">
+		<nav>
+			<a href="http://399699.com" target="_blank"><img src="assets/images/icon-home.png" alt=""><span>返回首页</span></a>
+			<a class="service"><img src="assets/images/icon-service.png" alt=""><span>联系客服</span></a>
+			<a class="rule"><img src="assets/images/icon-rule.png" alt=""><span>活动规则</span></a>
+		</nav>
+	</header>
+	<div id="mainWrap">
+		<div class="title animated zoomInUp"><img src="assets/images/title.png" alt=""></div>
+		<ul class="row main">
+			<li class="col-xs-6 animated fadeInLeft delay">
+				<div>
+					<img class="item animated updown infinite" src="assets/images/item-1.png" alt="">
+					<img class="shadow animated infinite zoomOutIn" src="assets/images/shadow.png" alt="">
+					<img class="plate" src="assets/images/item-1-plate.png" alt="">
+					<img class="txt" src="assets/images/item-1-txt.png" alt="">
+					<img class="num" src="assets/images/item-1-num.png" alt="">
+				</div>
+				<div>
+					<a class="btns btns-yellow" href="http://ctl.play5858.com/c_activity_forms/answer_package/851" target="_blank">我要报名</a>
+					<img src="assets/images/item-1-txt2.png" alt="">
+				</div>
+			</li>
+			<li class="col-xs-6 animated fadeInRight delay">
+				<div>
+					<img class="item animated updown2 infinite delay" src="assets/images/item-2.png" alt="">
+					<img class="shadow animated infinite zoomInOut delay" src="assets/images/shadow.png" alt="">
+					<img class="plate" src="assets/images/item-2-plate.png" alt="">
+					<img class="txt" src="assets/images/item-2-txt.png" alt="">
+					<img class="num" src="assets/images/item-2-num.png" alt="">
+				</div>
+				<div>
+					<a class="btns btns-brown" href="http://ctl.play5858.com/c_activity_forms/answer_package/852" target="_blank">我要报名</a>
+					<img src="assets/images/item-2-txt2.png" alt="">
+				</div>
+			</li>
+		</ul>
+	</div>
+	<footer id="footer">Copyright © 迪拜皇宫 Reserved</footer>
+	<div id="popwindow">
+		<section id="ruleBox">
+			<img class="txt" src="assets/images/rule-title.png" alt="">
+			<ul>
+				<li>活动时间：北京时间2017年4月12日中午12：00至2017年5月3日中午12：00。</li>
+				<li>中奖通知时间：活动结束后<span class="text-yellow">一周内</span>以站内信通知中奖会员，无中奖则不另行通知。</li>
+				<li>赠品寄送时间：<span class="text-yellow">2017年5月17日前</span>寄出，到货日期依收件区域等限制会有所不同。（寄出3日内以站内信告知货单号）</li>
+				<li>活动期间每位会员<span class="text-yellow">仅能报名一次</span>。务必选择欲兑换的赠品后填写申请表单，并填写正确收件人资讯（收件人姓名、收件人地址、收件人电话）。若有重复申请情况，且皆达兑换标准，将由迪拜皇宫官方随机择一赠送。</li>
+				<li>此次活动累积投注额全馆皆纳入计算。</li>
+				<li>由于赠品皆为限量赠送，迪拜皇宫将依报名时间先后顺序，再依累积投注达成时间审核资格。</li>
+				<li>会员的投注额由迪拜皇宫系统自动统计，若有任何异议，以迪拜皇宫查询结果为准。</li>
+				<li>此活动赠品无法对换成彩金，赠品寄出后，<span class="text-yellow">3日内物流商若无法联系上收件人</span>，将视同放弃。</li>
+				<li>每位会员、每个IP、每个手机号码、每个电子邮箱地址、每一组银行账号只能享有一次优惠，若发现重复注册或同IP多账号现象，则视为同一人，此IP下所有账号迪拜皇宫有权拒绝派送礼品。</li>
+				<li>参与此活动即表示同意<a href="http://www.399699.com/main/ot/faq/88" target="_blank">《迪拜皇宫活动声明》</a>，迪拜皇宫拥有最终解释权。</li>
+			</ul>
+			<a class="btn-close" href=""><img src="assets/images/close.png" alt=""></a>
+		</section>
+	</div>
+</body>
+</html>
+
+<script>
+	$(function(){
+
+
+		/*service - 客服系統*/
+		function service(){
+			var link = 'http://liveperson.lp2chat.com/dbpcn/';
+			var w = 800,h = 650;
+	  		var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+	  		var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+	  		width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+	  		height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+	  		var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+	  		var top = ((height / 2) - (h / 2)) + dualScreenTop;
+	  		window.open(link, "", 'scrollbars=yes,resizable=yes,toolbar=no,menubar=no, status=no, directories=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+		}
+		$('.service').on('click', function(event) {
+			event.preventDefault();
+			service();
+		});
+
+		$('.rule').on('click', function(event) {
+			event.preventDefault();
+			$('#popwindow').addClass('show');
+			$('#ruleBox').stop(true,false).fadeIn('fast');
+		});
+
+		$('.btn-close').on('click', function(event) {
+			event.preventDefault();
+			$('#ruleBox').stop(true,false).fadeOut('fast',function(){ 
+				$('#popwindow').removeClass('show');
+			});
+		});
+
+
+	});
+</script>

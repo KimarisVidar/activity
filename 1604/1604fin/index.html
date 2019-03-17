@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【金沙会】单身不炫富，明日没人顾 </title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child rule" onclick="pageObj.rule();">
+                        <i class="icon-list"></i>
+                        <span>规则</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btn-child home" onclick="pageObj.home();">
+                        <i class="icon-home3"></i>
+                        <span>首页</span>
+                    </a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();">
+                        <i class="icon-headphones"></i>
+                        <span>客服</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="bg01">
+ 
+        <div class="title wow pulse">
+            <img src="assets/images/title.png" class="pc">
+            <img src="assets/images/title_m.png" class="mobile">
+        </div>
+        <div class="title02 wow bounceInUp">
+            <img src="assets/images/title02.png" class="pc">
+        </div>
+        <div class="down"></div>
+    </section>
+    <section class="bg02">
+        <div class="title wow bounceIn">
+            <img src="assets/images/step1.png" class="pc">
+            <img src="assets/images/step1_m.png" class="mobile">
+        </div>
+        <button type="button" class="sign_btn wow bounceInUp" onclick="pageObj.sign();"></button>
+        <div class="down"></div>
+    </section>
+    <section class="bg03">
+        <div class="title wow fadeInRight">
+            <img src="assets/images/step2.png" class="pc">
+            <img src="assets/images/step2_m.png" class="mobile">
+        </div>
+    </section>
+    <footer>
+        <div class="wrap">Copyright © 金沙会 Reserved</div>   
+    </footer>
+    <!-- 彈窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+        <!-- 規則彈窗 -->
+        <div class="rule_block none">
+            <img src="assets/images/rule_bg.png" class="pc">
+            <img src="assets/images/rule_bg_m.png" class="mobile">
+            <div class="close_btn popclose"></div>    
+        </div>
+        <!-- 登入彈窗 -->
+        <div class="login none">
+            <input type="text" name="acc" value="">   
+            <button type="button" class="s_out"></button>
+            <div class="close_btn popclose"></div>   
+        </div>
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    <!-- 浮動視窗 -->
+    <div class="float pc">
+        <div>
+            <img src="assets/images/f_01.png" alt="">
+        </div>
+        <div class="none">
+            <img src="assets/images/f_02.png" alt="">
+        </div>
+        <div class="none">
+            <img src="assets/images/f_03.png" alt="">
+        </div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 100,
+    mobile: true,
+    live: true
+});
+wow.init(); 
+
+var indexFn = function(){
+    var current = 0;
+    var moving = 0;
+    var len = $('section').length;
+    var fn = {
+        login: function(callback){
+            var acc = $('input[name="acc"]').val();
+            if( acc == '' ){
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function(res){
+                    account = acc;
+                    //res = 100; 若报名成功会员资料进入活動系統內【未審核】名單
+                    alert('您已报名成功！更多优惠内容请至金沙会官网查看！');
+                    $('.login').addClass('none');
+                    $('.popbox').fadeOut(300);
+                },
+                onFail: function(res){
+                    //res = 101; 输入错误帐号会员帐号
+                    alert('您输入的帐号有误！请至金沙会官网注册参加活动！');
+                    //res = 102; 若已报名会员
+                    alert('您已报名过了哦！更多优惠内容请至金沙会官网查看！');
+                }
+            });
+        },
+        home: function(){
+            window.open("https://8370.com");
+        },
+        cs: function(){
+            var url = 'https://messenger.providesupport.com/messenger/0n6xvlivgq25e01zpfa6hfr82r.html';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        move: function(){
+            $("body").on('touchmove',function(event) { 
+                event.preventDefault(); 
+            }, false);
+        },
+        sign: function(){
+            var _this = this;
+            $('.sign_btn').on('click',function(){
+                $('.login').removeClass('none');
+                $('#mdOverlay, #mdWindow').fadeIn(500);
+                _this.move();
+            });
+        },
+        rule: function(){
+            var _this = this;
+            $('.rule').on('click',function(){
+                $('.rule_block').removeClass('none');
+                $('#mdOverlay, #mdWindow').fadeIn(500);
+                _this.move();
+            });
+        },
+        move: function(){
+            $('html, body').stop().animate({
+                scrollTop: $(window).height()*current
+            },500,function(){
+                moving = 0;
+                //右邊箭頭
+                $('.float div').addClass('none').eq(current).removeClass('none');
+            });
+        },
+        ani: function(){
+            $('section').css({ opacity: '0', transition : 'opacity .5s ease-in-out'})
+            .eq(current).css({ opacity: '1', transition : 'opacity .2s ease-in-out'});
+        },
+        scroll: function(){
+            var _this = this;
+            $(window).bind('mousewheel DOMMouseScroll', function(event) {
+                //判斷向上滾動 或是向下
+                var delta = event.wheelDelta || -event.detail || event.originalEvent.wheelDelta || -event.originalEvent.detail;
+                if( moving == 0 ){
+                    moving = 1
+                    //往上滾 data 是正值 
+                    if(delta > 0){ 
+                        //up
+                        if( current > 0 ){ current--; }
+                    //往下滾 data 是負值
+                    }else{ 
+                        //down
+                        if( current < len-1){ current++; }
+                    }
+                    console.log(current)
+                }
+                _this.ani();
+                _this.move();
+            });           
+        },
+        init: function(){
+            var $this = this
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);
+                $this.scroll();
+            });
+
+            $('.down').on('click',function(){
+                event.preventDefault();
+                current += 1;
+                $this.ani();
+                $this.move();
+            });
+
+            $('.popclose').on('click',function(){
+                $('#mdWindow > div').addClass('none');
+                $('.popbox').fadeOut(300);
+            });
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="yes">
+    <title>圣诞狂欢节  好礼重磅来袭</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <section class="f1" data-id="top">
+        <!-- 共用header -->
+        <div class="header">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">    
+            <div class="title"></div>
+            <div class="gift">
+                <div class="area01"></div>
+                <div class="area02"></div>
+                <div class="area03"></div>
+            </div>
+            <div class="down"></div>
+        </div>
+    </section>
+    <!-- 投注风华夜 -->
+    <section class="f2" data-id="block01">
+        <!-- 共用header -->
+        <div class="header">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="title"></div>
+            <div class="time"></div>
+            <div class="text">
+                <div class="text-img"></div>
+                <a href="javascript:void(0);" class="sign_up" onclick="pageObj.sign();"></a>
+            </div>
+            <div class="down"></div>
+        </div>            
+    </section>
+
+    <!-- 存款全勤夜 -->
+    <section class="f3" data-id="block02">
+        <!-- 共用header -->
+        <div class="header">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="title"></div>
+            <div class="time"></div>
+            <div class="text">
+                <div></div> 
+                <div></div>
+                <p>备注：若累积天数不符合存款金额则不列入计算</p> 
+            </div>
+            <a href="javascript:void(0);" class="sign_up01" onclick="pageObj.sign();"></a>
+            <div class="down"></div>
+        </div>
+    </section>
+
+    <!-- 圣诞超级献礼 -->
+    <section class="f4" data-id="block03">
+        <!-- 共用header -->
+        <div class="header">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="title"></div>
+            <div class="time"></div>
+            <div class="text">
+                <div class="into-box">
+                    <p class="into-btn" data-id="bule-intor"></p>
+                    <p class="into-btn" data-id="robot-intor"></p>
+                    <p class="into-btn" data-id="Vr-glass-intor"></p>
+                </div>
+                <div class="imm-box">
+                    <div class="imm">
+                        <p class="enable"></p>
+                        <p class="word">抢礼12月18日 准时献礼</p>
+                    </div>
+                    <div class="imm">
+                        <p class="wait"></p>
+                        <p class="word">
+                            本日好礼已抢完<br>下次抢礼：
+                            <span>08:32:52</span>
+                        </p>
+                    </div>
+                    <div class="imm">
+                        <p class="imm-btn"></p>
+                        <p class="word">立即点击抢好礼！</p>
+                    </div>
+                </div>
+            </div>
+            <p>備註：活动期间内，每位会员限量抢购1份礼品！</p>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap clearfix">
+            <div class="left">
+                <img src="assets/images/f_left.png" alt="">
+            </div>
+            <div class="right">
+                <img src="assets/images/f_right.png" alt="">
+            </div>
+        </div>   
+    </footer>
+
+    <!-- 彈窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+
+        <!-- 收件資訊 -->
+        <div class="recevie none">
+            <div class="title">收件资讯</div>
+            <form>
+                <label>
+                    <span>收件人姓名</span>
+                    <input type="text" name="q1" class="ipt" id="name" value="">
+                </label>
+                <label>
+                    <span>收件人手机</span>
+                    <input type="text" name="q2" class="ipt" id="phone" value="">
+                </label>
+                <div>收件人地址</div>
+                <div class="addr">
+                    <label>
+                        <span>省份</span>
+                        <input type="text" name="q3" class="ipt" value="">
+                    </label>
+                    <label>
+                        <span>县区</span>
+                        <input type="text" name="q4" class="ipt" value="">
+                    </label>
+                    <label>
+                        <span>城市</span>
+                        <input type="text" name="q5" class="ipt" value="">
+                    </label>
+                    <label>
+                        <span>街道</span>
+                        <input type="text" name="q6" class="ipt" value="">
+                    </label>
+                </div>
+                <div class="detal-add">
+                    <label>
+                        <span>详细地址</span>
+                        <textarea name="" class="ipt" cols="30" rows="10" value=""></textarea>
+                    </label>
+                </div>
+            </form>
+            <button type="button" class="sent-out"></button>
+            <div class="close_btn popclose"></div>  
+        </div>
+
+        <!-- 登入 -->
+        <div class="login-box none">
+            <div>会员帐号</div>
+            <input type="text" name="acc" id="" value="">
+            <button type="button" class="login-in" onclick="pageObj.login();"></button>
+            <div class="close_btn popclose"></div>
+        </div>
+
+        <!-- 贈品資訊 -->
+        <div class="gift-box none">
+            <div class="product bule none">
+                <p>立体声铝合金蓝牙音响</p>
+                <p>实用完美手机架 走到哪听到哪</p>
+                <div>
+                    <img src="assets/images/bule.png" alt="">
+                </div>
+            </div>
+            <div class="product robot none">
+                <p>智能家庭扫地机器人</p>
+                <p>让优博分担您的辛劳</p>
+                <div>
+                    <img src="assets/images/robot.png" alt="">
+                </div>
+            </div>
+            <div class="product Vr-glass none">
+                <p>小米虚拟实境智能VR眼镜</p>
+                <p>戴上就舍不得拿下的科技新装备</p>
+                <div>
+                    <img src="assets/images/Vr-glass.png" alt="">
+                </div>
+            </div>
+            <button type="button" class="confirm"></button>
+            <div class="close_btn popclose"></div>
+        </div>
+
+    </div>
+    <!-- 浮動視窗 -->
+    <div class="float">
+        <a href="javascript:void(0);" class="area01">投注风华夜</a>
+        <a href="javascript:void(0);" class="area02">存款全勤夜</a>
+        <a href="javascript:void(0);" class="area03">圣诞超级献礼</a>
+        <a href="javascript:void(0);" class="gotop">TOP</a>
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function(){
+    var current = 0,
+        moving  = 0,
+        len     = $('section').length;
+    var fn = {
+        login: function(callback){
+            var acc = $('input[name="acc"]').val();
+            if( acc == '' ){
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function(res){
+                    //满足单日存款 100
+                    $('.login-box').addClass('none');
+                    $('.recevie').removeClass('none');
+                },
+                onFail: function(res){
+                    //未满足单日存款 101
+                    popup.alert('很抱歉您的单日存款尚未满足申请条件！');
+                    //已有申请记录 102
+                    popup.alert('感谢您对本活动的支持！我们将于近日寄出礼品！请特别留意优博站内信，寄出时将会通知您货单号！');
+                }
+            });
+        },
+        home: function(){
+            window.open("http://youbo5555.com");
+        },
+        cs: function(){
+            var url = 'https://liveperson.lp2chat.com/u2bet/';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        sign: function(){
+            window.open('http://evt.yobo66.me/form/59f17a6288746');
+        },
+        //彈窗特效
+        fadeIn: function(){
+            $('#mdOverlay, #mdWindow').fadeIn(500);
+            $('.gift-box').removeClass('none');
+        },
+        //收件人視窗判斷
+        jud: function(){
+            var input_t = false;
+            $('.recevie form input[type="text"]').each(function(index,el){
+                var text = $(this).val();
+                text == '' ? input_t = false : input_t = true;
+            });
+            return input_t;
+        },
+        sent: function(){
+            var _this = this;
+            $('.sent-out').on('click',function(){
+                var Input = _this.jud();
+                if(!Input){
+                    popup.alert('您有资料尚未填写!');
+                }else{
+                    popup.alert('谢谢您的参与！礼品将于申请后四周内以优博站内信通知您货单号！');
+                }
+            });
+        },
+        //詳細介紹按鈕
+        intor: function(){
+            var _this = this;
+            $('.into-btn').on('click',function(){
+                var intoBtn = $(this).attr('data-id');
+                _this.fadeIn();
+                if( intoBtn == 'bule-intor'){
+                    $('.bule').removeClass('none');
+
+                }else if( intoBtn == 'robot-intor' ){
+                    $('.robot').removeClass('none');
+
+                }else if( intoBtn == 'Vr-glass-intor' ){
+                    $('.Vr-glass').removeClass('none');
+                }
+            });
+        },
+        gift: function(){
+            var _this = this;
+            $('.gift div').on('click',function(){
+                var gck = $(this).attr('class');
+                if( gck == 'area01' ){
+                    current = $(this).index()+1;
+                    _this.move();
+                }else if( gck == 'area02' ){
+                    current = $(this).index()+3;
+                    _this.move();
+                }else if( gck == 'area03' ){
+                    current = $(this).index();
+                    _this.move();
+                }
+            });
+        },
+        float: function(){
+            var _this = this;
+            $('.float a').on('click', function(event) {
+                var Ck = $(this).attr('class');
+                event.preventDefault();
+                if( Ck == 'gotop' ){
+                    current = $(this).index()-3; 
+                    _this.move();
+                }else{
+                    current = $(this).index()+1;
+                    _this.move();
+                }
+            }); 
+        },
+        //全視窗滑動特效
+        scroll: function(){
+            var _this = this;
+            $(window).bind('mousewheel DOMMouseScroll', function(event) {
+                //判斷向上滾動 或是向下
+                var delta = event.wheelDelta || -event.detail || event.originalEvent.wheelDelta || -event.originalEvent.detail;
+                if( moving == 0 ){
+                    moving = 1;
+                    if(delta > 0){  //往上滾 data 是正值 
+                        if( current > 0 ){ current--; } //up
+                    }else{  //往下滾 data 是負值
+                        if( current < len-1){ current++; }  //down
+                    }
+                }
+                _this.move();     
+            });
+            _this.gift();   //第一頁三大顆按鈕       
+            _this.float();  // 右方浮動式窗按鈕
+        },
+        move: function(){
+            $('html, body').stop().animate({
+                scrollTop: $(window).height()*current
+            },500,function(){
+                moving = 0;               
+            });
+        },
+        init: function(){
+            var _this = this;
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);                
+                _this.scroll();
+            });       
+            //頁面下方按鈕     
+            $('.down').on('click',function(){
+                event.preventDefault();
+                current += 1;
+                _this.move();
+            });
+            //X與確定按鈕效果
+            $('.popclose, .confirm').on('click',function(){
+                $('#mdWindow > div').addClass('none');
+                $('.product').addClass('none');
+                $('.popbox').fadeOut(300);
+            });
+            //立即搶禮按鈕
+            $('.imm-btn').on('click',function(){
+                $('#mdOverlay, #mdWindow').fadeIn(500);
+                $('.login-box').removeClass('none');
+            });
+            _this.intor();
+            _this.sent();
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

@@ -1,0 +1,165 @@
+/* common */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+	padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.container { 
+	margin: 0 auto;
+	max-width: 1240px;
+	height: auto;
+}
+
+/* re-setting */
+body {
+  width: 100%;
+  height: auto;
+  background-image: url('../images/bg_2.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.overlay {
+  opacity: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* b1 */
+.b1 {
+  width: 100%;
+  height: 184px;
+}
+
+.b2 {
+  position: relative;
+  width: 100%;
+  height: 802px;
+}
+
+.b2 .member-box {
+  position: relative;
+  left: 165px;
+  top: -27px;
+  width: 905px;
+  height: 724px;
+  background-image: url('../images/icon12.png');
+  background-repeat: no-repeat;
+}
+
+.input-user {
+  display: inline-block;
+  position: absolute;
+  top: 213px;
+  left: 396px;
+  padding-left: 10px;
+  width: 277px;
+  height: 35px;
+  border: none;
+}
+
+.input-password {
+  display: inline-block;
+  position: absolute;
+  top: 301px;
+  left: 396px;
+  padding-left: 10px;  
+  width: 277px;
+  height: 35px;
+  border: none;
+}
+
+.input-confirm {
+  display: inline-block;
+  position: absolute;
+  top: 388px;
+  left: 396px;
+  padding-left: 10px;  
+  width: 277px;
+  height: 35px;
+  border: none;  
+
+}
+
+.input-check {
+  display: inline-block;
+  position: absolute;
+  top: 476px;
+  left: 396px;
+  padding-left: 10px;  
+  width: 154px;
+  height: 35px;
+  border: none;  
+
+}
+
+#checkNumber {
+  display: inline-block;
+  position: absolute;
+  top: 476px;
+  left: 568px;
+  padding-left: 10px;  
+  width: 104px;
+  height: 35px;
+  /* border: 1px solid red; */
+}
+
+#go-btn {
+  display: inline-block;
+  position: absolute;
+  top: 582px;
+  left: 227px;
+  width: 452px;
+  height: 50px; 
+  font-size: 0;
+  background-color: transparent; 
+  border: none;
+  outline: none;
+  
+}
+
+.b2-link-a,
+.b2-link-b {
+  display: block;
+  position: absolute;
+  right: -206px;
+  width: 167px;
+  height: 166px;
+}
+
+.b2-link-a {
+  top: 10px;
+  background-image: url('../images/icon14.jpg');
+  background-repeat: no-repeat;
+}
+
+.b2-link-b {
+  top: 194px;
+  background-image: url('../images/icon13.jpg');
+  background-repeat: no-repeat;
+}

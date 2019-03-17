@@ -1,0 +1,209 @@
+@charset "UTF-8";
+.bg-btm .mission div p,.bg-btm .rule p, 
+.bg-btm .rule i,header .btn-child {display: inline-block;vertical-align: middle;}
+.bg-top,.bg-mid,.bg-mid .box,.bg-btm,.bg-btm .mission,.login,.old-acc {
+  background-repeat: no-repeat;
+  background-position: 54% 100%;
+}
+/*-- 共用 --*/
+body {position: relative;background-color: #000919;}
+img {max-width: 100%;border-style: none;}
+.wrap {max-width: 1000px;margin: 0 auto;}
+.none {display: none;}
+.round {border-radius: 99em;background: #fff;width: 9px;height: 9px;}
+/* scrollbar 
+============================================== */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {border-radius: 4px;margin: 0px 0px 5px 0;}
+::-webkit-scrollbar-thumb {border-radius: 4px;background: #464646;}
+::-webkit-scrollbar-thumb:hover {background: #191919;}
+/* loading
+============================================== */
+.loading {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translate3d(0%, 0%, 0);
+          transform: translate3d(0%, 0%, 0);
+}
+.double-bounce1, .double-bounce2 {
+  top: 50%;
+  left: 50%;
+  opacity: 0.6;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {-webkit-animation-delay: -1.0s;animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce {
+  0%,100% {-webkit-transform: scale(0);}
+  50% {-webkit-transform: scale(1);}
+}
+@keyframes sk-bounce {
+  0%,100% {transform: scale(0);-webkit-transform: scale(0);}
+  50% {transform: scale(1);-webkit-transform: scale(1);}
+}
+/* 內容 
+============================================== */
+header {
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 41px 0 0;
+  position: absolute;
+}
+header .logo {
+  float: left;
+  width: 300px;
+  height: 62px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+header .btn-box {
+  float: right;
+  width: 200px;
+  height: 30px;
+  padding: 10px 0;
+  margin-top: 15px;
+  text-align: center;
+}
+header .home::after {
+  content: '|';
+  color: #fff;
+  width: 1px;
+  height: 10px;
+  margin: 0 10px;
+  display: inline-block;
+}
+section {width: 100%; margin: 0 auto;}
+.bg-top {background-image: url(../images/bg_top.jpg); width: 100%; height: 500px;}
+.bg-mid {
+  padding-top: 60px;
+  background-image: url(../images/bg_mid.jpg);
+  width: 100%;
+  height: 325px;
+}
+.bg-mid .box {
+  width: 100%;
+  height: 255px;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(../images/box.png);
+}
+.bg-btm {
+  width: 100%;
+  height: 1302px;
+  padding-top: 10px;
+  background-image: url(../images/bg_btm.jpg);
+}
+.bg-btm .mission {
+  width: 100%;
+  height: 640px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 149px 0 0 0;
+  background-image: url(../images/mis_bg.png);
+}
+.bg-btm .mission .fail,
+.bg-btm .mission .scss {
+  width: 685px;
+  height: 570px;
+  top: 35px;
+  left: -151px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 29%;
+  font-size: 55px;
+  color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+}
+.bg-btm .mission div {margin-left: 25%; text-align: left; margin-bottom: 20px;}
+.bg-btm .mission div img, 
+.bg-btm .mission div p {font-size: 21px; color: #fffefe;padding-left: 25px;}
+.bg-btm .mission div p.lock{color: #f00;}
+.bg-btm .mission .heap span {font-size: 17px;}
+.bg-btm .mission .btn_block {width: 90%;margin: 35px 23% !important;}
+.bg-btm .mission .btn_block button:first-child {margin-right: 65px;}
+.bg-btm .rule {width: 71%;margin: 0 auto;}
+.bg-btm .rule li {margin-bottom: 5px;}
+.bg-btm .rule li:nth-of-type(5) i, 
+.bg-btm .rule li:nth-of-type(9) i {vertical-align: top;margin-top: 7px;}
+.bg-btm .rule img {margin: 45px auto;display: block;}
+.bg-btm .rule p {margin-left: 10px;font-size: 16px;color: #fbf8d9;}
+.bg-btm .rule p span {color: #f6ff00;}
+.bg-btm .rule p a {text-decoration: underline;}
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+.close_btn {
+  width: 38px;
+  height: 38px;
+  top: 32px;
+  right: 36px;
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  background: url(../images/close.png) no-repeat top center;
+  background-size: cover;
+}
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 18px 0 10px;
+  position: absolute;
+}
+footer div {font-size: 12px; color: #142974;}
+/*==彈窗
+============================================== */
+.login {
+  padding-top: 158px;
+  background-image: url(../images/login_bg.png);
+  width: 678px;
+  height: 421px;
+}
+.login input {
+  width: 48%;
+  color: #fff;
+  height: 49px;
+  margin: 0 33%;
+  display: block;
+  font-size: 20px;
+  background: transparent;
+  padding-left: 10px;
+}
+.login div {margin: 8% auto; display: block; width: 62%;}
+.old-acc {
+  width: 675px;
+  height: 345px;
+  padding-top: 29%;
+  background-image: url(../images/old_bg.png);
+}
+.old-acc button {display: block; margin: 0 auto;}

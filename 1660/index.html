@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="yes">
+    <title>雪人的报恩 一家团圆拿1万8-打码3倍</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrap clearfix">
+            <a href="javascript:void(0)" target="_blank" class="logo" onclick=""></a>
+            <div class="btn-box">
+                <a href="javascript:void(0)" target="_blank" class="btn-child rule" onclick="pageObj.rule();"></a>
+                <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+                <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();"></a>
+            </div>
+        </div>
+    </div>
+    <section class="content-first">
+        <div class="wrap">
+            <div class="title"></div>
+            <div class="snow"></div>
+            <div class="story">
+                <!-- slide -->
+                <div class="slideshow">
+                    <ul>
+                        <li><img src="assets/images/book01.png"></li>
+                        <li><img src="assets/images/book02.png"></li>
+                        <li><img src="assets/images/book03.png"></li>
+                    </ul>
+                </div>
+                <!-- slide end -->
+            </div>
+            <div class="button">
+                <a href="#" class="pre"></a>
+                <a href="#" class="next"></a>
+            </div> 
+            <div class="dec">
+                <img src="assets/images/snow_man.png" class="snow-man">
+                <img src="assets/images/book.png" class="book">
+            </div>
+            <div class="down"></div>
+        </div> 
+    </section>
+    <section class="content-second">
+        <div class="wrap">
+            <div class="slide-two">
+                <!-- 上方選單 -->
+                <div class="slide-nav">
+                    <a href="javascript:void(0);" class="Prev active"></a>
+                    <a href="javascript:void(0);" class="Next"></a>
+                </div>
+                <!-- 內容 -->
+                <div class="slide-content">
+                    <div class="slider how-snow">
+                        <img src="assets/images/snow-man01.png" class="snow-man01" alt="">
+                        <button type="button" class="money-btn" onclick="pageObj.get_money();"></button>
+                    </div>
+                    <div class="slider snow-gift">
+                        <img src="assets/images/snow-man02.png" class="snow-man02" alt="">
+                        <img src="assets/images/snow-man03.png" class="snow-man03" alt="">
+                        <button type="button" class="money-btn" onclick="pageObj.get_money();"></button>
+                    </div>
+                </div>
+                <!-- 左右選單 -->
+                <div class="slide-arrow">
+                    <a href="javascript:void(0);" class="btn-left none"></a>
+                    <a href="javascript:void(0);" class="btn-right"></a>
+                </div>
+            </div>
+            <div class="down top"></div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap">Copyright © 金沙会娱乐城 Reserved</div>   
+    </footer>
+
+    <!-- 彈窗  -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+        <!-- 登入 -->
+        <div class="login none">
+            <div class="content">
+                <div>会员帐号</div>
+                <input type="text" name="acc" id="" value="">
+            </div>
+            <button type="button" class="login-in" onclick="pageObj.login();"></button>
+            <button type="button" class="sign-btn" onclick="pageObj.home();"></button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <!-- 規則 -->
+        <div class="rule none">
+            <div class="close_btn popclose"></div>
+        </div>
+          
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function(){
+    var current = 0,
+        moving  = 0,
+        $book = $('.book'),
+        len     = $('section').length;
+    var fn = {
+        login: function(callback){
+            var acc = $('input[name="acc"]').val();
+            if( acc == '' ){
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function(res){
+                    //会员若报名成功，会员帐号＆报名时间导入到后台
+                    $('#mdWindow > div').addClass('none');
+                    $('.popbox').fadeOut(300);
+                },
+                onFail: function(res){
+                    //会员若报名失败，输入错误帐号 101
+                    popup.alert('您输入的帐号有误！请至金沙会官网注册帐号参加活动！');
+                    //若已报名会员 102
+                    popup.alert('您已报名过了哦！更多优惠内容请至金沙会官网查看！');
+                }
+            });
+        },
+        home: function(){
+            window.open("http://8370.com/");
+        },
+        cs: function(){
+            var url = 'https://vp8.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=80000482&configID=2303&skillId=542&enterurl=JSH';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        rule: function(){
+            $('.popbox').fadeIn(300);
+            $('#mdWindow .rule').removeClass('none');
+        },
+        get_money: function(){
+            $('.popbox').fadeIn(300);
+            $('#mdWindow .login').removeClass('none');
+        },
+        //說故事slide
+        slider: function(){
+            var Slider = $('.slideshow');
+            var _this = this;
+            Slider.each(function () {
+                var current   = 0,
+                    $this     = $(this),
+                    SliderLi  = $this.find('li'),
+                    Sliderlen = SliderLi.length;
+
+                SliderLi.eq(current).fadeIn(500);
+                $('.pre').hide();
+                
+                $('.next').on('click', function () {
+                    var nextIndex = (current + 1) % Sliderlen;
+                    SliderLi.eq(current).fadeOut();
+                    SliderLi.eq(nextIndex).fadeIn();
+                    current = nextIndex;
+
+                    if (current === 2) {
+                        $(this).hide();
+                        SliderLi.eq(nextIndex).addClass('corner');
+                    } else if (current >= 1) {
+                        $(this).prev().show();
+                    }
+
+                    //右下折角
+                    if (SliderLi.eq(2).hasClass('corner')) {
+                        $('.dec .book').fadeOut();
+                    }
+                });
+                $('.pre').on('click', function () {
+                    var preIndex = (current - 1) % Sliderlen;
+                    SliderLi.eq(current).fadeOut();
+                    SliderLi.eq(preIndex).fadeIn();
+                    current = preIndex;
+
+                    SliderLi.eq(2).removeClass('corner');
+                    if (!SliderLi.eq(2).hasClass('corner')) {
+                        $('.dec .book').show();
+                    }
+
+                    if (current == 0) {
+                        $(this).hide();
+                    } else if (current <= 2) {
+                        $(this).next().show();
+                    }
+                });
+            });
+        },
+        //如何堆雪人slide
+        slide_two: function(){
+            var $this    = $('.slide-two'),
+                $nav     = $this.find('.slide-nav'),
+                $arrow   = $this.find('.slide-arrow'),
+                $content = $this.find('.slide-content'),
+                $slider  = $content.find('.slider'),
+                current;
+
+            $slider.eq(0).fadeIn();
+            function goto(){
+                var $Prev     = $nav.find('.Prev'),
+                    $Next     = $nav.find('.Next'),
+                    $btnLeft  = $arrow.find('.btn-left'),
+                    $btnRight = $arrow.find('.btn-right');
+                
+                $slider.fadeOut(10);
+                $slider.eq(current).fadeIn();
+            
+                if (current === 0) {
+                    $Prev.addClass('active');
+                    $Next.removeClass('active');
+                    $btnLeft.addClass('none');
+                    $btnRight.removeClass('none');
+                }
+                if (current === 1) {
+                    $Prev.removeClass('active');
+                    $Next.addClass('active');
+                    $btnLeft.removeClass('none');
+                    $btnRight.addClass('none');
+                }
+            }
+            $nav.on('click', 'a', function (event) {
+                current = $(this).index();
+                goto();
+            });
+            $arrow.on('click', 'a', function (event) {
+                current = $(this).index();
+                goto();
+            });
+        },
+        //全視窗滑動特效
+        scroll: function(){
+            var _this = this;
+            $(window).bind('mousewheel DOMMouseScroll', function(event) {
+                //判斷向上滾動 或是向下
+                var delta = event.wheelDelta || -event.detail || event.originalEvent.wheelDelta || -event.originalEvent.detail;
+                if( moving == 0 ){
+                    moving = 1;
+                    if(delta > 0){  //往上滾 data 是正值 
+                        if( current > 0 ){ current--; } //up
+                    }else{  //往下滾 data 是負值
+                        if( current < len-1){ current++; }  //down
+                    }
+                }
+                _this.ani();
+                _this.move();     
+            });
+        },
+        move: function(){
+            $('html, body').stop().animate({
+                scrollTop: $(window).height()*current
+            },500,function(){
+                moving = 0;               
+            });
+        },
+        ani: function(){
+            $('section').css({ opacity: '0.5', transition: 'opacity .3s ease-in-out' })
+            .eq(current).css({ opacity: '1', transition: 'opacity .3s ease-in-out' });
+        },
+
+        init: function(){
+            var _this = this;
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);                
+                _this.scroll();
+            });       
+            //頁面下方按鈕     
+            $('.down').on('click',function(){
+                event.preventDefault();
+                current += 1;
+                _this.move();
+                _this.ani();
+            });
+            $('.top').on('click', function () {
+
+                current -= 2;
+                _this.move();
+                _this.ani();
+            });
+            //X與確定按鈕效果
+            $('.popclose, .confirm').on('click',function(){
+                $('#mdWindow > div').addClass('none');
+                $('.popbox').fadeOut(300);
+            }); 
+            _this.slider();
+            _this.slide_two();
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

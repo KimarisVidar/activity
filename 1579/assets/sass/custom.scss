@@ -1,0 +1,333 @@
+@import "mixin";
+//陣列的運用 nth
+$color:#000, #fff, #ffe850;
+$font-size: 12px, 14px, 16px, 18px, 20px;
+
+/*-- 共用 --*/
+body{ background: #19254b;}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+img {max-width: 100%; border-style: none;}
+.wrap{ @include Wrap(1100px); }
+.none{display: none;}
+/* scrollbar */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0px 0px 5px 0;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #464646;
+}
+::-webkit-scrollbar-thumb:hover {background: #191919;}
+.apply_btn{
+    @include btn_style(165px, 85px, apply_btn);
+    background-size: cover;
+    position: absolute;
+    bottom: -9%;
+    left: 159px;
+}
+.sign_btn{
+    @include btn_style(165px, 85px, sign_btn);
+    background-size: cover;
+    position: absolute;
+    bottom: -45px;
+    right: 130px;
+}
+.receive_btn{
+    @include btn_style(165px, 85px, receive_btn);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+}
+.login_btn{
+    @include btn_style(240px, 130px, login_btn);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left:36%;
+}
+.sent_btn{
+    @include btn_style(240px, 130px, sent_btn);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left:36%;
+}
+/*-- *字符號 --*/
+.not_check::before {
+    content: '*';
+    font-size: 35px;
+    color: #f00;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: -20px;
+}
+
+/*-- 內容 --*/
+header{
+    width: 1915px;
+    height: 960px;
+    margin: 0 auto;
+    background: url(../images/top_bnr.jpg) no-repeat top center;
+}
+nav{
+    @include nav_style(10px);
+    @include Logo( logo,185px,65px);
+    @include Btn(300px, 35px);
+    @include Btn-child;
+    background-color: rgba(0,0,0, 0.5);
+    .home{ 
+        @extend %btn_wh;
+        @include Top_Btn(home_btn); 
+        margin-right: 30px;
+    }
+    .cus{
+        @extend %btn_wh;
+        @include Top_Btn(cus_btn);  
+    }
+}
+.top_btn{
+    width: 920px;
+    height: 205px;
+    margin: 25% auto 0;
+    div{ display: inline-block; vertical-align: middle; cursor: pointer;}
+    .n_day,.love,.vip{ @extend %bg_style; @extend %bg_style_cover;}
+    .n_day{ @include btn_style(300px,180px,n_day); margin-top: 20px;}
+    .love{ @include btn_style(305px,170px,love); margin-top: 20px;}
+    .vip{ @include btn_style(305px,170px,vip); }
+}
+.bg{
+    @include bg_style_J(bg,1915px,1607px);
+    margin: 0 auto;
+    position: relative;
+}
+.bg02{
+    @include bg_style_J(bg01,1915px,2001px);
+    margin: 0 auto;
+}
+.bg03{
+    @include bg_style_J(bg01,1915px,1155px);
+    margin: 0 auto;
+}
+section{
+    width: 100%;
+    margin: 0 auto;
+}
+#Na{
+    height: 1857px;
+    padding-top: 260px;
+    .title{
+        background: url(../images/box_title.png) no-repeat top center;
+        @include wh(845px, 136px);
+        background-size: cover;
+    }
+    .gift{
+        width: 100%;
+        margin: 5% auto;
+        div{
+            width: 49%;
+            height: 512px;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            margin-right: 1.5%;
+            background-color: #fff;
+            &:last-child{ margin: 0;}
+        }
+        .gifts01{
+            background: url(../images/gifts01.png) no-repeat top center;
+            background-size: cover;
+            .apply_btn{
+                left: 184px;
+            }
+        }
+        .gifts02{
+            background: url(../images/gifts02.png) no-repeat top center;
+            background-size: cover;
+            .apply_btn{
+                left: 179px;
+            }
+        }
+    }
+    .rule{margin-top: 10%;}
+}
+
+#Lo{
+    .title{
+        background: url(../images/box_title01.png) no-repeat top center;
+        @include wh(1032px, 170px);
+        background-size: cover;
+    }
+    .pre01{
+        background: url(../images/pre01.png) no-repeat top center;
+        height: 450px;
+        margin-top: 7%;
+        position: relative;
+        .apply{
+            bottom: -45px;
+            left: 73%;
+        }
+    }
+    .pre02{
+        background: url(../images/pre02.png) no-repeat top center;
+        height: 450px;
+        margin-top: 10%;
+        position: relative;
+    }
+    .rule{margin-top: 3%;}
+}
+
+#Vi{
+    .title{
+        background: url(../images/box_title02.png) no-repeat top center;
+        @include wh(1100px, 165px);
+        background-size: cover;
+    } 
+    .pre03{
+        background: url(../images/pre03.png) no-repeat top center;
+        height: 428px;
+        margin-top: 10%;
+        position: relative;
+    }
+}
+
+.float_win{
+    position: absolute;
+    right: 30px;
+    width: 190px;
+    .Btn{cursor: pointer;}
+    .float_t{
+        background: url(../images/float_t.png) no-repeat top center;
+        background-size: cover;
+        height: 131px;
+    }
+    .float01{
+        background: url(../images/float01.png) no-repeat top center;
+        background-size: cover;
+        height: 71px;
+    }
+    .float02{
+        background: url(../images/float02.png) no-repeat top center;
+        background-size: cover;
+        height: 85px;
+    }
+    .float03{
+        background: url(../images/float03.png) no-repeat top center;
+        background-size: cover;
+        height: 85px;
+    }
+    .top{
+        background: url(../images/top.png) no-repeat top center;
+        background-size: cover;
+        height: 220px;
+    }
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+}
+footer .footer_txt {
+    float: left;
+    width: 285px;
+    height: 61px;
+    background: url(../images/footer_txt.png) no-repeat top center;
+    background-size: cover;
+}
+footer .footer_url {
+    float: right;
+    margin: 15px 15px 0 0;
+    width: 239px;
+    height: 35px;
+    background: url(../images/footer_url.png) no-repeat top center;
+    background-size: cover;
+}
+
+@include mdOverlay;
+@include mdWindow;
+@include Close( close, 0px, -5%);
+.recevie{
+    width: 860px;
+    height: 810px;
+    padding: 130px 135px 0;
+    font-size: 18px;
+    background: url(../images/recevie_bg.png) no-repeat top center;
+    span{
+        color: #fff;
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+    }
+    p{
+        color: #fff;
+        font-size: 18px;
+    }
+}
+.login{
+    background: url(../images/member_bg.png) no-repeat top center;
+    width: 860px;
+    height: 405px;
+    position: relative;
+    input{
+        width: 430px;
+        height: 35px;
+        margin: 18% 29%;
+        background: rgba(255, 255, 255, 0.5);
+        padding-left: 10px;
+        color: #fff;
+    }
+}
+
+
+.bk1, .bk2, .bk3{
+    width: 95%;
+    margin: 0 auto;
+
+    label{
+        margin: 10px 0;
+        input{
+            height: 35px;
+            margin-left: 5px;
+            padding-left: 10px;
+        }
+    }
+}
+.bk1{
+    label{
+        width: 550px;
+        input{width: 80%; }
+    }
+}
+.bk2{
+    margin: 20px auto;
+    label{
+        width: 47%;
+        margin-right: 20px; 
+        input{width: 82%; }
+        &:nth-child(odd){
+            margin-right: 0px;
+        }
+    }
+}
+.bk3{
+    textarea{
+        width: 550px;
+        height: 195px;
+        resize: none; /* 禁止縮放 */
+        padding: 10px 0 0 10px;
+    }
+    p{
+        position: relative;
+    }
+}

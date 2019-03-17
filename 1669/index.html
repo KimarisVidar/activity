@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣诞遇惊喜</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/gridsystem.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <section>
+        <!-- 左邊區塊 -->
+        <div class="box-left">
+            <div class="logo" onclick="pageObj.home();"></div>
+            <div class="btn-box">
+                <a href="javascript:void(0)" target="_blank" class="left-btn-money"></a>
+                <a href="javascript:void(0)" target="_blank" class="left-btn-pro"></a>
+                <a href="javascript:void(0)" target="_blank" class="left-btn-rule"></a>
+            </div>
+        </div>
+        <!-- 中間區塊 -->
+        <div class="page animated">
+            
+            <!-- 獎金說明頁 -->
+            <div class="main animal">
+                <div class="content">
+                    <button type="button" class="content-btn" data-name="change-ball">前往换球</button>
+                </div>
+            </div>
+            <!-- 對獎流程 -->
+            <div class="process woman">
+                <div class="content">
+                    <button type="button" class="content-btn" data-name="change-ball">前往换球</button>
+                    <button type="button" class="content-btn-01" data-name="how-ball">拿更多彩球</button>
+                </div>
+            </div>
+            <!-- 活動細則 -->
+            <div class="rule animal">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <span>01</span>
+                            <div>活动时间：北京时间2017年12月15日中午12点至2018年1月5日中午12点止。</div>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <div>有效投注量计算区间：当日北京时间中午12点至隔日中午12点止。</div>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <div>六合彩搅珠日：依据香港马会的开奖时间及开奖结果为准，开奖日当天的21:00-22:00将暂停兑换彩球。</div>
+                        </li>
+                        <li>
+                            <span>04</span>
+                            <div>派彩说明：六合彩开奖后，系统将自动对奖，若有中奖将于每周三19:00前自动派奖 。</p>
+                        </li>
+                        <li>
+                            <span>05</span>
+                            <div>彩球兑换方式：单日<p>全馆有效投注量1,000</p>以上，即可于2天内点击【兑换彩球】按钮，兑换1组彩球号码。</p>
+                        </li>
+                        <li>
+                            <span>06</span>
+                            <div>每人单日投注量兑换上限为10组彩球。</p>
+                        </li>
+                        <li>
+                            <span>07</span>
+                            <div>奖金<p>打码1倍</p>可出款。</p>
+                        </li>
+                        <li>
+                            <span>08</span>
+                            <div>兑换彩球有效期限为2天，逾期未兑换视同放弃，例：11/9有效投注1万，11/10中午-11/12中午期间可兑换10颗彩球。</p>
+                        </li>
+                        <li>
+                            <span>09</span>
+                            <div>每日结算投注量，兑换完的剩馀投注量无法累计到隔日投注量。</p>
+                        </li>
+                        <li>
+                            <span>10</span>
+                            <div>参与此活动即表示同意<a href="javascript:void(0);" onclick="pageObj.rule_link();">《迪拜皇宫活动声明》</a>，迪拜皇宫拥有最终解释权。</p>
+                        </li>
+                    </ul>
+                    <button type="button" class="content-btn" data-name="change-ball">前往换球</button>
+                </div>
+            </div>
+            <!-- 倒數計時頁 -->
+            <div class="count woman">
+                <div class="content">
+                    <div class="count-num">
+                        <div class="hour">99</div>
+                        <div class="minute">99</div>
+                    </div>
+                    <div class="text">
+                        <p>目前您有<span>1</span>组圣诞彩球</p>
+                        <p>累计中奖金额<span>288</span>元</p>
+                    </div>
+                    <div class="count-btn">
+                        <button type="button" class="content-btn" data-name="EXchange-ball">兌換彩球</button>
+                        <button type="button" class="content-btn-01" data-name="how-ball">投注换更多彩球</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 體驗奇蹟(一開始顯示的頁面) -->
+            <div class="miracle woman">
+                <div class="content">
+                    <input type="text" name="acc" value="" placeholder="输入会员帐号登录">
+                    <button type="button" class="content-btn" onclick="pageObj.login();">确  认</button>
+                    <a href="javascript:void(0);" onclick="pageObj.home();">我先注册 ></a>
+                </div>
+            </div>
+            <footer>Copyright © 迪拜皇宫 Reserved</footer>
+        </div>
+        <!-- 右邊區塊 -->
+        <div class="box-right">
+            <div class="btn-box">
+                <a href="javascript:void(0)" target="_blank" class="btn-home" onclick="pageObj.home();"></a>
+                <a href="javascript:void(0)" target="_blank" class="btn-cus"  onclick="pageObj.cs();"></a>
+            </div>
+            <div class="snow-pic"></div>
+            <div class="acc-name">
+                <span>Hang123</span>
+                您好
+            </div>
+            <div class="lottery-ball">
+                <div class="ball">
+                    <div>
+                        <p>0</p>
+                        <p>颗圣诞彩球</p>
+                    </div>
+                    <button type="button" class="btnstyle" data-name="hastaken">已领彩球</button>
+                </div>
+                <div class="ball">
+                    <div>
+                        <p>0</p>
+                        <p>颗已对奖</p>
+                    </div>
+                    <button type="button" class="btnstyle" data-name="recode">中奖记录</button>
+                </div>
+            </div> 
+            <div class="lottery-result">
+                <div class="each-result">
+                    <div>每期开奖结果</div>
+                    <button type="button" class="btnstyle" data-name="checkNow">立即查询</button>
+                </div>
+                <div class="next-result">
+                    <div>下期开奖说明</div>
+                    <button type="button" class="btnstyle" data-name="checkNext">立即查询</button>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <!-- 彈跳視窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+        <div class="float-bg">
+            <div class="float-pic">
+                <div class="title">
+                    <!-- 如何拿更多圣诞彩球 -->
+                    <img src="assets/images/how_title.png" alt="" class="how-title">
+                    <!-- 我的彩球 -->
+                    <img src="assets/images/myball_title.png" alt="" class="myball-title">
+                    <!-- 我的彩球號碼 -->
+                    <img src="assets/images/myball_num_title.png" alt="" class="myball-num-title">
+                    <!-- 我的中獎紀錄 -->
+                    <img src="assets/images/mywin_title.png" alt="" class="mywin-title">
+                    <!-- 每周開獎結果 -->
+                    <img src="assets/images/week_results_title.png" alt="" class="week-results-title">
+                    <!-- 下期開獎說明 -->
+                    <img src="assets/images/next_lottery_title.png" alt="" class="next-lottery-title">
+                    <!-- 中獎通知 -->
+                    <img src="assets/images/win_notice_title.png" alt="" class="win_notice_title">
+                    <!-- 如何獲得彩球 -->
+                    <img src="assets/images/get_ball_title.png" alt="" class="get_ball_title">
+                    <!-- 兌換通知 -->
+                    <img src="assets/images/exchange_box_title.png" alt="" class="exchange_box_title">
+                </div>
+                <div class="float-content">
+                    <!-- 如何拿更多圣诞彩球 -->
+                    <div class="how-box">
+                        <img src="assets/images/how_text.png" alt="">
+                        <button type="button" class="content-btn" onclick="pageObj.home();">回官网游戏</button>
+                    </div>
+
+                    <!-- 我的彩球 -->
+                    <div class="myball-box ">
+                        <label for="">
+                            <div>查询区间</div>
+                            <select name="" id="">
+                                <option value="12">12月</option>
+                                <option value="1">1月</option>
+                            </select>
+                        </label>
+                        <form action="">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>兑换日期</th>
+                                        <th>获得彩球组数</th>
+                                        <th>中奖组数</th>
+                                        <th>中奖金额</th>
+                                        <th>号码详情</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>20</td>
+                                        <td>待开奖</td>
+                                        <td>待开奖</td>
+                                        <td>
+                                            <button type="button" class="check-btn" data-name="myballNum">查看</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>20</td>
+                                        <td>待开奖</td>
+                                        <td>待开奖</td>
+                                        <td>
+                                            <button type="button" class="check-btn" data-name="myballNum">查看</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>20</td>
+                                        <td>待开奖</td>
+                                        <td>待开奖</td>
+                                        <td>
+                                            <button type="button" class="check-btn" data-name="myballNum">查看</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>20</td>
+                                        <td>待开奖</td>
+                                        <td>待开奖</td>
+                                        <td>
+                                            <button type="button" class="check-btn" data-name="myballNum">查看</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>20</td>
+                                        <td>待开奖</td>
+                                        <td>待开奖</td>
+                                        <td>
+                                            <button type="button" class="check-btn" data-name="myballNum">查看</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+
+                    <!-- 我的彩球號碼 -->
+                    <div class="table-style myball-num">
+                        <div class="top clearfix">
+                            <div class="day">
+                                <p>兑换日：<span>2017/12/18</span></p>
+                                <p>开奖日：<span>2017/12/19</span></p>
+                            </div>
+                        </div>
+                        <form action="">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>中奖组数</th>
+                                        <th>特码</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    
+                    <!-- 我的中獎紀錄 -->
+                    <div class="table-style mywin-recode">
+                        <label for="">
+                            <div>查询区间</div>
+                            <select name="" id="">
+                                <option value="all">全部</option>
+                                <option value="171220">2017/12/20</option>
+                                <option value="171221">2017/12/21</option>
+                            </select>
+                        </label>
+                        <form action="">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>兑换日期</th>
+                                        <th>正码</th>
+                                        <th>特码</th>
+                                        <th>开奖期数</th>
+                                        <th>状态</th>
+                                        <th>派彩时间</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                        <td>17/124-1</td>
+                                        <td>待开奖</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                        <td>17/124-1</td>
+                                        <td>待开奖</td>
+                                        <td>2017/12/20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                        <td>17/124-1</td>
+                                        <td>待开奖</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                        <td>17/124-1</td>
+                                        <td>待开奖</td>
+                                        <td>--</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+
+                    <!-- 每期開獎結果 -->
+                    <div class="table-style week-results">
+                        <label for="">
+                            <div>查询区间</div>
+                            <select name="" id="">
+                                <option value="171220">2017/12/20</option>
+                                <option value="171221">2017/12/21</option>
+                            </select>
+                        </label>
+                        <form action="">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>搅珠日期</th>
+                                        <th>开奖期数</th>
+                                        <th>正码</th>
+                                        <th>特码</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>17/124-1</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>17/124-1</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>17/124-1</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017/12/20</td>
+                                        <td>17/124-1</td>
+                                        <td>01,07,12,18,26,34</td>
+                                        <td>08</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+
+                    <!-- 下期開獎說明 -->
+                    <div class="next-lottery">
+                        <div>
+                            <p>六合彩开奖日为：</p>
+                            <p class="red">2017/12/25</p>
+                        </div>
+                        <div>
+                            <p>开奖期数为：</p>
+                            <p class="red">17/124-1</p>
+                        </div>
+                        <div>当天的21:00-22:00将暂停兑换彩球</div>
+                    </div>
+                    
+                    <!-- 中獎通知 -->
+                    <div class="win-notice">
+                        <div>恭喜您对中上期六合彩开奖号码</div>
+                        <div>详情请至中奖记录查看</div>
+                        <button type="button" class="content-btn">立即查詢</button>
+                    </div>
+                    
+                    <!-- 如何獲得彩球 -->
+                    <div class="get-ball">
+                        <div>xx月xx日中午12点前加紧投注1000元</div>
+                        <div>即可兑换1颗彩球</div>
+                        <button type="button" class="content-btn" onclick="pageObj.home();">回官网游戏</button>
+                    </div>
+                    
+                    <!-- 兌換通知 -->
+                    <div class="exchange-box">
+                        <div>今天兑换的彩球已达上限了~</div>
+                        <div>今天再玩几场，明天来兑换吧!</div>
+                        <button type="button" class="content-btn" onclick="pageObj.home();">回官网游戏</button>
+                    </div>
+
+                    <!-- 彩球已兑换成功 -->
+                    <div class="succ-box">
+                        <p>彩球已兑换成功!</p>
+                        <button type="button" class="content-btn" data-name="hastaken">查看已领彩球</button>
+                    </div>
+
+                </div><!-- float-content -->
+            </div>
+        </div>
+        <div class="close_btn popclose" onclick="pageObj.HideWindow();"></div>
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function(){
+    var $page          = $('.page'),
+        $pageChildren  = $page.children('div'),
+        $title         = $('.title'),
+        $titleImg      = $('.title > img'),
+        $floatDiv      = $('.float-content > div'),
+        $btn           = $('.count-btn button:first-child'),
+        $balltext      = $('.count .text p:last-child'),
+        $ball          = $('.count .text p:first-child span').text(),
+        pBlock,
+        Data;
+        
+    var fn = {
+        login: function(callback){
+            var _this = this;
+            var acc   = $('input[name="acc"]').val();
+            if (acc == '') {
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function(res){
+                    //登入會員帳號成功，顯示活動首頁 100
+                    $pageChildren.hide();
+                    $pageChildren.eq(3).show();
+                },
+                onFail: function(res){
+                    //非會員帐号 101
+                    popup.alert('抱歉，您未成为本站会员，请进行免费注册');
+                }
+            });
+        },
+        home: function(){
+            window.open("https://399699.com");
+        },
+        cs: function(){
+            var url ='https://vp8.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=80000482&configID=2251&skillId=537&enterurl=DuBai';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        rule_link: function(){
+            window.open('https://www.486486.com/main/ot/faq/88');
+        },
+        mainBlock: function(pBlock){
+            $pageChildren.hide();
+            if( pBlock === 0 ){    
+                $pageChildren.eq(pBlock).show();
+            }else if( pBlock === 1 ){
+                $pageChildren.eq(pBlock).show();
+            }else if( pBlock === 2 ){
+                $pageChildren.eq(pBlock).show();
+            }
+        },
+        //按鈕事件
+        BtnClk: function(){
+            var _this = this;
+            switch (Data) {
+                //活動首頁
+                case 'change-ball':
+                    $pageChildren.hide();
+                    $pageChildren.eq(3).show();
+                    break;
+
+                //會顯示如何獲得彩球彈窗	
+                case 'short':
+                    _this.ShowWindow();
+                    $titleImg.eq(7).fadeIn();
+                    $floatDiv.eq(7).fadeIn();
+                    break;
+
+                //兌換彩球按鈕 → 彩球已兑换成功彈窗
+                case 'EXchange-ball':
+                    _this.ShowWindow();
+                    $title.fadeOut();
+                    $floatDiv.eq(9).fadeIn();
+                    break;
+
+                //如何拿更多彩球
+                case 'how-ball':
+                    _this.ShowWindow();
+                    $titleImg.eq(0).fadeIn();
+                    $floatDiv.eq(0).fadeIn();
+                    break;
+
+                //已領彩球彈窗 = 我的彩球彈窗
+                case 'hastaken':
+                    _this.Hide();
+                    _this.ShowWindow();
+                    $titleImg.eq(1).fadeIn();
+                    $floatDiv.eq(1).fadeIn();
+                    break;
+                
+                //我的彩球號碼
+                case 'myballNum':
+                    _this.Hide();
+                    $titleImg.eq(2).fadeIn();
+                    $floatDiv.eq(2).fadeIn();
+                    break;
+
+                //中獎紀錄
+                case 'recode':
+                    _this.ShowWindow();
+                    $titleImg.eq(3).fadeIn();
+                    $floatDiv.eq(3).fadeIn();
+                    break;
+                
+                //每期開獎結果<立即查詢>
+                case 'checkNow':
+                    _this.ShowWindow();
+                    $titleImg.eq(4).fadeIn();
+                    $floatDiv.eq(4).fadeIn();
+                    break;
+
+                //下期開獎結果<立即查詢>
+                case 'checkNext':
+                    _this.ShowWindow();
+                    $titleImg.eq(5).fadeIn();
+                    $floatDiv.eq(5).fadeIn();
+                    break;
+
+                default:
+                    break;
+            }
+        },
+        ShowWindow: function(){
+            $('#mdOverlay,#mdWindow').fadeIn();
+        },
+        HideWindow: function(){
+            $titleImg.fadeOut();
+            $floatDiv.fadeOut();
+            $('.popbox').fadeOut(100);
+        },
+        Hide: function(){
+            $titleImg.fadeOut(10);
+            $floatDiv.fadeOut(10);
+        },
+        //累積中獎金額 → 若没中过奖，隐藏这段话
+        not_win: function(){
+            $balltext.addClass('none');
+        },
+        //累積中獎金額 → 若有中奖将显示累积中奖金额
+        is_win:function(){
+            $balltext.removeClass('none');
+        },
+        //会员投注量不足/兑换完毕再次点击兑换(0組)
+        short_ball: function(){
+            $ball === '0' ? $btn.attr('data-name','short') : $btn.attr('data-name','EXchange-ball');
+        },
+        //达兑换上限下次登陆后，弹窗提醒
+        //兌換通知彈窗
+        over_ball: function(){
+            var _this = this; 
+            $btn.on('click',function(){
+                _this.ShowWindow();
+                $titleImg.eq(8).fadeIn();
+                $floatDiv.eq(8).fadeIn();
+            });
+        },
+        //系统自动对奖后第一次登录时出现
+        //中獎通知彈窗
+        winning: function(){
+            var _this  = this; 
+            _this.ShowWindow();
+            $titleImg.eq(6).fadeIn();
+            $floatDiv.eq(6).fadeIn();
+        },
+        init: function(){
+            var _this  = this;
+
+            _this.Hide();               //將所有彈窗隱藏
+            $pageChildren.hide();       //所有中間區塊內容隱藏
+            $pageChildren.eq(4).show(); //顯示活動首頁
+            
+            //右邊區塊按鈕
+            $('.btn-box').on('click','a',function(){
+                pBlock = $(this).index();
+                _this.mainBlock(pBlock)
+            });
+            //button按鈕
+            $('button').on('click',function(){
+                Data = $(this).attr('data-name');
+                _this.BtnClk(Data);
+            });
+            //彩球已兑换成功彈窗按鈕
+            $('.succ-box').on('click','button',function(){
+                $title.fadeIn();
+            });
+            //如何拿更多圣诞彩球彈窗按鈕
+            $('.how-box').on('click','button',function(){
+                _this.HideWindow();
+            });
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);
+            });
+            _this.short_ball();
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

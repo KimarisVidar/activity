@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣诞惊喜夜 彩金狂欢周</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <section class="main">
+        <div class="header">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();"></a>
+                </div>
+            </div>
+        </div>
+        <div class="Snow divSnow"> 
+            <div class="wrap">
+                <div class="title"></div>
+                <div class="top-btn">
+                    <div class="btn-star" data-page="star"></div>
+                    <div class="btn-hunter" data-page="hunter"></div>
+                    <div class="btn-lucky" data-page="lucky"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page animated">
+        <!-- $.post page -->
+    </section>
+    <footer>Copyright © 金赞娱乐城 Reserved</footer>
+
+    <!-- 彈跳視窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+        <!-- 登入頁面 -->
+        <div class="login-box none">
+            <input type="text" name="acc">
+            <button type="button" class="login-btn" onclick="pageObj.login();"></button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <!-- 隊伍名稱 -->
+        <div class="team-box none">
+            <input type="text" name="team-name">
+            <button type="button" class="team-btn"></button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <!-- 報名成功 -->
+        <div class="succ-box none">
+            <div class="time">
+                您已于 <span>2017-XX-XX</span> 报名成功
+            </div>
+            <div class="t-name">
+                這裡是隊伍名稱
+            </div>
+            <div class="close_btn popclose"></div>
+        </div>
+    </div>
+    
+    <!-- 浮動視窗 -->
+    <div class="f_window float-style">
+        <div class="top"></div>
+        <div class="mid">
+            <p class="fir" data-page="star"></p>
+            <p class="sec" data-page="hunter"></p>
+            <p class="thr" data-page="lucky"></p>
+            <p class="gotop"></p>
+        </div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script src="assets/js/Websnowjq.js"></script>
+<script>
+
+//頁面切換 
+var pagefu = function () {
+    var $this  = this;
+    this.goPage = function (page) {
+        // $('.page').removeClass('fadeIn');
+        $.post(page + '.html', {}, function (pg) {
+            $('.page').html(pg);
+        });
+    }
+    this.init = function () {
+        //一開始要顯示的頁面
+        $this.goPage('star')
+        $('.mid p, .top-btn div').on('click', function (event) {
+            var page = $(this).attr('data-page');
+            $('html,body').stop(true, false).animate({
+                scrollTop: $('.page').offset().top
+            }, 800);
+            $this.goPage(page);
+        });
+    }
+}
+var Nav = new pagefu();
+Nav.init();
+
+//其他function
+var indexFn = function () {
+    var $float = $(".f_window"),
+        Star   = $('.page > .star-box .sign-btn'),
+        Hunter = $('.page > .hunter-box .sign-btn');
+    var fn = {
+        login: function (callback) {
+            var _this = this;
+            var acc   = $('input[name="acc"]').val();
+            if (acc == '') {
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function (res) {
+                    //是金赞帐号但尚未报名，登入后，跳出【报名弹窗】100
+                    $('.login-box').addClass('none');        //close'登入'視窗
+                    $('.team-box').removeClass('none');      //open'報名'視窗
+                    $('#mdOverlay, #mdWindow').fadeIn(500);  //視窗背景
+
+                    //完成報名時
+                    $('#mdWindow > div').addClass('none');   //close所有視窗
+                    $('.popbox').fadeOut(300);               //將視窗背景淡出
+                },
+                onFail: function (res) {
+                    //非金赞帐号 101
+                    popup.alert('请再次确认您的金赞帐号是否有误，若有任何问题请与在线客服联系');
+
+                    //是金赞帐号且已报名，登入后，跳出【队伍弹窗】 102
+                    $('.succ-box').removeClass('none');
+                    $('#mdOverlay, #mdWindow').fadeIn(500);
+                }
+            });
+        },
+        sign: function(){
+            window.open("http://evt.jinzan.net/form/5a05812d0d5ac")
+        },
+        home: function () {
+            window.open("http://jz6655.com/");
+        },
+        cs: function () {
+            var url ='https://vp8.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=80000482&configID=2301&skillId=541&enterurl=JzPlay';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        scroll: function () {
+            var _this = this;
+            $float.addClass('none');
+            $(window).scroll(function () {
+                var wintop = $(window).scrollTop();
+                if (wintop > $('.main').offset().top + 750) {
+                    $float.removeClass('none');
+                    _this.navscroll(500);
+                } else {
+                    $float.addClass('none');
+                    _this.navscroll(500);
+                }
+            });
+        },
+        navscroll: function (speed) {
+            $(window).scroll(function () {
+                $float.stop().animate({
+                    "top": $(window).scrollTop()
+                }, speed);
+            });
+            return false;
+        },
+        //登入按鈕
+        Sign_btn: function(){
+            $('.login-box').removeClass('none');
+            $('#mdOverlay, #mdWindow').fadeIn(500);
+        },
+        init: function () {
+            var _this  = this;
+            var $width = window.innerWidth;
+            var Body   = $('body');
+
+            $('.mid p, .top-btn div').on('click', function (event) {
+                var pName = $(this).attr('data-page');
+                
+                if( $width === 1366 && pName === 'hunter' ){
+                    Body.css({'height': '36vmin'});
+                }else if( $width === 1024 && pName === 'hunter' ){
+                    Body.css({'height': '24vmin'});
+                }
+
+                if( $width === 1366 && pName === 'lucky' ){
+                    Body.css({'height': '30vmin'});
+                }
+
+                if( $width === 1024 && pName === 'lucky' ){
+                    Body.css({'height': '26vmin'});
+                }
+            });            
+
+            $('body').preload(function() {
+                $('.loading').fadeOut(500);
+            });
+
+            $('.gotop').on('click',function(){
+                $('html, body').stop().animate({
+                    scrollTop:0
+                },800);
+            });
+            
+            $('.popclose, #mdOverlay').on('click',function(){
+                $('#mdWindow > div').addClass('none');
+                $('.popbox').fadeOut(300);
+            });
+            $(".divSnow").websnowjq({ snowFlakes: 200 }); 
+            _this.scroll();
+            _this.navscroll(500);
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+
+</html>

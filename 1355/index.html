@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放肆过五一 留言拿新机</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/scrollbar/jquery.Scrollbar.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header_top">
+            <div class="header_wrap clearfix">
+                    
+                <!-- logo -->
+                <a href="http://87080.com/" target="_bank" class="logo"></a>
+
+                <div class="header_right">
+                <!-- 回官網 -->
+                    <a href="http://87080.com/" target="_bank" class="home"></a>
+                <!-- 再線客服 -->
+                    <a href="https://messenger.providesupport.com/messenger/0n6xvlivgq25e01zpfa6hfr82r.html" target="_bank" class="custom"></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="header_bottom"></div>
+    </header> 
+    
+    <!-- content -->
+    <div class="content">
+
+        <div class="content_wrap">
+
+            <div class="content_left">
+
+                <!-- 得獎按鈕 -->
+                <a href="http://www.jshxxcl.com/51laborday/" target="bank" onclick="win()" class="winner_btn"></a>
+            </div>
+
+            <div class="content_right">
+                <form class="top_form" action="">
+                    <!-- 會員帳號 -->
+                    <input type="text" name="member" class="member" placeholder="輸入會員帳號。">
+                    <!-- 輸入文字框 -->
+                    <textarea type="text" name="text_con" class="text_con" placeholder="（非必填）输入我想说的话。填写内容不可为全特殊符号。"></textarea>
+
+                    <button type="button" class="Enter"></button>
+                </form>
+
+                <!-- 送出按鈕 -->
+                
+
+                <!-- 留言內容 -->
+                <div class="txt">
+                    <ul class="bxslider">
+                        <li>
+                            <div class="title">
+                                <p class="t_left">会员帐号</p>
+                                <p>内容</p>
+                            </div>
+                            <div class="txt_content">
+                                <p class="txt_left">xxxgoobob</p>
+                                <p>说：</p>
+                                <p class="txt_right">
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您谢您
+
+                                </p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="title">
+                                <p class="t_left">会员帐号</p>
+                                <p>内容</p>
+                            </div>
+                            <div class="txt_content">
+                                <p class="txt_left">xxxgoobob</p>
+                                <p>说：</p>
+                                <p class="txt_right">
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您谢您
+
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <p class="t_left">会员帐号</p>
+                                <p>内容</p>
+                            </div>
+                            <div class="txt_content">
+                                <p class="txt_left">xxxgoobob</p>
+                                <p>说：</p>
+                                <p class="txt_right">
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您谢您
+
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <p class="t_left">会员帐号</p>
+                                <p>内容</p>
+                            </div>
+                            <div class="txt_content">
+                                <p class="txt_left">xxxgoobob</p>
+                                <p>说：</p>
+                                <p class="txt_right">
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您的帮
+                                    前阵子谢谢您的帮助阿前阵子谢谢您谢您
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0);" target="_bank" class="more">更多留言</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 提示畫面 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox">
+	    <a href="https://www.epay-jsh.com/" target="blank" class="epay"></a>
+	    <a href="javascript:void(0);" class="know mdClose popclose"></a>
+    </div>
+
+    <!-- 留言板內容 -->
+    <div class="container popbox">
+        <div class="message_top clearfix">
+            <a href="javascript:void(0);" class="popclose"></a>
+        </div>
+        <div class="message_mid">
+            <div class="txt_content">
+                <table width="490" class="allmsg">
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：前阵子谢谢您的帮助阿！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgt123</td>
+                        <td>说：他奶奶低，我都三个礼拜没放过假了！</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxbyokl</td>
+                        <td>说：领导，哪时给我涨工资阿？</td>
+                    </tr>
+                    <tr>
+                        <td width="125">xxxgoobob</td>
+                        <td>说：领导，都三年了, 涨一下工资吧</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="message_bottom">
+            <p>最后更新时间：2017年04月21日 23:59</p>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <footer>
+        <p>Copyright © 金沙会 Reserved </p>
+    </footer>  
+
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="assets/js/scrollbar/jquery.Scrollbar.js"></script>
+<script>
+var cs = function() {
+    var url = 'https://liveperson.lp2chat.com/u2bet/';
+    window.open(url, 'newwindow', 'width=800,height=600');
+}
+
+
+//送出帳號&留言
+var sumbit = function() {
+    acc = $.trim($('.member').val());
+    if (acc) {
+        $.post("",{"send":acc},function(rt){
+            var obj = json_decode(rt);
+            switch(obj.code){
+            	//送出成功
+                case "100":{
+					alert('成功。');
+					reset(); //清空帳號和留言欄位內容
+                }break;
+                //已參加過
+                case "101":{
+					alert('您已参加过活动。');
+					$('.Enter').css({
+						'opacity': .5,
+						'cursor' : 'not-allowed'
+					}).unbind();
+					$('.member').val(obj.acc);
+					$('.text_con').val(obj.msg);
+                }break;
+                //会员不符合资格
+                case "102":{
+					notmet(); //存款不足彈跳提示
+					reset(); 
+                }break;
+                //查無帳號
+                case "103":{
+					alert('请确认帐号是否存在。');
+					reset();
+                }break;
+            }
+        });
+    }else{
+        alert('请填入帐号')
+    }
+}
+
+//清空帳號和留言欄位內容
+var reset = function(){
+	$('.member, .text_con').val('');
+
+}
+
+//存款不足彈跳提示
+var notmet = function(){
+	$('#mdOverlay, #mdWindow').fadeIn(500);
+}
+
+//彈跳視窗
+$(function(){
+
+	//關閉彈窗 & 遮罩
+   	$('.popclose').on('click',function(){
+        $('.popbox').fadeOut(300);
+    });
+
+   	//綁定送出事件
+   	$('.Enter').bind('click',function(event) {
+   		sumbit();
+   	});
+
+   	//更多留言
+   	$('.more').click(function(event) {
+   		$('#mdOverlay, .container').fadeIn(500);
+   	});
+   	
+
+   	//載入立即執行取留言內容
+   	//getmag();
+   	var getmag = function(){
+   		$('.inxMsg,.allmsg').html('');
+   		$.post("",function(rt){
+            var obj = json_decode(rt);
+            switch(obj.code){
+            	//成功
+                case "100":{
+                	var msg = $('.inxMsg');
+					for (var i=0 ; i<4; i++) {
+                        if(obj.msg[i]){
+                        	msg.append('<tr><td width="125">'+obj.msg[i].acc+'</td><td>说：'+obj.msg[i].text+'</td></tr>')
+                        }
+                    }
+                    var allmsg = $('.allmsg');
+                    for (x in obj.msg) {
+                        if(obj.msg[x]){
+                        	allmsg.append('<tr><td width="125">'+obj.msg[x].acc+'</td><td>说：'+obj.msg[x].text+'</td></tr>')
+                        }
+                    }
+
+                    $('.message_bottom').html('<p>最后更新时间：'+obj.time+'</p>')
+                }break;
+            }
+        });
+   	}
+
+    $('.bxslider').bxSlider();
+
+    $('.message_mid').mCustomScrollbar({
+        theme:"dark-3",
+        scrollbarPosition : "outside"
+    });
+
+});
+
+</script>
+
+</html>

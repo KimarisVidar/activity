@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>情暖过端午 好礼在金赞</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/magic.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="wrap clearfix">
+                
+                <a href="http://jz3366.com/" target="_blank" class="logo"></a>
+
+                <div class="nav-btn">
+                    <a href="https://liveperson.lp2chat.com/jzplay/" target="_blank" class="cus"></a>
+                    <a href="http://jz3366.com/" target="_blank" class="home"></a> 
+                </div>
+
+            </div>
+            <!--wrap-->
+        </div>
+
+        <div class="header-wrap wrap">
+            <div class="header-btn">
+                <ul>
+                    <li><a href="javascript:void(0);" data-name="vip" class="vip-btn scrollbtn"></a></li>
+                    <li><a href="javascript:void(0);" data-name="charge" class="charge-btn scrollbtn"></a></li>
+                    <li><a href="javascript:void(0);" data-name="game" class="game-btn scrollbtn"></a></li>
+                </ul>
+            </div>
+            <!-- header-btn -->
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="vip-box">
+            <div class="wrap clearfix">
+                <div id="vip">
+                    <a href="javascript:void(0);" class="sginUp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="chrage-box">
+            <div class="wrap">
+                <div id="charge">
+                    <a href="javascript:void(0);" class="sginUp-1"></a>
+                </div>
+            </div>
+        </div>
+        <div class="game-box">
+            <div class="wrap">
+                <div id="game">
+                    <a href="javascript:void(0);" class="sginUp-2"></a>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <footer>
+        <div class="wrap">
+            <p>Copyright © 金赞娱乐城 Reserved</p>
+        </div>
+    </footer>
+
+    <!-- 浮動視窗 -->
+    <div class="window">
+        <a href="javascript:void(0);" data-name="vip" class="w_vip scrollbtn"></a>
+        <a href="javascript:void(0);" data-name="charge" class="w_charge scrollbtn"></a>
+        <a href="javascript:void(0);" data-name="game" class="w_game scrollbtn"></a>
+        <a href="http://jz3366.com/" target="bank" class="w_btn">官方网站</a>
+        <a href="https://liveperson.lp2chat.com/jzplay/" target="bank" class="w_btn">在线客服</a>
+        <a href="javascript:void(0);" data-name="top" class="gotop scrollbtn">返回顶端</a>
+    </div>
+
+    <!-- 提示畫面 -->
+    <div id="mdOverlay" class="popbox"></div>
+
+    <!-- 彈跳VIP -->
+    <div id="mdWindow" class="popbox">
+        <div class="w_vipbox">
+            <input type="text" name="member" class="member vip_member" placeholder="请输入您的会员帐号">
+
+            <select name="select" class="select">
+                <option value="nothing"></option>
+                <option value="vr">小米VR</option>
+                <option value="robot">机器人监视器</option>
+            </select>
+
+            <a href="javascript:void(0);" class="member_btn vip_Enter"></a>
+        </div>
+        <a href="javascript:void(0);"  class="sign_close popclose"></a>
+    </div>
+
+    <!-- 彈跳charge -->
+    <div id="mdWindow_charge" class="popbox">
+        <div class="w_chargebox">
+            <input type="text" name="member" class="member charge_member" placeholder="请输入您的会员帐号">
+            <a href="javascript:void(0);" class="member_btn charge_Enter"></a>
+        </div>
+        <a href="javascript:void(0);"  class="sign_close popclose"></a>
+    </div>
+
+    <!-- 彈跳game -->
+    <div id="mdWindow_game" class="popbox">
+        <div class="w_gamebox">
+            <input type="text" name="member" class="member game_member" placeholder="请输入您的会员帐号">
+            <a href="javascript:void(0);" class="member_btn game_Enter"></a>
+        </div>
+        <a href="javascript:void(0);"  class="sign_close popclose"></a>
+    </div>
+
+    <!-- 彈跳收貨資料 infor -->
+    <div id="mdWindow_infor" class="popbox">
+        <div class="w_inforbox">
+
+            <form class="np" action="">
+                <input type="text" name="member" class="member" placeholder="">
+                <br>
+                <input type="text" name="phone" class="member phone" placeholder="">
+                <br>
+            
+            </form>
+
+            <form class="address" action="">
+                <input type="text" name="province" class="member province" placeholder="">
+                <input type="text" name="block" class="member block" placeholder="">
+                <br>
+                <input type="text" name="city" class="member city" placeholder="">
+                <input type="text" name="street" class="member street" placeholder="">
+            </form>
+
+            <textarea name="message" class="textarea">
+
+            </textarea>
+
+            <a href="javascript:void(0);" class="member_btn Enter"></a>
+
+        </div>
+        <a href="javascript:void(0);"  class="sign_close popclose"></a>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="assets/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+var cs = function() {
+    var url = 'https://liveperson.lp2chat.com/u2bet/';
+    window.open(url, 'newwindow', 'width=800,height=600');
+}
+
+//vip數碼禮
+var sumbit_vip = function() {
+    acc = $.trim($('.vip_member').val());
+    if (acc) {
+        $.post("",{"send":acc},function(rt){
+            var obj = json_decode(rt); 
+            switch(obj.code){
+                //符合存款3次以上
+                case "100":{
+                    inforbox();
+                    reset();
+                }break;
+                //未符合
+                case "101":{
+                    alert('您于活动期间内存款次数尚未超过3次，请进行存款，并于存款5分钟后回到此页面进行报名');
+                    reset();
+                }break;
+            }
+        });
+    }else{
+        alert('请填入帐号')
+    }
+}
+
+//充電寶 charge
+var sumbit_charge = function() {
+    acc = $.trim($('.charge_member').val());
+    if (acc) {
+        $.post("",{"send":acc},function(rt){
+            var obj = json_decode(rt); 
+            switch(obj.code){
+                //符合单笔存款500元以上
+                case "102":{
+                    inforbox();
+                    reset();
+                }break;
+                //未註冊
+                case "103":{
+                    alert('请再次确认您的金赞娱乐城帐号是否有误，若未注册请至官网进行注册');
+                    reset();
+                }break;
+                //未符合单笔存款500元以上
+                case "104":{
+                    alert('您于活动期间内存款次数尚未超过3次，请进行存款，并于存款5分钟后回到此页面进行报名');
+                    reset();
+                }break;
+            }
+        });
+    }else{
+        alert('请填入帐号')
+    }
+}
+
+//奪標賽 game
+var sumbit_game = function() {
+    acc = $.trim($('.game_member').val());
+    if (acc) {
+        $.post("",{"send":acc},function(rt){
+            var obj = json_decode(rt); 
+            switch(obj.code){
+                //若该帐号【真实帐号】
+                case "105":{
+                    alert('感谢您的报名！请完成指定规则条件，即可参加盈利夺标赛，获得最大奖5,888元！');
+                    reset();
+                }break;
+                //【未注册/帐号错误】
+                case "106":{
+                    alert('请确认您的金赞娱乐城帐号是否错误，若您未注册请至金赞娱乐城官网进行注册，有任何帐号以及游戏问题欢迎与7X24在线客服联系');
+                    reset();
+                }break;
+                //已报名
+                case "107":{
+                    alert('尊贵的会员您好，您完成【粽情端午 盈利夺标赛】报名，请完成指定规则条件，即可参加盈利夺标赛，获得最大奖5,888元！');
+                    reset();
+                }break;
+                //报名成功会员，帐号导入到后台
+                case "108":{
+                    reset();
+                }break;
+            }
+        });
+    }else{
+        alert('请填入帐号')
+    }
+}
+
+//視窗滾動
+$(function() {
+    $('.scrollbtn').click(function(event) {
+        var name = $(this).attr('data-name');
+        var top;
+
+        name == "top" ? top = 0 : top = $('#'+ name).offset().top;
+
+        $('body,html').animate({
+            'scrollTop': top
+        }, 650)
+
+    });
+
+    var navscroll = function(speed){
+        $(".window").stop().animate({
+            "top": $(window).scrollTop() + 110
+        }, speed);
+    }
+    navscroll(500);
+
+    //不顯示浮動視窗
+    $('.window').hide();
+    //當視窗滾動的時候
+    $(window).scroll(function(){
+
+        //抓視窗滾動的高度
+        var wintop = $(window).scrollTop();
+
+        if(wintop > $('#vip').offset().top - 100){
+            $('.window').show().addClass('show'); 
+            navscroll(500);
+        
+        }else{
+            $('.window').hide().removeClass('show');
+            navscroll(0);
+        }
+    });
+//視窗滾動 END
+    
+    //綁定送出事件
+    $('.vip_Enter').bind('click',function(event) {
+        sumbit_vip();
+    });
+    $('.charge_Enter').bind('click',function(event) {
+        sumbit_charge();
+    });
+    $('.game_Enter').bind('click',function(event) {
+        sumbit_game();
+    });
+    
+    //我要報名
+    $('.member_btn').on('click',function(){
+        $('#mdOverlay').fadeIn(500);
+    });
+
+    $('.sginUp').on('click',function(){
+        $('#mdOverlay, #mdWindow').fadeIn(500);
+    });
+
+    $('.sginUp-1').on('click',function(){
+        $('#mdOverlay, #mdWindow_charge').fadeIn(500);
+    });
+
+    $('.sginUp-2').on('click',function(){
+        $('#mdOverlay, #mdWindow_game').fadeIn(500);
+    });
+
+    //關閉彈窗 & 遮罩
+    $('.popclose, #mdOverlay').on('click',function(){
+        $('.popbox').fadeOut(300);
+    });
+    
+    //清空帳號和留言欄位內容
+    var reset = function(){
+        $('.vip_member,.charge_member,.game_member').val('');
+    }
+
+    //顯示收貨視窗 inforbox
+    function inforbox(){
+        $('#mdWindow_infor').css('display','block');
+        $('#mdOverlay, #mdWindow_infor').fadeIn(500);
+    }
+
+    
+
+});
+
+</script>
+
+</html>

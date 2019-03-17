@@ -1,0 +1,227 @@
+// 通用樣式
+@mixin bg-style($i){
+    background: {
+        image: url(../images/#{$i}.png);
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+@mixin btn_style($width,$height,$img){
+    width: $width;
+    height: $height;
+    background: url(../images/#{$b}.png) no-repeat top center;
+}
+@mixin bg_png($i){
+    background-image: url(../images/#{$i}.png);
+}
+@mixin bg_jpg($i){
+    background-image: url(../images/#{$i}.jpg);
+}
+@mixin bg_P($width,$height,$name){
+    width: $width;
+    height: $height;
+    background-image: url(../images/#{$name}.png);
+}
+@mixin bg_J($width,$height,$name){
+    width: $width;
+    height: $height;
+    background-image: url(../images/#{$name}.jpg);
+}
+//文字大小與顏色
+@mixin font_style($size,$color){ 
+    font-size: $size; 
+    color: $color;
+}
+//寬與高
+@mixin wh($M_width,$M_height){ 
+    width: $M_width; 
+    height: $M_height;
+}
+/*活動頁header
+==============================================================*/
+@mixin Header($padding){
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: $padding;
+}
+//LOGO
+@mixin Logo($img,$imgWidth,$imgHeight){
+    .logo{
+        float: left;
+        width: $imgWidth;
+        height: $imgHeight;
+        background: url(../images/#{$img}.png) no-repeat top center;
+        background-size: cover;
+    }
+}
+//header選單
+@mixin Btn($btn_width,$btn_height){
+    .btn-box{
+        float: right;
+        width: $btn_width;
+        height: $btn_height;
+        text-align: center;
+    }
+}
+//header子選單
+@mixin Btn_child{
+    .btn-child{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+/* 彈窗
+==============================================================*/
+/*
+<div id="mdOverlay" class="popbox"></div>
+<div id="mdWindow" class="popbox sign">
+    <div class="close_btn popclose"></div>
+</div>
+*/
+@mixin mdOverlay{
+    #mdOverlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        position: fixed;
+        z-index: 97;
+        background: rgba(0, 0, 0, 0.97);
+        display: none;
+    }
+}
+@mixin mdWindow{
+    #mdWindow {
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        z-index: 98;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+                transform: translate3d(-50%, -50%, 0);
+        display: none;
+    }
+}
+//關閉按鈕
+@mixin Close($img,$width,$height,$top,$right){
+    .close_btn {
+        top: $top;
+        right: $right;
+        width: $width;
+        height: $height;
+        cursor: pointer;
+        position: absolute;
+        background: url(../images/#{$img}.png) no-repeat top center;
+        background-size: cover;
+        z-index: 100;
+    }
+}
+/* loading
+==============================================================*/
+/*
+<div class="loading">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+*/
+@mixin load{
+    .loading {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.7);
+        -webkit-transform: translate3d(0%, 0%, 0);
+                transform: translate3d(0%, 0%, 0);
+      }
+      .double-bounce1, .double-bounce2 {
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        opacity: 0.6;
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ccc;
+        animation: sk-bounce 2.0s infinite ease-in-out;
+        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+      }
+      .double-bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+      @-webkit-keyframes sk-bounce{
+        0%,100% {-webkit-transform: scale(0);}
+        50% {-webkit-transform: scale(1);}
+      }
+      @keyframes sk-bounce{
+        0%,100% {transform: scale(0); -webkit-transform: scale(0);}
+        50% {transform: scale(1); -webkit-transform: scale(1);}
+      }
+}
+/* scrollbar 
+==============================================================*/
+@mixin scrollbar{
+    ::-webkit-scrollbar {width: 5px;}
+    ::-webkit-scrollbar-track {border-radius: 4px; margin: 0px 0px 5px 0; background: #4a0508;}
+    ::-webkit-scrollbar-thumb {border-radius: 4px; background: #000000;}
+}
+/* media
+==============================================================*/
+@mixin media{
+    @media screen and (max-width: 1366px){}
+    @media screen and (max-width: 1280px){}
+    @media screen and (max-width: 1024px){}
+    @media screen and (max-width: 990px){}
+    @media screen and (max-width: 800px){}
+    @media screen and (max-width: 768px){}
+    @media screen and (max-width: 640px){}
+    @media screen and (max-width: 480px){}
+    @media screen and (max-width: 414px){}
+    @media screen and (max-width: 375px){}
+    @media screen and (max-width: 360px){}
+    @media screen and (max-width: 320px){}
+}
+/* grid
+==============================================================*/
+//cloum_num 欄位數量, cloum_gut 欄位間距
+@mixin grid($cloum_num, $cloum_gut){
+    width: ($width - $cloum_gut*($cloum_num - 1) )/ $cloum_num;
+    margin-right: $cloum_gut;
+}
+//&:nht-child(#{$cloum_num}n){}
+
+
+/* extend
+==============================================================*/
+%inline-block{
+    display: inline-block;
+    vertical-align: middle;
+}
+%bg_style{
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+%bg_cover{
+    background-size: cover;
+}
+%btn_Pos{
+    background-repeat: no-repeat;
+    background-position: top;
+}
+%btn_Pos_hover{
+    background-position: bottom;
+}
+%wh{
+    width: 80px;
+    height: 40px;
+}
+//陣列的運用 nth
+//color:nth($font-size,2)
+$color:#000, #fff, #ffe850;
+$font-size: 12px, 14px, 16px, 18px, 20px;
+/*
+    lighten(red, 50%) //增亮50%
+    darken(blue, 50%) //變暗50%
+*/
+
+

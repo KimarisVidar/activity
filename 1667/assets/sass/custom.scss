@@ -1,0 +1,520 @@
+@import "mixin";
+/*-- 共用 --*/
+body{position: relative; overflow: auto;}
+img {max-width: 100%; border-style: none;}
+a, a:hover,a:focus{text-decoration: none;}
+.wrap{width: 1021px; margin: 0 auto; display: block;}
+.down{
+    @include bg_P(134px,55px,down);
+    @extend %bg_style;
+    position: absolute;
+    bottom: 3em;
+    left: 43%;
+    cursor: pointer;
+    z-index: 99;
+}
+.left{float: left;}
+.right{ float: right;}
+.none{display: none;}
+button.sign-btn{
+    @include bg_P(330px,102px,sign_btn);
+    margin: 20px auto;
+    display: block;
+}
+button.cus-btn{
+    @include bg_P(335px,105px,cus_btn);
+    margin: 20px auto;
+    display: block;
+}
+.red{color: #f22634 !important;}
+/* scrollbar 
+==============================================================*/
+@include scrollbar;
+/* loading
+==============================================================*/
+@include load;
+
+/* 內容 */
+.header{
+    width: 100%;
+    margin: 0 auto;
+    padding: 14px 5px;
+    border-bottom: 3px solid #d3c279;
+    box-shadow: 0 0 11px #000;
+    background-color: #000;
+    @include Logo( logo,180px,40px);
+    @include Btn-child;   
+    .btn-box{
+        width: 180px;
+        height: 40px;
+        float: right; 
+        padding-top: 0;
+        .home{
+            @extend %wh;
+            @include bg_png(nav_btn);
+            background-position: 0% 100%;
+            margin-right: 15px;
+        }    
+        .cus{
+            @extend %wh;
+            @include bg_png(nav_btn);
+            background-position: 100% 100%;
+        }
+    }
+}
+section{width: 100%; margin: 0 auto;}
+section.main{
+    @include bg_J(100%,960px,main_bg);
+    @extend %bg_style;
+    background-size: cover;
+    .header + .wrap{
+        position: relative;
+        .title{
+            @include bg_P(1078px,445px,title);
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 126px 0 0 -156px;       
+        }
+        .top-btn{
+            width: 1000px; 
+            margin: 40px auto 0;
+            div{
+                @include bg_P(320px,230px,top_btn);
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .btn-star{
+                background-position: 0% 102.5%;
+                margin-left: 30px;
+                &:hover{
+                    background-position: 0% 0%;
+                }
+            }
+            .btn-hunter{
+                background-position: 50% 100%;
+                &:hover{
+                    background-position: 50% -2.5%;
+                }
+            }
+            .btn-lucky{
+                background-position: 100% 100%;
+                &:hover{
+                    background-position: 100% -2.5%;
+                }
+            }
+        }
+    }   
+}
+/*------------------------*\
+        page star
+\*------------------------*/
+button.sign-btn{
+    @include bg_P(330px,102px,sign_btn);
+    margin: 0 auto;
+    display: block;
+}
+.star-box{
+    @include bg_J(100%,1776px,star_bg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    > .wrap{
+        position: relative; 
+        //border: 1px solid #f00;
+    }
+    // &::after{
+    //     content: '';
+    //     @include bg_P(216px,222px,deck); 
+    //     background-position: top center;
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     display: block;
+    //     left: 60%;
+    //     top: 24%;
+    //     z-index: 4;
+    // }
+    .sign-box{
+        @include bg_P(1077px,654px,sign_star);
+        //@include bg_P(1082px,551px,sign_star);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 32vmin 5vmin 0 0;
+    }
+    .star-content{
+        width: 100%;
+        margin: -75px auto;
+        padding: 0 60px;
+        .subtitle{margin-bottom: 20px;}
+        .text{
+            width: 95%;
+            text-align: left;
+            letter-spacing: 1px;
+            color: #000;
+            font-size: 24px;
+            line-height: 35px;
+            padding-left: 45px;
+        }
+        .star-table{
+            width: 100%;
+            display: block;
+            padding-left: 45px;
+            margin: 20px 0;
+        }
+        .text-01{
+            padding-left: 45px;
+            font-size: 22px; 
+            margin-bottom: 15px;
+            p{font-size: 22px; color: #993333;}
+            div{
+                font-size: 22px; 
+                color: #270000;
+                padding-left: 20px;
+                line-height: 35px;
+            }
+        }
+        .star-rule{
+            padding-left: 45px;
+            ul li{
+                font-size: 20px;
+                color: #270000;
+                line-height: 35px;
+                position: relative;
+                font-weight: 600;
+                letter-spacing: 1px;
+                
+                span{
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: -18px;
+                }
+            }
+        }
+    }
+}
+/*------------------------*\
+           hunter
+\*------------------------*/
+.hunter-box{
+    @include bg_J(1920ox,2503px,hunter_bg); 
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .sign-box{
+        @include bg_P(968px,627px,sign_hunter); 
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 33vmin 0 0 7vmin;
+    }
+}
+.hunter-content{
+    width: 100%;
+    margin: -35px auto;
+    .subtitle{width: 100%; margin: 0 auto;}
+    .text{
+        width: 90%;
+        text-align: left;
+        letter-spacing: 1px;
+        color: #2d0000;
+        font-size: 24px;
+        line-height: 35px;
+        padding-left: 45px;
+    }
+    .hunter-table{
+        position: relative;
+        margin-bottom: 45px;
+        > img{margin: 15px auto; display: block;}
+        &::before{
+            content: '';
+            width: 152px;
+            height: 173px;
+            background-image: url(../images/hunter_snow01.png);
+            background-position: top center;
+            background-repeat: no-repeat;
+            position: absolute;
+            display: block;
+            top: 187px;
+            left: -12px;
+        }
+        &::after{
+            content: '';
+            width: 105px;
+            height: 110px;
+            background-image: url(../images/hunter_snow02.png);
+            background-position: top center;
+            background-repeat: no-repeat;
+            position: absolute;
+            display: block;
+            top: 242px;
+            right: 43px;
+        }
+        p{
+            font-size: 22px;
+            color: #813228;
+            text-align: center;
+        }
+    }
+    .subtitle01{width: 100%; margin-bottom: 25px;}
+    .subtitle01 ul li{
+        width: 100%;
+        padding-left: 45px;
+        font-size: 24px;
+        color: #2d0000;
+        line-height: 25px;
+        margin: 15px auto;
+    }
+    .subtitle02{
+        width: 100%; margin: 0 auto;
+        img{
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    .subtitle02 ul li{
+        width: 100%;
+        position: relative;
+        padding-left: 70px;
+        font-size: 24px;
+        color: #2d0000;
+        line-height: 40px;
+        &:nth-of-type(1),&:nth-of-type(2){
+            p{
+                font-size: 24px;
+                color: #2d0000;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 45px;
+                margin: 0;
+            }
+        }
+        span{color: #0094f0;}
+        &:nth-of-type(3),&:nth-of-type(4){
+            font-size: 24px;
+            color: #813228;
+            padding-left: 165px;
+            p{
+                font-size: 24px;
+                color: #813228;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 70px;
+                margin: 0;
+            }
+        }
+    }
+    .subtitle03{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .subtitle03 ul li{
+        width: 100%;
+        position: relative;
+        padding-left: 70px;
+        font-size: 24px;
+        color: #270000;
+        line-height: 40px;
+        span{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 45px;
+        }
+    }
+}
+/*------------------------*\
+            lucky
+\*------------------------*/
+.lucky-box{
+    @include bg_J(1920px,1776px,lucky_bg); 
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .sign-box{
+        @include bg_P(1072px,613px,sign_lucky); 
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.lucky-content{width: 100%;margin: -50px auto 0;}
+.lucky-content .subtitle{
+    .text{padding-left: 45px;margin-top: 20px;}
+    .text div{
+        &:nth-of-type(1){
+            font-size: 24px;
+            color: #2d0000;
+            margin-bottom: 10px;
+            span{
+                color: #f22634;
+                font-size: 24px;
+                font-weight: bold;
+                padding-bottom: 2px;
+                border-bottom: 3px solid #f22634;
+            }
+        }
+        &:nth-of-type(2){
+            font-size: 24px;
+            color: #813228;
+        }
+        &:nth-of-type(3){
+            font-size: 37px;
+            font-weight: bolder;
+            color: #813228;
+            margin-top: 25px;
+        }
+    }
+    .text ul li{
+        position: relative;
+        margin-top: 20px;
+        padding-left: 110px;
+        line-height: 30px;
+        p{
+            width: 100%;
+            margin: 0 auto;
+            line-height: 35px;
+        }
+        p:nth-of-type(1){
+            
+            font-size: 24px;
+            color: #f22634;
+            font-weight: bolder;
+        }
+        p:nth-of-type(2),p:nth-of-type(3){   
+            font-size: 24px;
+            color: #270000;
+        }
+        span{
+            font-size: 24px;
+            color: #f22634;
+            font-weight: bolder;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 15px;
+            &::before{
+                content:'';
+                width: 7px;
+                height: 7px;
+                position: absolute;
+                top: 15px;
+                left: -15px;
+                display: block;
+                text-align: center;
+                border-radius:99em;
+                background-color: #f22634; 
+            }
+        }
+    }
+    .text ul li:nth-of-type(2) div{
+        font-size: 24px;
+        color: #7f2400;
+    }
+}
+.lucky-content .subtitle01{
+    img{
+        margin-bottom: 10px;
+    }
+}
+.lucky-content .subtitle01 ul{
+    padding-left: 70px;
+}
+.lucky-content .subtitle01 ul li{
+    position: relative;
+    p{
+        line-height: 30px;
+        font-size: 18px;
+        color: #270000;
+        font-weight: bold;
+
+    }
+    span{
+        font-size: 20px;
+        color: #270000;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: -23px;
+        font-weight: bold;
+    }
+}
+
+
+/*------------------------*\
+        float window
+\*------------------------*/
+.float-style{
+    right: 1%;
+    width: 170px;
+    height: 490px;
+    position: absolute;
+    transform: translateY(25%);
+    .top{
+        @include bg_P(170px,146px,float_top);
+        @extend %bg_style;
+    }
+    .mid{
+        @include bg_P(170px,344px,float_mid);
+        @extend %bg_style;
+        padding: 25px 0 0 15px;
+        p{
+            @include bg_P(105px,30px,float_text);
+            cursor: pointer;
+            margin: 0 auto 38px;
+            background-repeat: no-repeat;
+        }
+        .fir{
+            background-position: 100% 0;
+            &:hover{
+                background-position: 100% 13.5%;
+            }
+        }
+        .sec{
+            background-position: 100% 29%;
+            &:hover{
+                background-position: 100% 42.5%;
+            }
+        }
+        .thr{
+            background-position: 100% 58%;
+            &:hover{
+                background-position: 100% 71.5%;
+            }
+        }
+        .gotop{
+            background-position: 100% 84%;
+            &:hover{
+                background-position: 100% 99%;
+            }
+        }
+    }
+}
+
+/*------------------------*\
+          彈跳視窗
+\*------------------------*/
+@include mdWindow;
+@include mdOverlay;
+footer{
+    @include bg_J(100%,332px,footer_bg);
+    text-align: center;
+    font-size: 18px;
+    color: #813228;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 70px;
+    &::before{
+        content: '';
+        @include bg_J(125px,80px,tree);
+        position: absolute;
+        top: -80px;
+        display: block;
+    }
+}

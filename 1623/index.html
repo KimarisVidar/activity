@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双双彩金从天降</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap clearfix">
+            <a href="javascript:void(0);" class="logo" onclick="pageObj.home();"></a>
+            <div class="btn-box">
+                <a href="javascript:void(0);" class="btn-left home" onclick="pageObj.home();">
+                	<img src="assets/images/home.png">
+                </a>
+                <a href="javascript:void(0);" class="btn-right cus" onclick="pageObj.cs();">
+                	<img src="assets/images/cus.png">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="block01">
+        <div class="title">        
+            <button type="button" class="login" onclick="pageObj.login_btn();">
+                <img src="assets/images/login_btn.png">
+            </button>
+        </div>
+        <div class="down">
+            <i class="left"></i>
+            <i class="right"></i>
+        </div>
+    </section>
+    <section class="block02">
+        <div class="wrap">
+            <img src="assets/images/content.png">
+            <div>※ 活动详情 请依官网为准</div>
+        </div>
+    </section>
+    <div class="gotop">
+        <img src="assets/images/gotop.png">
+    </div>
+    <footer>
+        <div class="wrap">Copyright © 金赞娱乐城 Reserved</div>
+    </footer>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function() {
+    var $body = $('html, body');
+    var fn = {
+        home: function() {
+            window.open("http://jz3366.com/");
+        },
+        cs: function() {
+            var url = 'https://vp8.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=80000482&configID=2301&skillId=541&enterurl=JzPlay';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        login_btn: function(){
+            window.open('http://evt.jinzan.net/form/59e06ffa2d327');
+        },
+        down: function(){
+            $body.animate({
+                'scrollTop': 999999
+            },1000);
+        },
+        top: function(){
+            $body.animate({
+                'scrollTop': 0
+            },500);
+        },
+        init: function() {
+            var _this = this
+            $('body').preload(function() {
+                $('.loading').fadeOut(500);
+            });
+            $('.down').on('click',function(){
+                _this.down();
+            });
+            $('.gotop').on('click',function(){
+                _this.top();
+            });
+            _this.top();
+        }
+    }
+    fn.init();
+    return fn
+}
+var pageObj = new indexFn();
+</script>
+</html>

@@ -1,0 +1,202 @@
+/*------------------------*\
+           共用
+\*------------------------*/
+body {position: relative;overflow: hidden;}
+img {max-width: 100%;border-style: none;}
+a, a:hover, a:focus {text-decoration: none;}
+.wrap {max-width: 1000px;margin: 0 auto;}
+.down {width: 134px;height: 55px;background-image: url(../images/down.png);position: absolute;bottom: 3em;left: 43%;cursor: pointer;z-index: 10;}
+.down.top {-webkit-transform:rotate(180deg); transform:rotate(180deg);bottom: 11em;}
+.left {float: left;}
+.right {float: right;}
+.none {display: none;}
+.down, .header .btn-box, 
+section.content-first .title,
+section.content-second .slide-two .snow-gift,
+section.content-second .slide-two .how-snow,
+section.content-second .slide-two .how-snow .money-btn,
+section.content-second .slide-two .snow-gift .money-btn {background-repeat: no-repeat;background-position: top center;background-size: cover;}
+section.content-first, section.content-second {background-size: cover;}
+section.content-first, section.content-second {background-repeat: no-repeat;background-position: top;}
+.header .btn-box .home, 
+.header .btn-box .cus, 
+.header .btn-box .rule {width: 65px;height: 70px;}
+
+/*------------------------*\
+           loading
+\*------------------------*/
+.loading {top: 0;width: 100%;height: 100%;position: fixed;background: rgba(0, 0, 0, 0.7);-webkit-transform: translate3d(0%, 0%, 0);transform: translate3d(0%, 0%, 0);}
+.double-bounce1, .double-bounce2 {top: 50%;left: 50%;width: 40px;height: 40px;opacity: 0.6;position: absolute;border-radius: 50%;background-color: #ccc;animation: sk-bounce 2.0s infinite ease-in-out;-webkit-animation: sk-bounce 2.0s infinite ease-in-out;}
+.double-bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce {
+  0%,100% {-webkit-transform: scale(0);}
+  50% {-webkit-transform: scale(1);}
+}
+@keyframes sk-bounce {
+  0%,100% {transform: scale(0);-webkit-transform: scale(0);}
+  50% {transform: scale(1);-webkit-transform: scale(1);}
+}
+
+/*------------------------*\
+           內容
+\*------------------------*/
+.header {width: 100%;height: 13vh;margin: 0 auto;padding: 0 5px;position: fixed;top: 0;z-index: 10;}
+.header .wrap{height: 13vh;}
+.header .logo {float: left;width: 185px;height: 60px;background: url(../images/logo.png) no-repeat top center;background-size: cover;margin-top: 30px;}
+.header .btn-child {display: inline-block;vertical-align: middle;}
+.header .btn-box {top: -32px;width: 238px;height: 152px;float: right;padding-top: 50px;text-align: center;position: relative;background-image: url(../images/nav_bg.png);}
+.header .btn-box .home {background-image: url(../images/nav_btn.png);background-position: 50% -9%;}
+.header .btn-box .home:hover {background-position: 50% 90%;}
+.header .btn-box .cus {background-image: url(../images/nav_btn.png);background-position: 100% -9%;}
+.header .btn-box .cus:hover {background-position: 100% 90%;}
+.header .btn-box .rule {background-image: url(../images/nav_btn.png);background-position: 0% -9%;}
+.header .btn-box .rule:hover {background-position: 0% 90%;}
+
+/*------------------------*\
+        content-firs
+\*------------------------*/
+section {width: 100%;height: 100vh;}
+section.content-first {background-image: url(../images/bg.jpg);}
+section.content-first .wrap {position: relative;height: 100vh;}
+section.content-first .title {position: absolute;width: 41vw;height: 23vw;margin: 0 auto;top: 0%;left: 10%;z-index: 3;background-image: url(../images/top_title.png);}
+section.content-first .snow,
+section.content-first .story{position: absolute;top: 25em;}
+section.content-first .snow {background: url(../images/snow.png);width: 795px;height: 85px;left: 92px;z-index: 2;}
+section.content-first .story {z-index: 1;left: 103px;width: 778px;height:auto;}
+section.content-first .story .slideshow {position: absolute;overflow: hidden;width: 738px;height: 433px;top: 16px;left: 20px;z-index: 4;}
+section.content-first .story .slideshow ul li {width: 738px;height: 433px;display: none;position: absolute;z-index: 1;}
+section.content-first .story::before{content:''; background-image: url(../images/story_bg_top.png);background-position: top center;background-size: cover; display: block;width: 778px;height: 357px;}
+section.content-first .story::after {content:'';background-image: url(../images/story_bg_bottom.png);background-position: top center;background-size: cover;display: block;width: 912px; height: 157px;margin: -2px -8%;}
+section.content-first .button {width: 100%;margin: 0 auto;position: relative;}
+section.content-first .button a {position: absolute;}
+section.content-first .button .pre,
+section.content-first .button .next{z-index: 0;background-position: top;}
+section.content-first .button .pre {left: 0;top: 29em;width: 160px;height: 95px;background: url(../images/pre.png) no-repeat;}
+section.content-first .button .next {right: 20px;top: 28em;width: 135px;height: 79px;background: url(../images/next.png) no-repeat;}
+section.content-first .button .pre:hover,
+section.content-first .button .next:hover{background-position: bottom;}
+section.content-first .dec {width: 100%;margin: 0 auto;position: absolute;top: 35em;z-index: 5;left: -4.5em;}
+section.content-first .dec .book {margin: 0.3% 0 0 44.5%;}
+
+/*------------------------*\
+      content-second
+\*------------------------*/
+section.content-second {background-image: url(../images/bg01.jpg);padding-top: 7%;}
+section.content-second .wrap {position: relative;height: 100vh;}
+section.content-second .slide-two {width: 100%; margin: 0 auto;}
+section.content-second .slide-two .slide-nav a{background-image: url(../images/tablist.png);background-repeat: no-repeat;display: inline-block;width: 168px;height: 50px;}
+section.content-second .slide-two .slide-nav a:first-child{background-position: top left;}
+section.content-second .slide-two .slide-nav a:last-child{background-position: top right;}
+section.content-second .slide-two .slide-nav a:first-child.active,
+section.content-second .slide-two .slide-nav a:last-child.active{cursor: default;}
+section.content-second .slide-two .slide-nav a:first-child.active{background-position: bottom left;}
+section.content-second .slide-two .slide-nav a:last-child.active{background-position: bottom right;}
+section.content-second .slide-two .snow-gift,
+section.content-second .slide-two .how-snow{width: 987px;height: 721px;margin: 0 auto;display: none;position: relative;}
+section.content-second .slide-two .how-snow{background-image: url(../images/how_tab.png); padding-top: 61.5%;}
+section.content-second .slide-two .snow-gift{background-image: url(../images/gift_tab.png);padding-top: 59.5%;}
+section.content-second .slide-two .how-snow .money-btn,
+section.content-second .slide-two .snow-gift .money-btn{width: 255px;height: 56px;background-image: url(../images/money_btn.png);margin: 0 auto; display: block;}
+section.content-second .slide-two .how-snow .snow-man01,
+section.content-second .slide-two .snow-gift .snow-man02,
+section.content-second .slide-two .snow-gift .snow-man03{position: absolute; bottom: -5%;}
+section.content-second .slide-two .how-snow  .snow-man01 {left: -19%;}
+section.content-second .slide-two .snow-gift .snow-man02 {left: -13%;}
+section.content-second .slide-two .snow-gift .snow-man03 {right: -15%;}
+section.content-second .btn-left,
+section.content-second .btn-right {position: absolute; top: 31%;width: 53px;height: 53px;background: url(../images/arrow.png);}
+section.content-second .btn-left{left: -12%;}
+section.content-second .btn-right{ right: -10%; -webkit-transform:rotate(180deg); transform:rotate(180deg);}
+
+/*------------------------*\
+            彈窗
+\*------------------------*/
+.close_btn {top: -50px;right: -54px;width: 53px;height: 53px;cursor: pointer;position: absolute;background: url(../images/close.png) no-repeat top center;background-size: cover;z-index: 100;}
+.login{background: url(../images/login_bg.png) no-repeat top center;background-size: cover;width: 548px;height: 260px;padding: 100px 0 0;}
+.login .content{width: 100%;margin: 0 15%;}
+.login .content > div,
+.login .content input{display: inline-block;vertical-align: middle;}
+.login .content > div{font-size: 22px;color: #fff;letter-spacing: 2px;}
+.login .content input{width: 260px;height: 40px;padding-left: 10px;}
+button.login-in,
+button.sign-btn{width: 172px;height: 52px;display: inline-block;vertical-align: middle;background-size: cover;}
+button.login-in{background: url(../images/login_btn.png) no-repeat top center;margin: 28px 0 0 73px;}
+button.sign-btn{background: url(../images/sign_btn.png) no-repeat top center;margin: 28px 0 0 30px;}
+#mdWindow .rule {background: url(../images/rule_bg.png) no-repeat top center;background-size: cover;width: 826px;height: 731px;}
+#mdWindow .rule .close_btn {top: 105px;right: -54px;}
+#mdWindow {top: 50%;left: 50%;position: fixed;z-index: 98;-webkit-transform: translate3d(-50%, -50%, 0);transform: translate3d(-50%, -50%, 0);display: none;}
+#mdOverlay {top: 0;left: 0;width: 100%;height: 100%;bottom: 0;position: fixed;z-index: 97;background: rgba(0, 0, 0, 0.97);display: none;}
+/*------------------------*\
+          footer
+\*------------------------*/
+footer {font-size: 12px;color: #fff;bottom: 0;width: 100%;height: auto;position: fixed;text-align: center;padding: 10px 0;background: black;z-index: 20;}
+
+/*------------------------*\
+          Media
+\*------------------------*/
+@media screen and (max-width: 1366px){
+  .down {width: 11vmin;height: 4vmin;left: 33vw;}
+  .down.top{bottom: 12.5vw;}
+  section.content-first .title{width: 72vmin;height: 41vmin;left: 15vw;}
+  section.content-first .snow{width: 73vmin;height: 11vmin;left: 15vw;}
+  section.content-first .snow, section.content-first .story{top: 21vw;}
+  section.content-first .story{width:0;height: 47vmin;}
+  section.content-first .story::before{width: 71vmin; height: 32.33vmin; margin-left: 8vw;}
+  section.content-first .story::after{width: 83vmin;height: 14vmin;margin: 0 4.9vw;}
+  section.content-first .story .slideshow {width: 68vmin;height: 39vmin;top: 1.5vmin;left: 16vmin;}
+  section.content-first .button .next {width: 12vmin;height: 7vmin;right: 12.5vw;top: 23vw;background-size: cover;}
+  section.content-first .button .pre {width: 15vmin;height: 9vmin;left: 10vw;top: 23vw;background-size: cover;}
+  section.content-first .story .slideshow ul li{width: 68vmin;height: 39vmin;}
+  section.content-first .dec{top: 20em;height: 0px;}
+  section.content-first .dec .snow-man {width: 29.4vmin;height: 37.5vmin;margin: 11vmin 0 0 21vmin;}
+  section.content-first .dec .book {width: 15vmin;height: 16vmin;margin: 8.3vmin 0 0 40.3vmin;}
+  section.content-second{padding-top: 9vw;}
+  section.content-second .slide-nav{width: 52vw; margin: 0 auto;}
+  section.content-second .slide-two .snow-gift,
+  section.content-second .slide-two .how-snow {width: 92vmin;height: 67vmin;}
+  section.content-second .slide-two .how-snow .money-btn,
+  section.content-second .slide-two .snow-gift .money-btn {width: 24vmin;height: 5.2vmin;}
+  section.content-second .slide-two .how-snow{padding-top: 37vw;}
+  section.content-second .slide-two .snow-gift {padding-top: 34vw;}
+  section.content-second .slide-two .how-snow .money-btn{margin: -68px auto;}
+  section.content-second .slide-two .snow-gift .money-btn{margin: -42px auto;}
+  section.content-second .slide-two .how-snow .snow-man01 {width: 31vmin;height: 43vmin;}
+  section.content-second .slide-two .snow-gift .snow-man02 {width: 21vmin;height: 33vmin;left: -7vw;}
+  section.content-second .slide-two .snow-gift .snow-man03 {width: 22vmin;height: 33vmin;right: -8vw;}
+  section.content-second .btn-right,section.content-second .btn-left {width: 53px;height: 53px;top: 18vw;}
+  section.content-second .btn-left {left: 5vw;}
+  section.content-second .btn-right {right: 5vw;}
+  section.content-second .slide-two .slide-nav a{width: 22vmin;height: 6.5vmin;}
+}
+@media screen and (max-width: 1280px){
+  .down {left: 67vmin;}
+  .down.top {bottom: 21vmin;}
+  section.content-first .title {left: 18vw;}
+  section.content-first .snow {left: 18vw;}
+  section.content-first .story::before{margin-left: 19vmin;}
+  section.content-first .story::after{margin: 0 13.4vmin;}
+  section.content-first .story .slideshow{left: 20.8vmin;}
+  section.content-first .dec {top: 43vmin;left: -2.6vmin;}
+  section.content-first .button .next{  top: 49vmin;  right: 31.8vmin;}
+  section.content-first .button .pre{left: 24vmin;}
+  section.content-second {padding-top: 8vw;}
+  section.content-second .slide-two .slide-nav a {width: 24vmin;height: 7vmin;}
+  section.content-second .btn-left {left: 9vw;}
+  section.content-second .btn-right {right: 9vw;}
+}
+@media screen and (max-width: 1024px){
+  .down {left: 58vmin;}
+  section.content-first .title {left: 25vmin;}
+  section.content-first .snow,section.content-first .story {top: 37vmin;}
+  section.content-first .story .slideshow {left: 13.8vmin;}
+  section.content-first .story::before {margin-left: 12vmin;}
+  section.content-first .story::after {margin: 0 6.4vmin;}
+  section.content-first .dec {top: 41.2vmin;left: -11vmin;}
+  section.content-second {padding-top: 14vmin;}
+  section.content-second .slide-nav {width: 94vmin;margin: 0 auto;}
+  section.content-second .slide-two .slide-nav a {width: 22vmin;height: 6.5vmin;}
+  section.content-second .slide-two .how-snow .money-btn {margin: 8vmin auto;}
+  section.content-second .slide-two .snow-gift .money-btn {margin: 10vmin auto;}
+  section.content-second .btn-right {right: 10vmin;}
+  section.content-second .btn-left {left: 10vmin;}
+}

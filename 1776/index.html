@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="yes">
+    <title>巅峰之战-欧冠再起</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <section class="bg">
+        <div class="header">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)" target="_blank" class="logo" onclick="pageObj.home();"></a>
+                <div class="btn-box pc">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();">优博官网</a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();">在线客服</a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child app" onclick="pageObj.appDown();">App下载</a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child bkurl" onclick="pageObj.backup();">备用网址</a>
+                </div>
+                <div class="btn-box mb">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj.home();">官网</a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child cus" onclick="pageObj.cs();">客服</a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child app" onclick="pageObj.appDown();">App</a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child bkurl" onclick="pageObj.backup();">备用</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap ">
+            <div class="topbox-bg">
+                <ul class="clearfix">
+                    <li class="rk">
+                        <div class="rk_bg"></div>
+                    </li>
+                    <li class="godeye">
+                        <div class="godeye_bg"></div>
+                    </li>
+                    <li class="souvenir">
+                        <div class="souvenir_bg"></div>
+                    </li>
+                    <li class="football">
+                        <div class="football_bg"></div>
+                    </li>
+                    <li class="novice">
+                        <div class="novice_bg"></div>
+                    </li>
+                    <li class="bargain">
+                        <div class="bargain_bg"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btmbox">
+                <!-- 排名賽 -->
+                <div class="rk-content clearfix" id="rk-box">
+                    <div>
+                        <button type="button" class="btn-style rk-btn">立即下注</button>
+                    </div>
+                    
+                </div>
+                <!-- 神之眼 -->
+                <div class="eye-content clearfix" id="godeye-box">
+                    <div>
+                        <button type="button" class="btn-style eye-btn">立即预测</button>
+                    </div>
+                </div>
+                <!-- 寵愛 -->
+                <div class="sr-content clearfix" id="souvenir-box">
+                    <div>
+                        <button type="button" class="btn-style-2">立即申请</button>
+                        <button type="button" class="btn-style-2">立即申请</button>
+                        <button type="button" class="btn-style-2">立即申请</button>
+                        <button type="button" class="btn-style-2">立即申请</button>
+                    </div>
+                </div>
+                <!-- 足球 -->
+                <div class="fb-content clearfix" id="football-box">
+                    <div>
+                        <button type="button" class="btn-style fb-btn">立即领取</button>
+                    </div>
+                </div>
+                <!-- 新手 -->
+                <div class="ne-content clearfix" id="novice-box">
+                    <div>
+                        <button type="button" class="btn-style ne-btn">立即领取</button>
+                    </div>
+                </div>
+                <!-- 酬賓大紅包 -->
+                <div class="bn-content clearfix" id="bargain-box">
+                    <div>
+                        <button type="button" class="btn-style bn-btn">立即下注</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="f-nav">
+            <ul>
+                <li data-id="rk">
+                    <div>胜单排名赛</div>
+                </li>
+                <li class="nav-style" data-id="godeye">
+                    <div>预测胜利队伍</div>
+                </li>
+                <li class="nav-style" data-id="souvenir">
+                    <div>宠爱球迷礼品</div>
+                </li>
+                <li class="nav-style" data-id="football">
+                    <div>888元再存金</div>
+                </li>
+                <li class="nav-style" data-id="novice">
+                    <div>首存发财金</div>
+                </li>
+                <li class="nav-style" data-id="bargain">
+                    <div>酬宾大红包</div>
+                </li>
+                <li data-id="gt">
+                    <div>回顶部</div>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="wrap clearfix">
+                <div class="left">
+                    <img src="assets/images/f_left.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="assets/images/f_right.png" alt="">
+                </div>
+            </div>   
+        </footer>
+    </section>
+    <!-- 彈窗  -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+
+        <div class="f-rk none">
+            <button type="button" class="btn-style rk-btn">立即下注</button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <div class="f-eye none">
+            <button type="button" class="btn-style eye-btn">立即预测</button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <div class="f-sr none">
+            <div>
+                <button type="button" class="btn-style-2">立即申请</button>
+                <button type="button" class="btn-style-2">立即申请</button>
+                <button type="button" class="btn-style-2">立即申请</button>
+                <button type="button" class="btn-style-2">立即申请</button>
+            </div>
+            <div class="close_btn popclose"></div>
+        </div>
+        <div class="f-fb none">
+            <button type="button" class="btn-style fb-btn">立即领取</button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <div class="f-ne none">
+            <button type="button" class="btn-style ne-btn">立即领取</button>
+            <div class="close_btn popclose"></div>
+        </div>
+        <div class="f-bn none">
+            <button type="button" class="btn-style bn-btn">立即下注</button>
+            <div class="close_btn popclose"></div>
+        </div>
+          
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function(){
+    var _win = $(window).width();
+    var f_top,
+        top,
+        getCs;
+    var fn = {
+        login: function(callback){
+            var acc = $('input[name="acc"]').val();
+            if( acc == '' ){
+                // popup.alert('页面错误', '您尚未输入帐号哦');
+                // $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function(res){},
+                onFail: function(res){}
+            });
+        },
+        home: function(){
+            window.open("http://youbo5555.com");
+        },
+        cs: function(){
+            var url = 'http://www.yb588.vip';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        appDown: function(){
+            window.open("https://www.youboapp.com/");
+        },
+        backup:function(){
+            window.open("http://www.yb6699.com/cesu/");
+        },
+        signPage: function(){
+            window.open("http://evt.yobo66.me/form/5a82b55252616");
+        },
+        signPage2: function(){
+            window.open("http://evt.yobo66.me/form/5a82b7cba47d9");
+        },
+        scroll_fn:function(){
+            var _this = this;
+            $('.f-nav').hide();
+            $(window).scroll(function(){
+                var wintop  = $(window).scrollTop(),  
+                    fw      = $('.f-nav'),
+                    rk_con  = $('.rk-content').offset().top;
+                var rk  = $('.f-nav [data-id="rk"]'),
+                    eye = $('.f-nav [data-id="godeye"]'),
+                    sr  = $('.f-nav [data-id="souvenir"]'),
+                    fb  = $('.f-nav [data-id="football"]'),
+                    ne  = $('.f-nav [data-id="novice"]'),
+                    bn  = $('.f-nav [data-id="bargain"]');
+
+                if( wintop > rk_con -150){
+                    fw.fadeIn();
+                }else{
+                    fw.fadeOut();
+                }
+
+                $('.f-nav ul li').removeClass('active');
+                console.log(wintop)
+                if(wintop >= 1000 && wintop < 1500){
+                    rk.addClass('active');
+
+                }else if(wintop >= 1500 && wintop < 2300){
+                    eye.addClass('active');
+
+                }else if(wintop >= 2300 && wintop < 3000){
+                    sr.addClass('active');
+
+                }else if(wintop >= 3100 && wintop < 3800){
+                    fb.addClass('active');
+
+                }else if(wintop >= 3800 && wintop < 4300){
+                    ne.addClass('active');
+
+                }else if(wintop > 4300){
+                    bn.addClass('active');
+                }
+
+            });
+        },
+        navLink: function(){
+            var _this = this;
+            // 上方
+            $('.topbox-bg li').on('click',function() {
+                getCs = $(this).attr('class');
+                if( _win <= 1024 ){
+                    _this.mobile_chk(getCs);
+
+                }else{
+                    top = $('#'+getCs+'-box' ).offset().top;
+                    _this.scfn(top)
+                }
+            });
+            // 側邊
+            $('.f-nav li').on('click',function(){
+                var getId = $(this).attr('data-id');
+                if( getId == 'gt'){
+                    f_top = 0;
+                }else{
+                    f_top = $('#'+getId+'-box' ).offset().top;
+                }
+                _this.scfn(f_top)
+            });
+        },
+        mobile_chk: function(getCs){
+            $('html,body').css({'overflow': 'hidden'});
+            switch (getCs) {
+                case 'rk':
+                    $('.popbox').fadeIn(300);
+                    $('#mdWindow .f-rk').removeClass('none');
+                    break;
+                case 'godeye':
+                    $('.popbox').fadeIn(300);
+                    $('#mdWindow .f-eye').removeClass('none');
+                    break;
+                case 'souvenir':
+                    $('.popbox').fadeIn(300);
+                    $('#mdWindow .f-sr').removeClass('none');
+                    break;
+                case 'football':
+                    $('.popbox').fadeIn(300);
+                    $('#mdWindow .f-fb').removeClass('none');
+                    break;
+                case 'novice':
+                    $('.popbox').fadeIn(300);
+                    $('#mdWindow .f-ne').removeClass('none');
+                    break;
+                case 'bargain':
+                    $('.popbox').fadeIn(300);
+                    $('#mdWindow .f-bn').removeClass('none');
+                    break;
+                default:
+                    break;
+            }
+        },
+        btnChk: function(){
+            var _this  = this;
+            var rk_bn  = $('.rk-btn, .bn-btn'),
+                ne_fb  = $('.ne-btn, .fb-btn'),
+                eyeBtn = $('.eye-btn'),
+                btn_2  = $('.btn-style-2');
+
+            //排名賽 酬賓大紅包
+            rk_bn.on('click',function(){
+                _this.home();
+            });
+            //新手 足球
+            ne_fb.on('click',function(){
+                _this.cs();
+            });
+            //神之眼
+            eyeBtn.on('click',function(){
+                _this.signPage();
+            });
+            //寵愛
+            btn_2.on('click',function(){
+                _this.signPage2();
+            });
+        },
+        scfn: function(val){
+            $('html, body').animate({
+                'scrollTop': val
+            },500);
+        },
+        reSize:function(){
+            var _this = this;
+            if( _win > 1024){
+                _this.scroll_fn();
+            }else{
+                $('.f-nav').hide();
+            }
+        },
+        init: function(){
+            var _this = this;
+            _this.btnChk();
+            _this.navLink();
+            _this.reSize();
+            
+            $(window).resize(function(){
+                _this.reSize();
+            });
+            
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);
+            });       
+
+            //X與確定按鈕效果
+            $('.popclose, .confirm').on('click',function(){
+                $('#mdWindow > div').addClass('none');
+                $('.popbox').fadeOut(300);
+                $('html,body').css({'overflow': 'auto'});
+            });
+
+            // $(window).on('load',function(){
+            //     var as = $(this).innerWidth();
+            //     var sd = $(this).innerHeight()  
+            //     alert(as);
+            //     alert(sd);
+            // });
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

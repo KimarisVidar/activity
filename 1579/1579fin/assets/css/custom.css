@@ -1,0 +1,332 @@
+@charset "UTF-8";
+nav .home, nav .cus { 
+  width: 125px; 
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.top_btn .n_day, .top_btn .love, .top_btn .vip {
+  background-repeat: no-repeat; 
+  background-position: top center;
+  background-size: cover;
+}
+.apply_btn, .sign_btn, 
+.receive_btn, .login_btn, .sent_btn{background-size: cover;position: absolute;}
+.apply_btn, .sign_btn, .receive_btn{width: 165px; height: 95px;}
+.login_btn, .sent_btn{  width: 240px; height: 130px;   bottom: 0;}
+.top_btn .love, .top_btn .vip{ width: 305px; height: 170px;}
+.bg, .bg02, .bg03{
+  width: 1915px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: 0 auto;
+}
+
+body {background: #19254b;}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+img {border-style: none;}
+
+#Na .wrap{width: 1215px;}
+.wrap { width: 1100px; margin: 0 auto;}
+.none {display: none;}
+
+/* scrollbar */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0px 0px 5px 0;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #464646;
+}
+::-webkit-scrollbar-thumb:hover {background: #191919;}
+
+/* 按鈕 */
+.apply_btn {
+  background: url(../images/apply_btn.png) no-repeat top center;
+  bottom: -10%;
+  left: 184px;
+}
+.sign_btn {
+  background: url(../images/sign_btn.png) no-repeat top center;
+  bottom: -52px;
+  right: 140px;
+}
+.receive_btn {
+  background: url(../images/receive_btn.png) no-repeat top center;
+  bottom: 0;
+  right: 40%;
+}
+.login_btn {
+  background: url(../images/login_btn.png) no-repeat top center;
+  left: 36%;
+}
+.sent_btn {
+  background: url(../images/sent_btn.png) no-repeat top center;
+  left: 36%;
+}
+
+/*-- *字符號 --*/
+.not_check::before {
+  content: '*';
+  font-size: 35px;
+  color: #f00;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  left: -20px;
+}
+
+/*-- 內容 --*/
+header {
+  width: 1915px;
+  height: 960px;
+  margin: 0 auto;
+  background: url(../images/top_bnr.jpg) no-repeat top center;
+}
+section { width: 100%; margin: 0 auto;}
+nav {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+nav .logo {
+  float: left;
+  width: 185px;
+  height: 65px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+nav .btn-box {
+  float: right;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+  padding: 10px 0;
+}
+nav .btn-child {display: inline-block;vertical-align: middle;}
+nav .home {background-image: url(../images/home_btn.png);margin-right: 30px;}
+nav .cus {background-image: url(../images/cus_btn.png);}
+.top_btn {
+  width: 920px;
+  height: 205px;
+  margin: 25% auto 0;
+}
+.top_btn div {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.top_btn .n_day {
+  width: 300px;
+  height: 180px;
+  background: url(../images/n_day.png) no-repeat top center;
+  margin-top: 20px;
+}
+.top_btn .love { background: url(../images/love.png) no-repeat top center; margin-top: 20px;}
+.top_btn .vip { background: url(../images/vip.png) no-repeat top center;}
+.bg {
+  background-image: url(../images/bg.jpg);
+  height: 1607px;
+  position: relative;
+}
+.bg02 { background-image: url(../images/bg01.jpg); height: 2001px;}
+.bg03 { background-image: url(../images/bg01.jpg); height: 1155px;}
+#Na { height: 1857px; padding-top: 260px;}
+#Na .title {
+  background: url(../images/box_title.png) no-repeat top center;
+    width: 1080px;
+    height: 170px;
+}
+#Na .gift { width: 100%; margin: 5% auto;}
+#Na .gift div {
+  width: 49%;
+  height: 560px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-right: 1.5%;
+  background-color: #fff;
+}
+#Na .gift div:last-child { margin: 0;}
+#Na .gift .gifts01 {
+  background: url(../images/gifts01.png) no-repeat top center;
+  background-size: cover;
+}
+#Na .gift .gifts01 .apply_btn {left: 210px;}
+#Na .gift .gifts02 {
+  background: url(../images/gifts02.png) no-repeat top center;
+  background-size: cover;
+}
+#Na .gift .gifts02 .apply_btn {left: 205px;}
+#Na .rule {margin-top: 10%;padding-left: 35px;}
+#Lo .title {
+  background: url(../images/box_title01.png) no-repeat top center;
+  width: 1032px;
+  height: 170px;
+  background-size: cover;
+}
+#Lo .pre01 {
+  background: url(../images/pre01.png) no-repeat top center;
+  height: 450px;
+  margin-top: 7%;
+  position: relative;
+}
+#Lo .pre01 .apply { bottom: -52px; left: 72.5%;}
+#Lo .pre02 {
+  background: url(../images/pre02.png) no-repeat top center;
+  height: 450px;
+  margin-top: 10%;
+  position: relative;
+}
+#Lo .rule {margin-top: 3%;}
+#Vi .title {
+  background: url(../images/box_title02.png) no-repeat top center;
+  width: 1100px;
+  height: 165px;
+}
+#Vi .pre03 {
+  background: url(../images/pre03.png) no-repeat top center;
+  height: 428px;
+  margin-top: 10%;
+  position: relative;
+}
+.float_win {
+  position: absolute;
+  right: 30px;
+  width: 190px;
+}
+.float_win .Btn {cursor: pointer;}
+.float_win .float_t {
+  background: url(../images/float_t.png) no-repeat top center;
+  height: 131px;
+}
+.float_win .float01 {
+  background: url(../images/float01.png) no-repeat top center;
+  height: 71px;
+}
+.float_win .float02 {
+  background: url(../images/float02.png) no-repeat top center;
+  height: 85px;
+}
+.float_win .float03 {
+  background: url(../images/float03.png) no-repeat top center;
+  height: 85px;
+}
+.float_win .top {
+  background: url(../images/top.png) no-repeat top center;
+  height: 220px;
+}
+footer {
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+footer .footer_txt {
+  float: left;
+  width: 285px;
+  height: 61px;
+  background: url(../images/footer_txt.png) no-repeat top center;
+  background-size: cover;
+}
+footer .footer_url {
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 239px;
+  height: 35px;
+  background: url(../images/footer_url.png) no-repeat top center;
+  background-size: cover;
+}
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+.close_btn {
+  background: url(../images/close.png) no-repeat top center;
+  background-size: cover;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0px;
+  right: -5%;
+  cursor: pointer;
+  z-index: 100;
+}
+.recevie {
+  width: 860px;
+  height: 810px;
+  padding: 130px 135px 0;
+  font-size: 18px;
+  background: url(../images/recevie_bg.png) no-repeat top center;
+}
+.recevie span {
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+}
+.recevie p { color: #fff; font-size: 18px;}
+.login {
+  background: url(../images/member_bg.png) no-repeat top center;
+  width: 860px;
+  height: 405px;
+  position: relative;
+}
+.login input {
+  width: 430px;
+  height: 35px;
+  margin: 18% 29%;
+  background: rgba(255, 255, 255, 0.5);
+  padding-left: 10px;
+  color: #fff;
+}
+
+.bk1, .bk2, .bk3 { width: 95%; margin: 0 auto;}
+.bk1 label, .bk2 label, .bk3 label { margin: 10px 0;}
+.bk1 label input, .bk2 label input, .bk3 label input {
+  height: 35px;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+.bk1 label {width: 550px;}
+.bk1 label input {width: 80%;}
+.bk2 {margin: 20px auto;}
+.bk2 label {width: 47%; margin-right: 20px;}
+.bk2 label input { width: 82%;}
+.bk2 label:nth-child(odd) {margin-right: 0px;}
+.bk3 textarea {
+  width: 550px;
+  height: 195px;
+  resize: none;
+  /* 禁止縮放 */
+  padding: 10px 0 0 10px;
+}
+.bk3 p {position: relative;}
+
+.float_win .float_t, .float_win .float01,.float_win .float02,#Na .title, 
+.float_win .float03, .float_win .top, #Vi .title {background-size: cover;}

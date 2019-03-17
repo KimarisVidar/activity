@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="wrap clearfix">
+                <a href="https://399699.com" target="_blank" class="logo"></a>
+                <div class="btn-box">
+                    <a href="https://399699.com" target="_blank" class="btn-child home"></a>
+                    <a href="javascript:void(0);" class="btn-child cus" onclick="cs()"></a>
+                </div>
+            </div>
+        </nav>
+        <section id="top_btn">
+            <div class="clearfix">
+                <button type="button" class="free_btn"></button>
+                <button type="button" class="tv_btn"></button>
+                <button type="button" class="victory_btn"></button>
+            </div>
+        </section>
+    </header>
+    <div id="main">
+        <!-- index 首頁-->
+        <section id="index_page" class=""> 
+            <div class="index">
+                <div class="wrap">
+
+                    <div class="title flex">
+                        <img src="assets/images/main_title.png" alt="">
+                    </div>
+
+                    <!-- 驗證實力衝榜去 -->
+                    <button type="button" class="index_btn"></button>
+
+                    <div class="content clearfix">
+                        <div class="right">
+                            <div class="login_block_before "></div>
+                            <div class="login_block_after none">
+                                <p class="member_id">astraysoul</p>.
+                                <p class="sorting">999</p>
+                                <p class="money">100,000</p>
+                            </div>
+                            <div class="btn_block">
+                                <button type="button" class="login_btn"></button>
+                                <button type="button" class="reg_btn" onclick=""></button>
+                            </div>
+
+                            <!-- 排行榜 -->
+                            <div class="ranking">
+                                <!-- 標題 -->
+                                <div class="top">
+                                    <ul>
+                                        <li>排名</li>
+                                        <li>会员帐号</li>
+                                        <li>总营利</li>
+                                        <li>奖项</li>
+                                    </ul>
+                                </div>
+                                <div data-id="0" class="list">
+                                    <ul>
+                                        <li>
+                                            <p class="num">1</p>
+                                            <p class="id">I447***</p>
+                                            <p class="money">1,000</p>
+                                            <p class="item">电视</p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div data-id="1" class="list" style="display: none;">
+                                    <ul>
+                                        <li>
+                                            <p class="num">2</p>
+                                            <p class="id">I447***</p>
+                                            <p class="money">1,000</p>
+                                            <p class="item">电视</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div data-id="2" class="list" style="display: none;">
+                                    <ul>
+                                        <li>
+                                            <p class="num">3</p>
+                                            <p class="id">I447***</p>
+                                            <p class="money">1,000</p>
+                                            <p class="item">电视</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="control">
+                                    <a class="pre" rel=""></a>
+                                    <div id="page_number">
+                                        <span class="currentPage" id="first" rel="">1</span>
+                                        <span class="currentPage" rel="">/</span>
+                                        <span class="currentPage" id="total_num" rel=""></span>
+                                    </div>
+                                    <a class="next" rel=""></a>
+                                </div>
+                            </div>    
+                            <!-- 排行榜 end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 遊戲規則 -->
+            <div class="rule">
+                <div class="wrap flex">
+                    <ul>
+                        <li><span class="bk">1</span> 盈利冠军榜第一期：北京时间2017年08月07日中午12：00至09月06日中午11：59止。</li>
+                        <li><span class="bk">2</span> 盈利冠军榜第二期：北京时间2017年09月06日中午12：00至10月06日中午11：59止。</li>
+                        <li><span class="bk">3</span> 得奖名单：将于每期活动结束后，次个周三公告于活动页中，并于19：00前自动派发彩金至您的主账户内。 </li>
+                        <li><span class="bk">4</span> 本活动采体育累计盈利 排名竞赛，报名成功且前100名盈利者可获指定奖项。</li>
+                        <li><span class="bk">5</span> 彩金<span class="yellow">打码3倍</span>即可出款。</li>
+                        <li><span class="bk">6</span> 获得礼品会员，若<span class="yellow">7天内</span>未至客服告知寄件地址则视同放弃。</li>
+                        <li><span class="bk">7</span> 活动期间，<span class="yellow">仅需报名一次。</span></li>
+                        <li><span class="bk">8</span> 会员的累计盈利由迪拜皇宫系统自动统计，若有任何异议，以迪拜皇宫查询结果为准。</li>
+                        <li><span class="bk">9</span> 每位会员、每个IP、每个手机号码、每个电子邮箱地址、每一组银行账号只能享有一期一次优惠，若发<br>
+                            现重复注册或同IP多账号现象，则视为同一人，此IP下所有账号迪拜皇宫有权拒绝派送礼品。</li>
+                        <li><span class="bk bk10">10</span> 与此活动即表示同意<a href="https://www.486486.com/main/ot/faq/88" target="_blank">《迪拜皇宫活动声明》</a>，迪拜皇宫拥有最终解释权。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- free 免費籌碼週週拿-->
+        <section id="free_page" class="none">
+            <div class="free ">
+                <div class="wrap">
+                    <div class="title flex">
+                        <img src="assets/images/free_title.png" alt="">
+                    </div>
+
+                    <!-- 周周前往报名 -->
+                    <button type="button" class="f_btn"></button>
+                    <!-- 遊戲規則 -->
+                </div>
+            </div>
+            <div class="rule">
+                <div class="wrap flex">
+                    <ul>
+                        <li><span class="bk">1</span> 活动时间：2017年0８月02日中午12：00至0９月27日中午11：59止。</li>
+                        <li><span class="bk">2</span> 计算区间：每周三中午12点至隔周三中午12点止。</li>
+                        <li><span class="bk">3</span> 活动馆别：全馆体育。</li>
+                        <li><span class="bk">4</span> 派发时间：每周三19：00前自动派发至您的主账户内。</li>
+                        <li><span class="bk">5</span> 活动期间，<span class="yellow">每周需报名一次</span>，报名成功且达成活动条件即可获得彩金。</li>
+                        <li><span class="bk">6</span> 彩金打码3倍即可出款。</li>
+                        <li><span class="bk">7</span> 会员的投注额由迪拜皇宫系统自动统计，若有任何异议，以迪拜皇宫查询结果为准。</span></li>
+                        <li><span class="bk">8</span> 会员的累计盈利由迪拜皇宫系统自动统计，若有任何异议，以迪拜皇宫查询结果为准。</li>
+                        <li><span class="bk">9</span> 每位会员、每个IP、每个手机号码、每个电子邮箱地址、每一组银行账号只能享有一期一次优惠，若发<br>
+                            现重复注册或同IP多账号现象，则视为同一人，此IP下所有账号迪拜皇宫有权拒绝派送礼品。</li>
+                        <li><span class="bk bk10">10</span> 与此活动即表示同意<a href="https://www.486486.com/main/ot/faq/88" target="_blank">《迪拜皇宫活动声明》</a>，迪拜皇宫拥有最终解释权。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- victory 逆轉勝 -->
+        <section id="victory_page" class="none">
+            <div class="victory">
+                <div class="wrap">
+                    <div class="title flex">
+                        <img src="assets/images/victory_title.png" alt="">
+                    </div>
+                    <!-- 周周前往报名 -->
+                    <button type="button" class="v_btn"></button>
+                </div>
+            </div>
+            
+            <div class="rule">
+                <div class="wrap flex">
+                    <ul>
+                        <li><span class="bk">1</span> 活动时间：2017年0８月02日中午12：00 至 09月27日中午11：59止。</li>
+                        <li><span class="bk">2</span> 计算区间：每周三中午12点至隔周三中午12点止。</li>
+                        <li><span class="bk">3</span> 活动馆别：全馆体育。</li>
+                        <li><span class="bk">4</span> 派发时间：每周三19：00前自动派发至您的主账户内。</li>
+                        <li><span class="bk">5</span> 活动期间，每周需报名一次，报名成功且达成活动条件即可获得彩金。</li>
+                        <li><span class="bk">6</span> 彩金<span class="yellow">打码1倍</span>即可出款。</li>
+                        <li><span class="bk">7</span> 活动彩金一经派彩即无法放弃。</span></li>
+                        <li><span class="bk">8</span> 会员的累计盈利由迪拜皇宫系统自动统计，若有任何异议，以迪拜皇宫查询结果为准。</li>
+                        <li><span class="bk">9</span> 每位会员、每个IP、每个手机号码、每个电子邮箱地址、每一组银行账号只能享有一期一次优惠，若发<br>
+                            现重复注册或同IP多账号现象，则视为同一人，此IP下所有账号迪拜皇宫有权拒绝派送礼品。</li>
+                        <li><span class="bk bk10">10</span> 与此活动即表示同意<a href="https://www.486486.com/main/ot/faq/88" target="_blank">《迪拜皇宫活动声明》</a>，迪拜皇宫拥有最终解释权。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 活動推薦 -->
+        <div class="recom">
+            <div class="wrap flex">
+                <a href="https://399699.com/#activity#0#410" target="_blank" class="recom_01">
+                    <img src="assets/images/recom_01.png" alt="">
+                </a>
+                <a href="https://399699.com/#activity#0#329" target="_blank" class="recom_02">
+                    <img src="assets/images/recom_02.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- main end-->
+
+    <footer>
+        Copyright © 迪拜皇宫 Reserved 
+    </footer>
+
+    <!-- 彈跳視窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+               
+        <!-- 注 册 会 员 -->
+        <div id="reg_box" class="reg_member none">
+            <div class="title">注 册 会 员</div>
+            <div class="cus">
+                <p>任何问题,欢迎随时联系</p>
+                <a href="http://liveperson.lp2chat.com/dbpcn/" target="_blank">
+                    <span>线上客服</span>
+                </a>
+            </div>
+            <div class="reg_table">
+                <div>
+                    <p>会员帐号：</p>
+                    <input type="text" name="" id="acc" value="">
+                </div>
+                <div>
+                    <p class="ws">姓</p>
+                    <p>名：</p>
+                    <input type="text" name="" id="aname" value="">
+                </div>
+                <div>
+                    <p class="ws">邮</p>
+                    <p>箱：</p>
+                    <input type="email" name="" id="amail" value="">
+                </div>
+                <div class="mem_style">
+                    <p class="ws point">密</p>
+                    <p>码：</p>
+                    <input type="password" name="" id="pwd" value="">
+                    <div class="caps-lock"><span>大写锁定已打开</span></div>
+                </div>
+                <div class="tip">
+                    <span>密码須为6~12码英文搭配数字</span>
+                </div>
+                <div class="mem_style">
+                    <p class="point">确认密码：</p>
+                    <input type="password" name="" id="pwd_c" value="">
+                    <div class="caps-lock"><span>大写锁定已打开</span></div>
+                </div>
+                <div>
+                    <p class="ws point">生</p>
+                    <p>日：</p>
+                    <select name="" class="reg_select" id="sl_year">
+                        <option value="-1">-</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option></select>
+                    <select name="" class="reg_select" id="sl_month">
+                        <option value="-1">-</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
+                    <select name="" class="reg_select" id="sl_day">
+                        <option value="-1">-</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+                </div>
+                <div>
+                    <p class="ws point">手</p>
+                    <p>机：</p>
+                    <input type="text" name="" id="amobile" value="">
+                </div>
+                <div>
+                    <p>QQ：</p>
+                    <input type="text" name="" id="aqq" value="">
+                </div>
+                <div>
+                    <p class="point">取款密码：</p>
+                    <select class="reg_select1"><option value="-1">-</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select>
+                    <select class="reg_select1"><option value="-1">-</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select>
+                    <select class="reg_select1"><option value="-1">-</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select>
+                    <select class="reg_select1"><option value="-1">-</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select>
+                </div>
+                <div>
+                    <p class="ws2">货</p>
+                    <p>币：</p>
+                    <select name="" class="reg_select2" id="id_country">
+                        <option value="1">RMB</option>
+                        <option value="2">VND</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="ws1">介绍</p>
+                    <p>人：</p>
+                    <input type="text" name="" id="agent" value="">
+                </div>
+                <div class="code">
+                    <p class="point">安全验证：</p>
+                    <span class="vcode">
+                        <input type="text" name="" id="v_code" value="" placeholder="验证码">
+                        <img onclick="" width="100" height="30" id="vcode_img" src="assets/images/v_code.png">
+                    </span>
+                </div>
+                <div class="agree">
+                    <i class="no-chk"><img src="assets/images/chk.jpg" alt=""></i>
+                    <p>我已届满合法博彩年龄,且同意
+                        <a href="http://399699.com/main/ot/faq/109" target="_blank">开户协议</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="form_btn">
+				<button onclick="" id="Sign_up" class="send_btn">提交</button>
+				<button onclick="" class="reset_btn">清除重填</button>
+            </div>
+            <div class="close_btn popclose"></div>
+        </div>
+
+        <!-- 登入視窗 -->
+        <div id="login_box" class="login_member none">
+            <div class="title">会 员 登 录</div>
+            <div class="login_table">
+                <div>
+                    <p>用户名：</p>
+                    <input type="text" name="" id="acc" value="" placeholder="请输入您的会员帐号">
+                </div>
+                <div>
+                    <p class="ws point">密</p>
+                    <p>码：</p>
+                    <input type="password" name="" id="pwd" value="" placeholder="请输入您的密码">
+                </div>
+                <div class="code">
+                    <p class="point">验证码：</p>
+                    <span class="vcode">
+                        <input type="text" name="" id="v_code" value="" placeholder="验证码">
+                        <img onclick="" width="100" height="30" id="vcode_img" src="assets/images/v_code.png">
+                    </span>
+                </div>
+            </div>
+            <div class="login_btn">
+                <button onclick="" class="send_btn">登录</button>
+                <button type="button" onclick="" class="pws_btn">忘记密码</button>
+            </div>
+            <div class="close_btn popclose"></div>
+        </div>
+
+        <!-- 忘記密碼 -->
+        <div id="forgot_psw" class="login_member none" >
+            <div class="title">请输入帐号及取款密码</div>
+            <div class="login_table">
+                <div>
+                    <p>用户名：</p>
+                    <input type="text" name="" id="acc" value="" placeholder="请输入您的会员帐号">
+                </div>
+                <div>
+                    <p class="ws point">密</p>
+                    <p>码：</p>
+                    <input type="password" name="" id="pwd" value="" placeholder="请输入您的取款密码">
+                </div>
+                <div class="code">
+                    <p class="point">验证码：</p>
+                    <span class="vcode">
+                        <input type="text" name="" id="v_code" value="" placeholder="验证码">
+                        <img onclick="" width="100" height="30" id="vcode_img" src="assets/images/v_code.png">
+                    </span>
+                </div>
+            </div>
+            <div class="forgot_btn">
+                <button type="button" onclick="" class="send_btn">送出</button>
+            </div>
+            <div class="close_btn popclose"></div>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script>
+$(function() {
+
+    var cs = function() {
+        var url = 'https://liveperson.lp2chat.com/dbpcn/';
+        window.open(url, 'newwindow', 'width=800,height=600');
+    }
+
+    //網頁重整
+    function reload(){
+        var  $body = $('html, body')
+        $body.scrollTop(0);
+    }
+    reload();
+
+    //關閉彈窗 & 遮罩
+    $('.popclose').on('click',function(){
+        $('.popbox').fadeOut(300);
+    });
+    
+
+    //清空帳號和留言欄位內容
+    var reset = function(){
+        $('.member').val('');
+    }
+    
+    
+    //判斷是否為會員
+    var $Login = true;
+
+    function m_login(){
+        switch (key) {
+
+            //注册成功時
+            case 99:
+                alert('恭喜您，注册成功！');
+                $('#reg_box').addClass('none');
+                break;
+                
+            //報名成功時
+            case 100:
+                alert('恭喜您，报名成功！');
+                $('#login_box').addClass('none');
+                break;
+
+            //在会员登錄画面時、非本站會员
+            case 101:
+                alert('抱歉，您未成为本站会员，请进行免费注册');
+                $('#login_box').addClass('none');
+                $('#reg_box').removeClass('none');
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    var i = 0;
+    var j;
+    var DB = function(){
+        
+        var num = $('.ranking').find('.list').length;  
+
+        //找尋list數量 並顯示在#total_num上
+        function list_num(){
+            $('#total_num').text(num);
+        }
+        list_num();
+
+        //及時排行榜 下方按鈕
+        function control_btn(){
+            $('.next').on('click',function(){
+                i++;
+                if(i < num){        
+                    $('.ranking > div[data-id]').hide();
+                    $('.ranking > div[data-id]').eq(i).show();
+                    $('#first').text(i+1);
+                }
+            });
+            $('.pre').on('click',function(){
+                i--;
+                if( i < num ){
+                    $('.ranking > div[data-id]').hide();
+                    $('.ranking > div[data-id]').eq(i).show();
+                    $('#first').text(i+1);
+                }
+            });
+        }
+        control_btn();
+
+        //選單按鈕
+        function Allbtn(){
+            var md = $('#mdOverlay, #mdWindow');
+
+            $('button').on('click',function(){
+
+                //免費籌碼周周拿btn > 顯示活動首頁，其他隱藏
+                if( $(this).attr('class') == 'free_btn' ){
+                    $('#free_page, #victory_page').hide();
+                    $('#index_page').show();
+
+                //盈利冠軍、送高清電視btn > 顯示免費籌碼頁面，其他隱藏
+                }else if( $(this).attr('class') == 'tv_btn' ){
+                    $('#index_page, #victory_page').hide();
+                    $('#free_page').show();
+
+                //逆轉勝btn > 顯示逆轉勝頁面，其他隱藏
+                }else if(  $(this).attr('class') == 'victory_btn' ){
+                    $('#index_page, #free_page').hide();
+                    $('#victory_page').show();
+
+                
+                //登入按钮、衝榜去按钮 
+                }else if( ($(this).attr('class') == 'login_btn') || ($(this).attr('class') == 'index_btn') ){
+                    $('#login_box').removeClass('none');
+                    md.fadeIn(500);
+
+                //周周前往报名 、 免费注册按钮
+                }else if(  ($(this).attr('class') == 'f_btn') || ($(this).attr('class') == 'v_btn') || ( $(this).attr('class') == 'reg_btn') ){
+                    $('#reg_box').removeClass('none');
+                    md.fadeIn(500);
+
+                //忘記密碼
+                }else if( $(this).attr('class') == 'pws_btn' ){
+                    $('#login_box').addClass('none');
+                    md.fadeIn(500);
+                    $('#forgot_psw').removeClass('none');
+                }
+            });
+        }
+        // Allbtn();
+
+        function Close(){
+            $('.popclose').on('click',function(){
+                $(this).parent('div').addClass('none');
+            });
+        }
+        Close();
+    }
+    DB();
+    
+});
+
+function Btn(){
+    var a;
+    var md = $('#mdOverlay, #mdWindow');
+
+    $('button').on('click',function(){
+        a = $(this).attr('class');
+        console.log(a);
+        switch( a ){
+            
+            case 'free_btn' :
+
+                $('#free_page, #victory_page').hide();
+                $('#index_page').show();
+                break;
+
+            case 'tv_btn' :
+            
+                $('#index_page, #victory_page').hide();
+                $('#free_page').show();
+                break;
+
+            case 'victory_btn' :
+            
+                $('#index_page, #free_page').hide();
+                $('#victory_page').show();
+                break;
+                
+            case 'reg_btn' :
+            case 'f_btn' :
+            case 'v_btn' :
+
+                $('#reg_box').removeClass('none');
+                md.fadeIn(500);
+                break;
+            
+            case 'login_btn' :
+            case 'index_btn' :
+
+                $('#login_box').removeClass('none');
+                md.fadeIn(500);
+                break;
+
+            case 'pws_btn' :
+
+                $('#login_box').addClass('none');
+                md.fadeIn(500);
+                $('#forgot_psw').removeClass('none');
+                break;
+
+            default:
+                break;
+        }
+    });
+   
+}
+Btn();
+
+</script>
+</html>

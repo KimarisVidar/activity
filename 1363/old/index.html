@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>劳动节最光荣 全勤就抽iPhone</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header_top">
+            <div class="header_wrap clearfix">
+                    
+                <!-- logo -->
+                <a href="http://jz3366.com/" target="_bank" class="logo"></a>
+
+                <div class="header_right">
+                <!-- 活動規則 -->
+                    <a href="javascript:void(0);" target="_bank" class="rule"></a>
+                <!-- 再線客服 -->
+                    <a href="https://liveperson.lp2chat.com/jzplay/" target="_bank" class="custom"></a>
+                <!-- 回官網 -->
+                    <a href="http://jz3366.com/" target="_bank" class="home"></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="header_bottom">
+             <div class="header_wrap">
+             <!-- 我要報名 -->
+                <a href="javascript:void(0);" class="sign_btn"></a>
+             </div>
+        </div>
+    </header> 
+    
+    <!-- content -->
+    <div class="content">
+
+        <!-- 簽到彩金 -->
+        <div id="money" class="money">
+
+            <div class="money_top">
+                <div class="content_wrap">
+                    <p class="p_style">
+                        点击我要报名，并于活动期间至金赞投注1元以上，就算签到成功，周签到2天以上<br>
+                        即可依下表签到天数（不需连续）抽得对应彩金，全勤奖加码再抽iPhone7 128G！
+                    </p>
+                </div> 
+            </div>
+            <div class="money_bottom"></div>
+
+        </div>
+        
+        <!-- 樂享3天3夜 -->
+        <div id="enjoy" class="enjoy">
+            <div class="enjoy_top">
+                <div class="content_wrap">
+                    <p class="p_style01">
+                        点击我要报名，不於51劳动节3天假期期间！至金赞进行【登陆】，还有机会抽中5大享乐大奖！
+                        <p class="p_style02">登入时间：2017年04月29日至2017年05月01日</p>
+                    </p>
+                </div> 
+            </div>
+            <div class="enjoy_bottom"></div>
+        </div>
+        <!-- enjoy -->
+
+    </div>
+    <!-- content -->
+    
+    <!-- footer -->
+    <footer>
+        <p>Copyright © 金赞娱乐城 Reserved</p>
+    </footer>  
+
+    <!-- 浮動視窗 -->
+    <div class="f_window">
+        <a href="javascript:void(0);" data-name="money" class="f_money scrollbtn"></a>
+        <a href="javascript:void(0);" data-name="enjoy" class="f_enjoy scrollbtn"></a>
+        <a href="http://jz3366.com/" target="_bank" class="f_home"></a>
+        <a href="https://liveperson.lp2chat.com/jzplay/" target="_bank" class="f_cus"></a>
+        <a href="javascript:void(0);" class="f_sign sign"></a>
+        <a href="javascript:void(0);" data-name="top" id="signUp" class="gotop scrollbtn"></a>
+    </div>
+    
+    <!-- 提示畫面 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox">
+    <!-- 立即報名 -->
+        <div class="sign_window">
+            <input type="text" name="member" class="member" placeholder="请输入您的会员帐号">
+            <a href="javascript:void(0);" class="member_btn  Enter"></a>
+        </div>
+        <a href="javascript:void(0);"  class="sign_close popclose"></a>
+    </div>
+    
+    <!-- 規則 -->
+    <div id="mdWindows_rule" class="popbox">
+        <div class="rule_top"></div>
+        <div class="rule_mid01"></div>
+        <div class="rule_mid02"></div>
+        <div class="rule_bottom"></div>
+        <a href="javascript:void(0);"  class="rule_close popclose"></a>
+    </div>
+    
+
+
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script>
+var cs = function() {
+    var url = 'https://liveperson.lp2chat.com/u2bet/';
+    window.open(url, 'newwindow', 'width=800,height=600');
+}
+
+var sumbit = function() {
+    acc = $.trim($('.member').val());
+    if (acc) {
+        $.post("",{"send":acc},function(rt){
+            var obj = json_decode(rt); //php
+            switch(obj.code){
+                //送出成功
+                case "100":{
+                    alert('感谢您的报名！请完成指定规则条件，即可参加iPhone抽奖！');
+                    reset(); //清空帳號和留言欄位內容
+                }break;
+                //已參加過
+                case "101":{
+                    alert('尊贵的会员您好，您完成【劳动最光荣 全勤就抽iPhone7】报名，请完成指定规则条件，即可参加iPhone抽奖！');
+                    reset();
+                }break;
+                //会员不符合资格
+                case "102":{
+                    alert("请确认您的金赞娱乐城帐号是否错误，若您未注册请至金赞娱乐城官网进行注册，有任何帐号以及游戏问题欢迎与7X24在线客服联系");
+                    reset(); 
+                }break;
+            }
+        });
+    }else{
+        alert('请填入帐号')
+    }
+}
+ 
+$(function() {
+    $('.scrollbtn').click(function(event) {
+        var name = $(this).attr('data-name');
+        var top;
+
+        if(name == "top"){
+            top = 0
+        }else{
+            top = $('#'+ name).offset().top;
+        }
+
+        $('body,html').animate({
+            'scrollTop': top
+        }, 650)
+
+    });
+
+    var navscroll = function(){
+        $(".f_window").stop().animate({
+            "top": $(window).scrollTop() + 110
+        }, 500);
+    }
+    navscroll();
+
+    //不顯示浮動視窗
+    $('.f_window').hide();
+    //當視窗滾動的時候
+    $(window).scroll(function(){
+
+        //抓視窗滾動的高度
+        var wintop = $(window).scrollTop();
+
+        //當高度大於或等於550時
+        if(wintop > 550){
+            $('.f_window').fadeIn(200);
+        
+        }else{
+            $('.f_window').fadeOut(200);
+        }
+        navscroll();
+    });  
+
+    //綁定送出事件
+    $('.Enter').bind('click',function(event) {
+        sumbit();
+    });
+    
+     //我要報名
+    $('.sign_btn, .member_btn, .sign').on('click',function(){
+        $('#mdOverlay, #mdWindow').fadeIn(500);
+    });
+
+    //活動規則
+     $('.rule').on('click',function(){
+        $('#mdOverlay, #mdWindows_rule').fadeIn(500);
+    });
+
+    //關閉彈窗 & 遮罩
+    $('.popclose').on('click',function(){
+        $('.popbox').fadeOut(300);
+    });
+    
+    //清空帳號和留言欄位內容
+    var reset = function(){
+        $('.member, .text_con').val('');
+    }
+
+});
+
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+    background: #09013d url(../images/bg.jpg) no-repeat top center;
+
+}
+img {max-width: 100%;border-style: none;}
+.wrap {max-width: 1312px; margin: 0 auto;}
+.none {display: none;}
+/* 內容 */
+header {top: 1%; width: 100%; position: absolute; z-index: 1;}
+section {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+    background: url(../images/content.png) no-repeat top center;
+    width: 1312px;
+    height: 720px;
+}
+footer {
+    bottom: 8%;
+    width: 100%;
+    height: auto;
+    color: #c4a6ff;
+    padding: 10px 0; 
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    letter-spacing: 1px;
+}
+.logo{width: 100%; display: block; margin: 0 auto; text-align: center;}
+.btn_style{width: 80%; float: left; margin: 36% 0 0 13%;}
+.btn_style a{margin-right: 5px;}
+.btn_style a:last-child{margin: 0;}
+
+/*==== mobile
+==========================================================================*/
+body.mobile{background: #09013d url(../images/bg_m.jpg) no-repeat top center; background-size: cover;}
+.mobile section {
+    background: url(../images/content_m.png) no-repeat top center;
+    background-size: cover;
+    width: 69vw;
+    height: 98vw;
+    margin: 5vw auto 0;
+}
+.mobile footer {
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: #c4a6ff;
+    padding: 10px 0; 
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    letter-spacing: 1px;
+}
+.mobile .btn_style a{margin: 0 1vw 1vw 0; display: inline-block;}
+.mobile .btn_style{width: 80%; float: left; margin: 63vw 0 0 12vw;}
+
+@media (max-width: 640px) {
+    .mobile section{width: 87vw; height: 124vw; margin: 5vw auto 0;}
+    .mobile .btn_style{margin: 80vw 0 0 12vw;}
+    .mobile .btn_style a{margin: 0 6vw 2vw 0;}
+}
+@media (max-width: 480px) {
+    .mobile .logo{width: 40vw; margin: 10vw auto 0;}
+    .mobile .btn_style a {margin: 0 1vw 2vw 0; width: 32vw;}
+}

@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金赞神秘客，填题闯关拿彩金</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+<!-- css -->
+
+<!-- reset -->
+<link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/reset.css">
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/font-awesome/css/font-awesome.min.css">
+<!-- jQuery-confirm -->
+<link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/jQuery-confirm/jquery-confirm.css">
+<!-- global -->
+<link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/global.css">
+
+
+
+<!-- js -->
+
+<!-- jQuery 2.2.3 -->
+<script src="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/bootstrap/js/bootstrap.min.js"></script>
+<!-- jQuery-confirm -->
+<script src="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/jQuery-confirm/jquery-confirm.js"></script>
+<script src="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/jQuery-confirm/jquery-confirm-ext.js"></script>
+<!-- global -->
+<script src="http://251e.bcad8.com/actions/act_evt/web_file/assets/global/global.js"></script>
+    <link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/jz/jzquestionnaire/css/animate.css">
+    <link rel="stylesheet" href="http://251e.bcad8.com/actions/act_evt/web_file/assets/jz/jzquestionnaire/css/custom.css">
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="wrap clearfix">
+                <a href="http://jz3366.com/" target="_blank" class="logo"></a>
+                <div class="btn-box">
+                    <a href="javascript:void(0);" class="btn-child rule"></a>
+                    <a href="http://jz3366.com/" target="_blank" class="btn-child home"></a>
+                    <a href="#" class="btn-child cus" onclick="cs()"></a>
+                </div>
+            </div>
+        </header>
+        <!-- 內容 -->
+        <section id="main">
+            <div class="wrap">
+                <div class="title"></div>
+                <input type="text" name="acc" class="member_id">
+                <button type="button" class="qa_btn">开始闯关</button>
+            </div>
+        </section>
+        <!-- 內容 end-->
+        <div id="question_block">
+            <!-- 問卷區塊 - 客服相關 -->
+            <section class="cus_block none" data-id="0">
+                <div class="wrap">
+                    <div class="title cus_top"></div>
+                    <form class="qa_content">
+                        <div class="require">
+                            <div class="inside_title">1.请问您对于客服人员的服务态度是否满意？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q1" value="1">
+                                    <span>很满意</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q1" value="2">
+                                    <span>普通</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q1" value="3">
+                                    <span>不太满意</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q1" value="4">
+                                    <span>非常不满意</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="require">
+                            <div class="inside_title">2.请问您向客服人员谘询时，客服人员是否能理解您的需求？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q2" value="1">
+                                    <span>是，能完全理解</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q2" value="2">
+                                    <span>普通，需再解释</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q2" value="3">
+                                    <span>否，有些难沟通</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q2" value="4">
+                                    <span>否，完全不能理解</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="require">
+                            <div class="inside_title">3.请问您对于客服人员的处理效率是否满意？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q3" value="1">
+                                    <span>很满意，很快</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q3" value="2">
+                                    <span>普通，时快时慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q3" value="3">
+                                    <span>有点慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q3" value="4">
+                                    <span>非常慢，每次都等很久</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="require">
+                            <div class="inside_title">4.根据以往的谘询经验，请问您觉得客服人员的专业知识如何？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q4" value="1">
+                                    <span> 很好，什么都懂</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q4" value="2">
+                                    <span> 普通，有时答很慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q4" value="3">
+                                    <span> 稍差，有时会回错</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q4" value="4">
+                                    <span>非常差，问什么都不懂</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s1 require">
+                            <div class="inside_title">5.请问您咨询客服主要是谘询什么项目?</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q5" value="1">
+                                    <span>存取款问题</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q5" value="2">
+                                    <span>游戏问题</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q5" value="3">
+                                    <span>系统问题</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q5" value="4">
+                                    <span>优惠问题</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q5" value="5">
+                                    <span>会员账户问题</span>
+                                </label>
+                            </p>
+                        </div>
+                    </form>
+                    <button type="button" class="qa_btn form_btn" value="">下一关</button>
+                    <div class="icon cus_icon"></div>
+                </div>
+            </section>
+            <!-- 客服相關 end -->
+            <!-- 問卷區塊 - 金流相關 -->
+            <section class="money_block none" data-id="1">
+                <div class="wrap">
+                    <div class="title money_top"></div>
+                    <form class="qa_content">
+                        <div class="require">
+                            <div class="inside_title">1.对于娱乐城的使用操作，您目前最常遇到的问题是什么？ </div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q6" value="1">
+                                    <span>存款太慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q6" value="2">
+                                    <span>取款太慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q6" value="3"> 
+                                    <span>官网时常连不上</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q6" value="4">
+                                    <span> 游戏时常卡屏</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q6" value="other" class="else_radio">
+                                    <span>其他:</span>
+                                    <input type="text" name="else" class="else_option" id="Q6_other_text">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s1 require">
+                            <div class="inside_title">2.网站进站的弹窗广告对您有帮助吗？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q7" value="1">
+                                    <span>是，直接使用弹窗链结</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q7" value="2">
+                                    <span>不一定，依广告内容而定</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q7" value="3">
+                                    <span>没，不管他直接关掉</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="require">
+                            <div class="inside_title">3.请问平时会点击或注意两侧的浮动窗口吗？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q8" value="1">
+                                    <span>会，点选客服</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q8" value="2">
+                                    <span> 会，点选快速支付</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q8" value="3">
+                                    <span>会，点其他的</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q8" value="4">
+                                    <span>不会，很少用这功能</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s3 theForm require">
+                            <div class="inside_title">4.请问您曾经使用过资讯站提供的操作教学吗？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q9" value="1">
+                                    <span>完全没用过</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q9" value="2">
+                                    <span>有使用过，觉得有帮助</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q9" value="3">
+                                    <span>有使用过，但没帮助到我</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q9" value="other" class="else_radio">
+                                    <span>其他:</span>
+                                    <input type="text" name="else" class="else_option" id="Q9_other_text">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s2 require">
+                            <div class="inside_title">5.当进行不熟悉的操作时,在资讯站很容易找到相关提示？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q10" value="1">
+                                    <span>是，很容易找到</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q10" value="2">
+                                    <span>是，但有点难找</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q10" value="3">
+                                    <span>否，没有我要的教学</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q10" value="4">
+                                    <span>希望有</span>
+                                </label>
+                            </p>
+                        </div>
+                    </form>
+                    <button type="button" class="qa_btn form_btn" value="">下一关</button>
+                    <div class="icon money_icon"></div>
+                </div>
+            </section>
+            <!-- 金流相關 end -->
+            <!-- 問卷區塊 - 系統相關 -->
+            <section class="sys_block none" data-id="2">
+                <div class="wrap">
+                    <div class="title sys_top"></div>
+                    <form class="qa_content">
+                        <div class="s1 theForm require">
+                            <div class="inside_title">1.对于娱乐城的使用操作，您目前最常遇到的问题是什么？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q11" value="1">
+                                    <span> 存款太慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q11" value="2">
+                                    <span> 取款太慢</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q11" value="3">
+                                    <span> 官网时常连不上</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q11" value="4">
+                                    <span> 游戏时常卡屏</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q11" value="other" class="else_radio">
+                                    <span>其他:</span>
+                                    <input type="text" name="else" class="else_option" id="Q11_other_text">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s1 require">
+                            <div class="inside_title">2.网站进站的弹窗广告对您有帮助吗？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q12" value="1">
+                                    <span> 是，直接使用弹窗链结</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q12" value="2">
+                                    <span> 不一定，依广告内容而定</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q12" value="3">
+                                    <span> 没，不管他直接关掉</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s2 require">
+                            <div class="inside_title">3.请问平时会点击或注意两侧的浮动窗口吗？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q13" value="1">
+                                    <span> 会，点选客服</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q13" value="2">
+                                    <span> 会，点选快速支付 </span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q13" value="3">
+                                    <span> 会，点其他的</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q13" value="4">
+                                    <span> 不会，很少用这功能</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s2 theForm require">
+                            <div class="inside_title">4.请问您曾经使用过资讯站提供的操作教学吗？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q14" value="1">
+                                    <span> 完全没用过</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q14" value="2">
+                                    <span> 有使用过，觉得有帮助</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q14" value="3">
+                                    <span> 有使用过，但没帮助到我</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q14" value="other" class="else_radio">
+                                    <span>其他:</span>
+                                    <input type="text" name="else" class="else_option" id="Q14_other_text">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s3 theForm require">
+                            <div class="inside_title">5.当进行不熟悉的操作时,在资讯站很容易找到相关提示？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q15" value="1">
+                                    <span> 是，很容易找到</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q15" value="2">
+                                    <span> 是，但有点难找</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q15" value="3">
+                                    <span> 否，没有我要的教学</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q15" value="other" class="else_radio">
+                                    <span>希望有</span>
+                                    <input type="text" name="else" class="else_option" id="Q15_other_text">教学
+                                </label>
+                            </p>
+                        </div>
+                    </form>
+                    <button type="button" class="qa_btn form_btn" value="">下一关</button>
+                    <div class="icon sys_icon"></div>
+                </div>
+            </section>
+            <!-- 系統相關 end -->
+            <!-- 問卷區塊 - 优惠相關 -->
+            <section class="offer_block none" data-id="3">
+                <div class="wrap">
+                    <div class="title offer_top"></div>
+                    <form class="qa_content">
+                        <div class="require">
+                            <div class="inside_title">1.请问官网的优惠活动条则对您而言是否清楚易懂？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q16" value="1">
+                                    <span> 非常清楚</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q16" value="2">
+                                    <span> 还行，可以再简洁些</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q16" value="3">
+                                    <span> 普通，都可以理解</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q16" value="4">
+                                    <span> 难懂，解释不够清楚</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q16" value="5">
+                                    <span> 完全看不懂</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="require">
+                            <div class="inside_title">2.请问以下哪种活动，对您最有吸引力，请选出前3名（复选题）</div>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="1">
+                                    <span> 投注赠彩金</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="2">
+                                    <span> 积分换礼品</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="3">
+                                    <span> 抽彩金活动</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="4">
+                                    <span> 注单对奖活动</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="5">
+                                    <span> 竞猜活动</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="6">
+                                    <span> 存款优惠</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label class="aa">
+                                    <input type="checkbox" name="Q17" value="7">
+                                    <span> 负盈利回馈金 </span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="require">
+                            <div class="inside_title">3.您平常习惯从哪里得知优惠活动呢？</div>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q18" value="1">
+                                    <span> 每周优惠信件</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q18" value="2">
+                                    <span> 站内信</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q18" value="3">
+                                    <span> 最新优惠</span>
+                                </label>
+                            </p>
+                            <p class="Select">
+                                <label>
+                                    <input type="radio" name="Q18" value="4">
+                                    <span> 短讯</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s1 require">
+                            <div class="inside_title">4.您是否有看过他家优惠，建议本娱乐城也可以举办的？</div>
+                            <p class="Select">
+                                <label>
+                                    <span>答案:</span>
+                                    <input type="text" name="Q19" class="else_option">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="s1 require">
+                            <div class="inside_title">5.想对金赞说的任何建议，必填</div>
+                            <p class="Select">
+                                <label>
+                                    <span>答案:</span>
+                                    <input type="text" name="Q20" class="else_option else_radio">
+                                </label>
+                            </p>
+                        </div>
+                    </form>
+                    <button type="button" class="qa_btn offer_btn" value="">通 关</button>
+                    <div class="icon offer_icon"></div>
+                </div>
+            </section>
+            <!-- 优惠相關 end -->
+        </div>
+
+        <!-- 問卷完成區塊 -->
+        <section id="finished" class="none">
+            <div class="wrap">
+                <div class="title"></div>
+                <div class="finished_content">
+                    <div>在您的慷慨相助下</div>
+                    <div>相信未来的的金赞娱乐城会变得更加美好</div>
+                    <div>我们会于一个小时内将 <span id="member_id">astraysoul1234</span> 的<span class="yellow">感谢彩金</span>派至您的帐户中</div>
+                    <div>祝您今日事事顺心，好运连连！</div>
+                </div>
+                <button type="button" class="qa_btn fin_close" value="">关 闭</button>
+            </div>
+        </section>
+        <!-- 問卷完成區塊 -->
+
+    </div><!-- bg end -->
+
+    <!-- copyright -->
+    <footer>
+        <div class="wrap clearfix flex">
+            <p class="txt">尊爵时尚 品味不凡</p>
+            <p class="copyright">Copyright © 金赞娱乐城 Reserved</p>
+            <p class="url">易记网址：4261.com</p>
+        </div>
+    </footer>
+    
+    <!-- 彈跳視窗 -->
+    <!-- 遮罩 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <!-- 立即報名 -->
+    <div id="mdWindow" class="popbox sign">
+        <div class="rule_title"></div>
+        <div class="rule_content"></div>
+        <div class="close_btn popclose"></div>
+    </div>
+
+</body>
+<script>
+	$(function() {
+
+	    //網頁重整
+	    function reload() {
+	        var $body = $('html, body')
+	        $body.scrollTop(0);
+	    }
+	    reload();
+
+	    //遮罩
+	    $('.rule').on('click', function() {
+	        $('#mdOverlay, #mdWindow').fadeIn(500);
+	    });
+
+	    //關閉彈窗 & 遮罩
+	    $('.popclose, #mdOverlay').on('click', function() {
+	        $('.popbox').fadeOut(300);
+	    });
+	});
+
+	var cs = function() {
+        var url = 'https://liveperson.lp2chat.com/jzplay/';
+        window.open(url, 'newwindow', 'width=800,height=600');
+    }
+
+	var account = null;
+	var indexFn = function(){
+		var formNum = 0;
+
+		var fn = {
+			analytics: function(type){
+				_czc.push(['_trackEvent', type, 'click']);
+			},
+			login: function(callback){
+				var acc = $('input[name="acc"]').val();
+				if(acc == ''){
+					popup.alert('页面错误', '您尚未输入帐号哦');
+					$('input[name="acc"]').focus();
+					return false;
+				}
+
+				sendFun.post('http://251e.bcad8.com/actions/act_evt/web_mem/jz/jzquestionnaire/login', {acc: acc}, {
+					onSuccess: function(res){
+						account = res.acc;
+						$('#main').addClass('none');
+                        $('.cus_block').removeClass('none');
+                        if (callback && $.isFunction(callback)) {
+                        	callback();
+                        }
+					},
+					onFail: function(res){
+						popup.alert(res.title, res.msg);
+					}
+				});
+			},
+			send: function(){
+				// 問卷資料
+				var question = {},
+					pattern = new RegExp('[\'\'?]', 'ig');
+				for (var i = 1; i <= 18; i++) {
+					var name = new Array();
+					question['Q'+i] = {'name':name, 'val': ''};
+				}
+
+				// 抓取資料
+				for (var i = 1; i <= 4; i++) {
+					$('input:radio:checked[name="Q'+i+'"]').each(function(){
+						question['Q'+i]['name'].push(this.value);
+					});
+				}
+
+				$('input:checkbox:checked[name="Q5"]').each(function(){
+					question["Q5"]['name'].push(this.value);
+				});
+
+				for (var i = 6; i <= 7; i++) {
+					$('input:radio:checked[name="Q'+i+'"]').each(function(){
+						question['Q'+i]['name'].push(this.value);
+					});
+				}
+
+				$('input:checkbox:checked[name="Q8"]').each(function(){
+					question['Q8']['name'].push(this.value);
+				});
+				question['Q8']['val'] = $('input#Q8_other_text').val().replace(pattern, '');
+
+				$('input:checkbox:checked[name="Q9"]').each(function(){
+					question["Q9"]['name'].push(this.value);
+				});
+
+				for (var i = 11; i <= 12; i++) {
+					$('input:radio:checked[name="Q'+i+'"]').each(function(){
+						question['Q'+i]['name'].push(this.value);
+					});
+					question['Q'+i]['val'] = $('input#Q'+i+'_other_text').val().replace(pattern, '');
+				}
+
+				$('input:radio:checked[name="Q13"]').each(function(){
+					question['Q13']['name'].push(this.value);
+				});
+
+				question['Q14']['name'][0] = $('input:radio:checked[name="Q14"]').val();
+				if (question['Q14']['name'][0] == '2') {
+					question['Q14']['val'] = $('#Q14_2_text').val().replace(pattern, '');
+				} else if (question['Q14']['name'][0] == '3') {
+					question['Q14']['val'] = $('#Q14_3_text').val().replace(pattern, '');
+				}
+
+				$('input:radio:checked[name="Q15"]').each(function(){
+					question['Q15']['name'].push(this.value);
+				});
+				question['Q15']['val'] = $('input#Q15_other_text').val().replace(pattern, '');
+
+				$('input:checkbox:checked[name="Q16"]').each(function(){
+					question['Q16']['name'].push(this.value);
+				});
+				question['Q16']['val'] = $('input#Q16_other_text').val().replace(pattern, '');
+
+				$('input:radio:checked[name="Q17"]').each(function(){
+					question['Q17']['name'].push(this.value);
+				});
+
+				question['Q18']['val'] = $('#Q18_val').val().replace(pattern, '');
+
+				sendFun.post('http://251e.bcad8.com/actions/act_evt/web_mem/jz/jzquestionnaire/sendQuestion', {acc: account, question: question}, {
+					onSuccess: function(res){
+						$('.member_ifo span').text(res.bonus);
+						bg_done();
+					},
+					onFail: function(res){
+						switch(res.code){
+							case 407:
+								for (var i = 1; i <= 18; i++) {
+				    				$('#Q' + i).hide();
+				    			}
+					            var check = res.check;
+					            for (var i = 0; i < check.length; i++) {
+					            	$('#'+check[i]).show();
+					            }
+					            var tab = res.tab;
+					            for (var i = 1; i <= 4; i++) {
+					            	$('a[href="#tab'+i+'"]').removeAttr('style');
+					            }
+					            for (var i in tab) {
+					            	$('a[href="#'+tab[i]+'"]').css('color', 'yellow');
+					            }
+								popup.alert(res.title, res.msg);
+								break;
+							default:
+								popup.alert(res.title, res.msg);
+								break;
+						}
+					}
+				});
+			},
+
+            //所有題目判斷
+			checkRequire: function(){
+
+                //回傳
+				var chk = true;
+
+				$('section[data-id="'+formNum+'"] .require').each(function(key, val){
+
+					var length = $(this).find(':radio, :checkbox').length,
+						chklength = $(this).find(':radio:checked, :checkbox:checked').length,
+						val = $(this).find(':radio:checked').val(),
+						text = $(this).find('.else_option').val();
+
+					$(this).find('.inside_title').removeClass('not_check');
+
+					// radio & checkbox require
+					if (chklength == 0 && length != 0) {
+						$(this).find('.inside_title').addClass('not_check');
+						chk = false;
+
+					// other text require
+					} else if (val == 'other' && text == '') {
+						$(this).find('.else_option').focus();
+						$(this).find('.inside_title').addClass('not_check');
+						chk = false;
+
+					// input text require
+					} else if (length == 0 && text == '') {
+						$(this).find('.else_option').focus();
+						$(this).find('.inside_title').addClass('not_check');
+						chk = false;
+
+					// 優惠相關第二題 (必選3選項)
+                    //formNum = data-id = 3; key = index = 題數 
+					} else if (formNum === 3 && key === 1 && chklength < 3) {
+						$(this).find('.inside_title').addClass('not_check');
+						chk = false;
+					}
+				});
+
+				return chk;
+			},
+			init: function(){
+				var _this = this;
+				// 登入
+				$('.qa_btn').not('.form_btn, .offer_btn, .fin_close').on('click', function(){
+					_this.login();
+				});
+				$('#main').on('keydown', function(event){
+					if (event.which === 13) {
+						_this.login();
+					}
+				});
+				// 下一關
+				$('.form_btn, .offer_btn').on('click', function(){
+					var chk = _this.checkRequire();
+					if (!chk) {
+						popup.alert('尚未完成', '很抱歉，因有题目尚未填写完毕，无法进行下一关');
+						return false;
+					} else {
+						formNum++;
+						if (formNum < 4) {
+							$('section[data-id]').hide();
+							$('section[data-id]').eq(formNum).show();
+						} else {
+							// send
+							console.log(111)
+						}
+					}
+				});
+				// 輸入input text自動選取
+				$('input[type="text"]').on('blur', function(){
+					var val = $(this).val();
+					if (val != '') {
+						$(this).parent().find(':radio, :checkbox').prop('checked', true);
+					}
+				});
+			}
+		};
+		fn.init();
+		return fn;
+	}
+	var indexfn = new indexFn();
+
+</script>
+</html>

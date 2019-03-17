@@ -1,0 +1,461 @@
+@import "mixin";
+
+//陣列的運用 nth
+$color:#000, #fff, #ffe850;
+$font-size: 12px, 14px, 16px, 18px, 20px;
+
+%nav_btn{width: 10vw;}
+body{
+    font-size: 100%;
+    margin: 0 auto;
+    padding: 0;
+    outline: 0;
+    position: relative;
+    font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei';
+    background-color: #010f31;
+    overflow-x: hidden;
+}
+ul, p{margin: 0;}
+.btn:active{box-shadow: none;}
+a {cursor: pointer; text-decoration: none; display: block;}
+a:hover,a:focus,{text-decoration: none; box-shadow: none;}
+*:focus{ outline: 0; }
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin:0px 0px 5px 0;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(70, 70, 70);
+    &:hover{
+        background: rgb(25, 25, 25);
+    }
+}
+button{background-color: transparent; border: 0;}
+.scroll{overflow: hidden;}
+/*-- 共用 --*/
+
+/*-- 內容 --*/
+.bk{
+    position: absolute;
+    font-size: 14px;
+    color: #000;    
+    z-index: 3;
+    left: 5px;
+    top: 1px;
+}
+.none{display: none;}
+.bk10{left: 0; letter-spacing: 0px;}
+.yellow{color: #ffe658;}
+.flex{display: flex;}
+.wrap{width: 1010px; margin: 0 auto; }
+#main{width: 1920px; margin: 0 auto;}
+header{
+    width: 1920px;
+    height: 828px;
+    margin: 0 auto;
+    position: relative;
+    @include bg-style(bnr);
+}
+nav{
+    @include Header-style(10px);
+    @include Logo( logo,210px,35px);
+    @include Btn(21%, 35px);
+    @include Btn-child;
+    .home{
+        @include Top_Btn(home_btn);  
+        &:hover{
+            background-position: bottom;
+        }
+    }
+    .cus{
+        @include Top_Btn(cus_btn);
+        &:hover{
+            background-position: bottom;
+        }
+    }
+}
+#top_btn{
+    position: absolute;
+    left: 24%;
+    bottom: -28px;
+    width: 1000px;
+    button{
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.free_btn{
+    @include btn_style(345px, 70px, free_btn);
+    float: left;
+}
+.tv_btn{
+    @include btn_style(406px, 100px, tv_btn);
+    position: absolute;
+    left: 30%;
+    top: -15%;
+}
+.victory_btn{
+    @include btn_style(345px, 70px, victory_btn);
+    float: right;
+}
+.free_btn:hover,.tv_btn:hover,.victory_btn:hover{background-position: bottom;}
+
+/*-- index --*/
+.index{
+    margin: 0 auto;
+    @include bg-style-J(mid_bg,1920px ,2199px);
+    .title{
+        width: 1010px;
+        margin: 0 auto;
+        padding-top: 75px;
+        img{margin: auto;}
+    }
+}
+.index_btn{
+    @include btn_style(255px, 75px, index_btn);
+    margin: 28% auto 0;
+    display: block;
+    &:hover{background-position: bottom;}
+}
+
+.content{
+    width: 993px;
+    margin: 73px auto 0;
+    .right{
+        float: right;
+    }
+}
+.login_block_before{
+    @include btn_style(328px, 280px, login_block_before);
+}
+.login_block_after{
+    @include btn_style(328px, 352px, login_block_after);
+    margin-bottom: 63px;
+    p{
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .member_id{
+        @include font-style(18px,#dbbc78);
+        padding-top: 55px;
+    }
+    .sorting{
+        @include font-style(50px,#fff);
+        font-weight: 600;
+        padding-top: 80px;
+    }
+    .money{
+        @include font-style(16px,#dbbc78);
+        padding-top: 13px;
+    }
+}
+.btn_block{
+    width: 100%;
+    padding-top: 10px;
+    .login_btn{
+        @include btn_style(165px, 75px, login_btn);
+        &:hover{
+            background-position: bottom;
+        }
+    }
+    .reg_btn{
+        @include btn_style(165px, 75px, reg_btn);
+        &:hover{
+            background-position: bottom;
+        }
+    }
+}
+.ranking{
+    margin-top: 45px;
+    padding: 45px 8px 0;
+    position: relative;
+    @include btn_style(328px, 1040px, ranking);
+    .top{
+        padding: 20px 0;
+        background-color: #010f32;
+        ul li{
+            display: inline-block;
+            width: 24%;
+            text-align: center;
+            @include font-style(15px,#fff);
+            &:nth-of-type(1){width: 17.5%;}
+            &:nth-of-type(2){width: 30%;}
+            &:nth-of-type(3){width: 30%;}
+            &:nth-of-type(4){width: 17.5%;}
+        }
+    }
+    .list{
+        margin-top: 2px;
+        ul li{
+            text-align: center;
+            p{
+                display: inline-block;
+                padding: 11px 0;
+                background-color: #0a183b;
+                @include font-style(15px,#fff);
+                &:last-child{margin: 0;}
+                margin-bottom: 2px;
+            }
+            .num{width: 19%;}
+            .id{width: 30%;}
+            .money{width: 30%;}
+            .item{width: 17.5%;}
+        }
+    }
+}
+.control{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+.control > a,.control > div{display: inline-block; vertical-align: middle;}
+.control a{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+}
+.currentPage{color: #fff;}
+.pre{
+    border-width: 7px 12px 7px 0;
+    border-color: transparent #fff transparent transparent; 
+}
+.next{
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #fff;
+}
+
+/*-- free 免費籌碼週週拿 --*/
+.free{
+    @include bg-style-J(free_bg, 1920px, 846px);
+    .title{
+        img{margin: 60px auto 0;}
+    }
+    .f_btn{
+        @include btn_style(255px, 75px, f_login_btn);
+        display: block;
+        margin: 55px auto 0;
+        &:hover{
+            background-position: bottom;
+        }
+    }
+}
+
+/*-- victory 逆轉勝 --*/
+.victory{
+    @include bg-style-J(victory_bg, 1920px, 966px);
+    .title{
+        img{margin: 60px auto 0;}
+    }
+    .v_btn{
+        @include btn_style(255px, 75px, f_login_btn);
+        display: block;
+        margin: 20px auto 0;
+        &:hover{
+            background-position: bottom;
+        }
+    }
+}
+
+/*-- 規則 --*/
+.rule{
+    padding-top: 60px;
+    @include bg-style-J(rule_bg,1920px ,409px);
+    ul li{
+        @include font-style(18px,#fff);
+        letter-spacing: 2px;
+        position: relative;
+        padding-left: 25px;
+        margin-left: 10px;
+        &::before{
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            border-radius: 99em;
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            top: 2px;
+            left: 0;
+        }
+        &:last-child a{ display: inline;}
+    }
+}
+.recom{
+    padding-top: 152px; 
+    @include bg-style-J(recom_bg,1920px ,453px);
+    a{
+        flex: 1 1 auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@include mdOverlay;
+@include mdWindow;
+.reg_member{
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    .title{
+        @include font-style(18px,#000);
+        text-align: center;
+        padding: 10px 0;
+    }
+    .reg_table{
+        width: 65%;
+        margin: 0 auto;
+        padding: 10px 0;
+        div{
+            width: 100%;
+            margin: 10px 0;
+            justify-content: flex-end;
+            align-items: baseline;
+            display: flex;
+            letter-spacing: 2px;
+            span{
+                @include font-style(12px,#000);
+            }
+            p{
+                @include font-style(15px,#000);
+                text-align: left;
+                padding-top: 5px;
+            }
+            input{
+                background-color: transparent;
+                border: 1px solid #ccc;
+                padding: 0 0 0 5px;
+                width: 215px;
+                height: 35px;
+                border-radius: 5px;
+            }
+            select{
+                height: 35px;
+                margin: 10px 5px 10px 0;
+                border-radius: 5px;    
+            }
+            .reg_select{
+                width: 21%;
+                &:last-child{margin-right: 0;}
+            }
+            .reg_select1{
+                width: 15.5%;
+                &:last-child{margin-right: 0;}
+            }
+            .reg_select2{
+                width: 65%;
+            }
+            .caps-lock {
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.caps-lock > span {
+    position: relative;
+    top: 6px;
+    left: 0;
+    background: #feefef;
+    padding: 2px 5px;
+    color: #f67b9a;
+    border-radius: 3px;
+    border: 1px solid #f67b9a;
+    font-size: 11px;
+    letter-spacing: 1px;
+    height: 24px;
+    line-height: 20px;
+    padding-left: 26px;
+}
+.caps-lock > span::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 6px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background: url(images/capslocki.png) no-repeat;
+}
+.caps-lock > span::after {
+    position: absolute;
+    content: '';
+    top: -6px;
+    left: 8px;
+    width: 10px;
+    height: 6px;
+    background: url(images/capslockia.png) no-repeat;
+}
+        }
+        .code{
+            height: 35px;
+            input{ width: 110px;}
+            img{height: 30px;}
+            .vcode{width: 67%;}
+        }
+        .mem_style{margin:10px 0 0;}
+        .mem_style + div{margin: 0 0 10px;}
+    }
+}
+.send_btn{
+    width: 150px;
+    display: inline-block;
+    background: #bd7117;
+    border: 1px solid #bd7117;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 30px;
+    margin-top: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    &:hover{
+        background: #fff;
+        color: #bd7117;
+    }
+}
+.reset_btn{
+    width: 150px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    color: #4d4d4d;
+    line-height: 30px;
+    margin-top: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    &:hover{
+        border: 1px solid #aaa;
+        color: #aaa;
+    }
+}
+.form_btn{
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.text{margin: 10px auto 0;}
+
+footer{
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 15px 0;
+    text-align: center; 
+    @include font-style(14px,#f9ddbf);
+}
+
+

@@ -1,0 +1,176 @@
+<div class="content p_vip">
+	<ul class="display-table table-fixed">
+		<li>
+			<section class="bdStyle mini">
+				<div class="title">
+					<strong><img src="assets/images/title-01.png"></strong>
+				</div>
+				<div class="wrap">
+					<div class="box">
+						<p>Trong thời gian khuyến mãi, những hội viên VIP đạt đủ điệu kiện dưới</p>
+						<p>trong thời gian sớm nhất sẽ có cơ hội nhận được 1 phần quà tặng tương ứng</p>
+					</div>
+				</div>
+			</section>
+			<section class="bdStyle">
+				<div class="wrap">
+					<div class="box">
+						<div class="ranking">
+							<div class="tb">
+								<table>
+									<thead>
+										<tr>
+											<th rowspan="0">Tổng nạp tiền<br>trong tháng</th>
+											<th colspan="0">Tổng cược hiệu<br>lực trong tháng</th>
+											<th colspan="0">Quà tặng</th>
+											<th colspan="0">Số giải</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>300 triệu</td>
+											<td>50 tỷ </td>
+											<td>IPHONE X 64 GB</td>
+											<td>10 giải</td>
+										</tr>
+										<tr>
+											<td>100 triệu</td>
+											<td>30 tỷ </td>
+											<td>IPHONE 8 64 GB</td>
+											<td>10 giải</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</li>
+		<li>
+			<img src="assets/images/phone-01.png">
+		</li>
+	</ul>
+	<section class="bdStyle ">
+		<div class="wrap">
+			<div class="box">
+				<div class="ranking">
+					<div class="title">
+						<img src="assets/images/title-05.png">	
+					</div>
+					<div class="list">
+					<ul>
+						<li>
+							<span>1.</span>	
+							Mỗi hội viên chỉ được nhận thưởng 1 phần quà tặng
+						</li>
+						<li>
+							<span>2.</span>
+							Khuyến mãi này không cần đăng ký, người trúng thưởng sẽ được chuyên viên VIP của DUBAI PALACE thông báo trúng thưởng và hướng dẫn cách thức nhận thưởng
+						</li>
+						<li>
+							<span>3.</span>
+							Thời gian làm thủ tục nhận thưởng là 30 ngày kể từ khi nhận được thông báo trúng thưởng
+						</li>
+						<li>
+							<span>4.</span>
+							Sau khi hội viên hoàn tất thủ tục nhận thưởng thì trong vòng 30 ngày DUBAI PALACE sẽ gửi quà tặng
+						</li>
+						<li>
+							<span>5.</span>
+							Mỗi hội viên, mỗi IP, mỗi số điện thoại, email, tài khoản ngân hàng chỉ được nhận 1 phần quà tặng. Nếu phát hiện hội viên sở hữu nhiều tài khoản DUBAI PALACE hoặc 1 địa chỉ IP có nhiều tài khoản hội viên thì coi như là cùng 1 người, DUBAI PALACE sẽ từ chối trao giải cho các tài khoản đó.
+						</li>
+						<li>
+							<span>6.</span>
+							Khuyến mãi này áp dụng các < Điều khoản khuyến mãi chung > của DUBAI PALACE
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+<script>
+
+
+	$(function(){
+
+
+		var datas = {1:['AAAA***',100],2:['BBBB***',100],3:['CCCC***',100],4:['DDDD***',100],5:['EEEE***',100],6:['FFFF***',100],7:['GGGG***',100],8:['HHHH***',100],9:['IIII***',100],10:['JJJJ***',100],11:['KKKK***',100],12:['LLLL***',100],13:['MMMMM***',100],14:['NNNN***',100]}
+
+		var marqueeFun = function(){
+			var $this = this;
+			var rowH = 30;
+			var rowNum = 8;
+			var tagWrap = $('.winner-list ol');
+			var time = 1500;
+			this.autopaly = true;
+			console.log(this.autopaly);
+
+			tagWrap.addClass('marquee').css({ height:rowH*rowNum });
+
+			var timerCall;
+			/*insertData*/
+			this.insertData = function(){
+				//ajax inset data
+				var html = '';
+				$.each(datas, function(i, e){
+					html += '<li><span>'+e[0]+'</span><span>'+e[1]+'</span></li>';
+				});
+				tagWrap.html(html);
+
+				clearTimeout(timerCall);
+				timerCall = setTimeout(function(){
+					callTimer();
+				},time);
+			}
+
+			/*animate*/
+			this.animateMove = function() {
+				var row = tagWrap.find('>*').eq(0);
+				row.stop(true,false).animate({ marginTop: -rowH },500,function(){
+					row.appendTo(tagWrap).removeAttr('style');
+					console.log(marqueeObj.autopaly);
+					if($this.autopaly){
+						callTimer();
+					}
+				});
+			}
+
+			/*init*/
+			this.init = function(){
+				$this.insertData();
+			}
+
+			var timerObj;
+			clearTimeout(timerObj);
+			function callTimer(){
+				timerObj = setTimeout(function(){
+					$this.animateMove();
+				},time);
+			}
+			
+		}
+
+		var marqueeObj = new marqueeFun();
+
+		$('.btns-winner').on('click', function(event) {
+			var href = $(this).attr('href');
+			$.fancybox({ type:'inline', href:href,
+				afterLoad:function(current, previous){
+					console.log(1111111111);
+					marqueeObj.autopaly = true;
+					marqueeObj.init();
+				},afterClose:function(){
+					marqueeObj.autopaly = false;
+				}
+			});
+		});
+
+
+	});
+</script>

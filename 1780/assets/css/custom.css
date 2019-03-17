@@ -1,0 +1,409 @@
+/*------------------------*\
+           共用
+\*------------------------*/
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/bg.jpg) no-repeat top center;
+  background-size: cover;
+  /* overflow-x: hidden; */
+}
+img {max-width: 100%;border-style: none;}
+a, a:hover, a:focus {text-decoration: none;}
+.wrap {max-width: 990px;margin: 0 auto;}
+.left {float: left;}
+.right {float: right;}
+.none {display: none;}
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {border-radius: 4px; margin: 0px 0px 5px 0;}
+::-webkit-scrollbar-thumb {border-radius: 4px; background: #06183e;}
+::-webkit-scrollbar-thumb:hover {background: #2059c4;}
+/*------------------------*\
+           loading
+\*------------------------*/
+.loading {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+}
+.double-bounce1, .double-bounce2 {
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ccc;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce {
+  0%,100% {-webkit-transform: scale(0);}
+  50% {-webkit-transform: scale(1);}
+}
+@keyframes sk-bounce {
+  0%,100% {transform: scale(0);-webkit-transform: scale(0);}
+  50% {transform: scale(1);-webkit-transform: scale(1);}
+}
+
+/*------------------------*\
+           內容
+\*------------------------*/
+.header {
+  width: 100%;
+  height: 13vh;
+  margin: 0 auto;
+  padding: 15px 5px;
+}
+.header .wrap{height: 13vh;}
+.header .logo {
+  float: left;
+  width: 155px;
+  height: 55px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+.header .btn-child {display: inline-block;vertical-align: middle;}
+.header .btn-box {
+  float: right;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.header .btn-box .home,
+.header .btn-box .cus,
+.header .btn-box .rule{  
+  width: 101px;
+  height: 41px; 
+  margin-right: 10px;
+}
+
+.header .btn-box .home {background: url(../images/home.png) no-repeat top center;background-size: cover;}
+.header .btn-box .home:hover {background: url(../images/home.png) no-repeat bottom center;}
+.header .btn-box .cus {background: url(../images/cus.png) no-repeat top center;background-size: cover;}
+.header .btn-box .cus:hover {background: url(../images/cus.png) no-repeat bottom center;}
+.header .btn-box .rule {background: url(../images/rule.png) no-repeat top center;background-size: cover;}
+.header .btn-box .rule:hover {background: url(../images/rule.png) no-repeat bottom center;}
+
+.top-bar{
+  width: 786px;
+  height: 210px;
+  margin: 0 auto;
+  background: url(../images/topbar.png) no-repeat top center;
+  background-size: cover;
+  margin-top: 10.5vw;
+  padding-top: 150px;
+  padding-left: 2vmin;
+  
+}
+.top-bar div{
+  text-align: center;
+  font-size: 2.7vmin;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-shadow: 0 2px 0 #fff;
+  color: #000;
+}
+
+.login-box{
+  width: 655px;
+  height: 317px;
+  margin: 0 auto;
+  background: url(../images/login_bg.png) no-repeat top center;
+  background-size: cover;
+  margin-top: -1vw;
+}
+.no-login{padding: 5.5vw 0 0 6.5vw;}
+.no-login p,
+.no-login input{display: inline-block;vertical-align: middle;}
+.no-login p {
+  font-size: 25px; 
+  color: #fff; 
+  font-weight: 600; 
+  letter-spacing: 2px;
+}
+.no-login input{
+  width: 275px;
+  height: 40px;
+  padding-left: 10px;
+}
+.login-btn{
+  width: 430px;
+  height: 75px;
+  background: url(../images/no-login.png) no-repeat top center;
+  background-size: cover;
+  margin: 15px 0 0 -5px;
+}
+
+.login-in{
+  padding: 70px 0 0 90px;
+}
+.login-in .acc-box{width: 85.5%;}
+.login-in .acc-box p:first-child{
+  color: #fff; 
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.login-in .acc-box p:nth-of-type(2){
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+  border: 1px solid #fff;
+  background: rgba(184,173,203,0.5);
+  font-size: 24px;
+  padding: 6px;
+  margin-top: 1.5vmin;
+}
+
+.login-btn-box{margin: 2vmin 0 0 -1vmin;}
+.login-btn-box button{display: inline-block; vertical-align: middle;}
+
+.get-now,
+.get-later{  width: 250px; height: 70px;}
+.get-now{
+  background: url(../images/get-now.png) no-repeat top center;
+  background-size: cover;
+}
+.get-later{
+  background: url(../images/receive-late.png) no-repeat top center;
+  background-size: cover;
+}
+
+
+/*------------------------*\
+            彈窗
+\*------------------------*/
+.close_btn {
+  top: 0;
+  right: -55px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  position: absolute;
+  background: url(../images/close.png) no-repeat top center;
+  background-size: cover;
+  z-index: 100;
+}
+.rule-bg {
+  width: 939px;
+  height: 446px;
+  background: url(../images/rule_bg.png) no-repeat top center;
+  background-size: cover;
+}
+/* #mdWindow .rule .close_btn {top: 105px;right: -54px;} */
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+.con-box{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 83px;}
+/*------------------------*\
+            彈窗
+\*------------------------*/
+footer {
+  font-size: 12px;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 10px 0;
+  background: black;
+}
+
+/*------------------------*\
+          Media
+\*------------------------*/
+@media screen and (max-width: 1366px){
+  .top-bar{ margin-top: 16.5vw;}
+  .top-bar div {font-size: 3.2vmin;}
+  .no-login {padding: 7vw 0 0 8.5vw;}
+}
+@media screen and (max-width: 1280px){
+  .top-bar {margin-top: 18.5vw;}
+  .btn-box {margin: 2vmin 0 0 -2vmin;}
+}
+@media screen and (max-width: 1024px){
+  .top-bar {margin-top: 22.5vw;}
+  .no-login {padding: 95px 0 0 115px;}
+}
+@media screen and (max-width: 768px){
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/m_bg.jpg) no-repeat top center; 
+    background-size: cover;
+  }
+
+  .top-bar {
+    width: 100%;
+    padding-top: 19vmin;
+    margin-top: 33.5vw;
+  }
+  .close_btn {
+    top: 2vw;
+    right: 19vw;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    position: absolute;
+    background: url(../images/m_close.png) no-repeat top center;
+    background-size: cover;
+    z-index: 100;
+  }
+  .rule-bg {
+    width: 100vmin;
+    height: 100vh;
+    background: url(../images/m_rule_bg.png) no-repeat top center;
+    background-size: contain;
+  }
+  .login-box {
+    width: 100%;
+    height: 63vw;}
+  /* .login-box{
+    width: 100%;
+    height: 10vw;
+    margin: 0 auto;
+    background: url(../images/m_login_bg.png) no-repeat top center;
+    background-size: cover;
+  } */
+}
+@media screen and (max-width: 640px){
+  /* footer {position:absolute; bottom: -2px;} */
+  .login-in .acc-box p:first-child{text-align: center;}
+  .login-box {width:auto;}
+  .con-box {margin-bottom: 0;}
+  .login-in {padding: 18vw 0 0 12vw;}
+  .login-btn-box {margin: 2vmin 0 0 -2vmin; width: 100%;}
+  .no-login {
+    /* padding: 95px 0 0 115px; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 21vw 0 0 18vw;
+  }
+  .top-bar {margin-top: 43.5vw;}
+}
+@media screen and (max-width: 480px){
+  /* body{height: 99.9vh;} */
+  footer{position: absolute; bottom: 0;}
+  .login-in {padding: 15vmin 0 0 4vmin;}
+  .top-bar {width: 100vmin; height: 33vmin; margin-top: 39.5vw;}
+  .no-login {padding: 19vmin 0 0 6vmin;}
+  .login-box {
+    /* width: 100%;
+    height: 74vmin; */
+    margin-top: -10.5vw;
+    overflow: hidden;
+  }
+  .login-in .acc-box {width: 97%;}
+  .header .btn-box .home, 
+  .header .btn-box .cus, 
+  .header .btn-box .rule {
+    width: 18vw;
+    height: 7.3vw;
+    margin-right: 1vmin;
+  }
+  .no-login input {width: 92%;}
+  .get-now,
+  .get-later{ 
+    width: 45vmin; 
+    height: 14vmin;    
+    margin-right: 0;
+  }
+  .get-now{float: left;}
+  .get-later{float: right; }
+  .login-btn-box{margin: 2vmin 0 0 -1vmin; width: 98%;}
+  .top-bar div { 
+    width: 95%; 
+    margin: 0 auto; 
+    letter-spacing: 0;
+    font-size: 3.6vmin;
+  }
+  .login-btn {margin: 15px 0 0 -7px}
+}
+@media screen and (max-width: 424px){
+  body {height: 90vh;}
+  .login-btn {width: 90vw; height: 14vw;}
+}
+@media screen and (max-width: 414px){
+  /* footer{position: fixed; bottom: 0;} */
+  body {
+    height: 87vh;
+    background: url(../images/m_bg.jpg) no-repeat top center #210665; 
+    background-size: cover;
+  }
+  .login-btn {width: 96%; height: 15vmin;}
+  .top-bar {height: 36vmin;}
+  .top-bar div {font-size: 3.7vmin; letter-spacing: 0;}
+  .con-box {margin-bottom: 36px;}
+}
+@media screen and (max-width: 375px){
+  .top-bar div {font-size: 3.5vmin;}
+  .header .logo{width: 33vw; height: 10vw;}
+  .no-login {padding: 23vmin 0 0 6vmin;}
+}
+@media screen and (max-width: 360px){}
+@media screen and (max-width: 320px){
+  footer{position: static;}
+  body {height: 100vh;}
+  .top-bar {
+    height: 36vmin; 
+    padding-top: 19.5vmin;    
+    margin-top: 37.5vw;
+  }
+  .top-bar div {width: 100%;}
+  .login-box {height: 83vmin;}
+  .login-in {padding: 20vmin 1vmin 0 4vmin;}
+}
+/*---------------------------------------*/
+@media screen and (height: 812px){
+  body {height: 80vh;}
+  footer{position: fixed; bottom:10px;}
+  .no-login {padding: 18vmin 0 0 6vmin;}
+  .login-box {height: 70vw;}
+  .top-bar {margin-top: 33.5vw;}
+}
+@media screen and (height: 736px){
+  body {height: 101vh;}
+  footer{position: absolute; bottom:0;}
+}
+@media screen and (height: 667px){
+  .login-box {height: 75vw;}
+}
+@media screen and (height: 568px){
+}
+@media screen and (height: 559px){
+  footer{position: static;}
+  .login-box {height: 70vw;}
+  .no-login {padding: 20vmin 0 0 6vmin;}
+}
+@media screen and (height: 541px){}
+@media screen and (height: 480px){
+  footer{position: static;}
+}

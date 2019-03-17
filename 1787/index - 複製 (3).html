@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="yes">
+    <title></title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrap clearfix">
+            <a href="javascript:void(0)" class="logo" onclick="pageObj.home();"></a>
+            <div class="pc-nav ">
+                <div class="btn-box">
+                    <a href="javascript:void(0)" target="_blank" class="btn-child rule" onclick="pageObj.efpay()"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child home" onclick="pageObj._go399()"></a>
+                    <a href="javascript:void(0)" target="_blank" class="btn-child deposit" onclick="pageObj.cs()"></a>
+                </div>
+            </div>
+            <div class="mb-nav">
+                <a href="javascript:void(0)" class="logo m_logo" onclick="pageObj.home();"></a>
+                <ul class="m_nav_list">
+                    <li class="m_deposit" onclick="pageObj.efpay()">Nạp tiền nhanh</li>
+                    <li class="m_cus" onclick="pageObj.cs()">CSKH 24/7</li>
+                    <li class="m_home" onclick="pageObj._go399()">Trang chủ</li>
+                </ul>
+            </div>
+            <!-- 半透黑背景 -->
+            <div class="nav-bg"></div>
+        </div>
+    </div>
+    <section>
+        <div class="wrap">
+            <div class="title">
+                <!-- 登入 -->
+                <div class="login-title"></div>
+                <!-- 機率 -->
+                <div class="probability-title none"></div>
+                <!-- 體育 -->
+                <div class="sport-title none"></div>
+                <!-- 視訊 -->
+                <div class="video-title none"></div>
+                <!-- 彩票 -->
+                <div class="lottery-title none"></div>
+                <div class="btm-bnr"></div>
+            </div>
+            <div class="content-box">
+                <!-- 登入 -->
+                <div class="select-block ">
+                    <ul>
+                        <li><img src="assets/images/sport_btn.png" alt="" class="Sport"></li>
+                        <li><img src="assets/images/video_btn.png" alt="" class="Video"></li>
+                        <li><img src="assets/images/probability_btn.png" alt="" class="Probability"></li>
+                        <li><img src="assets/images/lottery_btn.png" alt="" class="Lottery"></li>
+                    </ul>
+                </div>
+                <!-- 会员目前的资料 -->
+                <div class="common-block none">
+                    <div class="pavilion-block">
+                        <ul>
+                            <!-- 1 -->
+                            <li class="probability-icon">
+                                <div class="block-left">Bạn đã lựa chọn tham gia tại :</div>
+                                <div class="block-right">
+                                    <input type="text" class="pav-name" name="" value="" id="">
+                                </div>
+                            </li>
+                            <!-- 2 -->
+                            <li class="first_money_icon">
+                                <div class="block-left ">
+                                    Số tiền nạp lần đầu:
+                                </div>
+                                <div class="block-right">
+                                    <input type="text" class="" name="" value="" id="">
+                                    <div class="vnd">VND </div>
+                                    <span class="check-icon"></span>
+                                </div>
+                            </li>
+                            <!-- 3 -->
+                            <li class="money_icon">
+                                <div class="block-left ">
+                                    Tiền thưởng :
+                                </div>
+                                <div class="block-right">
+                                    <input type="text" class="" name="" value="" id="">
+                                    <div class="vnd">VND </div>
+                                    <span class="check-icon"></span>
+                                </div>
+                            </li>
+                            <!-- 4 -->
+                            <li class="chips_icon">
+                                <div class="block-left "></div>
+                                <div class="block-right">
+                                    <input type="text" class="" name="" value="" id="">
+                                    <div class="vnd">VND </div>
+                                    <span class="check-icon"></span>
+                                </div>
+                            </li>
+                            <!-- 5 -->
+                            <li class="condition_icon">
+                                <div class="block-left "></div>
+                                <div class="block-right">
+                                    <input type="text" class="" name="" value="" id="">
+                                    <div class="vnd">VND </div>
+                                    <span class="check-icon"></span>
+                                </div>
+                            </li>
+                            <!-- 6 -->
+                            <li class="deadline_icon">
+                                <div class="block-left ">
+                                    Thời gian hoàn thành trước :
+                                </div>
+                                <div class="block-right">
+                                    <input type="text" class="" name="" value="" id="">
+                                    <p class="time-text"></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btm-box">
+                            <button type="button" class="btn4"></button>
+                            <div class="btm-text">
+                                Thể lệ chi tiết của khuyến mãi vui lòng tham khảo 
+                                <a href="javascript:void(0)" class="text-link">tại đây</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 彈窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+        <div class="float-bg none">
+            <!-- 登入彈窗 -->
+            <div class="login-block">
+                <p>Điền tên đăng nhập</p> 
+                <input type="text" name="acc">
+                <div class="float-btn">
+                    <!-- 送出按鈕 -->
+                    <button type="button" class="login_btn"></button>
+                </div>
+            </div>
+            <!-- 送出確認 -->
+            <div class="float-win none">
+                <div class="float-btn">
+                    <!-- 送出按鈕 -->
+                    <button type="button" class="send_btn"></button>
+                    <!-- 重新選擇 -->
+                    <button type="button" class="reselect_btn"></button>
+                </div>
+            </div>
+        </div>
+        <div class="close_btn popclose"></div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="wrap">Copyright © 2018 DUBAI PALACE All Rights Reserved.</div>   
+    </footer>
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script scr="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function(){
+    // 別館內容
+    // val = 1 為成功, val = 0 為失敗
+    var pavObj = {
+        // 是否有登入
+        "accLogin": true,
+        // 儲存館別
+        "pavilion":"sport",
+        // 體育
+        "sport":{
+                "id":0,
+                "money":{
+                    "val": 1,
+                    "num": "1000"
+                },
+                "lottery":{
+                    "val": 1,
+                    "num": "2000"
+                },
+                "chipsNum":{
+                    "val": 1,
+                    "num": "3000"
+                },
+                "condition":{
+                    "val": 1,
+                    "num": "4000"
+                },
+                "deadline":"10/02/2017 20:59:58",
+                "time":"Cập nhật lúc 15:50:53 14/10/2018",
+                "name": "Sàn Thể Thao",
+                "class": "sport-icon",
+                "text01": "Tổng cược Sàn Thể thao hiện tại :",
+                "text02": "Tổng cược Sàn Thể thao cần đạt :",
+        },
+        // 視訊
+        "video":{
+                "id":1,
+                "money":{
+                    "val": 0,
+                    "num": "1000"
+                },
+                "lottery":{
+                    "val": 0,
+                    "num": "2000"
+                },
+                "chipsNum":{
+                    "val": 0,
+                    "num": "3000"
+                },
+                "condition":{
+                    "val": 0,
+                    "num": "4000"
+                },
+                "deadline":"10/02/2017 20:59:58",
+                "time":"Cập nhật lúc 15:50:53 14/10/2018",
+                "name": "Sàn Casino",
+                "class": "video-icon",
+                "text01": "Tổng cược Sàn Casino hiện tại :",
+                "text02": "Tổng cược Sàn Casino cần đạt :",
+        },
+        // 機率
+        "probability":{
+            "id":2,
+            "money":{
+                "val": 0,
+                "num": "1000"
+            },
+            "lottery":{
+                "val": 0,
+                "num": "2000"
+            },
+            "chipsNum":{
+                "val": 0,
+                "num": "3000"
+            },
+            "condition":{
+                "val": 0,
+                "num": "4000"
+            },
+            "deadline":"10/02/2017 20:59:58",
+            "time":"Cập nhật lúc 15:50:53 14/10/2018",
+            "name": "Sàn Trò Chơi",
+            "class": "probability-icon",
+            "text01": "Tổng cược Sàn Trò chơi hiện tại :",
+            "text02": "Tổng cược Sàn Trò chơi cần đạt :",
+        },
+        // 彩票
+        "lottery":{
+            "id":3,
+            "money":{
+                "val": 0,
+                "num": "1000"
+            },
+            "lottery":{
+                "val": 0,
+                "num": "2000"
+            },
+            "chipsNum":{
+                "val": 0,
+                "num": "3000"
+            },
+            "condition":{
+                "val": 0,
+                "num": "4000"
+            },
+            "deadline":"10/02/2017 20:59:58",
+            "time":"Cập nhật lúc 15:50:53 14/10/2018",
+            "name": "'Sàn Xổ Số",
+            "class": "lottery-icon",
+            "text01": "Tổng cược Sàn xổ số hiện tại :",
+            "text02": "Tổng cược Sàn xổ số cần đạt :",
+        }
+    }
+    // 彈窗內容
+    var winObj = {
+        // 查無會員
+        "noMember":{
+            "text01": 'Tên đăng nhập không chính xác!',
+            "float_win": "no_member",
+            "send_btn": "login_reset",
+        },
+        // 未存款
+        "noMoney":{
+            "text01": 'Bạn chưa nạp tiền!',
+            "text02": 'Hãy nạp tiền để tham gia khuyến mãi này!',
+            "float_win": "no_money",
+            "send_btn": "go_efpay",
+        },
+        // 首存超过30天
+        "over30":{
+            "text01": 'Đơn nạp tiền lần đầu của bạn đã quá 30 ngày nên',
+            "text02": 'không thể tham gia khuyến mãi này!',
+            "float_win": "over30",
+            "send_btn": "activity",
+        },
+        // 已参加过
+        "hasJoin":{
+            "text01": 'Bạn đã tham gia khuyến mãi này rồi',
+            "float_win": "hasJoin",
+            "send_btn": "activity",
+        },
+        // 30天未達成
+        "unAchieve":{
+            "text01": 'Rất tiếc! Bạn không thể nhận thưởng do quá thời',
+            "text02": 'gian 30 ngày mà chưa hoàn thành yêu cầu',
+            "float_win": "unAchieve",
+            "send_btn": "activity",
+        },
+        // 不可参加
+        "noJoin":{
+            "text01": 'Rất tiếc! Bạn không thể nhận thưởng do quá thời',
+            "text02": 'gian 30 ngày mà chưa hoàn thành yêu cầu',
+            "float_win": "unAchieve",
+            "send_btn": "activity",
+        },
+        // 首存金额低于200,000
+        "low_money":{
+            "text01": 'Rất tiếc! Khoản nạp lần đầu của bạn thấp hơn 200,000',
+            "text02": 'Nên bạn không thể tham gia khuyến mãi này',
+            "float_win": "low_money",
+            "send_btn": "activity",
+        }
+    }
+    // 会员目前的资料
+    var _div        = $('.pavilion-block');
+    var _icon       = $('.pavilion-block li:first-child'),
+        _textLi     = $('.pavilion-block li:first-child .block-left'),
+        _textLeft   = $('.chips_icon .block-left'),
+        _textLeft01 = $('.condition_icon .block-left '),
+        _inputName  = $('.pav-name'),
+        _time       = $('.time-text');
+
+    var _money     = $('.first_money_icon input[type="text"]'), // 首存金額
+        _lottery   = $('.money_icon input[type="text"]'),       // 彩金
+        _chipsNum  = $('.chips_icon input[type="text"]'),       // 館別碼量
+        _condition = $('.condition_icon input[type="text"]'),   // 需完成條件
+        _deadline  = $('.deadline_icon input[type="text"]');    // 完成期限
+
+    var geType; // 是否有登入
+    var getCs;
+    var login_s;
+    var isLogin;
+    var _id;
+    var category; // 別館
+    var _getCategory; // 別館
+    var _win;
+    var fn = {
+        login_jug: function(){
+            for( var f in pavObj ){
+                isLogin = pavObj[f];
+                console.log('isLogin',isLogin)
+                break;
+            }
+            // 未登入過
+            if( isLogin == false ){
+                fn.loginShow();
+                geType = 0
+            // 已登入過    
+            }else{
+                // 確認已登入 直接進入館別
+                fn.loginHide();
+                for( var p in pavObj ){
+                    _getCategory = pavObj['pavilion'];
+                    break;
+                }
+                geType = 1;
+                fn.content_fn(_getCategory);
+            }
+        },
+        loginnn: function(){
+            var _this = this;
+            var acc = $('input[name="acc"]').val();
+            if( acc == '' ){
+                alert('您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            
+            login_s = 100;
+            switch (login_s) {
+                case 100:
+                    _this.loginHide();
+                    pavObj.accLogin = true;
+                    break;
+                case 101:
+                    console.log('查無帳號');
+                    _win = "noMember"
+                    break;
+                case 102:
+                    console.log('未存款');
+                    _win = "noMoney"
+                    break;
+                case 103:
+                    console.log('首存超过30天');
+                    _win = "over30"
+                    break;
+                case 104:
+                    console.log('已参加过');
+                    _win = "hasJoin"
+                    break;
+                case 105:
+                    console.log('未達成');
+                    _win = "unAchieve"
+                    break;
+                case 106:
+                    console.log('不可參加');
+                    _win = "noJoin"
+                    break;
+                case 107:
+                    console.log('首存金额低于200,000');
+                    _win = "low_money"
+                    break;
+            }
+            _this.floatWin(_win);
+        },
+        login: function(callback){
+            var _this = this;
+            var acc = $('input[name="acc"]').val();
+            if( acc == '' ){
+                // popup.alert('页面错误', '您尚未输入帐号哦');
+                // $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', {acc: acc}, {
+                onSuccess: function(res){
+                    _this.loginBtn();
+                },
+                onFail: function(res){}
+            });
+        },
+        home: function(){
+            window.open("https://www.486486.com/ag/100181");
+        },
+        cs: function(){
+            var url = 'http://liveperson.lp2chat.com/dbpvn/';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        _go399: function(){
+            window.open("https://www.399699.com");
+        },
+        efpay: function () {
+            window.open("https://486486.com/efpay");
+        },
+        activity_go: function(){
+            window.open("https://www.399699.com/#activity");
+        },
+        // 登入按鈕
+        loginBtn: function(){ 
+            var _this = this;
+            $('.login_btn').on('click',function(){
+                _this.loginnn();
+                $('input[name="acc"]').val('');
+            });
+            $('.reselect_btn').on('click',function(){
+                _this.switch_fn();
+                _this.loginShow();
+            });
+        },
+        loginShow: function(){
+            $('.popbox').fadeIn(300);
+            $('.float-bg').removeClass('none');
+        },
+        loginHide: function(){
+            $('.popbox').fadeOut(300);
+            $('.float-bg').addClass('none');
+        },
+        // 手機版側邊按鈕
+        m_btn: function(){
+            $('.m-nav').on('click',function(){
+               fn.show_side();
+            }); 
+            $('.nav-bg').on('click',function(){
+                fn.hide_side();
+            });
+        },
+        // 隱藏側邊選單
+        hide_side: function(){
+            $('.mb-nav').animate({"left": "-80%"},500);
+            $('.nav-bg').hide();
+        },
+        // 開啟側邊選單
+        show_side: function(){
+            $('.mb-nav').animate({"left": 0},500);
+            $('.nav-bg').show();
+        },
+        //換圖
+        chg_pic: function(){
+            $('.Sport').attr('src','assets/images/m_sport_btn.png');
+            $('.Video').attr('src','assets/images/m_video_btn.png');
+            $('.Probability').attr('src','assets/images/m_probability_btn.png');
+            $('.Lottery').attr('src','assets/images/m_lottery_btn.png');
+        },
+        // 點選館別事件
+        pavilion_btn: function(){
+            var _this = this;
+            $('.select-block li').on('click','img',function(){
+                // 若把登入視窗關閉，直接點選館別之判斷
+                if( isLogin == false &&  login_s !== 100){
+                    fn.loginShow();
+                    $('.login-block').removeClass('none');
+                    geType = 0
+                    return
+                }
+
+                if( login_s == 100 ){
+                    getCs = $(this).attr('class');
+                    switch (getCs) {
+                        // 體育
+                        case 'Sport':
+                            p_name = 'Sàn Thể Thao';
+                            _id = 0;
+                            break;
+                        // 視訊
+                        case 'Video':
+                            p_name = 'Sàn Casino';
+                            _id = 1;
+                            break;
+                        // 機率
+                        case 'Probability':
+                            p_name = 'Sàn Trò Chơi';
+                            _id = 2;
+                            break;
+                        // 彩票
+                        case 'Lottery':
+                            p_name = 'Sàn Xổ Số';
+                            _id = 3;
+                            break;
+                    }
+                    _this.pavilion_fn(p_name,_id);
+                }
+            });
+        },
+        /*--------------------------------------------------------以下為彈窗FN-----*/
+        floatWin: function(_win){
+            var _this = this;
+            for( var j in winObj[_win] ){
+                var witem = winObj[_win];
+                var getS = witem.float_win;
+
+                if( witem.length > 3 ){
+                    var text01 = $("<p/>").text(witem.text01);
+                    var text02 = $("<p/>").text(witem.text02);
+                    // 打開會員查無
+                    $('.float-win').removeClass('none').addClass(_win).prepend(text01,text02); 
+                }else if( witem.length = 3 ){
+                    var text01 = $("<p/>").text(witem.text01);
+                    // 打開會員查無
+                    $('.float-win').removeClass('none').addClass(_win).prepend(text01); 
+                }
+                // 關閉登入 
+                $('.login-block').addClass('none'); 
+                // 換置左邊按鈕
+                $('.send_btn').attr("data-id",_win);
+
+                // 點選左邊按鈕時
+                if( _win == "noMoney" ){
+                    $('[data-id="'+_win+'"]').on('click',function(){
+                        _this.switch_fn();
+                        window.open("https://486486.com/efpay");
+                    });
+                }else if( _win == "over30" || _win == "hasJoin" || _win == "unAchieve" || _win == "noJoin" || _win == "low_money"){
+                    // 點選左邊按鈕時
+                    $('.over30 [data-id="'+_win+'"]').on('click',function(){
+                        _this.switch_fn();
+                        _this.activity_go();
+                    });
+                }else{
+                    $('[data-id="'+_win+'"]').on('click',function(){
+                        _this.switch_fn();
+                    });
+                }
+                break;
+            }
+        },
+        // 館別彈窗內容
+        pavilion_fn: function(p_name,_id){
+            var _this = this;
+            var _span = $("<span/>").text(p_name);
+            var text01 = $("<p/>").text('Bạn đã muốn tham gia khuyến mãi tại'+' ').append(_span),
+                text02 = $("<p/>").text('Một khi đã tham gia thì không thể thay đổi'),
+                text03 = $("<p/>").text('bạn có chắc chắn gửi đi?');
+            // 打開
+            $('.popbox').fadeIn(300);
+            $('.float-bg').removeClass('none');
+            $('.login-block').addClass('none');
+            $('.float-win').removeClass('none').addClass('pavilion').prepend(text01,text02,text03); 
+            $('.send_btn').attr("id",_id);
+            // 點選右邊按鈕時 - 取消重新選擇
+            $('.pavilion .reselect_btn').on('click',function(){
+                _this.close_btn();
+            });
+            // 點選左邊按鈕 - 確認送出
+            $('.pavilion .send_btn').on('click',function(){
+                _this.content_fn();
+                _this.close_btn();
+                pavObj.pavilion = getCs;
+            });
+        },
+        /*--------------------------------------------------------以下為進入別館FN-----*/
+        // 顯示各館別內容
+        content_fn: function(_getCategory){
+            if(_getCategory == undefined && geType == 0 ){
+                category = {
+                    0: "sport",
+                    1: "video",
+                    2: "probability",
+                    3: "lottery"
+                }[_id]
+            }else{
+                category = _getCategory
+            }
+            
+            $('.login-title, .select-block').addClass('none');
+            $('.common-block').removeClass('none');
+
+            var f_icon  = $('.first_money_icon .vnd'),
+                m_icon  = $('.money_icon .vnd'),
+                cp_icon = $('.chips_icon .vnd'),
+                ct_icon = $('.condition_icon .vnd');
+            var val_ary = [];
+
+            for( var i in pavObj[category] ){
+                var item = pavObj[category];
+                _myVal = item.money.val,
+                _ltVal = item.lottery.val,
+                _cnVal = item.chipsNum.val,
+                _ctVal = item.condition.val;
+                
+                _money.val(item.money.num);         // 首存金額
+                _lottery.val(item.lottery.num);     // 彩金
+                _chipsNum.val(item.chipsNum.num);   // 館別碼量
+                _condition.val(item.condition.num); // 需完成條件
+                _div.attr('data-name',item.id)
+                _deadline.val(item.deadline);   // 完成期限
+                _time.text(item.time);          // 更新時間
+
+                $('.'+category+'-title').removeClass('none');
+                _inputName.val(item.name);
+                _icon.addClass(item.class);
+                _textLeft.text(item.text01);
+                _textLeft01.text(item.text02);
+            }
+            
+            var _chg = [
+                [_myVal,f_icon],
+                [_ltVal,m_icon],
+                [_cnVal,cp_icon],
+                [_ctVal,ct_icon],
+            ]
+
+            _chg.forEach(function (ary) { 
+                var val = ary[0]
+                var dom = ary[1]
+                chk(val,dom)
+            });
+
+            function chk(val,dom) { 
+                if( val == 0 ){
+                    dom.next().attr('class',"cross-icon");
+                }else{
+                    dom.next().attr('class',"check-icon");
+                }
+            }
+            val_ary.push(_myVal)
+            val_ary.push(_ltVal)
+            val_ary.push(_cnVal)
+            val_ary.push(_ctVal)
+            console.log('val_ary',val_ary)
+            var _link = {
+                sport: 'https://486486.com/#activity#0#456',
+                video : 'https://486486.com/#activity#0#459',
+                probability : 'https://486486.com/#activity#0#453',
+                lottery : 'https://486486.com/#activity#0#462',
+            }[category]
+
+            // 別館下方連結
+            $('.btm-text').on('click','a',function(){
+                window.open(_link);
+            });
+            // 條件皆有達成 才會換按鈕
+            function isBooling(element, index, array) {
+                return element;
+            }
+            var jugBooling = val_ary.every(isBooling);
+
+            if( jugBooling == true ){
+                $('.btm-box button').attr('class','btn5');
+            }
+        },
+        // 別館內下方按鈕
+        ca_btn: function(){
+            $('.btn4').on('click',function(){
+                fn.home();
+            });
+            $('.btn5').on('click',function(){
+                alert('直接存款')
+            });
+        },
+        /*--------------------------------------------------------end-----*/
+        close_btn: function(){
+            $('.float-bg, .login-block, .float-win').addClass('none');
+            $('.popbox').fadeOut(300);
+            $('html,body').css({'overflow': 'auto'});
+            // 清除內容
+            $('.float-win p').remove();
+            // 換置左邊按鈕
+            $('.send_btn').removeClass("data-id");
+        },
+        switch_fn: function () {
+            // 清除會員查無內容
+            $('.float-win p').remove();
+            // 換置左邊按鈕
+            $('.send_btn').removeClass("data-id");
+            // 關閉會員查無
+            $('.float-win').addClass('none');
+            // 開啟登入 
+            $('.login-block').removeClass('none');
+        },
+        _resize: function () {
+            var _btn = $('<button type="button" class="m-nav">');
+            $('.header .wrap .m-nav').remove();
+            $('.pc-nav').addClass('none');
+            $('.header .wrap').prepend(_btn);
+            fn.m_btn();
+            fn.chg_pic();
+        },
+        win_type: function(){
+            var _this = this;
+            var $weidht = innerWidth; 
+            if ($weidht <= 480) { 
+               _this._resize();
+            }else{
+                $('.pc-nav').removeClass('none');
+                $('.mb-nav').addClass('none');
+                $('.header .wrap .m-nav').remove();
+            }
+        },
+        init: function(){
+            var _this = this;
+            _this.login_jug();
+            _this.loginBtn();
+            _this.pavilion_btn();
+            _this.ca_btn();
+            _this.win_type();
+
+            $('.nav-bg').hide();
+            
+            $('body').preload(function(){
+                $('.loading').fadeOut(500);                
+            });  
+            
+            //X與確定按鈕效果
+            $('.popclose').on('click',function(){
+                _this.close_btn();
+            });
+        
+            $(window).resize(function(){
+                _this.win_type();
+            }); 
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+</html>

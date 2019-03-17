@@ -1,0 +1,240 @@
+var ZgWindow = function(){
+	var $this = this;
+	var that;
+	var bg;
+	var _NowTab = 0;
+	/*預設開啟視窗的控制項*/
+	this.OptionInit = function(){
+		var options = {
+			type			: "html",	/*html,iframe*/
+			title			: "新視窗",
+			html			: false,
+			url				: false,
+			lock 			: true,		/*是否開啟先鎖定  lock = false 以下再有作用*/ 
+			width 			: "95%",	
+			height 			: "90%",
+			SetCoordinate 	: false,	/*是否設定座標*/
+			top 			: 32,
+			left 			: 0,
+			minTop			: 32,
+			repeat_iframe	: true,		/*是否可以開啟同樣網址的iframe*/
+			Classify		: "_New",
+			firstShow		: false		/*先載入視窗再載iframe*/
+		}
+		return options;
+	}
+	/*取得視窗z-index 最高值*/
+	this.MaxZindex = function(){
+		var maxZ=0;
+		that.find(".Windows").each(function(){
+			if($(this).css('zIndex')!="auto"){
+				if($(this).css('zIndex')*1 > maxZ*1) maxZ = $(this).css('zIndex');
+			}
+		})
+		return maxZ;
+	}
+	/*確認此網頁(iframe)是否已存在*/
+	this.checkiframe = function(url){
+		var check = false;
+		that.find(".Windows").each(function(){
+			if($(this).find("iframe[src='"+url+"']").length > 0){
+				check = $(this);
+				return false;
+			}
+		})
+		return check;
+	}
+	/*建立視窗*/
+	this.OpenWin = function(option){
+		var op = $this.OptionInit();
+		if(option){
+			for(var k in option){
+				op[k] = option[k];
+			}
+		}
+		var NowID = "ZgWin_" + _NowTab;
+		var obj = $this.CreateWin(NowID,op);
+		obj = $this.CreateWinEvent(obj);
+		switch(op.type){
+			case 'iframe':{
+				if(op.repeat_iframe){
+					var ck = $this.checkiframe(op.url);
+					if(ck){/*有重覆的網址*/
+						if(ck.hasClass("small")){
+							ck.find(".ToWinSmall").trigger("click");
+						}
+						ck.trigger("click");
+						return;
+					}
+				}
+				if(!op.url){return;}
+				var $iframe = $("<iframe/>").attr({
+					"id"			: NowID + "_iframe",
+					"name"			: NowID + "_iframe",
+					"frameborder"	: 0,
+					"vspace"		: 0,
+					"hspace"		: 0,
+					"vspace"		: 0
+				}).addClass("ZgIframe");
+				var con = $("<div/>").css({"width":"100%","height":"100%"}).append($iframe);
+				obj.find(".WinContent").html(con);
+				if(op.firstShow){
+					$this.ShowWin(op,obj);
+					$iframe.attr("src",op.url);
+				}else{
+					loading(true);
+					$iframe.load(function(){
+						loading(false);
+						$this.ShowWin(op,obj);
+					});
+					$iframe.attr("src",op.url); 
+				}
+				break;
+			}
+			case 'html':{
+				if(!op.html){return;}
+				obj.find(".WinContent").html(op.html);
+				$this.ShowWin(op,obj);
+				break;
+			}
+		}
+		_NowTab++;
+	}
+	this.ShowWin = function(op,obj){
+		if(op.lock){
+			obj.show();
+		}else{
+			obj.width(op.width);
+			obj.height(op.height);
+			obj.find(".ToWinSmall").trigger("click");
+			if(op.SetCoordinate){
+				if(op.top < op.minTop){
+					op.top = op.minTop;
+				}
+				obj.css({
+					left 	: op.left,
+					top 	: op.top
+				})
+			}
+			obj.show();
+		}
+	}
+	/*刪除視窗*/
+	this.CloseWin = function(DivID){
+		that.find("#"+DivID).remove();
+	}
+	/*刪除同分類的視窗*/
+	this.CloseWin_Classify = function(Classify){
+		that.find(".Windows").each(function(){
+			if($(this).hasClass(Classify)){
+				$(this).remove();
+			}
+		});
+	}
+	/*產生視窗(DIV)*/
+	this.CreateWin = function(ObjID,op){
+		var w_div = $('<div id="' + ObjID + '" class="Windows '+ op.Classify +'"></div>');
+		w_div.css({
+			opacity: 1
+		})
+		var Cn = $("<div/>").addClass("Cn");
+		var Cnn = $("<div/>").addClass("Cnn");
+		var WinTitle = $("<div/>").addClass("WinTitle");
+		WinTitle.append('<div class="tool">'+
+							'<div class="glyphicon glyphicon-minus ToSmall" aria-hidden="true"></div> '+
+							'<div class="glyphicon glyphicon-fullscreen ToWinSmall" aria-hidden="true"></div> '+
+							'<div class="glyphicon glyphicon-remove Close" aria-hidden="true"></div> '+
+						'</div>');
+		WinTitle.append('<div class="leftfix" style="margin-right:85px;">' + op.title + '</div>');
+		WinTitle.append($("<div/>").addClass("clearfix"));
+		Cnn.append(WinTitle);
+		Cnn.append($('<div class="WinContent"></div>'));
+		Cn.append(Cnn);
+		w_div.append(Cn);
+		w_div.hide();
+		that.append(w_div);
+		
+		return w_div;
+	}
+	/*建立視窗(事件)*/
+	this.CreateWinEvent = function(obj){
+		obj.draggable({ handle: ".WinTitle" });
+		obj.draggable("disable");
+		obj.resizable({ghost: true});
+		obj.resizable("disable");
+		obj.click(function(){
+			var maxZ = $this.MaxZindex();
+			maxZ++;
+			obj.zIndex(maxZ);
+		}).find(".WinTitle").click(function(){
+			var maxZ = $this.MaxZindex();
+			maxZ++;
+			obj.zIndex(maxZ);
+		})
+		obj.find(".Close").click(function(){
+			obj.remove();
+		});
+		obj.find(".ToSmall").click(function(){
+			if(obj.hasClass("small")){
+				obj.removeClass("small").find(".WinContent").show();
+			}else{
+				$(this).siblings(".ToWinSmall").removeClass("glyphicon-resize-small").addClass("glyphicon-fullscreen");
+				obj.removeClass("big").addClass("small").find(".WinContent").hide();
+				obj.removeAttr("style");
+				obj.draggable("disable");
+				obj.resizable("disable");
+				obj.css({
+					opacity: 1
+				})
+			}
+		});
+		obj.find(".ToWinSmall").click(function(){
+			if(obj.css("position") == "relative"){
+				$(this).removeClass("glyphicon-fullscreen").addClass("glyphicon-resize-small");
+				obj.removeClass("small").addClass("big").find(".WinContent").show();
+				var w_w = $(window).width();
+				var w_h = $(window).height();
+				var w = obj.width();
+				var h = obj.height();
+				obj.css({
+					left : ((w_w - w) / 2) + "px",
+					top  : ((w_h - h) / 2) + "px"
+				})
+				obj.draggable("enable");
+				obj.resizable("enable");
+				var maxZ = $this.MaxZindex();
+				obj.zIndex(maxZ*1+1);
+			}else{
+				$(this).removeClass("glyphicon-resize-small").addClass("glyphicon-fullscreen");
+				obj.removeClass("small").removeClass("big").find(".WinContent").show();
+				obj.removeAttr("style");
+				obj.draggable("disable");
+				obj.resizable("disable");
+				obj.css({
+					opacity: 1
+				})
+			}
+		});
+		return obj;
+	}
+	this.ReSize = function(){
+		that.find(".Windows").each(function(){
+			
+		});
+	}
+	this.Ready = function(){
+		if($("body").children("#ZgWindow").length <= 0){
+			$("body").append('<div id="ZgWindow"></div>');
+		}
+		that = $("body").children("#ZgWindow");
+		if(that.children("#ZgWindow_bg").length <= 0){
+			that.append('<div id="ZgWindow_bg" class="bg"></div>');
+		}
+		bg = that.children("#ZgWindow_bg");
+		$this.ReSize();
+	}
+	this.init = function(){
+		$this.Ready();
+	};
+	this.init();
+};

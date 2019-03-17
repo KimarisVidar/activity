@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【优博】嘻猴记</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+<body>
+    <div class="btn_float clearfix">
+        <div class="btn_left" style="display:none;">
+            <div id="memact">
+                <div>test1151</div>
+            </div>
+        </div>
+        <div class="btn_right">
+            <div id="record">
+                <a href="javascript: void(0)" onclick="show_record()"></a>
+            </div>
+            <div id="rule">
+                <a href="javascript: void(0)" onclick="show_rule()"></a>
+            </div>
+            <div id="home">
+                <a href="http://www.ubpop.com/" target="_blank"></a>
+            </div>
+            <div id="serve">
+                <a href="https://liveperson.lp2chat.com/u2bet/" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="title"></div>
+        <!-- 未登入 -->
+        <div class="loginbox">
+            <input type="text" id="loginName">
+            <div id="login"></div>
+        </div>
+        <!-- 登入後 -->
+        <div id="logon">
+            <div class="logon_btn" style="display: none;">
+                <a href="javascript: void(0)" class="start_btn" id="start"></a>
+                <a href="javascript: void(0)" class="my_treasure" id="exchange"></a>
+            </div>
+            <div class="logon_icon">
+                <div class="logon_treasure">
+                    <p>0</p>
+                </div>
+                <div class="logon_gold">
+                    <p>0</p>
+                </div>
+                <div class="logon_coin">
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 彈跳視窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox">
+        <!-- 活動規則 -->
+        <div class="rule_box">
+            <div class="abgne_tab">
+                <ul class="tabs">
+                    <li class="active"><a href="#tab1">活动资​​格</a></li>
+                    <li><a href="#tab2">奖金说明</a></li>
+                    <li><a href="#tab3">游戏说明</a></li>
+                </ul>
+
+                <div class="tab_container">
+
+                    <!-- 活動資格內容 -->
+                    <div id="tab1" class="tab_content">
+                        <div class="txt">
+                            <p>活动时间：</p>
+                            <p>北京时间2017.04.01 中午12点 - 2017.05.01 中午12点</p>
+                        </div>
+                        <div class="txt mt">
+                            <p>游戏次数说明：</p>
+                            <p>有以下三大方式可获得嘻猴记游戏次数</p>
+                        </div>
+                        <div class="table">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th>获得方式</th>
+                                        <td class="pading gif_pic">
+                                            <p>新会员大赠送</p>
+                                            <img src="assets/images/gif.png" alt="">
+                                        </td>
+                                        <td class="pading monkey_pic">
+                                            <p>每周登入嘻猴记</p>
+                                            <img src="assets/images/monkey.png" alt="">
+                                        </td>
+                                        <td class="pading money_pic">
+                                            <p>每日累积存款50元</p>
+                                            <img src="assets/images/money.png" alt="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>获得游戏次数</th>
+                                        <td>
+                                            <p class="b_number">10<span>次</span></p>
+                                        </td>
+                                        <td>
+                                            <p class="b_number">3<span>次</span></p>
+                                        </td>
+                                        <td>
+                                            <p>每日最高<span class="b_number"> 5 </span>次</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>说明</th>
+                                        <td class="s_txt">当月新注册会员<br>直接送10次</td>
+                                        <td class="s_txt">每周登入此游戏<br>直接送3次</td>
+                                        <td class="s_txt">
+                                            日累积存款50元，可获1次<br>
+                                            日累积存款100元，可获2次<br> 
+                                            以此类推，单日最高可获5次
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="txt_btm">
+                            <ul>
+                                <li>活动规则：</li>
+                                <li>1. 累积存款不限入款方式</li>
+                                <li>2. 每日累积存款50元，即可获得1次游戏次数，单日凭存款最高可获得5次游戏次数</li>
+                                <li>3. 游戏次数将在您登入嘻猴记活动页面后自动更新，若您于游戏期间有进行存款，则请您再次登入即会更新游戏次数</li>
+                                <li>4. 文案中提及的每日、每周、每月皆以美东时间计算</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- 彩金內容 -->
+                    <div id="tab2" class="tab_content">
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <th>嘻猴币金额</th>
+                                    <td>188元</td>
+                                    <td>58元</td>
+                                    <td>38元</td>
+                                    <td>18元</td>
+                                    <td>12元</td>
+                                    <td>5元</td>
+                                </tr>
+                                <tr>
+                                    <th>需要宝物</th>
+                                    <td>
+                                        <p>
+                                            <img src="assets/images/treasure.png" alt="">
+                                            <span>500个</span>
+                                        </p>
+                                        <p>
+                                            <img src="assets/images/gold.png" alt="">
+                                            <span>2,500个</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <img src="assets/images/treasure.png" alt="">
+                                            <span>400个</span>
+                                        </p>
+                                        <p>
+                                            <img src="assets/images/gold.png" alt="">
+                                            <span>2,000个</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <img src="assets/images/treasure.png" alt="">
+                                            <span>300个</span>
+                                        </p>
+                                        <p>
+                                            <img src="assets/images/gold.png" alt="">
+                                            <span>1,500个</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/coin.png" alt="">
+                                        <p>3,000个</p>
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/coin.png" alt="">
+                                        <p>2,000个</p>
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/coin.png" alt="">
+                                        <p>1,000个</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="des">
+                            <ul>
+                                <li>彩金说明：</li>
+                                <li>1. 于游戏中累积的宝箱、金元宝、金币，累积达数量即可兑换为嘻猴币</li>
+                                <li>2. <span>累积嘻猴币20元以上，即可兑换为优博彩金</span>，彩金5倍打码即可出款</li>
+                                <li>3. 每月可免费兑换优博彩金1次；若当月有存款记录，则兑换次数无上限</li>
+                                <li>4. 您本月未兑换完的宝物、嘻猴币皆可累积至下个月</li>
+                                <li>5. 每月嘻猴记赠送总彩金50,000元，送完为止</li>
+                                <li>6. 宝物、嘻猴币、彩金一经申请或兑换即无法放弃或取消</li>
+                            </ul>
+                        </div>
+                        <div class="pic">
+                            <img src="assets/images/pic01.png" alt="">
+                        </div>
+                    </div>
+                    <!-- 遊戲教學 -->
+                    <div id="tab3" class="tab_content">
+                        <div class="game clearfix">
+                            <div class="game_title">
+                                <ul>
+                                    <li>生命力</li>
+                                    <li>游戏时间</li>
+                                    <li>好道具</li>
+                                    <li>坏道具</li>
+                                    <li>JACKPOT</li>
+                                </ul>
+                            </div>
+                            <div class="game_nav clearfix">
+                                <a class="life active" onclick="">
+                                    <img src="assets/images/life_icon.png" alt="">
+                                    <span>每次游戏有三次生命</span>
+                                </a>
+                                <a class="time" onclick="">
+                                    <img src="assets/images/clock.png" alt="">
+                                    <span>每次游戏时间30秒</span>
+                                </a>
+                                <a class="shield" onclick="">
+                                    <img src="assets/images/shield.png" alt=""><br>    
+                                    盾牌
+                                </a>
+                                <a class="magnet" onclick="">
+                                    <img src="assets/images/magnet.png" alt=""><br>
+                                    磁铁
+                                </a>
+                                <a class="xiantao" onclick="">
+                                    <img src="assets/images/xiantao.png" alt=""><br>
+                                    仙桃
+                                </a>
+                                <a class="fire" onclick="">
+                                    <img src="assets/images/fire.png" alt=""><br>    
+                                    无名火
+                                </a>
+                                <a class="rock" onclick="">
+                                    <img src="assets/images/rock.png" alt=""><br>
+                                    石头
+                                </a>
+                                <a class="headgear" onclick="">
+                                    <img src="assets/images/headgear.png" alt=""><br>
+                                    紧箍咒
+                                </a>
+                                <a class="jackpot" onclick="">集满JACKPOT柱，进入奖金爆发</a>
+                            </div>
+                            <section class="game_box">
+                                <div class="contnet_box life_pd active">
+                                    <p>生命力</p>
+                                    <img src="assets/images/big_life_icon.png" alt="">
+                                    <ul>
+                                        <li>* 每次游戏有三次生命</li>
+                                        <li>* 接到坏的道具会损耗生命</li>
+                                        <li>* 若三次生命都损耗完，该局游戏直接结束</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>游戏时间</p>
+                                    <img src="assets/images/time.png" alt="">
+                                    <ul>
+                                        <li>* 每次游戏时间30秒</li>
+                                        <li>* 若三次生命都损耗完，则不论是否还有游戏时间，该局游戏直接结束</li>
+                                        <li>* 若中途关掉游戏页面，则该局游戏直接结束</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>盾牌</p>
+                                    <img src="assets/images/shield_con.png" alt="">
+                                    <ul>
+                                        <li>* 盾牌可抵挡1次坏道具的攻击</li>
+                                        <li>* 有效时间5秒</li>
+                                        <li>* 接到坏道具将会启动保护，抵挡后盾牌功能即结束</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>磁铁</p>
+                                    <img src="assets/images/magnet_con.png" alt="">
+                                    <ul>
+                                        <li>* 磁铁可强力吸引宝物</li>
+                                        <li>* 有效时间5秒</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>仙桃</p>
+                                    <img src="assets/images/xiantao_con.png" alt="">
+                                    <ul>
+                                        <li>* 接到仙桃，可直接进入奖金爆发</li>
+                                        <li>* 有效时间5秒</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>无名火</p>
+                                    <img src="assets/images/fire_con.png" alt="">
+                                    <ul>
+                                        <li>* 坏道具，接到将会消耗1次生命</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>石头</p>
+                                    <img src="assets/images/rock_con.png" alt="">
+                                    <ul>
+                                        <li>* 坏道具，接到将会消耗1次生命</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>紧箍咒</p>
+                                    <img src="assets/images/headgear_con.png" alt="">
+                                    <ul>
+                                        <li>* 坏道具，接到将会消耗1次生命</li>
+                                    </ul>
+                                </div>
+                                <div class="contnet_box">
+                                    <p>紧箍咒</p>
+                                    <img src="assets/images/jackpot_con.png" alt="">
+                                    <ul class="jackpot_txt">
+                                        <li>* 接到仙桃，无条件进入奖金爆发</li>
+                                        <li>* 接到宝物可累积JACKPOT柱，集满进入奖金爆发</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="close_btn btn_position popclose"></a>
+    </div>
+
+    <!-- 遊戲開始 -->
+    <div id="mdOverlay01" class="popbox"></div>
+    <div id="mdWindow01" class="popbox">
+
+        <div class="start_box">
+            <div class="start_block">
+                
+                <div class="start_top">
+                    <div class="left_pic"></div>
+                    <a href="javascript:void(0);"></a>
+                    <div class="right_pic"></div>
+                </div>
+                <!--start_top -->
+
+                <div class="start_mid">
+                    <ul>
+                        <li class="left">
+                            <img src="assets/images/start_item_left.png" alt="">
+                        </li>
+                        <li class="right">
+                            <img src="assets/images/start_item_right.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!--start_mid -->
+
+                <div class="start_bottom">
+                    <table>
+                        <tr>
+                            <td class="bgcolor"><img src="assets/images/life_icon.png" alt=""></td>
+                            <td>每次游戏有三次生命</td>
+                            <td class="bgcolor"><img src="assets/images/clock.png" alt=""></td>
+                            <td>每次游戏时间30秒</td>
+                        </tr>
+                        <tr>
+                            <td class="bgcolor"><img src="assets/images/jackpot_icon.png" alt=""></td>
+                            <td>JACKPOT累积</td>
+                            <td class="bgcolor"><img src="assets/images/mix_icon.png" alt=""></td>
+                            <td>获得宝物数量</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- 遊戲結果 -->
+    <div id="game_results_bg"></div>
+    <div id="game_results_win">
+        <div class="game_results clearfix">
+            <div class="results_title"></div>
+            <div class="game_last">
+                <p>剩馀游戏次数：</p>
+                <p>188</p>
+            </div>
+            <div class="results_left">
+                <div class="results_new">
+                    <ul>
+                        <li>000</li>
+                        <li>000</li>
+                        <li>000</li>
+                    </ul>
+                </div>
+                <div class="results_my">
+                    <div class="number">
+                        <p>300<span>个</span></p>
+                        <p>1,200<span>个</span></p>
+                        <p>1,200<span>个</span></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="results_right">
+                <a href="javascript:void(0);" class="continue_btn">
+                    <img src="assets/images/continue_btn.png" alt="">
+                </a>
+                <a href="javascript:void(0);" class="watch_treasure">
+                    <img src="assets/images/watch_treasure.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <a href="javascript:void(0);" class="close_btn results_close"></a>
+    </div>
+
+    <!-- 寶物兌換 -->
+    <div id="exchange_bg" class="popbox"></div>
+    <div id="exchange_win" class="popbox">
+        <div class="abgne_tab">
+            <ul class="tabs">
+                <li class="active"><a href="#tab4">宝物兑换</a></li>
+                <li><a href="#tab5">兑换记录</a></li>
+                <li><a href="#tab6">游戏记录</a></li>
+            </ul>
+            <div class="tab_container">
+                <!-- 寶物兌換 -->
+                <div id="tab4">
+                    <div class="exchange_tre clearfix">
+                        <p>我的宝物</p>
+                        <div class="exchange_tiem">
+                            <ul>
+                                <li>
+                                    <div><img src="assets/images/treasure.png" alt=""></div>
+                                    <div>300<span>个</span></div>
+                                </li>
+                                <li>
+                                    <div><img src="assets/images/gold.png" alt=""></div>
+                                    <div>10<span>个</span></div>
+                                </li>
+                                <li>
+                                    <div><img src="assets/images/coin.png" alt=""></div>
+                                    <div>1,000<span>个</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--exchange_tre-->
+                    <div class="exchange_list">
+                        <div class="exchange_list_left">
+                            <ul>
+                                <li>
+                                    <div class="list_num">
+                                        <p>嘻猴币<span>188</span>元</p>
+                                    </div>
+                                    <div class="item_list">
+                                        <img src="assets/images/item_list01.png" alt="">
+                                    </div>
+                                    <div class="exchange_btn">
+                                        <a href="javascript:void(0);">
+                                            <img src="assets/images/change_yes.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_num">
+                                        <p>嘻猴币<span>58</span>元</p>
+                                    </div>
+                                    <div class="item_list">
+                                        <img src="assets/images/item_list02.png" alt="">
+                                    </div>
+                                    <div class="exchange_btn">
+                                        <a href="javascript:void(0);">
+                                            <img src="assets/images/change_no.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_num">
+                                        <p>嘻猴币<span>38</span>元</p>
+                                    </div>
+                                    <div class="item_list">
+                                        <img src="assets/images/item_list03.png" alt="">
+                                    </div>
+                                    <div class="exchange_btn">
+                                        <a href="javascript:void(0);">
+                                            <img src="assets/images/change_no.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_num">
+                                        <p>嘻猴币<span>18</span>元</p>
+                                    </div>
+                                    <div class="item_list">
+                                        <img src="assets/images/item_list04.png" alt="">
+                                    </div>
+                                    <div class="exchange_btn">
+                                        <a href="javascript:void(0);">
+                                            <img src="assets/images/change_no.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_num">
+                                        <p>嘻猴币<span>12</span>元</p>
+                                    </div>
+                                    <div class="item_list">
+                                        <img src="assets/images/item_list05.png" alt="">
+                                    </div>
+                                    <div class="exchange_btn">
+                                        <a href="javascript:void(0);">
+                                            <img src="assets/images/change_no.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_num">
+                                        <p>嘻猴币<span>5</span>元</p>
+                                    </div>
+                                    <div class="item_list">
+                                        <img src="assets/images/item_list06.png" alt="">
+                                    </div>
+                                    <div class="exchange_btn">
+                                        <a href="javascript:void(0);">
+                                            <img src="assets/images/change_no.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="exchange_list_right">
+                            <p>累积嘻猴币</p>
+                            <div class="big_num">
+                                <p>5,888</p>
+                                <p>元</p>
+                            </div>
+                            <img src="assets/images/big_box.png" alt="">
+                            <div class="exchange_yubo">
+                                <a href="javascript:void(0);" id="yubo_btn">
+                                    <img src="assets/images/change_yubo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 兌換紀錄 -->
+                <div id="tab5">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td>兑换时间</td>
+                                <td>兑换宝物</td>
+                                <td>兑换内容</td>
+                                <td>兑换结果</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td>嘻猴币18元</td>
+                                <td>优博彩金18元</td>
+                                <td>申请中</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td class="icon_pd">
+                                    <p><img src="assets/images/coin.png" alt=""></p>
+                                    <p>1,000</p>
+                                </td>
+                                <td>嘻猴币5元</td>
+                                <td>兑换成功</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td class="icon_pd">
+                                    <p><img src="assets/images/coin.png" alt=""></p>
+                                    <p>3,000</p>
+                                </td>
+                                <td>嘻猴币18元</td>
+                                <td>兑换成功</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td class="icon_pd">
+                                    <p><img src="assets/images/treasure.png" alt=""></p>
+                                    <p>400</p>
+                                    <p><img src="assets/images/gold.png" alt=""></p>
+                                    <p>2,000</p>
+                                </td>
+                                <td>嘻猴币58元</td>
+                                <td>兑换成功</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td>嘻猴币18元</td>
+                                <td>嘻猴币58元</td>
+                                <td>成功，已存入优博帐户<br>存入时间：2017-01-01 12:00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td>嘻猴币38元</td>
+                                <td>优博彩金18元</td>
+                                <td>申请中</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td>嘻猴币28元</td>
+                                <td>优博彩金18元</td>
+                                <td>申请中</td>
+                            </tr>
+                            <tr>
+                                <td>2016-03-29 18：02</td>
+                                <td>嘻猴币188元</td>
+                                <td>优博彩金18元</td>
+                                <td>申请中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 遊戲紀錄 -->
+                <div id="tab6">
+                    <div class="record">
+                        <p>剩馀游戏次数：<span>8</span> 次</p>
+                        <div class="record_nav clearfix">
+                            <a href="javascript:void(0);" class="active">游戏记录</a>
+                            <a href="javascript:void(0);">游戏次数记录</a>
+                        </div>
+                        
+                        <section class="record_box">
+                            <div class="g_record active">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>游戏时间</td>
+                                            <td>获得宝物</td>
+                                            <td>累积宝物</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016-03-29 18：02</td>
+                                            <td>
+                                                <p><img src="assets/images/treasure.png" alt=""></p>
+                                                <p>400</p>
+                                                <p><img src="assets/images/gold.png" alt=""></p>
+                                                <p>2,000</p>
+                                                <p><img src="assets/images/coin.png" alt=""></p>
+                                                <p>3,000</p>
+                                            </td>
+                                            <td>
+                                                <p><img src="assets/images/treasure.png" alt=""></p>
+                                                <p>400</p>
+                                                <p><img src="assets/images/gold.png" alt=""></p>
+                                                <p>2,000</p>
+                                                <p><img src="assets/images/coin.png" alt=""></p>
+                                                <p>3,000</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016-03-29 18：02</td>
+                                            <td>
+                                                <p><img src="assets/images/treasure.png" alt=""></p>
+                                                <p>400</p>
+                                                <p><img src="assets/images/gold.png" alt=""></p>
+                                                <p>2,000</p>
+                                                <p><img src="assets/images/coin.png" alt=""></p>
+                                                <p>3,000</p>
+                                            </td>
+                                            <td>
+                                                <p><img src="assets/images/treasure.png" alt=""></p>
+                                                <p>400</p>
+                                                <p><img src="assets/images/gold.png" alt=""></p>
+                                                <p>2,000</p>
+                                                <p><img src="assets/images/coin.png" alt=""></p>
+                                                <p>3,000</p>
+                                            </td>
+                                        </tr>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page_list">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">最前页</a></li>
+                                        <li><a href="javascript:void(0);">上一页</a></li>
+                                        <li><a href="javascript:void(0);">下一页</a></li>
+                                        <li><a href="javascript:void(0);">最后页</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="g_frequency">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>内容</td>
+                                            <td>获得游戏次数</td>
+                                            <td>累积游戏次数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016-02-03</td>
+                                            <td>登入游戏</td>
+                                            <td>1</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016-02-03</td>
+                                            <td>
+                                                <p>日累积存款 <span>88</span> 元</p>
+                                            </td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page_list">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">最前页</a></li>
+                                        <li><a href="javascript:void(0);">上一页</a></li>
+                                        <li><a href="javascript:void(0);">下一页</a></li>
+                                        <li><a href="javascript:void(0);">最后页</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="close_btn popclose"></a>
+    </div>
+
+    <div id="yubo_money_bg" class="popboxs"></div>
+    <div id="yubo_money_win" class="popboxs">
+        <p class="yubo_money_txt">累积嘻猴币：<span>5,888元</span></p>
+        <div class="money_txt">
+            <p class="yubo_money_txt">请输入您要兑换的额度：</p>
+            <input type="text" class="money_input">
+            <span>*最低需兑换20元</span>
+        </div>
+        <div class="change_btn_box">
+            <a href="javascript:void(0);" class="change_btn"></a>
+            <a href="javascript:void(0);" class="cancel_btn"></a>
+        </div>
+        <a href="javascript:void(0);" class="close_btn money_close popclose"></a>
+    </div>
+    
+
+
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    function BBOnlineService() {
+        var url = 'https://messenger.providesupport.com/messenger/0n6xvlivgq25e01zpfa6hfr82r.html';
+        window.open(url, 'newwindow', 'width=800,height=600');
+    }
+    $(document).ready(function(){
+        
+        //寶物兌換視窗
+        $('.logon_icon, #exchange').on('click', function () {
+            $('#exchange_bg, #exchange_win').fadeIn(500);
+        });
+
+        //活動規則視窗
+        $('#record').on('click', function () {
+            $('#exchange_bg, #exchange_win').fadeIn(500);
+        });
+
+        //活動規則視窗
+        $('#rule').on('click', function () {
+            $('#mdOverlay, #mdWindow').fadeIn(500);
+        });
+
+        //遊戲開始視窗
+        $('#start').on('click', function () {
+            $('#mdOverlay01, #mdWindow01').fadeIn(500);
+        });
+
+         //兌換為優博彩金 按鈕
+        $('#yubo_btn').on('click', function () {
+            $('#yubo_money_bg, #yubo_money_win').fadeIn(500);
+        });
+
+        $(".results_close").on('click', function () {
+            $('#game_results_bg, #game_results_win').fadeOut(500);
+        });
+
+        $('#mdOverlay, #mdOverlay01, #exchange_bg, .popclose').on('click', function () {
+            $('.popbox').fadeOut(300);
+        });
+
+        $('#yubo_money_bg, .popclose').on('click', function () {
+            $('.popboxs').fadeOut(300);
+        });
+
+
+        $('.game .game_nav').on('mouseover', 'a', function (event) {
+            event.preventDefault();
+            $(this).addClass('active').siblings('a').removeClass('active');
+            $(this).parents('.game').find('section > div').eq($(this).index()).addClass('active').siblings('div').removeClass('active');
+        });
+
+        $('.record .record_nav').on('mouseover', 'a', function (event) {
+            event.preventDefault();
+            $(this).addClass('active').siblings('a').removeClass('active');
+            $(this).parents('.record').find('section > div').eq($(this).index()).addClass('active').siblings('div').removeClass('active');
+        });
+
+        // 預設顯示第一個 Tab
+        var _showTab = 0;
+        $('.abgne_tab').each(function () {
+            // 目前的頁籤區塊
+            var $tab = $(this);
+
+            var $defaultLi = $('ul.tabs li', $tab).eq(_showTab).addClass('active');
+            $($defaultLi.find('a').attr('href')).siblings().hide();
+
+            // 當 li 頁籤被點擊時...
+            // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+            $('ul.tabs li', $tab).click(function () {
+                // 找出 li 中的超連結 href(#id)
+                var $this = $(this),
+                    _clickTab = $this.find('a').attr('href');
+                // 把目前點擊到的 li 頁籤加上 .active
+                // 並把兄弟元素中有 .active 的都移除 class
+                $this.addClass('active').siblings('.active').removeClass('active');
+                // 淡入相對應的內容並隱藏兄弟元素
+                $(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+                return false;
+            }).find('a').focus(function () {
+                this.blur();
+            });
+        });
+
+
+    });
+</script>
+
+</html>

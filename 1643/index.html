@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" charset="UTF-8">
+	<title>Khuyến mãi sinh nhật 4 tuổi DUBAI PALACE</title>
+	
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/loading/loading.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/customScrollbar/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+
+	<!-- javscript -->
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/loading/loading.js"></script>
+	<script type="text/javascript" src="assets/js/customScrollbar/jquery.mCustomScrollbar.js"></script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="stars">
+			<i class="animated fadeInOut infinite"></i>
+		</div>
+		<img class="bg" src="assets/images/bg-top.png" alt="">
+		<nav>
+			<a class="logo" href="http://399699.com/" target="_blank"><img src="assets/images/logo.png" alt=""></a>
+			<a class="btns-square btns-home" target="_blank" href="http://399699.com/"></a>
+			<a class="btns-square btns-service"></a>
+		</nav>
+		<div>
+			<img class="title animated zoomInUp" src="assets/images/title.png" alt="">
+		</div>
+	</header>
+	<nav class="menu animated fadeIn">
+		<!-- 王者稱霸-->
+		<a class="active" data-page="betting"> <!-- history -->
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-1.png" alt="">
+				<h6><img src="assets/images/menu-1-title.png" alt=""></h6>
+			</div>
+		</a>
+		<!--  免費禮品-->
+		<a data-page="free"> <!-- vip -->
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-2.png" alt="">
+				<h6><img src="assets/images/menu-2-title.png" alt=""></h6>
+			</div>
+		</a>
+		<!--  問卷活動-->
+		<a data-page="quest"> <!-- betting -->
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-3.png" alt="">
+				<h6><img src="assets/images/menu-3-title.png" alt=""></h6>
+			</div>
+		</a>
+		<!-- VIP會員獨享 -->
+		<a data-page="vip"> <!-- app -->
+			<img src="assets/images/menu-bg-hover.png" alt="">
+			<div>
+				<img src="assets/images/menu-4.png" alt="">
+				<h6><img src="assets/images/menu-4-title.png" alt=""></h6>
+			</div>
+		</a>
+	</nav>
+	<div class="main animated">
+		<!-- ajax page -->
+	</div>
+	<footer class="footer">
+		Copyright © 2017 DUBAI PALACE All Rights Reserved.
+	</footer>
+	<div class="hide">
+		<div id="login">
+			<div class="popWindow">
+				<div class="wrap" >
+					<table class="formStyle">
+						<tr>
+							<th width="120"><b>会员帐号：</b></th>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><a class="btns-default" href="">登入</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>	
+	var islogin = true; //尚未登入（示意）
+
+	$(function(){
+
+		/*loading*/
+		function loading(visible){
+			if(visible){
+				$('.div_loading').stop(true,false).fadeIn(250);
+				load = true;
+			}else{
+				$('.div_loading').stop(true,false).fadeOut(250);
+				load = false;
+			}
+		}
+
+		/*service*/
+		function onlineService() {
+			var url = 'http://liveperson.lp2chat.com/dbpvn/';
+			window.open(url, 'newwindow', 'width=840,height=600');
+		}
+		$('.btns-service').on('click', function(event) {
+			event.preventDefault();
+			onlineService();
+		});
+
+		/*page*/
+		var navFun = function(){
+			var $this = this;
+
+			this.goPage = function(page){
+				$('.main').removeClass('fadeIn');
+				$.post(page+'.html',{},function(rt,callback){
+					loading(false);
+					$('.main').html(rt).addClass('fadeIn');
+					if($.isFunction(callback)) callback();
+				})				
+			}
+
+			this.init = function(){
+				$this.goPage('betting');
+				$('.menu').on('click','a', function(event) {
+					event.preventDefault();
+					loading(true);
+					var page = $(this).attr('data-page');
+					$(this).addClass('active').siblings('a').removeClass('active');
+					$('html,body').stop(true,false).animate({ scrollTop:$('.menu').offset().top },800);
+					$this.goPage(page);
+				});
+			}
+		}
+		var navObj = new navFun();
+			navObj.init();
+
+		/*star*/
+		function stars(){
+			var num = 50;
+			var $col = $(".stars > i");
+			for(var i = 0; i < num; i++){
+				var delay = Math.round(Math.random() * (20 - 1) + 1)*100;				
+				setTimeout(function(){
+					var rx = Math.round(Math.random() * ($('.stars').width() - 1) + 1);
+					var ry = Math.round(Math.random() * ($('.stars').height() - 1) + 1);
+					var size = Math.round(Math.random() * (10 - 1) + 1)/10;	
+					$col.clone().appendTo('.stars').css({ left:rx, top:ry, transform:'scale('+size+')' });
+				},delay);
+			}
+		}
+		stars();
+
+		/*window resize*/
+		$(window).resize(function(){
+			if($(window).width() >=1000){
+
+			}
+		});
+
+
+	});
+</script>

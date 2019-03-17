@@ -1,0 +1,330 @@
+
+/*-- 共用 --*/
+body {position: relative; overflow: hidden; background-color: #000;}
+img {max-width: 100%; border-style: none;}
+nav .btn-box .home, 
+nav .btn-box .rule, 
+nav .btn-box .cus {width: 101px; height: 39px; border-radius: 5px; border: 1px solid #f0d890;}
+.wrap {max-width: 1021px; margin: 0 auto;}
+.none {display: none;}
+.pc{display: block;}
+.mobile{display: none;}
+.icon-home3:before {content: "\e902";}
+.icon-headphones:before {content: "\e910";}
+.icon-list:before {content: "\e9ba";}
+.icon-home3:before,.icon-headphones:before,.icon-list:before{ color: #f0d890;}
+.bg01, .bg02, .bg03 {background-repeat: no-repeat; background-position: top center;}
+.bg01, .bg02, .bg03 {background-size: cover;}
+/* scrollbar */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {border-radius: 4px; margin: 0px 0px 5px 0;}
+::-webkit-scrollbar-thumb {border-radius: 4px;background: #464646;}
+::-webkit-scrollbar-thumb:hover {background: #191919;}
+/* 往下箭頭 */
+.down {
+  background-image: url(../images/down.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  display: block;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  left: 49%;
+  z-index: 4;
+  cursor: pointer;
+  -webkit-animation-name: do;
+          animation-name: do;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes do {0% {bottom: 65px;} 50% {bottom: 60px;} 100% {bottom: 65px;}}
+@keyframes do {0% {bottom: 65px;} 50% {bottom: 60px;} 100% {bottom: 65px;}}
+.float {
+  top: 35%;
+  position: fixed;
+  -webkit-animation-name: fl;
+          animation-name: fl;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes fl {0% {right: 0%;} 50% {right: 0.5%;} 100% {right: 0%;} }
+@keyframes fl {0% {right: 0%;} 50% {right: 0.5%;} 100% {right: 0%;}}
+.loading {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  -webkit-transform: translate3d(0%, 0%, 0);
+          transform: translate3d(0%, 0%, 0);
+  background: rgba(0, 0, 0, 0.7);
+}
+.double-bounce1, .double-bounce2 {
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce{
+  0%,100% {-webkit-transform: scale(0);}
+  50% {-webkit-transform: scale(1);}
+}
+@keyframes sk-bounce{
+  0%,100% {transform: scale(0); -webkit-transform: scale(0);}
+  50% {transform: scale(1); -webkit-transform: scale(1);}
+}
+/* 內容 */
+header {width: 100%; margin: 0 auto; position: fixed; top: 0; z-index: 1;}
+nav {width: 100%;height: auto;margin: 0 auto;padding: 10px;}
+nav .logo {
+  float: left;
+  width: 165px;
+  height: 60px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+nav .btn-child {display: inline-block; vertical-align: middle;}
+nav .btn-box {float: right; text-align: center; padding: 10px 0;}
+nav .btn-box a{ padding: 6px 0px; display: inline-block;}
+nav .btn-box a span{ color: #f0d890; margin-left: 5px;}
+nav .btn-box a i, nav .btn-box a span{display: inline-block; vertical-align: middle;}
+nav .btn-box a:hover span{ color: #fff;}
+nav .btn-box a:hover{ border: 1px solid #fff; }
+nav .btn-box a:hover .icon-list:before,
+nav .btn-box a:hover .icon-home3:before,
+nav .btn-box a:hover .icon-headphones:before{ color: #fff;}
+section {width: 100%; height: 100vh; position: relative;}
+.bg01 {background-image: url(../images/bg01.jpg);}
+.bg01 .title {
+  width: 100%;
+  margin: 0 9%;
+  display: block;
+  padding-top: 7%;
+  text-align: center;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.bg01 .title02 {
+  top: 60%;
+  right: 32%;
+  position: absolute;
+  display: inline-block;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.bg02 {background-image: url(../images/bg02.jpg);}
+.bg02 .title {
+  width: 100%;
+  margin: 0 25%;
+  display: block;
+  padding-top: 7%;
+  text-align: center;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.bg02 .sign_btn {
+  background-image: url(../images/Sign.png);
+  width: 340px;
+  height: 84px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  margin: 2% 36% 0;
+}
+.bg02 .sign_btn:hover {background-position: bottom;height: 80px;}
+.bg03 {background-image: url(../images/bg03.jpg);}
+.bg03 .title {
+  width: 100%;
+  margin: 0 32%;
+  display: block;
+  padding-top: 5%;
+  text-align: center;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  z-index: 98;
+  position: fixed;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+#mdOverlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 97;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+.close_btn {
+  background: url(../images/close.png) no-repeat top center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 64px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 100;
+}
+.login {
+  background: url(../images/login_bg.png) no-repeat top center;
+  background-size: cover;
+  width: 666px;
+  height: 351px;
+  padding: 22% 0 0 13%;
+}
+.login input {
+  font-size: 18px;
+  color: #000;
+  width: 345px;
+  height: 40px;
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+  padding-left: 1%;
+}
+.login .s_out {
+  background-image: url(../images/s_out.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 275px;
+  height: 68px;
+  margin: 7% 19%;
+}
+.login .s_out:hover {height: 66px; background-position: bottom;}
+footer {
+  font-size: 20px;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  padding: 18px 0 10px;
+  background: rgba(0, 0, 0,1);
+}
+@media (max-width: 1366px){
+  .bg01 .title{width: 78%; margin: 0 7%;}
+  .bg01 .title02{width: 36%; right: 28%;}
+  .bg02 .title{width: 45%; margin: 0 22%;}
+  .bg02 .sign_btn{margin: 1% 35% 0;width: 260px; height: 64px;}
+  .bg02 .sign_btn:hover{height: 60px;}
+  .bg03 .title {width: 46%; margin: 0 31%; padding-top: 7%;}
+  .float div{width: 78%;}
+  @-webkit-keyframes fl {0% {right: 0%;} 50% {right: -3%;} 100% {right: 0%;}}
+  @keyframes fl {0% {right: 0%;} 50% {right: -3%;} 100% {right: 0%;}}
+}
+@media (max-width: 1280px){
+  .bg01 .title {width: 75%; margin: 0 8%;}
+  .bg01 .title02 {width: 34%;right: 30%;}
+  .bg02 .sign_btn {margin: 1% 36% 0; width: 215px; height: 52px;}
+  .bg02 .sign_btn:hover {height: 50px;}
+  .bg03 .title {width: 43%;margin: 0 32%;}
+  .down{width: 30px;height: 22px;}
+  .float div {width: 65%;} 
+}
+@media (max-width: 1024px){
+  .bg01 .title {width: 95%; margin: 0 -3%; padding-top: 10%;}
+  .bg01 .title02 {width: 43%;right: 25%; top: 57%;}
+  .bg02 .sign_btn {margin: 1% 28% 0;}
+  .bg02 .sign_btn:hover {height: 50px;}
+  .bg02 .title {width: 65%; margin: 0 6%; padding-top: 10%;}
+  .bg03 .title {width: 61%; margin: 0 25%;}
+  .down{width: 30px;height: 22px;}
+  .float{right: -8%;}
+  .float div {width: 50%;}
+  @-webkit-keyframes fl { 0% {right: -8%;} 50% {right: -9%;} 100% {right: -8%;}}
+  @keyframes fl { 0% {right: -8%;} 50% {right: -9%;} 100% {right: -8%;}}
+}
+@media (max-width: 768px){
+  .pc{display: none;}
+  .mobile{display: block;}
+  .bg01 .title {width: 100%; margin: 0 0%;}
+  .bg02{background-position: 60% 100%;}
+  .bg03{background-position: 40% 100%;}
+  .bg02 .title {width: 90%; margin: 0 5%; padding-top: 10%;}
+  .bg02 .sign_btn {width: 340px; height: 84px;}
+  .bg03 .title {width: 80%;margin: 0 12%;padding-top: 10%;}
+  .close_btn{width: 42px;height: 40px;}
+}
+@media (max-width: 640px){
+  header{position: absolute;}
+  footer {bottom: 0; position:absolute;}  
+  nav .logo{margin: 0 auto;}
+  nav .logo, nav .btn-box{float: none; text-align: center; display: block;}
+  nav .btn-box a{margin: 0 10px;}
+  nav .btn-box .home, nav .btn-box .rule, nav .btn-box .cus{width: 28%; height: 45px;}
+  nav .btn-box a i, nav .btn-box a span{font-size: 22px;}
+  .bg01 .title {width: 100%; padding-top: 25%;}
+  .down{display: none;}
+  .bg02 .title{width: 100%;margin: 0;padding-top: 20%;}
+  .bg02 .sign_btn {margin: 2% 24% 0;}
+  .bg02 .sign_btn:hover {height: 80px;}
+  .bg03 .title{width: 100%;margin: 0 10px;padding-top: 9%;}
+  .close_btn {width: 32px; height: 30px;}
+  .login {
+    background: url(../images/login_bg_m.png) no-repeat top center;
+    background-size: cover;
+    width: 80vw;
+    height: 49.5vw;
+    padding: 26% 0 0 0%;
+  }
+  .login .s_out{margin: 7% auto; display: block;}
+}
+@media (max-width:480px){
+  nav .logo{margin: 0 auto;}
+  nav .logo, nav .btn-box{float: none; text-align: center; display: block;}
+  footer{font-size: 12px;}
+  .bg02 {background-position: 63% 100%;}
+  .bg01 .title {padding-top: 35%;}
+  .bg02 .sign_btn{width: 260px;height: 64px;margin: 5% 24% 0;}
+  .close_btn {width: 22px;height: 20px;}
+  .login .s_out:hover {height: 51px;}
+  .login .s_out {width: 213px; height: 53px;}
+}
+@media  (max-width: 414px){
+  nav .btn-box a {margin: 0 5px;}
+  .bg01 .title {padding-top: 40%;}
+  .bg02 .title {padding-top: 42%;}
+  .bg02 .sign_btn {margin: 5% 20% 0;}
+  .bg03 .title {padding-top: 23%;}
+  .login input{width: 80%;}
+  .login .s_out {margin: 3% auto;}
+}
+@media  (max-width: 375px){
+  .login .s_out:hover {height: 37px;}
+  .login .s_out {width: 41vw;height: 10vw;}
+}
+@media  (max-width: 320px){
+  nav .btn-box a i, nav .btn-box a span {font-size: 18px;}
+  nav .btn-box a {padding: 10px 0px;}
+  .bg01 .title {padding-top: 48%;}
+  .bg02 .sign_btn {margin: 5% 10% 0;}
+  .login .s_out:hover {height: 31px;}
+}

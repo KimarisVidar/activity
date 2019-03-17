@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*-- 共用 --*/
+p {
+  margin: 0 0 5px 0;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+input + i {
+  display: inline-block;
+  vertical-align: text-bottom;
+  position: relative;
+}
+
+input:checked + i::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url(../images/radio_checked.png) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+label {
+  cursor: pointer;
+  font-size: 0.8vw;
+}
+
+label > span {
+  display: inline-block;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.other {
+  border-bottom: 1px solid #000;
+}
+
+/*-- 問卷樣式 --*/
+.qa_box {
+  padding: 10px;
+}
+
+.qa_list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.qa_list ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.qa_title {
+  font-size: 0.8vw;
+}
+
+/*-- 規則視窗 --*/
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+}

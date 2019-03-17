@@ -1,0 +1,248 @@
+
+body{
+	padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei';
+	position: relative;	
+}
+
+a{display: block;}
+*:focus{ outline: 0; }
+
+/*-- header --*/
+header{width: 100%; margin: 0 auto; background-repeat: no-repeat;}
+
+.header_top{
+	width: 100%;
+	height: 596px;
+	background: url(images/header_top.jpg) center top;
+}
+
+.header_bottom{
+	width: 100%;
+	height: 174px;
+	background: url(images/header_bottom.jpg) center top;	
+}
+
+.header_wrap,.content_wrap{
+	width: 1080px; 
+	margin: 0 auto; 
+	clear: both;
+}
+.logo{
+	width: 190px;
+	height: 50px;
+	background: url(images/logo.png) no-repeat center;
+	float: left;
+	margin: 32px 0 0 0px;
+}
+.header_right{
+	float: right;
+	width: 210px;
+	height: 192px;
+	margin:0;
+}
+.rule,.custom,.home{
+	width: 67px; 
+	height: 96px; 
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+.sign_btn{
+	width: 298px;
+	height: 109px;
+	margin: auto 390px;
+	background: url(images/sign_btn.png) no-repeat top;
+}
+a.rule{background: url(images/btn_rule.png);}
+a.custom{background: url(images/btn_cus.png);}
+a.home{background: url(images/btn_home.png);}
+a.rule:hover, a.custom:hover,
+a.home:hover, .sign_btn:hover{background-position: bottom;}
+
+/*-- container --*/
+.content{width: 100%;}
+
+/*-- 簽到彩金 --*/
+.money_top{
+	width: 100%;
+	height: 361px;
+	background: url(images/money_top.jpg) no-repeat top;
+}
+.money_bottom{
+	width: 100%;
+	height: 706px;
+	background: url(images/money_bottom.jpg) no-repeat top;
+}
+	
+
+/*-- 享樂3天3夜 --*/
+.enjoy_top{
+	width: 100%;
+	height: 399px;
+	background: url(images/enjoy_top.jpg) no-repeat top;
+}
+.enjoy_bottom{
+	width: 100%;
+	height: 682px;
+	background: url(images/enjoy_bottom.jpg) no-repeat top;
+}
+
+.p_style, .p_style01,.p_style02{
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;	
+	letter-spacing: 2px;
+}
+.p_style{
+	color: #ffe292;
+	height: 321px;
+	font-size: 17px;
+}
+.p_style01{
+	color: #ffe292;
+	height: 350px;
+	font-size: 17px;
+}
+.p_style02{
+	color: #fff2d0;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+/*-- footer --*/
+footer{
+	width: 100%;
+	margin: 0 auto;
+	background: url(images/footer.jpg) no-repeat center;
+}
+footer p{
+	height: 88px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 14px;
+	color: #ffe794;
+	display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/*-- 滾動視窗 --*/
+.f_window{
+	width: 179px;
+	height: 294px;
+	background: url(images/float_bg.png) no-repeat top;
+	position: absolute;
+	top: 0;
+	right: 200px;
+}
+a.f_enjoy, a.f_home, a.f_cus, a.f_sign{
+	width: 179px;
+	margin: 2px 0;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.f_money{height: 48px; background: url(images/f_money.png) no-repeat top; }
+a.f_enjoy{height: 44px; background-image: url(images/f_enjoy.png);}
+a.f_home{height: 44px; background-image: url(images/f_home.png);}
+a.f_cus{height: 45px; background-image: url(images/f_cus.png);}
+a.f_sign{height: 50px; background-image: url(images/f_sign.png);}
+
+.gotop{
+	width: 47px;
+	height: 47px;
+	background: url(images/gotop.png) no-repeat top;
+	margin: 10px auto;
+}
+.f_home:hover,.f_cus:hover,.f_sign:hover{background-position: bottom;}
+ 
+/*遮罩樣式*/
+#mdOverlay {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	position: fixed;
+	z-index: 97;
+	background: rgba(0,0,0,.7);
+	display: none;
+}
+
+/*視窗大小*/
+#mdWindow {
+	top: 50%;
+	left: 50%;
+	width: 605px;
+	height: 285px;
+	position: fixed;
+	z-index: 98;
+	border-radius: 10px;
+	background: #fff;
+	transform: translate3d(-50%, -50% ,0);
+	background: url(images/sign_bg.png) no-repeat center;
+	display: none;
+}
+.sign_window{
+	width: 412px; 
+	margin: 0 auto;
+	padding: 95px 0 0 0;
+}
+
+.member{
+	width: 415px;
+	height: 50px;
+	background: #fff;
+	border-radius: 10px;
+	border: 0;
+	text-align: center;
+	font-size: 18px;
+	color: #2d2d2d;
+}
+
+.member_btn{
+	width: 180px;
+	height: 55px;
+	margin: 40px auto;
+	background: url(images/member_btn.png) no-repeat top;	
+}
+
+.member_btn:hover{background: url(images/member_btn.png) no-repeat bottom;}
+
+/*規則*/
+#mdWindows_rule{
+	width: 1110px;
+	height: 1410px;
+	top: 75%;
+	left: 50%;
+	z-index: 98;
+	position: fixed;
+	transform: translate3d(-50%, -50% ,0);
+	display: none;
+}
+.rule_top,.rule_mid01,.rule_mid02,.rule_bottom{
+	width: 1065px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.rule_top{ height: 138px; background-image:url(images/rule_top.png); }
+.rule_mid01{ height: 482px; background-image:url(images/rule_mid01.png);}
+.rule_mid02{height: 459px; background-image:url(images/rule_mid02.png);}
+.rule_bottom{height: 335px; background-image:url(images/rule_bottom.png);}
+ 
+/*-- close --*/
+.sign_close,.rule_close{
+	width: 32px; 
+	height: 32px; 
+	top: 5px;
+	background: url(images/close.png) no-repeat center;
+	position: absolute;
+
+}
+.rule_close{right: 10px;}
+.sign_close{right: -15px;}

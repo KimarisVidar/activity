@@ -1,0 +1,328 @@
+a{cursor: pointer;}
+body{
+	width: 100%;
+	margin: 0  auto;
+	font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei';	
+}
+.content{width: 100%; margin: 0 auto;}
+#header{
+	width: 100%;
+	margin: 0 auto;
+	height: 727px;
+	background: url(images/header_bg.gif) no-repeat center;
+}
+.header_top{clear: both; width: 1200px; margin:0 auto; }
+
+/*logo*/
+.logo{float: left;}
+.logo a{
+	float: left;
+	width: 175px;
+	height: 80px;
+	margin-left: 64px;
+	background: url(images/logo.png) no-repeat center;
+	cursor: pointer;
+}
+
+/*客服跟官網*/
+.top-Btn{
+	float: right; 
+	height: 80px;
+	color: #fff;
+	margin-right: 110px;
+}
+.cus,.home{float: right;}
+.cus{
+	width: 50px;
+	height: 75px;
+	background: url(images/cus_btn.png) no-repeat top;
+}
+.cus:hover,.home:hover{
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+.home{ 
+	width: 55px; 
+	height: 74px;
+	background: url(images/home_btn.png) no-repeat top;
+}
+
+
+
+/*3大優惠按鈕*/
+.header_btn{
+	width: 100%;
+	height: 271px;
+	background: url(images/top_bar.jpg) no-repeat center;
+}
+.btn_margin{padding: 42px 82px 0 74px;}
+.h_btn01,.h_btn02,.h_btn03{
+	display: inline-block;
+	vertical-align: middle;
+	height: 179px;
+}
+.h_btn01{
+	width: 324px;
+	margin-right: 30px;
+	background: url(images/h_btn01.jpg) no-repeat top;
+}
+.h_btn02{
+	width: 340px;
+	margin-right: 17px;
+	background: url(images/h_btn02.jpg) no-repeat top;
+}
+.h_btn03{
+	width: 323px;
+	background: url(images/h_btn03.jpg) no-repeat top;
+}
+.h_btn01:hover{background: url(images/h_btn01.jpg) no-repeat bottom;}
+.h_btn02:hover{background: url(images/h_btn02.jpg) no-repeat bottom;}
+.h_btn03:hover{background: url(images/h_btn03.jpg) no-repeat bottom;}
+
+/*free*/
+.padd{padding-top: 225px;}
+.free_top{
+	width: 100%;
+	height: 305px;
+	background: url(images/free_top.jpg) no-repeat center;
+}
+.free_wrap{width: 1200px; margin:-10px auto 0; }
+
+/*立即申請 按鈕*/
+.free_btn{
+	width: 315px;
+	height: 70px;
+	display: block;
+	margin: 0 auto;
+	background: url(images/free_btn.jpg) no-repeat top;
+}
+.free_btn:hover{background: url(images/free_btn.jpg) no-repeat bottom;}
+
+.free_content{
+	width: 100%;
+	height: 509px;
+	background: url(images/free_content.jpg) no-repeat center;
+	margin-top: -20px;
+}
+.free_content h1{
+	height: 65px;
+	font-size: 18px;
+	color: #4e0000;
+	font-weight: bolder;
+	text-align: center;
+	padding-top: 35px;
+	letter-spacing: 2px;
+	line-height: 25px;
+}
+.free_text{
+	width: 780px;
+	height: 180px;
+	margin: 39px 0 0 213px;
+	color: #fff;
+	background: url(images/free_table.jpg) no-repeat top;
+}
+.free_text ul li{
+	width: 255px;
+	height: 60px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px;
+	text-align: center;
+}
+.font_bold{	font-weight: bold; color:#fff;}
+.yellow{color: #ffcc00;}
+
+.text_buttom{
+	color: #fff;
+	width: 395px;
+	height: 100px;
+	margin: 15px 0 0 210px;
+}
+.text_buttom p{
+	color: #fff;
+	font-size: 14px;
+	margin: 0; 
+}
+.indent{
+	text-indent: 15px;
+	display: block;
+}
+.point::before{
+	content:url(images/point.jpg);
+	width: 6px;
+	height: 6px;
+	padding-right: 6px;
+	vertical-align: text-bottom;
+}
+
+/*iphone*/
+.nopad{padding: 0;}
+.i_padding{	padding-top: 155px;}
+.iphone_wrap,.money_wrap{width: 1200px; margin: 0 auto;}
+.iphone_block,.money_block{width: 100%;margin: -20px auto;}
+.iphone_top{
+	width: 100%;
+	height: 247px;
+	background: url(images/iphone_top.jpg) no-repeat center;
+}
+.iphone_content{
+	width: 100%;
+	height: 507px;
+	background: url(images/iphone_content.jpg) no-repeat center;
+	margin-top: -20px;
+}
+.not_open{
+	width: 315px;
+	height: 70px;
+	background: url(images/not_open.jpg) no-repeat center;
+	display: block;
+	margin:0 auto;
+	padding-top: 400px;
+}
+.iphone_wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.iphone_wrap h1{
+	text-align: center;
+	height: 65px;
+	font-size: 20px;
+	color: #4e0000;
+	font-weight: bolder;
+	text-align: center;
+	padding-top: 52px;
+	letter-spacing: 2px;
+	line-height: 30px;
+}
+.iphone_text{
+	width: 800px;
+    height: 260px;
+    margin: 71px 0 0 197px;
+	color:#fff;
+	background: url(images/iphone_table.jpg) no-repeat center;
+} 
+.iphone_text ul li{
+	width: 255px;
+	height: 60px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px;
+	text-align: center;
+}
+.iphone_pic{
+	margin: -34px 0 0 5px;
+	background: url(images/iphone_pic.jpg) no-repeat center;}
+
+/*moneyzone*/
+.not_open_money{
+	width: 315px;
+	height: 70px;
+	background: url(images/not_open_money.jpg) no-repeat center;
+	display: block;
+	margin:0 auto;
+	padding-top: 410px;
+}
+.money_top{
+	width: 100%;
+	height: 243px;
+	background: url(images/money_top.jpg) no-repeat center;
+}
+.money_content{
+	width: 100%;
+	height: 656px;
+	background: url(images/money_content.jpg) no-repeat center;
+	margin-top: -20px;
+}
+.money_tab{
+	width: 835px;
+	height: 300px;
+	background: url(images/money_table.jpg) no-repeat center;
+	margin: 60px 0 0 178px;
+}
+.money_wrap h1{
+	text-align: center;
+	height: 65px;
+	font-size: 20px;
+	color: #4e0000;
+	font-weight: bolder;
+	text-align: center;
+	padding-top: 35px;
+	letter-spacing: 2px;
+	line-height: 30px;
+}
+.money_tb{
+	margin-left: 185px;
+}
+footer{
+	width:100%;
+	background: #0a0000;
+	color: #fff;
+}
+.footer_wrap{
+	padding:10px 0;
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer_left{
+	float: left;
+	width: 450px;
+	height: 45px;
+	margin-left: 100px;
+	
+}
+.footer_left a{
+	width: 280px;
+	height: 45px;
+	display: block;
+	cursor: pointer;
+	background: url(images/footer_left.jpg) no-repeat center;
+}
+.footer_right{
+	float: right;
+	width: 239px;
+	height: 35px;
+	margin-right: 120px;
+	background: url(images/footer_right.png) no-repeat center;
+}
+
+/*浮動*/
+nav{
+	width: 179px;
+	height: 385px;
+	background: url(images/float.png) no-repeat center;
+	position: absolute;
+	right: 100px;
+	top: 450px;
+}
+.float_free{
+	width: 158px;
+	height: 77px;
+	background: url(images/float_free.png) no-repeat top;
+	display: block;
+	margin: 45px 0 0 11px;
+}
+.float_iphone{
+	width: 158px;
+	height: 74px;
+	background: url(images/float_iphone.png) no-repeat top;
+	display: block;
+	margin: 2px 0 0 11px;
+}
+.float_money{
+	width: 158px;
+	height: 73px;
+	background: url(images/float_money.png) no-repeat top;
+	display: block;
+	margin: 2px 0 0 11px;
+}
+.gotop{
+	width: 158px;
+	height: 64px;
+	background: url(images/gotop.png) no-repeat top;
+	display: block;
+	margin: 2px 0 0 11px;
+}
+.float_free:hover{background: url(images/float_free.png) no-repeat bottom;}
+.float_iphone:hover{background: url(images/float_iphone.png) no-repeat bottom;}
+.float_money:hover{background: url(images/float_money.png) no-repeat bottom;}
+.gotop:hover{background: url(images/gotop.png) no-repeat bottom;}

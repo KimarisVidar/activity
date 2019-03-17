@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国迪拜新会员首存经典</title>
+    <link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a href="javascript:void(0);" class="logo" onclick="pageObj.home();"></a>
+            <div class="btn-box">
+                <a href="javascript:void(0);" class="btn-left home" onclick="pageObj.home();">
+                	<img src="assets/images/home_btn.png">
+                </a>
+                <a href="javascript:void(0);" class="btn-right" onclick="pageObj.cs();">
+                	<img src="assets/images/cus_btn.png">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="bg-top"></section>
+    <section class="bg-mid">
+    	<div class="wrap">
+        	<div class="box stp1"></div>
+        </div>
+    </section>
+    <section class="bg-btm">
+        <div class="wrap">
+            <div class="mission">
+                <!-- 任務失敗 -->
+                <div class="fail none">任务失败</div>
+                <div class="scss none">任务成功</div>
+                <div class="money">
+                    <img src="assets/images/icon_01.png">
+                    <p>首次存款 300 元</p>
+                </div>
+                <div class="bonus">
+                    <img src="assets/images/icon_02.png">
+                    <p>首次红利 84 元</p>
+
+                    <!-- 已鎖定 -->
+                    <p class="lock">（已锁定）</p>
+                </div>
+                <div class="mis">
+                    <img src="assets/images/icon_03.png">
+                    <p>电子游艺流水任务：5,760 元</p>
+                </div>
+                <div class="heap">
+                    <img src="assets/images/icon_04.png">
+                    <p>
+                        电子游艺已累积流水 ：95 元
+                        <br>
+
+                        <!-- 時間 -->
+                        <span>（更新时间2017.09.29 15：30）</span>
+                    </p>
+                </div>
+                <div class="btn_block">
+                    <!-- 申請紅利 -->
+                    <button type="button" class="bonus_btn">
+                        <img src="assets/images/bonus_btn.png" alt="">
+                    </button>
+                    <!-- 前往存款 -->
+                    <button type="button" class="deposit_btn" onclick="pageObj.deposit();">
+                        <img src="assets/images/deposit_btn.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="rule">
+                <img src="assets/images/rule.png">
+                <ul>
+                    <li>
+                        <i class="round"></i>
+                        <p>活动资格：北京时间2017年10月19日中午12点起注册之新会员，每位会员仅限申请一次。</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>派彩时间：申请红利后，彩金将于<span>1个小时</span>内，由系统自动计算并派发至主账户中</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>彩金<span>打码1倍</span>可出款。</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>首存优惠要求的流水仅计算<span>电子游艺馆</span>，其馀馆别流水不计入。</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>
+                            流水要求＝（首存金额+首存红利）x15<br> 
+                       		举例：（首存300元+红利金＄84）x15=5,760元
+                        </p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>完成流水要求后，系统解除彩金锁定，即可点击申请红利。</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>新会员首存后<span>7天内需完成流水要求</span>，逾期视同放弃资格。</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>欲领取首存优惠之会员只要登录一次即等同报名，无登录的会员无法领取首存优惠。 </p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>每位会员、每个IP、每个手机号码、每个电子邮箱地址、每一组银行帐号仅限申请一次，
+                            <br>若发现重复注册或同IP多帐号现象，则视为同一人，此IP下所有帐号迪拜皇宫有权拒绝派送彩金。</p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>每位会员的开户银行卡地址、手机号码归属地、登入IP须为同一个地区。 </p>
+                    </li>
+                    <li>
+                        <i class="round"></i>
+                        <p>参与此活动即表示同意
+                        	<a href="https://www.399699.com/main/ot/faq/88" target="_blank">《迪拜皇宫活动声明》</a>
+                        ，迪拜皇宫拥有最终解释权。 </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrap">Copyright © 迪拜皇宫 Reserved</div>
+    </footer>
+    <!-- 彈窗 -->
+    <div id="mdOverlay" class="popbox"></div>
+    <div id="mdWindow" class="popbox sign">
+        <!-- 活動登入 -->
+        <div class="login none">
+            <input type="text" name="acc">
+            <div>
+                <button type="button" class="login_btn">
+                    <img src="assets/images/login_btn.png">
+                </button>
+                <button type="button" class="sign_btn" onclick="pageObj.home();">
+                    <img src="assets/images/sign_btn.png">
+                </button>
+            </div>
+        </div>
+        <!-- 	旧会员填账号 您首存未达300 ，无法领取红利 -->
+        <div class="old-acc none">
+            <button type="button" class="confirm_btn">
+                <img src="assets/images/confirm_btn.png">
+            </button>
+            <div class="close_btn popclose"></div>
+        </div>
+    </div>
+    <!-- loading -->
+    <div class="loading">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.preload.min.js"></script>
+<script>
+var indexFn = function() {
+    var current = 0;
+    var moving = 0;
+    var fn = {
+        login: function(callback) {
+            var _this = this;
+            //紅利標準 ture=有達
+            var dividend = false;
+            var acc = $('input[name="acc"]').val();
+            if (acc == '') {
+                popup.alert('页面错误', '您尚未输入帐号哦');
+                $('input[name="acc"]').focus();
+                return false;
+            }
+            sendFun.post('{burl}login', { acc: acc }, {
+                onSuccess: function(res) {
+                    account = acc;
+                    //res = 100
+                    _this.close();
+                },
+                onFail: function(res) {
+                    //res = 101; 	旧会员填账号，按【立即登录】，出现弹窗
+                    popup.alert('此活动仅限新注册会员参加，但别气馁！官网还有许多优惠等您领取！');
+                }
+            });
+        },
+        home: function() {
+            window.open("https://399699.com/");
+        },
+        deposit: function() {
+            window.open('https://399699.com/efpay')
+        },
+        cs: function() {
+            var url = 'http://liveperson.lp2chat.com/dbpcn/';
+            window.open(url, 'newwindow', 'width=850,height=650');
+        },
+        close: function() {
+            $('.login').addClass('none');
+            $('.popbox').fadeOut(300);
+        },
+        star_win: function() {
+            $('.login').removeClass('none');
+            $('#mdOverlay, #mdWindow').fadeIn(500);
+        },
+        fail: function(){
+            $('.fail').removeClass('none');
+        },
+        scss: function(){
+            $('.scss').removeClass('none');
+        },
+        div_btn: function(){
+            var _this = this;
+        	switch (key) {
+	            //新会员未存款
+	            case 110:
+	                alert('会员未存款：您尚未存款，前往官网存款激活红利吧！');
+	                break;
+	            //新会员首存未达标
+	            case 115:
+	                $('.old-acc').removeClass('none');
+            		$('#mdOverlay, #mdWindow').fadeIn(500);
+                    //任務失敗
+                    _this.fail(); 
+	                break;
+	            //新会员７日'内'流水未达标
+	            case 120:
+	                popup.alert('还差一点就能领！赶快把握黄金7日达成流水要求吧！');
+                    //任務失敗
+                    _this.fail(); 
+	                break;
+	            //新会员７日'后'流水未达标
+	            case 120:
+	                popup.alert('好可惜！您没在存款７日内完成流水任务，所以无法领取首存红利。那就到官网领其他优惠吧～');
+                    //任務失敗
+                    _this.fail(); 
+	                break;
+	            //新会员７日内流水达标
+	            case 125:
+	                popup.alert('恭喜您可获得红利ＸＸ元，彩金将于１个小时由系统自动计算并派发至主账户中。');
+                    //任務成功
+                    _this.scss();
+	                break;
+	            //新会员已领红利
+	            case 125:
+	                popup.alert('您已领过红利喽～彩金于（派发时间）存入主账户。');
+                    //任務成功
+                    _this.scss();
+	                break;
+	        }
+        },
+        init: function() {
+            var $this = this
+            $('body').preload(function() {
+                $('.loading').fadeOut(500);
+            });
+
+            $('.popclose, .confirm_btn').on('click', function() {
+                $('#mdWindow > div').addClass('none');
+                $('.popbox').fadeOut(300);
+            });
+
+            $('.login_btn').on('click', function() {
+                // $this.login();
+                $this.close();
+            });
+
+            //紅利按鈕
+            $('.dividend_btn').on('click', function() {
+		        $this.div_btn();
+		    });
+
+            //一開始顯示活動登視窗
+            //$this.star_win();
+        }
+    }
+    fn.init();
+    return fn;
+}
+var pageObj = new indexFn();
+</script>
+
+</html>

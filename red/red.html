@@ -1,0 +1,131 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">		
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+		<!--在iPhone 手机上禁止了把数字转化为拨号链接-->
+	    <meta content="telephone=no" name="format-detection" />
+	    <!--删除默认的苹果工具栏和菜单栏-->
+	    <!-- <meta content="yes" name="apple-mobile-web-app-capable"> -->
+	    <!-- 网站开启对web app程序的支持，在web app应用下状态条（屏幕顶部条）的颜色，默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）-->
+   		<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+		<link rel="stylesheet" href="../red/assets/css/style.css">
+		<style>
+			button{position: fixed; top: 0; left: 0; width: 100px; height: 100px;z-index:9999}
+		</style>
+	</head>
+	<body>
+		<ul class="couten"></ul>
+		<!-- <div> -->
+			<button type="button" id="btn" onclick="aa();">click</button>
+		<!-- </div> -->
+</body>
+<script src="../red/assets/js/jquery-3.2.0.min.js"></script>
+<script>
+$(function(){
+	var num = 0;
+	// var Add = function(){
+	// 	var win = parseInt($(".couten").css("width"));
+	// 	var hb   = parseInt(Math.random()*(3-1)+1);     //隨機取得紅包名稱 hb_1、hb_2
+	// 	var wh   = parseInt(Math.random()*(70-30)+20);  //隨機產出寬度
+	// 	var Left = parseInt(Math.random()*(win-0)+0);	//隨機產出left位置
+	// 	var rot  = parseInt(Math.random()*(45-(-45))-45) + "deg"; //隨機產出角度
+	// 	// console.log(Left);
+	// 	//console.log(rot)
+	// 	//console.log(wh)
+	// 	num++;
+	// 	$('.couten').append('<li class="pos_'+ num +'"><a href="javascript:void(0);"><img src="../red/assets/images/hb_'+ hb +'.png"></a></li>');
+	// 	$(".pos_" + num).css({  "transform": "translate(" + Left + "px)" });
+	// 	$(".pos_" + num + " a img").css({
+	// 		"width": wh,
+	// 		"transform": "rotate(" + rot + ")",
+	// 		"-webkit-transform": "rotate(" + rot + ")",
+	// 		"-ms-transform": "rotate(" + rot + ")", 	/* Internet Explorer */
+	// 		"-moz-transform": "rotate(" + rot + ")", 	/* Firefox */
+	// 		"-webkit-transform": "rotate(" + rot + ")",	/* Safari 和 Chrome */
+	// 		"-o-transform": "rotate(" + rot + ")" 		/* Opera */
+	// 	});	
+
+	// 	$('.pos_'+num).animate({
+	// 		'top': $(window).height()
+	// 	},8300,function(){  //毫秒後做刪除HB動作
+	// 		this.remove();
+	// 	});
+
+	// 	$(".pos_" + num + " a img").on('click',function(){
+	// 		$(this).remove();
+	// 	});
+	// }
+	// var tt = 10;
+	// var timer;
+	// var myVar;
+	// function S2(){
+	// 	tt--;
+	// 	console.log('tt',tt);
+	// 	if( tt == 0 ){
+	// 		clearInterval(myVar);
+	// 		clearInterval(timer);
+	// 	}
+	// }
+
+	// $('#btn').on('click',function(e){
+	// 	myVar = setInterval(Add,300);
+	// 	timer = setInterval(S2,1000);
+	// });
+
+
+});
+
+function aa(){
+	var num = 0;
+	var Add = function(){
+		var win  = parseInt($(".couten").css("width"));
+		var hb   = parseInt(Math.random()*(3-1)+1);     //隨機取得紅包名稱 hb_1、hb_2
+		var wh   = parseInt(Math.random()*(70-30)+20);  //隨機產出寬度
+		var Left = parseInt(Math.random()*(win-0)+0);	//隨機產出left位置
+		var rot  = parseInt(Math.random()*(45-(-45))-45) + "deg"; //隨機產出角度
+		// console.log(Left);
+		//console.log(rot)
+		//console.log(wh)
+		num++;
+		$('.couten').append('<li class="pos_'+ num +'"><a href="javascript:void(0);"><img src="../red/assets/images/hb_'+ hb +'.png"></a></li>');
+		$(".pos_" + num).css({  "transform": "translate(" + Left + "px)" });
+		$(".pos_" + num + " a img").css({
+			"width": wh,
+			"transform": "rotate(" + rot + ")",
+			"-webkit-transform": "rotate(" + rot + ")",
+			"-ms-transform": "rotate(" + rot + ")", 	/* Internet Explorer */
+			"-moz-transform": "rotate(" + rot + ")", 	/* Firefox */
+			"-webkit-transform": "rotate(" + rot + ")",	/* Safari 和 Chrome */
+			"-o-transform": "rotate(" + rot + ")" 		/* Opera */
+		});	
+
+		$('.pos_'+num).animate({
+			'top': $(window).height()
+		},8300,function(){  //毫秒後做刪除HB動作
+			this.remove();
+		});
+
+		$(".pos_" + num + " a img").on('click',function(){
+			$(this).remove();
+		});
+	}
+	var tt = 10;
+	var timer;
+	var myVar;
+	function S2(){
+		tt--;
+		console.log('tt',tt);
+		if( tt == 0 ){
+			clearInterval(myVar);
+			clearInterval(timer);
+		}
+	}
+	myVar = setInterval(Add,300);
+	timer = setInterval(S2,1000);
+}
+</script>
+</html>

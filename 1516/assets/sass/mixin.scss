@@ -1,0 +1,74 @@
+// 通用樣式
+@mixin bg-style($i){
+    background: {
+        image: url(images/#{$i});
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
+}
+@mixin bg-style-P($path, $height){
+    background-image: url(../images/#{$path}.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: $height;
+}
+@mixin bg-style-J($path, $height){
+    background-image: url(../images/#{$path}.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: $height;
+}
+@mixin font-style($size,$color){ font-size: $size; color: $color;}
+@mixin wh($M_width,$M_height){ width: $M_width; height: $M_height;}
+
+//Wrap
+@mixin Wrap($w_width){width: $w_width; margin: 0 auto ;}
+
+//活動頁header
+@mixin Header-style($padding){
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: $padding;
+    position: absolute;
+    top: 0;
+}
+//LOGO
+@mixin Logo($img,$imgWidth,$imgHeight){
+    .logo{
+        float: left;
+        width: $imgWidth;
+        height: $imgHeight;
+        background: url(images/#{$img}.png) no-repeat top center;
+    }
+}
+//header選單
+@mixin Btn($btn_width,$btn_height){
+    .btn-box{
+        float: right;
+        width: $btn_width;
+        height: $btn_height;
+        text-align: center;
+    }
+}
+//header子選單
+@mixin Btn-child($btnBg-W,$btnBg-H,$btnBg-L,$btnBg-R){
+    .btn-left,.btn-right{
+        width: $btnBg-W;
+        height: $btnBg-H;
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    .btn-left{
+        background-image: url(images/#{$btnBg-L}.png);
+       
+    }
+    .btn-right{
+        background-image: url(images/#{$btnBg-R}.png);
+       
+    }
+}

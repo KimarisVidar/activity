@@ -1,0 +1,1138 @@
+html,body{ height: 100%; }
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei';	
+	background: url(images/bg.jpg) no-repeat top;
+	overflow-x: hidden;
+}
+a{
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover {text-decoration: none;}
+*:focus {outline: 0;}
+img {max-width: 100%; height: auto;}
+/*--內容--*/
+.content{}
+.title{
+	width: 50vw;
+	height: 26vw;
+	margin-top: 2.8vw;
+	margin: 2.8vw auto 0;
+	background: url(images/title.png) no-repeat top;
+	background-size: cover;
+}
+/*-- 未登入 --*/
+.loginbox{
+	width: 24vw;
+	height: 12vw;
+	margin: 0 auto 10vw;
+	background: url(images/loginbox.png) no-repeat top;
+	background-size: cover;
+	position: relative;
+}
+#loginName{
+	position: absolute;
+    top: 3.1vw;
+    left: 9vw;
+    width: 56%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #180d04;
+    border: none;
+    color: white;
+    font-size: 14pt;
+    padding-left: 5px;
+}
+#login {
+	position: absolute;
+	top: 7vw;
+	left: 5vw;
+	width: 277px;
+	height: 55px;
+	background-image: url(images/login_btn_o.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#login:hover {background-image: url(images/login_btn.png);}
+
+/*-- 登入後 --*/
+#logon{
+	background: url(images/logon_bg.png) 0 0.5vw no-repeat;
+	background-size: contain; 
+	position: relative;
+	margin: 4vw auto 0;
+	width: 26vw;
+	height: 14vw;
+}
+.logon_btn{position: absolute; top: -4vw; left: 3vw;}
+
+.start_btn, .my_treasure{
+	width: 20.5vw;
+	height: 4vw;
+	margin: 0 auto;
+}
+.start_btn{
+	background: url(images/start_btn.png) no-repeat top; 
+	background-size: cover;
+}
+.start_btn:hover {
+	background: url(images/start_btn_h.png) no-repeat top;
+	background-size: cover;
+}
+.my_treasure{
+	background: url(images/my_treasure.png) no-repeat top;
+	background-size: cover;
+}
+.my_treasure:hover{
+	background: url(images/my_treasure_h.png) no-repeat top;
+	background-size: cover;
+}
+
+.logon_icon{text-align: center; cursor: pointer;}
+.logon_icon > div > p{
+	margin-top: 5.2vw; 
+	color: #fdca00;
+	font-size: 1.5vw;
+}
+.logon_treasure,.logon_gold,.logon_coin{
+	display: inline-block; 
+	vertical-align: middle;
+	width: 6vw;
+	height: 7vw;
+	margin: 5vw 0.5vw;
+}
+.logon_treasure{
+	background: url(images/treasure_s.png) no-repeat top;
+	background-size: cover;
+}
+.logon_gold{
+	background: url(images/gold_s.png) no-repeat top;
+	background-size: cover;
+}
+.logon_coin{
+	background: url(images/coin_s.png) no-repeat top;
+	background-size: cover;
+}
+.btn_float{position: relative; width: 100%;}
+.btn_left{
+	float: left;
+	position: absolute;
+	left: 2vw;
+	top: 1vw;
+}
+.btn_right{
+	float: right;
+	position: absolute;
+	right: 4vw;
+	top: 2vw;
+}
+.btn_right > div{display: inline-block; vertical-align: middle; cursor: pointer;}
+
+#home,#serve{width: 4vw; height: 4vw;}
+#record,#rule{width: 10vw; height: 4vw;}
+#rule{background: url(images/rule_btn.png) no-repeat top;background-size: cover;}
+#home {background: url(images/home.png) no-repeat top;background-size: cover;}
+#home a,#serve a{height: 100%;}
+#serve {background: url(images/serve.png) no-repeat top;background-size: cover;}
+#record {background: url(images/record_btn.png) no-repeat top;background-size: cover;}
+#memact {
+	width: 17vw;
+	height: 5vw;
+	background: url(images/memact.png) no-repeat top;
+	background-size: cover;
+}
+#memact > div {
+	width: 13vw;
+	height: 4vw;
+	line-height: 5vw;
+	color: white;
+	font-size: 1.5vw;
+	font-weight: bold;
+	margin-left: 2vw;
+	overflow: hidden;
+	cursor: default;
+	text-align: center;
+}
+.rule_box{
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	z-index: 98;
+	width: 67vw;
+	height: 42vw;
+	transform: translate3d(-50%, -50%, 0);
+	background: url(images/scroll.png) no-repeat top;
+	background-size: cover;
+}
+.close_btn {
+	width: 4vw;
+	height: 4vw;
+    top: 3vw;
+    right: -4vw;
+	background: url(images/close.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+}
+.btn_position{top: -18vw;right: -38vw;}
+
+/*遮罩樣式*/
+#mdOverlay, #mdOverlay01{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	position: fixed;
+	z-index: 97;
+	background: rgba(0, 0, 0,.7);
+	display: none;
+}
+/*視窗大小*/
+#mdWindow, #mdWindow01 {
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	z-index: 98;
+	transform: translate3d(-50%, -50%, 0);
+	display: none;
+}
+
+/*-- 活動規則 --*/
+.rule_box > p{
+	text-align: center; 
+	color: #d4bb3d; 
+	padding:2vw 0 0.5vw;
+	font-size: 2vw;
+	letter-spacing: 1vw;
+}
+.abgne_tab{
+	width: 92%; 
+	margin: 0 auto;
+	text-align: center;
+	}
+ul.tabs {width: 100%;margin: 0 auto;}
+ul.tabs > li{
+	width: 32%;
+	cursor: pointer;
+	line-height: 3vw;
+	text-align: center;
+	display: inline-block;
+	padding-top: 3vw;
+}
+ul.tabs > li > a{
+	height: 4vw;
+	font-size: 1.8vw;
+	padding: 0.5vw 0;
+	letter-spacing: 1vw;
+	background: url(images/btn.png) no-repeat top;
+	background-size: cover;
+	color: #d4bb3d;
+}
+ul.tabs>li.active a, ul.tabs>li:hover a {
+	background: url(images/btn_h.png) no-repeat top;
+	background-size: cover;
+}
+
+/*-- 活動資格 --*/
+.txt{margin-top: 2vw; text-align: left;}
+.txt > p{
+	font-size: 1.2vw; 
+	display: inline-block; 
+	vertical-align: middle;
+	letter-spacing: 0.2vw;
+}
+.txt > p:nth-of-type(1){color: #d4bb3d;}
+.txt > p:nth-of-type(2){color: #fff;}
+.mt{margin-top: 0vw;}
+
+table {
+	color: #d4bb3d;
+	border: 2px solid #cf9e43;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2vw;
+}
+tbody > tr > td{
+	border-bottom: 2px solid #cf9e43;
+	border-right: 2px solid #cf9e43;
+}
+tbody > tr > th{
+	background:rgba(0, 0, 0, .5);
+	text-align: center;
+	width: 20%;
+	border-bottom: 2px solid #cf9e43;
+	border-right: 2px solid #cf9e43;
+}
+#tab1 > .table > table > tbody > tr > td{background-color: #560202;}
+.s_txt{font-size: 1vw; color: #fff; padding: 1vw 0;}
+.gif_pic > img{width: 5vw;}
+.pading{padding: 1vw 0;}
+.b_number{font-size: 2.5vw;}
+.b_number > span{font-size: 1.2vw;}
+.txt_btm{width: 100%; margin-top: -0.8vw; text-align: left;}
+.txt_btm > ul > li{font-size:0.8vw; color: #fff; line-height: 1.3vw; letter-spacing: 0.2vw;}
+.txt_btm > ul > li:nth-of-type(1){color: #d4bb3d;}
+.monkey_pic > img{width: 4vw;}
+.money_pic > img{width: 5vw;}
+
+#tab2 > table{margin-top: 2vw; width: 100%;}
+#tab2 > table > tbody > tr:nth-of-type(1){line-height: 9.5vw;}
+#tab2 > table > tbody > tr:nth-of-type(2) > td{padding: 2vw 0;}
+#tab2 > table > tbody > tr > td{font-size: 1.5vw; background-color: #560202;}
+#tab2 > table > tbody > tr > td > p{font-size: 1vw; margin: 0; padding: 0;}
+#tab2 > table > tbody > tr > td > img{width: 3vw;}
+#tab2 > table > tbody > tr > td > p > img{width: 2.5vw;}
+.des, .pic{display: inline-block; vertical-align: middle;}
+.des{
+	font-size: 0.9vw;
+	color: #fff;
+	line-height: 1.3vw;
+	letter-spacing: 0.1vw;
+	margin-top: 2vw;
+	width:55%;
+	text-align: left;
+}
+.des > ul > li:nth-of-type(1),.des > ul > li > span{color: #d4bb3d;}
+.pic{width: 44%;margin-top: 1vw;}
+.pic > ul > li{
+	width: 19%;
+	text-align: center;
+	color: #d4bb3d; 
+	font-size: 1vw;
+	display: inline-block;
+	vertical-align: middle;
+}
+.pic > ul > li:nth-child(odd) > img{width: 2vw;}
+.game{margin-top: 2vw; width: 100%;}
+.game > section > div{ display: none; }
+.game > section > div.active{ display: block;}
+.game_title, .game_nav{float: left;}
+.game_title{
+	background:rgba(0, 0, 0, .5);
+	text-align: center;
+	width: 15%;
+	border: 2px solid #cf9e43;
+	font-size: 1.2vw;
+	color: #d4bb3d;
+}
+.game_title ul li{border-bottom: 3px solid #cf9e43;line-height: 6vw;}
+.game_title ul li:last-child{border:none;}
+.game_box{
+	width: 44%;
+	height: 31vw; 
+	float: right;
+	background:rgba(0, 0, 0, .5);
+	border: 2px solid #cf9e43;
+	padding: 5vw 2vw 0;
+	}
+.game_nav{width: 40%;}
+.game_nav a:hover{color: #fff;}
+.contnet_box{position: relative;}
+.contnet_box > p{
+	text-align: center;
+	color: #d4bb3d;
+	font-size: 2vw;
+}
+.contnet_box > p + img{display: block; margin:0 auto; }
+.contnet_box > ul > li{
+	color: #fff; 
+	font-size: 1vw; 
+	line-height: 1.5vw;
+	width: 70%;
+	margin: 1vw auto;
+	text-align: left;
+}
+.jackpot_txt{
+	position: absolute;
+	width: 95%;
+	top: 10vw;
+	right: -5vw;
+
+}
+.life,.time,.shield,.magnet,.xiantao,.fire,.rock,.headgear,.jackpot{
+	width: 100%; 
+	color: #fff; 
+	background: #580000; 
+	text-align: center;
+	font-size: 1.2vw;
+	border-left: 3px solid #986262;
+	border-top: 3px solid #986262;
+	border-right: 3px solid #230000;
+	border-bottom: 3px solid #230000;
+}
+.life{padding: 1.4vw 0;}
+.jackpot{padding: 2.4vw 0; clear: both;}
+.time{padding: 1vw 0;}
+.shield,.magnet,.xiantao,.fire,.rock,.headgear{
+	width: 33.33%;
+	padding: 0.6vw 0;
+	float: left;
+}
+.shield > img,.magnet > img,.xiantao > img,
+.fire > img,.rock > img,.headgear > img{width: 3vw;} 
+
+/*-- 遊戲開始 --*/
+.start_box{
+	background: url(images/scroll.png) no-repeat top;
+	background-size: cover;
+	width: 67vw;
+	height: 42vw;
+}
+.start_block{width: 90%; margin: 0 auto;}
+.start_top{
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 3vw;
+	text-align: center;
+}
+.start_top > div,.start_top > a{display: inline-block; vertical-align: middle;}
+.start_top > a{
+	margin: 0 4vw;
+	background: url(images/btn_startGame_normal.png) no-repeat top;
+	background-size: cover;
+	width: 20vw;
+	height: 11vw
+}
+.start_top > a:hover{background: url(images/btn_startGame_h.png) no-repeat top;background-size: cover;}
+.left_pic,.right_pic{
+	background: url(images/start_monkey.png) no-repeat top;
+	background-size: cover;
+	width: 7vw;
+	height: 11vw;
+}
+.right_pic{transform: rotateY(180deg);}
+.start_mid,.start_bottom {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.start_mid ul li.left, .start_mid ul li.right{float: left;}
+.start_mid ul li.left{width: 54%;}
+.start_mid ul li.right{width: 40%;}
+.start_bottom > table{width: 100%; color: #fff;}
+.start_bottom > table > tbody > tr > td{padding: 1vw 0;}
+.bgcolor{background: rgba(0, 0, 0, .5);}
+
+/*-- 遊戲結束 --*/
+
+/*遮罩樣式*/
+#game_results_bg {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	position: fixed;
+	z-index: 97;
+	background: rgba(0, 0, 0, .7);
+	display: none;
+}
+/*視窗大小*/
+#game_results_win {
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	z-index: 98;
+	transform: translate3d(-50%, -50%, 0);
+	width: 67vw;
+	height: 42vw;
+	background: url(images/scroll.png) no-repeat top;
+	background-size: cover;
+	display: none;
+}
+.game_results{
+	width: 90%; 
+	margin:0 auto; 
+	padding: 3vw 0;
+}
+.results_title{
+	background: url(images/g_results_title.png) no-repeat top;
+	background-size: contain;
+	width: 15vw; height: 4vw;
+	margin: 0 auto 1vw;
+}
+.game_last{
+	width: 75%; 
+	margin: 0 auto;
+	text-align: right;
+	font-size: 1.5vw;
+	letter-spacing: 0.1vw;
+}
+.game_last > p{
+	display: inline-block; 
+	vertical-align: middle;
+	color: #fdca00;
+	margin: 0;
+}
+.results_left, .results_right{float: left;}
+.results_left{width: 60%; padding:0 0 0 5vw;}
+.results_right{width: 40%;}
+.results_new{
+	background: url(images/g_results_new.png) no-repeat top;
+	background-size: contain;
+	width: 30vw; height: 14vw;
+	margin-bottom: 1vw;
+}
+.results_new ul{text-align: center; padding: 10vw 0 0 0;}
+.results_new ul li{
+	display: inline-block; 
+	vertical-align: middle;
+	color:#fdca00;
+	font-size: 1.2vw;
+	width: 25%;
+}
+.results_my{
+	background: url(images/g_results_my.png) no-repeat top;
+	background-size: contain;
+	width: 30vw;
+	height: 12vw;
+}
+.results_my .number{
+	width: 100%;
+	text-align: center;
+	padding: 5vw 0 0 0;
+	position: relative;
+
+}
+.number>p{
+	display: inline-block;
+	vertical-align: middle;
+	color: #d4bb3d;
+	font-size: 1.5vw;
+	width: 25%;
+	position: absolute;
+}
+.number > p:nth-of-type(1){left: 4vw;}
+.number > p:nth-of-type(2){left: 13vw;}
+.number > p:nth-of-type(3){left: 21.5vw;}
+
+/*-- 寶物兌換 --*/
+
+/*遮罩樣式*/
+#exchange_bg {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	position: fixed;
+	z-index: 97;
+	background: rgba(0, 0, 0, .7);
+	display: none;
+}
+/*視窗大小*/
+#exchange_win {
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	z-index: 98;
+	transform: translate3d(-50%, -50%, 0);
+	width: 67vw;
+	height: 42vw;
+	background: url(images/scroll.png) no-repeat top;
+	background-size: cover;
+	display: none;
+}
+.exchange_tre{
+	width: 85%;
+	background: #270202;
+	border: 2px solid #c18c3c;
+	border-radius: 1vw;
+	margin: 2vw auto 0;
+}
+.exchange_tre > p{
+	float: left;
+	font-size: 1.2vw;
+	color: #d4bb3d;
+	margin: 0;
+	padding: 1vw 0;
+	width: 23%;
+}
+.exchange_tre > p::after{
+	content: '';
+	height: 1px;
+	padding: 0.5vw 1vw;
+	border-right: 2px solid #d4bb3d;
+}
+.exchange_tiem{float: right;width: 75%;}
+.exchange_tiem ul{margin: 0;}
+.exchange_tiem ul li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0.5vw 0;
+	width: 32%;
+}
+.exchange_tiem ul li > div{display: inline-block;vertical-align: middle;}
+.exchange_tiem ul li > div > img{width: 3vw;}
+.exchange_tiem ul li > div:nth-of-type(2){
+	font-size: 1.5vw;
+	color: #d4bb3d;
+	padding:0 0.5vw;
+} 
+.exchange_list{width: 85%; margin: 0 auto;}
+.exchange_list_left {
+	width: 72%;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	margin: 1vw auto 0;
+}
+.exchange_list_left ul li{
+	float: left;
+	width: 31%;
+	margin:0 1vw 0.5vw 0;
+	background: #270202;
+	border: 2px solid #c18c3c;
+	border-radius: 1vw;
+	padding: 0.8vw 0px;
+}
+.exchange_list_left > ul li:nth-of-type(3),.exchange_list_left ul li:last-child{margin-right:0;}
+.exchange_list_left ul li > div.list_num {
+	color: #d4bb3d;
+	font-size: 1vw;
+	width: 85%;
+	margin: 0 auto;
+}
+.list_num > p{font-size: 1vw;}
+.list_num > p > span{
+	font-size: 2vw; 
+	padding: 0 0.1vw;
+	width: 4vw;
+	text-align: center;
+}
+.list_num > p, .list_num > p > span{
+	display: inline-block;
+	vertical-align: baseline;
+	letter-spacing: 0.1vw;
+	margin: 0;
+}
+.item_list{background-color: #180606; padding: 0.5vw;}
+.item_list > p{color: #fff;}
+.item_list > p:nth-of-type(2) > img{width: 1vw;}
+.exchange_btn{padding:1vw 0.5vw 0; text-align: center;}
+.exchange_yubo{padding: 0.5vw 0;}
+.exchange_list_right{
+	width: 27%;
+	border-radius: 1vw;
+	display: inline-block;
+	vertical-align: top;
+	background: #270202;
+	border: 2px solid #c18c3c;
+	margin-top: 1vw;
+}
+.exchange_list_right > p{
+	letter-spacing: 0.3vw;
+	font-size: 1vw;
+	text-align: left;
+	color: #d4bb3d;
+	margin: 1vw;
+	width: 94%;
+}
+.big_num {
+	width: 100%; 
+	margin: 0 1vw; 
+	text-align: left;
+}
+.big_num > p{display: inline-block; vertical-align: bottom;}
+.big_num > p:nth-of-type(1){
+	background: #190101;
+	border: 2px solid #c18c3c;
+	padding:0 0.5vw 0 2vw;
+	font-size: 3vw;
+	color: #fff;
+}
+.big_num > p:nth-of-type(2){color: #d4bb3d;font-size: 1.5vw;}
+
+/*-- 兌換紀錄 --*/
+#tab5 {padding: 2%;}
+#tab5 > table > tbody > tr{background-color: #560202;}
+#tab5 > table > tbody > tr:nth-child(odd){background-color: #450202;}
+#tab5 > table > tbody > tr:nth-of-type(1) > td{background: rgba(0,0,0,.5);font-size: 1.2vw}
+#tab5 > table > tbody > tr > td{width:25%;padding: 0.7vw 0; font-size: 1vw;}
+#tab5 > table > tbody > tr > td > p{display: inline-block; vertical-align: middle;}
+#tab5 > table > tbody > tr > td > p > img{width: 3vw;}
+.icon_pd{padding: 0 !important;}
+
+/*-- 遊戲紀錄 --*/
+.record{width: 100%; margin: 0 auto; position: relative;}
+.record > p{
+	width: 50%;
+	font-size: 1.2vw;
+	color: #d4bb3d;
+	position: absolute;
+	top: 0;
+	right: 1vw;
+	margin-top: 2vw;
+	text-align: right;
+	padding-right: 3vw;
+}
+.record > p > span{color: #fff; font-size: 1.4vw;}
+.record_nav {
+	width: 100%;
+	padding: 1vw;
+	float: left;
+}
+.record_nav > a{
+	width: 15%;
+	margin: 0; 
+	padding: 0.5vw;
+	border: 2px solid #c18c3c;
+	background-color: #290202;
+	color: #d4bb3d;
+	float: left;
+	text-decoration: none;
+	font-size: 1vw;
+}
+.record_nav > a.active{
+	color: #fff;
+	border: 2px solid #c18c3c;
+	background: #3a0404; /* Old browsers */
+	background: -moz-linear-gradient(top, #3a0404 0%, #590203 50%, #3a0404 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #3a0404 0%,#590203 50%,#3a0404 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #3a0404 0%,#590203 50%,#3a0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0404', endColorstr='#3a0404',GradientType=0 ); /* IE6-9 */ 
+}
+.record > section > div{ display: none; }
+.record > section > div.active{ display: block;}
+
+/*遊戲紀錄*/
+.g_record{padding: 0 0.9vw;}
+.g_record > table > tbody > tr{background-color: #560202;}
+.g_record > table > tbody > tr:nth-child(odd){background-color: #450202;}
+.g_record > table > tbody > tr:nth-of-type(1) > td{background: rgba(0,0,0,.5);font-size: 1.2vw}
+.g_record > table > tbody > tr > td{width:32%; padding:0.3vw 0; font-size: 1vw;}
+.g_record > table > tbody > tr > td > p{display: inline-block; vertical-align: middle; margin: 0;}
+.g_record > table > tbody > tr > td > p > img{width: 2vw;}
+
+/*遊戲紀錄*/
+.g_frequency{padding: 0 0.9vw;}
+.g_frequency > table > tbody > tr{background-color: #560202;}
+.g_frequency > table > tbody > tr:nth-child(odd){background-color: #450202;}
+.g_frequency > table > tbody > tr:nth-of-type(1) > td{background: rgba(0,0,0,.5);font-size: 1.2vw}
+.g_frequency > table > tbody > tr > td{width:25%; padding:0.3vw 0; font-size: 1vw;}
+.g_frequency > table > tbody > tr > td > p{display: inline-block; vertical-align: middle; margin: 0;}
+.g_frequency > table > tbody > tr > td > p > span{font-size: 1.2vw; color: #fff; margin:0 0.1vw;}
+
+/*頁面按鈕*/
+.page_list{width: 90%; margin: 0 auto;}
+.page_list ul li {
+	text-align: center;
+	border: 2px solid #c18c3c;
+	background-color: #290202;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.5vw 1vw;
+	margin: 1vw 0.5vw;
+	width: 15%;
+}
+.page_list ul li > a{
+	color: #d4bb3d;
+	letter-spacing: 0.1vw;
+	font-size: 1vw;
+}
+
+/*兌換為優博彩金*/
+
+/*遮罩樣式*/
+#yubo_money_bg{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	position: fixed;
+	z-index: 98;
+	background: rgba(0, 0, 0, .7);
+	display: none;
+}
+/*視窗大小*/
+#yubo_money_win {
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	z-index: 98;
+	transform: translate3d(-50%, -50%, 0);
+	width: 22vw;
+	height: 20vw;
+	background: url(images/yubo_money_bg.png) no-repeat top;
+	background-size: cover;
+	padding-top: 5vw;
+	display: none;
+}
+.money_close {
+	top: 1vw;
+	right: -2.5vw;
+	width: 2vw;
+	height: 2vw;
+}
+.yubo_money_txt{
+	font-size: 1.3vw;
+	color: #d4bb3d;
+	letter-spacing: 0.1vw;
+	text-align: center;
+}
+.money_input{
+	background: rgba(45,5,5,.8);
+	width: 75%;
+	height: 2vw;
+	text-align: center;
+	display: block;
+	border: none;
+	margin: 0 auto;
+	color: #d4bb3d;
+	text-shadow: 1px 2px #000;
+}
+.money_txt > span{
+	display: block;
+	text-align: center;
+	color: #d4bb3d;
+	font-size: 0.8vw;
+	margin-top: 0.5vw;
+}
+.change_btn_box{width: 75%; margin: 1vw auto 0;}
+
+a.change_btn, a.cancel_btn{
+	display: block;
+	margin: 0.5vw auto 0;
+	width: 10vw;
+	height: 2vw;
+}
+a.change_btn{background: url(images/change_btn.png) no-repeat top; background-size: cover;}
+a.cancel_btn{background: url(images/cancel_btn.png) no-repeat top; background-size: cover;}
+
+/*-- 以下為media --*/
+
+/*-- 1366 --*/
+@media (max-width: 1366px) {
+	.rule_box{width: 75vw;}
+	.title {width: 60vw; height: 30vw; background-size:contain;}
+	.loginbox {width: 33vw; height: 16vw;}
+	ul.tabs > li{padding-top: 2vw;}
+	.life{padding: 0.6vw 0;}
+	.time{padding: 0.5vw 0;}
+	.shield, .magnet, .xiantao, .fire, .rock, .headgear{padding: 0.5vw 0;}
+	.jackpot{padding: 2.4vw 0; clear: both;}
+	.contnet_box{padding: 0 2vw 4.5vw;}
+	.start_bottom > table > tbody > tr > td{padding: 0;}
+	.start_btn, .my_treasure{width: 21vw;}
+	.logon_btn{left: 4vw;}
+	.logon_treasure, .logon_gold, .logon_coin{width: 6vw; margin: 5vw 1vw;}
+	.logon_icon > div > p{margin-top: 5.1vw;}
+	.continue_btn > img{width: 20vw;}
+	.watch_treasure > img{width: 22vw;}
+	.exchange_list_right > img{width: 9.8vw;}
+	.start_mid ul li.left{width: 56%;}
+	.start_mid ul li.right{width: 43%;}
+	.btn_position{top: -19vw;right: -42vw;}
+	#yubo_btn > img{width: 10vw; margin: 0 auto;}
+	#loginName {top: 4.2vw; left: 12vw; width: 210px;}
+	#login {top: 9vw;left: 6vw;}
+	#logon{width: 28vw; height: 15vw;}
+	
+}
+
+@media (max-width: 1065px) {
+	#login {left: 4vw;}
+}
+
+/*-- 1024 --*/
+@media (max-width: 1024px) {
+	ul.tabs > li{line-height: 4vw;}
+	ul.tabs > li > a{height: 4.7vw;}
+	.txt_btm > ul > li{line-height: 1.8vw;}
+	.title {height: 32vw; margin-top: 8.8vw;}
+	.rule_box{width: 78vw; height: 49vw;}
+	.game_box{height: 37vw;}
+	.game_title ul li{line-height: 7vw;}
+	.life_box{padding: 0 2vw 8vw;}
+	.life{padding: 1.8vw 0;}
+	.life > img{width: 10vw;}
+	.logon_treasure, .logon_gold, .logon_coin{width: 8vw; height: 9.5vw;margin: 9vw 1vw 0;}
+	.logon_icon > div > p{margin-top: 7.1vw;}
+	.time{padding: 1vw 0;}
+	.time > img{width: 10vw;}
+	.start_box{width: 90vw; height: 56vw;}
+	.start_bottom > table > tbody > tr > td{padding: 2vw; font-size: 2VW;}
+	.start_bottom > table > tbody > tr > td > img{width: 12vw;}
+	.start_mid ul li.right{width: 42%;}
+	.start_mid ul li.left{width: 58%;}
+	.shield, .magnet, .xiantao, .fire, .rock, .headgear{padding: 1vw 0;}
+	.start_btn, .my_treasure{width: 27vw; height: 5vw; margin: 1vw auto;}
+	.jackpot{padding: 3vw 0;}
+	.jackpot_txt{width: 80%; top: 14vw; right: -3vw;}
+	.contnet_box > ul > li{line-height: 2.2vw;width: 80%;}
+	.results_new ul{padding: 9.7vw 0 0 0;}
+	.yubo_money_txt{font-size: 1.5vw;}
+	.money_input{height: 3vw;}
+	.money_txt > span{font-size: 1vw;}
+	a.change_btn, a.cancel_btn{width: 15vw; height: 3vw;}
+	.exchange_yubo{padding: 1vw 0;}
+	.exchange_tre, .exchange_list.big_num{width: 90%;}
+	.big_num{margin: 0 3vw;}
+	.btn_position{top: -22vw;right: -43vw;}
+	#yubo_btn > img{width: 15vw;}
+	#yubo_money_win{width: 29vw; height: 28vw; padding-top: 6vw;}
+	#exchange_win{width: 80vw; height: 50vw;}
+	#loginName {top: 4vw; left: 12vw; width: 190px;}
+	#login {left: 3vw;}
+	#logon{width: 35vw; height: 30vw; background-position: 0vw 4vw; background-size: contain;}
+}
+
+/*-- 768 --*/
+@media (max-width: 768px) {
+	.title{margin-top: 20.8vw; width: 85vw; height: 45vw;}
+	.loginbox {width: 45vw; height: 22vw;}
+	ul.tabs > li{line-height: 4vw; padding-top: 4vw;}
+	ul.tabs > li > a{height: 5.5vw;}
+	.txt_btm > ul > li{line-height: 2vw;}
+	.game_box{height: 38vw;}
+	.des{line-height: 2.3vw;}
+	.time{padding: 0.8vw 0;}
+	.logon_icon > div > p{margin-top: 7.5vw; font-size: 1vw;}
+	.shield, .magnet, .xiantao, .fire, .rock, .headgear{padding: 0.7vw 0;}
+	.start_box{width: 97vw; height: 60vw;}
+	.start_mid ul li.left{width: 57%;}
+	.start_mid ul li.right{width: 43%;}
+	.start_bottom > table > tbody > tr > td{padding: 2vw; font-size: 2.5vw;}
+	.results_title{width: 20vw; height: 4vw; margin: 1.5vw auto;}
+	.results_new{width: 40vw; height: 19vw; margin-bottom: 0.5vw;}
+	.results_new ul{padding: 12.8vw 0 0 0;}
+	.results_new ul li{font-size: 2vw;}
+	.results_my{width: 40vw; height: 14vw;}
+	.results_my .number{padding: 7vw 0 0 0;}
+	.rule_box{width: 90vw; height: 62vw;}
+	.number > p{font-size: 2vw;}
+	.number > p:nth-of-type(1){left: 5vw;}
+	.number > p:nth-of-type(2){left: 17.5vw;}
+	.number > p:nth-of-type(3){left: 29vw;}
+	.continue_btn > img{width: 26vw;}
+	.watch_treasure > img{width: 29vw;}
+	.yubo_money_txt{font-size: 2.5vw;}
+	.money_input{height: 5vw;}
+	.money_txt > span{font-size: 2vw;}
+	.money_close{top: 3vw; right: -4.5vw; width: 4vw; height: 4vw;}
+	a.change_btn, a.cancel_btn{width: 25vw; height: 5vw;}
+	.exchange_list{width: 90%;}
+	.exchange_list_right > img{width: 10.8vw;}
+	.btn_position{top: -26vw;right: -49vw;}
+	#exchange_win{width: 90vw; height: 56vw;}
+	#yubo_money_win{width: 45vw; height: 43vw; padding-top: 11vw;}
+	#game_results_win{width: 85vw; height: 50vw;}
+	#loginName {top: 5vw;left: 16vw;}
+	#login {top: 12vw;left: 5vw;}
+	#home,#serve{width: 6vw;height: 6vw;}
+	#record,#rule{width: 15vw;height: 6vw;}
+	#memact {width: 34vw;height: 10vw;}
+	#memact > div{width: 25vw;height: 10vw;line-height: 9vw;margin-left:0vw;font-size: 2.5vw;}
+}
+
+/*-- 640 --*/
+@media (max-width: 640px){
+	.rule_box{height: 85vw;}
+	.loginbox {width: 55vw; height: 27vw;}
+	.life{padding: 4.2vw 0;}
+	.txt_btm > ul > li {line-height: 2.5vw;}
+	.des,.pic{width: 100%;}
+	.des{line-height: 3.3vw;}
+	.pic > img{width: 60vw; margin: 0 auto; display: block;}
+	.game_box{height: 64vw; padding: 10vw 2vw 0;}
+	.game_title ul li{line-height: 12vw;}
+	.contnet_box > p{font-size: 3vw;}
+	.time{padding: 3.3vw 0;}
+	.jackpot{padding: 5.1vw 0;}
+	.shield, .magnet, .xiantao, .fire, .rock, .headgear{padding: 3vw 0;}
+	.yubo_money_txt{font-size: 3.5vw;}
+	.money_input{height: 6vw;}
+	.money_txt > span{font-size: 2.5vw;}
+	.money_close{top: 3vw; right: -4.5vw; width: 4vw; height: 4vw;}
+	a.change_btn, a.cancel_btn{width: 32vw; height: 6vw;}
+	.record_nav > a{width: 20%;}
+	#exchange_win{height: 65vw; padding-bottom: 2vw;}
+	#yubo_money_win{width: 60vw; height: 57vw; padding-top: 15vw;}
+	#loginName {top: 6.5vw; left: 20vw;}
+	#login{top:15vw;}
+	#memact > div{width: 25vw;line-height: 60px;font-size: 2.5vw;}
+}
+
+/*-- 480 --*/
+@media (max-width: 480px) {
+	ul.tabs{padding-top: 5vw;}
+	ul.tabs > li{width: 27vw; height: 5vw;line-height: 5vw;}
+	.title {width:97vw; height: 90vw;margin: 10vw auto 0;background: url(images/m_title.png) no-repeat top; margin-top: 20vw;}
+	.loginbox {width: 85vw; height: 42vw;}
+	.life{padding: 2.5vw 0;}
+	.logon_icon > div > p{margin-top: 9.5vw;}
+	.logon_treasure, .logon_gold, .logon_coin{width: 11vw; height: 12.5vw; margin: 14vw 1vw 0;}
+	.left_pic, .right_pic{width: 10vw; height: 16vw;}
+	.rule_box{width: 87vw; height: 115vw;}
+	.record_nav{padding: 2vw 0;}
+	.record_nav > a{width: 25%;}
+	.results_new ul{padding: 12vw 0 0 0;}
+	.txt_btm > ul > li{line-height: 4.3vw;}
+	.contnet_box > p{font-size: 5vw;}
+	.contnet_box > ul > li{width: 100%; line-height: 3.2vw;}
+	.game_last{width: 81%; font-size: 1vw;}
+	.game_title ul li{line-height: 17vw;}
+	.game_nav > a > span{display: block;}
+	.game_nav > a > img,.game_nav > a > span{width: 77%; margin: 0 auto;}
+	.game_box{height: 90vw; padding: 25vw 2vw 0;}
+	.g_record > table > tbody > tr > td > p > img{width: 11vw;}
+	.des{line-height: 5.3vw;letter-spacing: 0vw;}
+	.time{padding: 0.6vw 0;}
+	.start_btn, .my_treasure{width: 40vw; height: 7vw;}
+	.shield, .magnet, .xiantao, .fire, .rock, .headgear{padding: 2.8vw 0;}
+	.start_box{height: 100%; padding-bottom: 10vw;}
+	.start_top{padding-top: 8vw;}
+	.start_top > a{width: 35vw; height: 20vw;}
+	.start_mid ul li.left, .start_mid ul li.right{width: 100%;}
+	.jackpot{padding: 5.5vw 0;}
+	.jackpot_txt{width: 62%; top:17vw; right: -1vw;}
+	.exchange_list_right{width: 100%;}
+	.exchange_list_left{width: 101%;}
+	.exchange_list_left ul li{width: 32%;}
+	.exchange_tiem ul li > div > img{width: 6vw;}
+	.exchange_list_right > p{text-align: center; font-size: 4vw;}
+	.exchange_list_right > img{width: 15%;}
+	.exchange_yubo{padding: 3vw 0;}
+	.exchange_tre > p{padding:2vw 0;}
+	.big_num, .exchange_list_right > img{display: inline-block; vertical-align: middle;}
+	.big_num{ width: 27%;}
+	.big_num > p:nth-of-type(1){font-size: 5vw;}
+	.btn_position { top: -48vw; right: -48vw;}
+	.abgne_tab{width: 96%;}
+	.page_list ul li{width: 22%;}
+	#exchange_win{height: 118vw;}
+	#yubo_btn > img{width: 35vw;}
+	#loginName {top: 10vw;left: 30vw;width: 210px;}
+	#login {top: 22vw;left: 10vw;}
+	#logon{width: 49vw; background-position: 0vw 7vw;}
+	#home,#serve{width: 8vw;height: 8vw;}
+	#record,#rule{width: 20vw;height: 8vw;}
+	#memact {width: 34vw;height: 10vw;}
+	#memact > div{width: 20vw;height: 10vw;line-height: 40px;margin-left: 30px;}
+	#tab5 > table > tbody > tr > td > p > img{width: 7vw;}
+}
+@media (max-width: 414px){
+	.abgne_tab{width: 95%;}
+	.rule_box{height: 155vw;}
+	.record_nav{margin: 1vw 0;}
+	.record_nav > a{width: 27%;}
+	.start_top > a{width: 30vw; height: 18vw;}
+	.start_mid ul li.left,.start_mid ul li.right{width: 100%;}
+	.start_top{padding-top: 7vw;}
+	.start_box{height: 140vw;}
+	.shield, .magnet, .xiantao, .fire, .rock, .headgear{padding: 0.6vw 0;}
+	.exchange_tiem ul li > div > img{width: 6vw;}
+	.exchange_tre{width: 100%;}
+	.exchange_list{width: 100%;}
+	.exchange_list_left{width: 100%; margin: 1vw auto 0}
+	.exchange_list_left ul li{width: 32%; margin: 0 1.7vw 0.5vw 0;}
+	.exchange_list_left > ul li:nth-of-type(3),
+	.exchange_list_left > ul li:nth-of-type(6){margin: 0 0 0.5vw 0;}
+	.exchange_list_right{width: 100%;}
+	.exchange_list_right > img{width: 23vw;}
+	.exchange_list_right > p{text-align: center; font-size: 6vw;}
+	.exchange_yubo{padding: 5.5vw 0;}
+	.big_num{text-align: center; width: 39%;}
+	.big_num > p:nth-of-type(1){font-size: 9vw;}
+	.big_num > p:nth-of-type(2){font-size: 5.5vw;}
+	.list_num > p > span{width: 7vw;}
+	.big_num, .exchange_list_right > img{display: inline-block; vertical-align: middle;}
+	.game_box{width: 40%; height: 108vw; padding: 25vw 0 0;}
+	.game_nav{width: 45%;}
+	.game_nav > a > img, .game_nav > a > span{width: 95%; font-size: 0.5vw;}
+	.g_record > table > tbody > tr > td > p > img{width: 11vw;}
+	.life{padding: 0.5vw 0;}
+	.time{padding: 6.3vw 0;}
+	.jackpot{padding: 5.2vw 0;}
+	.jackpot_txt{right: 0;}
+	.page_list ul li{width: 20%;}
+	#login{background-size:contain; width: 110vw; height: 13vw;}
+	#loginName{width: 180px;}
+	#exchange_win{width: 90vw; height: 140vw;}
+	#tab2 > table > tbody > tr > td > p > img{width: 9vw;}
+	#tab5 > table > tbody > tr > td > p > img{width: 7vw;}
+}
+@media (max-width: 375px){
+	.title{background-size: contain;}
+	ul.tabs > li{width: 26vw;}
+	.txt > p{margin: 0;}
+	.logon_icon > div > p{margin-top: 9.8vw;}
+	.logon_treasure, .logon_gold, .logon_coin{height: 13.5vw;}
+	.game_last{text-align: center; font-size: 4vw;}
+	.results_left, .results_right{float: none; width: 100%;}
+	.results_title{width: 30vw; height: 6vw; background-size: cover;}
+	.results_left{padding: 0;}
+	.results_new{width: 100%; height: 35vw;background-size: cover;}
+	.results_new ul{padding: 25vw 0 0 0;}
+	.results_my{width: 100%; height: 25vw; margin: 2vw auto;}
+	.results_my .number{padding-top: 13vw;}
+	.results_right > a{float: left;}
+	.results_right > a:nth-of-type(1){width: 45%;}
+	.results_right > a:nth-of-type(2){width: 54%;}
+	.results_right > a:nth-of-type(1) > img{width: 28vw;}
+	.results_right > a:nth-of-type(2) > img{width: 48vw;}
+	.number > p:nth-of-type(1){left: 9vw;}
+	.number > p:nth-of-type(2){left: 32.5vw;}
+	.number > p:nth-of-type(3){left: 55vw;}
+	.close_btn{width: 6vw; height: 6vw; right: -6vw;}
+	#game_results_win{height: 125vw; padding: 6vw 0;}
+	#memact > div{line-height: 35px;}
+	#logon{height: 33vw;}
+}
+@media (max-width: 320px){
+	ul.tabs{padding-top: 3vw;}
+	.logon_btn{left: 7.5vw;}
+	.logon_treasure, .logon_gold, .logon_coin{width: 13vw;height: 15.5vw}
+	.logon_icon > div > p{margin-top: 11vw;}
+	.list_num > p > span{width: 6.7vw;}
+	.left_pic, .right_pic{width: 9vw; height: 14vw;}
+	.exchange_tre > p{width: 100%; text-align: center; border-bottom: 1px solid #d4bb3d;}
+	.exchange_tre > p::after{display: none;}
+	.exchange_tiem{width: 100%;}
+	.btn_position {top: -80vw;}
+	.big_num > p:nth-of-type(1){font-size: 7vw; padding: 1vw 3.5vw;}
+	.exchange_list_right > p{font-size: 5vw;}
+	.exchange_list_right > img{width: 15vw;}
+	.exchange_yubo{padding: 3.5vw 0;}
+	.rule_box{height: 175vw; padding-bottom: 5vw;}
+	.record_nav{margin: 1vw 0 10vw;}
+	.record_nav > a{width: 50%;}
+	.record > p{width: 100%; text-align: center; font-size: 4.2vw; margin-top: 0vw; top:10vw;}
+	.record > p > span{font-size: 6.4vw;}
+	.page_list{width: 100%;}
+	.txt{text-align: left;}
+	.txt > p{margin: 0; }
+	.money_pic > img,.monkey_pic > img,.gif_pic > img{width: 10vw;}
+	.pic > img{margin: 2vw auto;}
+	.time{padding: 0;}
+	a.life > img{width: 55% !important;}
+	a.time > img{width: 40% !important;}
+	a.shield >img,a.magnet > img,a.xiantao > img,
+	a.fire > img,a.rock > img,a.headgear > img{width: 54% !important;}
+	a.change_btn, a.cancel_btn{margin: 1.5vw auto 0;}
+	.jackpot{padding: 7vw 0;}
+	.jackpot_txt{width: 52%; top:23vw; right: 3vw;}
+	.start_box{height: 100%; padding: 0 0 10vw;}
+	.start_top > a{width: 40vw; height: 22vw;}
+	.start_bottom > table > tbody > tr > td > img{width: 40vw;}
+	.start_mid ul li.left, .start_mid ul li.right{width: 110%; float: none; clear: both; margin: 0 -5vw;}
+	.game_title{width:30%;}
+	.game_nav{width: 70%;}
+	.game_nav > a > img, .game_nav > a > span{width: 61%;}
+	.game_box{width: 100%; height: 100%; padding: 0; float: none; clear: both;}
+	.contnet_box > p{font-size: 7vw; margin: 1vw 0;}
+	.contnet_box > p + img{width:55%;}
+	.contnet_box > ul > li{line-height: 6.2vw;}
+	.money_close{top: 3vw;right: -7.5vw;width: 7vw;height: 7vw;}
+	#yubo_money_win{width: 64vw; height: 60vw;}
+	#exchange_win{height: 150vw;}
+	#tab5 > table > tbody > tr > td > p{margin: 0;}
+	#logon{width: 55vw; height: 33vw;background-position: 0 6vw;}
+	#memact > div{width: 20vw; height: 10vw; line-height: 30px; margin-left: 25px;}
+	#tab2 > table > tbody > tr > td > img{width: 10vw;}
+}

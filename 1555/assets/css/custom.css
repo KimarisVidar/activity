@@ -1,0 +1,644 @@
+@charset "UTF-8";
+body {
+  font-size: 100%;
+  margin: 0 auto;
+  padding: 0;
+  outline: 0;
+  position: relative;
+  font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei';
+  background-color: #010f31;
+}
+button {background-color: transparent; border: 0;}
+ul, p {margin: 0;}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+a:hover, a:focus {text-decoration: none; box-shadow: none;}
+*:focus { outline: 0;}
+.btn:active { box-shadow: none;}
+
+/* scrollbar */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 10px 0px 5px 0;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #464646;
+}
+::-webkit-scrollbar-thumb:hover {background: #191919;}
+
+/*-- 內容 --*/
+.ws{letter-spacing: 45px;}
+.ws1{letter-spacing: 15px;}
+.ws2{letter-spacing: 51px;}
+.bk {
+  position: absolute;
+  font-size: 14px;
+  color: #000;
+  z-index: 3;
+  left: 5px;
+  top: 1px;
+}
+.text {margin: 10px auto 0;}
+.scroll {overflow: hidden;}
+.none {display: none;}
+.bk10 {left: 0; letter-spacing: 0px;}
+.yellow {color: #ffe658;}
+.flex {display: flex;}
+.wrap { width: 1010px; margin: 0 auto;}
+
+#main { width: 1920px; margin: 0 auto;}
+header {
+  width: 1920px;
+  height: 828px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(../images/bnr.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+nav {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+nav .logo {
+  float: left;
+  width: 210px;
+  height: 35px;
+  background: url(../images/logo.png) no-repeat top center;
+  background-size: cover;
+}
+nav .btn-box {
+  float: right;
+  width: 21%;
+  height: 35px;
+  text-align: center;
+}
+nav .btn-child { display: inline-block; vertical-align: middle;}
+nav .home,nav .cus{
+  width: 100px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+nav .home {background-image: url(../images/home_btn.png);}
+nav .home:hover {background-position: bottom;}
+nav .cus {background-image: url(../images/cus_btn.png);}
+nav .cus:hover {background-position: bottom;}
+#top_btn {
+  left: 24%;
+  bottom: -28px;
+  width: 1000px;
+  position: absolute;
+}
+#top_btn button { justify-content: space-around; align-items: center;}
+
+.free_btn, .tv_btn, .victory_btn{background-position: top; background-repeat: no-repeat;}
+.free_btn {
+  width: 345px;
+  height: 70px;
+  background-image: url(../images/free_btn.png);
+  float: left;
+}
+.tv_btn {
+  width: 406px;
+  height: 100px;
+  background-image: url(../images/tv_btn.png);
+  position: absolute;
+  left: 30%;
+  top: -15%;
+}
+.victory_btn {
+  width: 345px;
+  height: 70px;
+  background-image: url(../images/victory_btn.png);
+  float: right;
+}
+.free_btn:hover, .tv_btn:hover, .victory_btn:hover {background-position: bottom;}
+
+/*-- index --*/
+.md_bg01,.md_bg02{
+  width: 1920px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.md_bg01{height: 1031px; background-image: url(../images/mid_bg01.jpg);}
+.md_bg02{height: 1166px; background-image: url(../images/mid_bg02.jpg);}
+.content { width: 1000px;}
+.right {float: right;}
+
+.md_bg01 .title {
+  width: 1010px;
+  margin: 0 auto;
+  padding-top: 75px;
+}
+.inmd_bg01dex .title img {margin: auto;}
+.index_btn {
+  width: 255px;
+  height: 75px;
+  background-image: url(../images/index_btn.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  margin: 27% 0 83px 39%;
+  display: block;
+}
+.index_btn:hover {background-position: bottom;}
+.login_block_before, .login_block_after{ background-position: top; background-repeat: no-repeat;}
+.login_block_before {
+  width: 328px;
+  height: 280px;
+  background-image: url(../images/login_block_before.png);
+}
+.login_block_after {
+  width: 328px;
+  height: 352px;
+  background-image: url(../images/login_block_after.png);
+  margin-bottom: 63px;
+}
+.login_block_after p {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.login_block_after .member_id {
+  font-size: 18px;
+  color: #dbbc78;
+  padding-top: 55px;
+}
+.login_block_after .sorting {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+  padding-top: 80px;
+}
+.login_block_after .money {
+  font-size: 16px;
+  color: #dbbc78;
+  padding-top: 13px;
+}
+
+.btn_block {width: 100%;margin: 15px 0 40px;}
+.btn_block .login_btn,.btn_block .reg_btn{
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 165px;
+  height: 75px;
+}
+.btn_block .login_btn {background-image: url(../images/login_btn.png);}
+.btn_block .reg_btn {background-image: url(../images/reg_btn.png);}
+.btn_block .reg_btn:hover,.btn_block .login_btn:hover  {background-position: bottom;}
+
+.ranking {
+  margin: 60px 0 0 100%;
+  padding: 45px 8px 0;
+  position: relative;
+  width: 328px;
+  height: 1040px;
+  background-image: url(../images/ranking.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.ranking .top {padding: 20px 0; background-color: #010f32;}
+.ranking .top ul li {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+.ranking .top ul li:nth-of-type(1) {width: 17.5%;}
+.ranking .top ul li:nth-of-type(2) {width: 30%;}
+.ranking .top ul li:nth-of-type(3) {width: 30%;}
+.ranking .top ul li:nth-of-type(4) {width: 17.5%;}
+
+.ranking .list {margin-top: 2px;}
+.ranking .list ul li {text-align: center;}
+.ranking .list ul li p {
+  display: inline-block;
+  padding: 11px 0;
+  background-color: #0a183b;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.ranking .list ul li p:last-child {margin: 0;}
+.ranking .list ul li .num {width: 19%;}
+.ranking .list ul li .id {width: 30%; color: #4ba3ed;}
+.ranking .list ul li .money {width: 30%;}
+.ranking .list ul li .item {width: 17.5%;}
+
+.control {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+}
+.control > a, .control > div { display: inline-block; vertical-align: middle;}
+.control a {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+}
+.currentPage {color: #fff;}
+.pre {border-width: 7px 12px 7px 0; border-color: transparent #fff transparent transparent;}
+.next {border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #fff;}
+
+/*-- free,victory 區塊共用 --*/
+.free .f_btn, .victory .v_btn{
+  width: 255px;
+  height: 75px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url(../images/f_login_btn.png);
+}
+.free .title img,.victory .title img {margin: 80px auto 0;}
+.free, .victory{
+  width: 1920px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.recode_btn{ 
+  width: 255px;
+  height: 75px;
+  background-image: url(../images/recode_btn.png); 
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.recode_btn:hover{ background-position: bottom;}
+
+.one{width: 25%; margin: 0 auto;}
+.two{width: 51%; margin: 0 auto;}
+/*-- free 免費籌碼週週拿 --*/
+.free { background-image: url(../images/free_bg.jpg); height: 846px;}
+.free .f_btn {margin: 55px auto 0;}
+.free .f_btn:hover {background-position: bottom;}
+
+/*-- victory 逆轉勝 --*/
+.victory { background-image: url(../images/victory_bg.jpg); height: 966px;}
+.victory .v_btn:hover {background-position: bottom;}
+
+/*-- 規則 --*/
+.rule {
+  padding-top: 60px;
+  background-image: url(../images/rule_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 1920px;
+  height: 409px;
+}
+.rule ul li {
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  padding-left: 25px;
+  margin-left: 10px;
+}
+.rule ul li::before {
+  content: '';
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 99em;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+}
+.rule ul li:last-child a {display: inline;}
+
+.recom {
+  padding-top: 152px;
+  background-image: url(../images/recom_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 1920px;
+  height: 453px;
+}
+.recom a {
+  flex: 1 1 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#mdOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  position: fixed;
+  z-index: 97;
+  background: rgba(0, 0, 0, 0.97);
+  display: none;
+}
+#mdWindow {
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  z-index: 98;
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+}
+.close_btn {
+  background: url(../images/close.png) no-repeat top center;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*-- 領取紀錄 --*/
+#betting,#loss{width: 100%;}
+#betting button,#loss button{width: 195px;}
+.table{
+  width:95%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.table > table{border: 1px solid #6c6951;}
+.table table tbody tr td{
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  border-right: 1px solid #093e8d;
+}
+.table table tbody tr td:last-child{border:none;}
+.table table tbody tr:nth-of-type(1) {
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2d3a2+0,796155+100,e0e0e0+100 */
+  background: rgb(226,211,162); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(226,211,162,1) 0%, rgba(121,97,85,1) 100%, rgba(224,224,224,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(226,211,162,1) 0%,rgba(121,97,85,1) 100%,rgba(224,224,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(226,211,162,1) 0%,rgba(121,97,85,1) 100%,rgba(224,224,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2d3a2', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+}
+.table table tbody tr:nth-of-type(1) td{
+  width: 175px;
+  font-size: 18px;
+  font-weight: bold; 
+  text-align: center;
+  color: #2f251b;
+  border: none;
+}
+.table table tbody tr:nth-of-type(2){background-color: #08285b;} 
+.table table tbody tr:nth-of-type(3){background-color: #08306d;} 
+
+
+/* 彈窗公用樣式 */
+.login_member, .reg_member{
+  width: 500px;
+  height: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 1px solid #fff4db;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b3477+0,010b2b+100 */
+  background: rgb(11,52,119); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(11,52,119,1) 0%, rgba(1,11,43,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(11,52,119,1) 0%,rgba(1,11,43,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(11,52,119,1) 0%,rgba(1,11,43,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b3477', endColorstr='#010b2b',GradientType=0 ); /* IE6-9 */
+}
+
+/*-- 注册会员 --*/
+.reg_member .cus{
+  width: 49%;
+  margin: 0 auto;
+  color: #fff; 
+}
+.reg_member .cus > p ,
+.reg_member .cus > a{ display: inline-block;}
+.reg_member .cus > p { font-size: 16px; }
+.reg_member .cus > a{
+  color: #fff; 
+  font-size: 18px; 
+  font-weight: bold; 
+  padding-bottom: 0px;
+  border-bottom:1px solid #fff;
+}
+.reg_member .title {
+  font-size: 36px;
+  color: #ffe7a8;
+  padding: 10px 0;
+  text-align: center;
+}
+.reg_member .reg_table {
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.reg_member .reg_table div,
+.login_member .login_table div {
+  width: 100%;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+.reg_member .reg_table div span {
+  font-size: 12px; 
+  color: #ffe7a8;
+  padding-top: 5px;
+}
+.reg_member .reg_table div p,
+.login_member .login_table div p {
+  font-size: 20px;
+  color: #ffe7a8;
+  text-align: left;
+  padding-top: 5px;
+  position: relative;
+}
+.reg_member .reg_table div input,
+.login_member .login_table div input  {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0 0 0 5px;
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.reg_member .reg_table div select {
+  height: 35px;
+  margin: 10px 5px 10px 0;
+  border-radius: 5px;
+}
+.reg_member .reg_table div.agree{width: 100%; letter-spacing: 1px;}
+.reg_member .reg_table div.agree i{margin-right: 0px;}
+.reg_member .reg_table div.agree i + p{font-size: 12px; color: #fff;}
+.reg_member .reg_table div.agree i + p > a{display: inline-block; color: #fff; text-decoration: underline;}
+.reg_member .reg_table div .reg_select {width: 80px;}
+.reg_member .reg_table div .reg_select1 {width: 59px;}
+.reg_member .reg_table div .reg_select2 {width: 65%;}
+.reg_member .reg_table div .reg_select:last-child,
+.reg_member .reg_table div .reg_select1:last-child {margin-right: 0;}
+.reg_member .reg_table div > span {font-size: 20px;}
+.reg_member .reg_table div.tip {width: 92%;}
+.reg_member .reg_table div.tip > span{ color: #a4aaba; font-size: 14px; }
+.reg_member .reg_table div p.point::before{
+  content: '*';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: -14px;
+  color: #ffe7a8;
+  font-size: 25px; 
+}
+.reg_member .reg_table .code {height: 35px;}
+.reg_member .reg_table .code input {width: 140px;}
+.reg_member .reg_table .code img {height: 30px;}
+.reg_member .reg_table .code .vcode {width: 67%;}
+.reg_member .reg_table .code .vcode {color: #000;}
+.reg_member .reg_table .mem_style {margin: 10px 0 0;}
+.reg_member .reg_table .mem_style + div {margin: 0 0 10px;}
+
+/*-- 会员登陆 --*/
+.login_member{padding: 35px 30px;}
+.login_member .title{
+  font-size: 36px;
+  color: #ffe7a8;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 600;
+}
+.login_member .login_table{width: 100%;margin: 0 auto;} 
+.login_member .login_table input{font-size: 15px; letter-spacing: 2px;}
+.login_member .login_table  div > p.ws{letter-spacing: 25px;}
+.login_member .login_table .code {height: 35px;}
+.login_member .login_table .code input {width: 140px;}
+.login_member .login_table .code img {height: 35px; margin-top: -4px;}
+.login_member .login_table .code .vcode {width: 57%;}
+.login_member .login_table .code .vcode {color: #000;}
+
+/*-- 大寫鍵鎖定樣式 --*/
+.reg_member .reg_table div .caps-lock {
+  z-index: 10;
+  display: none;
+  position: absolute;
+}
+.reg_member .reg_table div .caps-lock > span {
+  top: 6px;
+  left: 0;
+  background: #feefef;
+  border-radius: 3px;
+  border: 1px solid #f67b9a;
+  color: #f67b9a;
+  font-size: 11px;
+  letter-spacing: 1px;
+  height: 24px;
+  line-height: 20px;
+  padding: 2px 5px;
+  padding-left: 26px;
+  position: relative;
+}
+.reg_member .reg_table div .caps-lock > span::before {
+  content: '';
+  top: 50%;
+  left: 6px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background: url(images/capslocki.png) no-repeat;
+}
+.reg_member .reg_table div .caps-lock > span::after {
+  content: '';
+  top: -6px;
+  left: 8px;
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  background: url(images/capslockia.png) no-repeat;
+}
+/*-- 大寫鍵鎖定樣式 end--*/
+
+.send_btn, .reset_btn{
+  width: 150px;
+  height: 52px;
+  display: inline-block;
+  border-radius: 5px;
+  line-height: 30px;
+  margin-top: 20px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  font-size: 20px;
+  letter-spacing: 6px;
+  text-align: center;
+  font-weight: bolder;
+  color: #000d2d;
+}
+.send_btn {
+  margin-right: 10px;
+  background: rgb(255,233,180); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255,233,180,1) 0%, rgba(255,243,216,1) 19%, rgba(216,185,115,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,233,180,1) 0%,rgba(255,243,216,1) 19%,rgba(216,185,115,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,233,180,1) 0%,rgba(255,243,216,1) 19%,rgba(216,185,115,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe9b4', endColorstr='#d8b973',GradientType=0 ); /* IE6-9 */
+}
+.reset_btn {
+  background: rgb(224,224,224); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(224,224,224,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 97%, rgba(224,224,224,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(224,224,224,1) 0%,rgba(255,255,255,1) 15%,rgba(255,255,255,1) 97%,rgba(224,224,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(224,224,224,1) 0%,rgba(255,255,255,1) 15%,rgba(255,255,255,1) 97%,rgba(224,224,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #eee;
+}
+.send_btn:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d8b973+0,fff3d8+81,ffe9b4+100 */
+  background: rgb(216,185,115); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(216,185,115,1) 0%, rgba(255,243,216,1) 81%, rgba(255,233,180,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(216,185,115,1) 0%,rgba(255,243,216,1) 81%,rgba(255,233,180,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(216,185,115,1) 0%,rgba(255,243,216,1) 81%,rgba(255,233,180,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8b973', endColorstr='#ffe9b4',GradientType=0 ); /* IE6-9 */
+}
+.reset_btn:hover {border: 1px solid #aaa; color: #aaa;}
+
+.form_btn, .L_box{
+  width: 100%;
+  margin: 15px auto;
+  text-align: center;
+}
+.L_box button{
+  width: 55%;
+  margin: 0 auto;
+  display: block;
+}
+.L_box button:first-child{margin-top: 25px;}
+.L_box .pws_btn{
+  margin-top: 10px; 
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.forgot_btn{
+  width: 100%;
+  margin: 15px auto;
+  text-align: center;
+}
+.forgot_btn button{ width: 55%; margin: 0 auto;}
+footer {
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #f9ddbf;
+}

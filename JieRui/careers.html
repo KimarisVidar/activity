@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>人才招募 - 捷睿</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/js/fullPage/jquery.fullPage.css">
+
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<!-- for IE -->
+	<script type="text/javascript" href="assets/js/respond.min.js"></script>
+</head>
+<body id="careers">
+	
+	<nav>
+		<div href="javascript:void(0);" class="bar clearfix">
+			<a href="index.html" class="logo" rel=""></a>
+			<a href="javascript:void(0);" class="meun" rel="">
+				<div class="meun_bg_top"></div>
+				<div class="meun_bg"></div>
+				<div class="meun_bg_bottom"></div>
+			</a>
+		</div>
+		<div class="nav-animation"></div>
+
+		<div class="nav-bg">
+			<ul class="animated">
+				<li>
+					<a href="index.html" rel="">
+						<p>公司簡介</p>
+						<p>ABOUT</p>
+					</a>
+				</li>
+				<li>
+					<a href="work.html" rel="">
+						<p>營運項目</p>
+						<p>WORK</p>
+					</a>
+				</li>
+				<li>
+					<a href="benefits.html" rel="">
+						<p>公司福利</p>
+						<p>BENEFITS</p>
+					</a>
+				</li>
+				<li>
+					<a href="vibe.html" rel="">
+						<p>工作環境</p>
+						<p>VIBE</p>
+					</a>
+				</li>
+				<li>
+					<a href="careers.html" rel="">
+						<p>人才招募</p>
+						<p>CAREERS</p>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html" rel="">
+						<p>聯絡我們</p>
+						<p>CONTACT</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 上方選單及LOGO end -->
+
+	<section class="careers">
+		<div class="careers-block">
+			<div class="careers-title animated fadeInUp">人才招募</div>
+			<div class="careers-line animated fadeInRight"></div>
+			<div class="careers-text animated fadeInUp">
+				<p>我們相信充滿熱情的人才</p>
+				<p>無論背景無論年資</p>
+				<p>唯有對工作的熱情，才能推動捷睿前進</p>
+				<p>我們愛科技</p>
+				<p>但，我們更愛人</p>
+			</div>
+
+			<a href="https://goo.gl/QjPY9r" target="_blank" class="car-btn">
+				<div>加入我們</div>
+				<div class="car-yellow-bg"></div>
+			</a>
+
+		</div>
+	</section>
+
+	<footer>
+		<div>Copyright © 捷睿廣告行銷 Reserved</div>
+	</footer>
+</body>
+<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/wow/wow.js"></script>
+<script src="assets/js/jquery.easing.1.3.js"></script>
+<script src="assets/js/fullPage/jquery.fullPage.js"></script>
+<script>
+$(function (){
+
+	$(".car-btn").hover(function() {
+		$("#careers").addClass("active")
+	}, function() {
+		$("#careers").removeClass("active")
+	});
+
+	//選單置中
+	$(window).resize(function () {
+		var CK_btn = $(".meun, .nav-animation");
+		CK_btn.click(function () {
+			var wh = $(window).height();
+			var h = $(".nav-bg ul").height();
+			var a;
+			if (wh > h) {
+				a = "18vw";
+			}else {
+				a = (wh - h) / 2;
+			}
+			$(".open .nav-bg").css({ "top": a });
+		});
+	});
+
+	//網頁重整置頂
+	function w_reload(){
+		var  $body = $('html, body')
+		$body.scrollTop(0);
+	}
+	w_reload();
+
+	//選單事件
+	$(".meun, .nav-animation").click(function(){
+		$(".meun").toggleClass("toggle")
+		$("nav").toggleClass("open")
+		$(".nav-animation").toggleClass("nav-active")
+		$(".nav-bg ul").toggleClass("fadeInDown")
+	})
+});
+
+</script>
+</html>

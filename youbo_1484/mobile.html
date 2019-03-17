@@ -1,0 +1,125 @@
+<div class="content p_mobile">
+	<section class="bdStyle">
+		<h2 class="title"><strong>话费赠送</strong></h2>
+		<div class="wrap">
+			<div class="box">
+				<div class="moc-fee">
+					<a class="btns-icon btns-inlinePop" href="#history"><img src="assets/images/icon-history.png" alt=""></a>
+					<div class="border-B">
+						<!-- 尚未登入 -->
+						<!-- <a class="txt btns-inlinePop" checklogin='true'>登入查看我的周投注</a> -->
+						<!-- 已登入 -->
+						<p class="txt" data-tooltip="投注累积时间 2017-06-20 至 2017-06-30 美东时间">我的本周有效投注：<span class="txt-yellow">158,710</span></p>
+					</div>
+					<div class="border-C">
+						<div class="wrap">
+							<table class="table-criss">
+								<tr>
+									<td>周有效投注</td>
+									<td>8,000</td>
+									<td>15,000</td>
+									<td>35,000</td>
+									<td>65,000</td>
+									<td>150,000</td>
+									<td>250,000</td>
+									<td>350,000</td>
+								</tr>
+								<tr>
+									<td>送话费</td>
+									<td>10元</td>
+									<td>20元</td>
+									<td>30元</td>
+									<td>50元</td>
+									<td>100元</td>
+									<td>200元</td>
+									<td>300元</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<p class="txt-ps text-center">※ 仅计算【体育投注】、【NEW BB体育】、【BB体育】、【BB视讯】、【BB电子】、【BB彩票】手机网页版或APP之投注 </p>
+					<a class="btns-send btns-default" href="">立即报名</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bdStyle">
+		<h2 class="title"><strong>活动规则</strong></h2>
+		<div class="wrap">
+			<div class="box">
+				<div class="rule">
+					<h6>活动馆别：</h6>
+					<p>体育投注、New BB体育、BB体育、BB视讯、BB电子、BB彩票</p>				
+					<br/>
+					<h6>活动方式：</h6>
+					<p>报名后于指定馆别使用优博手机网页版或APP投注，周有效投注达8,000以上，即可获得話费赠送！</p>
+					<br/>
+					<h6>活动细则：</h6>
+					<ol class="listStyle-decimal">
+						<li>此活动需进行报名，将依照您累积的周有效投注，赠送一笔最高话费金额</li>
+						<li>行动装置有效投注将于每周二、五下午19:00前更新</li>
+						<li>话费将于每周三下午19:00前<span class="txt-yellow">自动充值至您注册的手机号中</span>，请务必确认您的注册手机号正确</li>
+						<li>此活动需报名，未报名者将不进行优惠派发</li>
+						<li>参加此活动即表示同意遵守优博活动条款，优博娱乐城拥有最终解释权</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="hide">
+		<div id="history" class="p_mobile">
+			<div class="popWindow">
+				<div class="wrap">
+					<table class="tableList-H">
+						<tr>
+							<th colspan="5">参加记录</th>
+						</tr>
+						<tr>
+							<th>参加周次</th>
+							<th>有效投注</th>
+							<th>可获话费</th>
+						</tr>
+						<tr>
+							<td>0711-0717</td>
+							<td>567</td>
+							<td>未获得</td>
+						</tr>
+						<tr>
+							<td>0711-0717</td>
+							<td>567</td>
+							<td>未获得</td>
+						</tr>
+						<tr>
+							<td>0711-0717</td>
+							<td>567</td>
+							<td>未获得</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	$(function(){
+
+
+		/*tooltip*/
+		function mouseTooltip(){
+			$('[data-tooltip]').on('mouseenter', function(event) {
+				var txt = $(this).attr('data-tooltip');
+					$(this).after('<div class="m_Tooltip">'+txt+'</div>');
+			}).on('mousemove', function(event) {
+				$(this).next('.m_Tooltip').css({ left:event.pageX - $(this).parent('*').offset().left + 30, top:event.pageY - $(this).parent('*').offset().top + 30 });
+			}).on('mouseleave', function(event) {
+				$(this).next('.m_Tooltip').remove();
+			});
+		}
+		mouseTooltip();
+
+
+	})
+
+</script>

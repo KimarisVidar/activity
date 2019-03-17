@@ -1,0 +1,216 @@
+@import "mixin";
+/*-- 共用 --*/
+body{position: relative; overflow: hidden;}
+img {max-width: 100%; border-style: none;}
+.wrap{max-width: 1021px; margin: 0 auto;}
+.none{display: none;}
+
+/* scrollbar */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 0px 0px 5px 0;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #464646;
+}
+::-webkit-scrollbar-thumb:hover {background: #191919;}
+
+.down{
+    @include bg_style_P(40px,30px,down);
+    position: absolute;
+    left: 49%;
+    z-index: 4;
+    cursor: pointer;
+    animation-name: do;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes do {
+    0%   {bottom: 65px;}
+    50%  {bottom: 60px;}
+    100% {bottom: 65px;}
+}
+.float{
+    position: fixed;
+    top: 35%;
+    animation-name: fl;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fl {
+    0%   {right: 0%;}
+    50%  {right: 0.5%;}
+    100% {right: 0%;}
+}
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 0;
+    transform: translate3d( 0%, 0%, 0);
+    background: rgba(0,0,0,.7);
+}
+.double-bounce1,.double-bounce2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce {
+    0%,100% {-webkit-transform: scale(0.0);}
+    50% {-webkit-transform: scale(1.0);}
+}
+@keyframes sk-bounce {
+    0%,100% { transform: scale(0.0); -webkit-transform: scale(0.0);}
+    50% {transform: scale(1.0); -webkit-transform: scale(1.0);}
+}
+/* 內容 */
+header{
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+nav{
+    @include nav_style(10px);
+    @include Logo( logo,165px,60px);
+    @include Btn-child;   
+    .btn-box{
+        float: right;
+        text-align: center;
+        padding: 10px 0;    
+        .home{
+            @extend %btn_Pos;
+            @extend %btn_wh;
+            @include bg_png(home);
+            &:hover{ @extend %btn_Pos_hover; }
+        } 
+        .rule{
+            @extend %btn_Pos;
+            @extend %btn_wh;
+            @include bg_png(rule);
+            &:hover{ @extend %btn_Pos_hover; }
+        }
+        .cus{
+            @extend %btn_Pos;
+            @extend %btn_wh;
+            @include bg_png(cus);
+            &:hover{ @extend %btn_Pos_hover; }
+        }
+    }
+}
+section{width: 100%; height: 100vh; position: relative;}
+.bg01{
+    @include bg_jpg(bg01);
+    @extend %bg_style;
+    @extend %bg_cover;
+    .title{
+        width: 100%;
+        margin: 0 -5%;
+        display: block;
+        padding-top: 7%;
+        text-align: center;
+        animation-duration: 1s; 
+    }
+    .title02{
+        top: 60%;
+        right: 32%;
+        position: absolute;
+        display: inline-block;
+        animation-duration: 1s;
+        animation-delay: 1s;
+    }
+}
+.bg02{
+    @include bg_jpg(bg02);
+    @extend %bg_style;
+    @extend %bg_cover;
+    .title{
+        width: 100%;
+        margin: 0 -5%;
+        display: block;
+        padding-top: 7%;
+        text-align: center;
+        animation-delay: 0.5s;
+    }
+    .sign_btn{
+        @include bg_png(Sign);
+        @include wh(340px,84px);
+        background-position: top;
+        background-repeat: no-repeat;
+        animation-delay: 1s;
+        margin: 2% 36% 0;
+        &:hover{
+            background-position: bottom;
+            height: 80px;
+        }
+    }
+}
+.bg03{
+    @include bg_jpg(bg03);
+    @extend %bg_style;
+    @extend %bg_cover;
+    .title{
+        width: 100%;
+        margin: 0 4%;
+        display: block;
+        padding-top: 5%;
+        text-align: center;
+        animation-delay: 0.5s;
+    }
+}
+@include mdWindow;
+@include mdOverlay;
+@include Close(close, 0px, 0px);
+
+.login{
+    background: url(../images/login_bg.png) no-repeat top center;
+    background-size: cover;
+    width: 666px;
+    height: 351px;
+    padding: 22% 0 0 13%;
+    input{
+        @include font_style(18px,#000);
+        width: 345px;
+        height: 40px;
+        background: #fff;
+        display: block;
+        margin: 0 auto;
+        padding-left: 1%;
+    }
+    .s_out{
+        @include bg_png(s_out);
+        @include wh(275px,68px);
+        background-position: top;
+        background-repeat: no-repeat;
+        margin: 7% 19%;
+        &:hover{
+            height: 66px;
+            background-position: bottom;
+        }
+    }
+}
+
+footer{
+    @include font_style(12px,#fff);
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    padding: 18px 0 10px; 
+    background: rgba(0,0,0,.7);
+}

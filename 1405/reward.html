@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>金沙会两周年庆</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+<body>
+	<article>
+		<header class="animated fadeInDown">
+			<div class="container clearfix">
+				<div class="logo"><a href="http://dj2111.com/" target="_blank"><img src="assets/images/logo.png" alt=""></a></div>
+				<ul class="head_nav">
+					<li class="_home">
+						<a href="http://dj2111.com/" target="_blank">
+							<span>首&nbsp;&nbsp;页</span><span>HOME</span>
+						</a>
+					</li>
+					<li class="_cs">
+						<a href="javascript:void(0)" onclick="cs();">
+							<span>客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服</span><span>SERVICE</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<section class="reward">
+			<div class="container animated fadeInUp">
+				<div class="reward_title"><img src="assets/images/reward_title.png" alt=""></div>
+				<div class="reward_content">
+					<div class="head">
+						<span class="_title">会员帐号</span>
+						<span class="acc"><input type="text" id="acc" value="----" readonly></span>
+						<span class="btn-login"><i class="_flash"></i><img src="assets/images/reward_login.png" alt=""></span>
+						<span class="btn-sign"><i class="_flash"></i><img src="assets/images/reward_sign.png" alt=""></span>
+					</div>
+					<div class="sign-info">
+						<div class="info_left">
+							<table>
+								<tr>
+									<th>项目</th>
+									<th>当前累积</th>
+									<th>可达金牌数</th>
+								</tr>
+								<tr>
+									<td>周存款次数</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>周存款金额达100元以上</td>
+									<td>15350</td>
+									<td>153</td>
+								</tr>
+								<tr>
+									<td>周投注天数</td>
+									<td>6</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>周有效投注达</td>
+									<td>562820</td>
+									<td>1125</td>
+								</tr>
+								<tr>
+									<td colspan="2">总计</td>
+									<td>1287</td>
+								</tr>
+							</table>
+						</div>
+						<div class="info_right">
+							<table>
+								<tr>
+									<th colspan="2">大榜金牌累积总数</th>
+								</tr>
+								<tr>
+									<td>第一周（05.22-05.29）</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>第二周（05.29-06.05）</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>第三周（06.05-06.12）</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>第四周（06.12-06.19）</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td colspan="2">※以上区间为北京时间周一中午12点至隔周一中午12点※</td>
+								</tr>
+							</table>
+						</div>
+						<br class="clearfix">
+					</div>
+					<div class="reward_info clearfix">
+						<div class="re_info_left">
+							<table>
+								<tr>
+									<th colspan="3">周榜排名</th>
+								</tr>
+								<tr>
+									<th>排名</th>
+									<th>会员帐号</th>
+									<th>金牌数</th>
+								</tr>
+							</table>
+							<div id="week_list">
+								<table>
+									<tr>
+										<td>1</td>
+										<td>***sfafasf</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>***sfafasf</td>
+										<td>50</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>***sfafasf</td>
+										<td>60</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="re_info_right clearfix">
+							<table>
+								<tr>
+									<th colspan="3">大榜排名</th>
+								</tr>
+								<tr>
+									<th>排名</th>
+									<th>会员帐号</th>
+									<th>金牌数</th>
+								</tr>
+							</table>
+							<div id="all_list">
+								<table>
+									<tr>
+										<td>1</td>
+										<td>***sfafasf</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>***sfafasf</td>
+										<td>50</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>***sfafasf</td>
+										<td>60</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reward_footer clearfix">
+					<span>※ 排行榜仅取到30名</span>
+					<span>最后更新：<i id="finalTime">2017-05-23 13：00</i></span>
+					<span>前期名单</span>
+				</div>
+			</div>
+		</section>
+		<footer>Copyright © 金沙会 Reserved</footer>
+	</article>
+	<div class="mask">
+		<div class="popbox loginbox">
+			<div class="poptitle">
+				<span>会员登入</span>
+				<i class="closebtn"></i>
+			</div>
+			<div class="popcontent">
+				<label>用户名<input type="text" id="loginacc" onKeyDown="KeyDown(event)"></label>
+				<span class="popbtn" id="loginsend"><i class="_flash"></i><img src="assets/images/btn-send.png" alt=""></span>
+			</div>
+		</div>
+		<div class="popbox signbox">
+			<div class="poptitle">
+				<span>报名参加</span>
+				<i class="closebtn"></i>
+			</div>
+			<div class="popcontent">
+				<label>用户名<input type="text" id="signacc" onKeyDown="KeyDown(event)"></label>
+				<span class="popbtn" id="signsend"><i class="_flash"></i><img src="assets/images/btn-send.png" alt=""></span>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/global.js"></script>
+
+<script>
+	function cs() {
+	    var url = 'https://messenger.providesupport.com/messenger/0n6xvlivgq25e01zpfa6hfr82r.html';
+	    window.open(url, 'newwindow', 'width=800,height=600');
+	}
+
+	function KeyDown(event){
+		if (event.keyCode != 13) {
+			return;
+		}
+
+
+		if($('.loginbox').is(":visible")){
+			if($.trim($('#loginacc').val()) == ''){
+				alert('请输入用户名!')
+				return;
+			}
+			login()
+		}else{
+			if($.trim($('#signacc').val()) == ''){
+				alert('请输入用户名!')
+				return;
+			}
+			sign()
+		}
+	}
+
+	var fun = function(){
+		var $this = this;
+		var that = $('body');
+		var isLogin = false;
+		var ispopopen = false;
+		var loginopen = false;
+		var signopen = false;
+		var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		var acc;
+
+		/*--登入--*/
+		var login = function(){
+			acc = $('#loginacc').val().replace(/\s/g,'');
+			$.post("",{"send":acc},function(rt){
+	            var obj = json_decode(rt);
+	            switch(obj.code){
+	            	//登入成功 & 已報名
+	                case "100":{
+						alert('登入成功。');
+						$('#acc').html(obj.acc);
+	                	$this.getinfo();
+	                	isLogin = true;
+						$('.mask, .popbox').fadeOut(300);
+						ispopopen = loginopen = signopen = false;
+						$('.btn-login,.btn-sign').remove();
+	                }break;
+	                //登入成功 未報名
+	                case "101":{
+						alert('登入成功。');
+						$('#acc').html(obj.acc);
+	                	isLogin = true;
+	                	$('.popbox').fadeOut(300);
+						loginopen = false;
+						$('.btn-login').remove();
+	                	$('.signbox').addClass('magictime spaceInUp').fadeIn(300).one(animationEnd, function() {
+				            $(this).removeClass('magictime spaceInUp');
+				        });
+						signopen = true;
+	                }break;
+	                //查無帳號
+	                case "103":{
+						alert('確認帳號。');
+						$('#loginacc').val('')
+	                }break;
+	            }
+	        });
+		}
+
+		/*--報名--*/
+		var sign = function(){
+			var acc = $('#signacc').val().replace(/\s/g,'');
+			$.post("",{"send":acc},function(rt){
+	            var obj = json_decode(rt);
+	            switch(obj.code){
+	            	//報名成功
+	                case "100":{
+						alert('報名成功。');
+	                	$this.getinfo();
+	                	isLogin = true;
+						$('.mask, .popbox').fadeOut(300);
+						ispopopen = loginopen = signopen = false;
+						$('.btn-sign').remove();
+	                }break;
+	            }
+	        });
+		}
+
+		/*--取得榜單--*/
+		var getlist = function(){
+			$.post("",{},function(rt){
+	            var obj = json_decode(rt);
+	            switch(obj.code){
+	                case "100":{
+						/*周榜*/
+						$('#week_list table').html('');
+						for(i in obja){
+							$('#week_list table').append('<tr><td>'+(i+1)+'</td><td>'+obja[i].acc+'</td><td>'+obja[i].gold+'</td></tr>')
+						}
+
+						/*大榜*/
+						$('#all_list table').html('');
+						for(i in objb){
+							$('#all_list table').append('<tr><td>'+(i+1)+'</td><td>'+objb[i].acc+'</td><td>'+objb[i].gold+'</td></tr>')
+						}
+
+						/*最后更新*/
+						$('#finalTime').html(obj.time)
+
+	                }break;
+	            }
+	        });
+		}
+
+		/*--取得個人訊息--*/
+		this.getinfo = function(){
+			$.post("",{"send":acc},function(rt){
+	            var obj = json_decode(rt);
+	            switch(obj.code){
+	                case "100":{
+						$('.info_left table,.info_right table').html('')
+
+						$('.info_left table').append('<tr><th>项目</th><th>当前累积</th><th>可达金牌数</th></tr>')
+						$('.info_left table').append('<tr><td>周存款次数</td><td>'+3+'</td><td>'+3+'</td></tr>')
+						$('.info_left table').append('<tr><td>周存款金额达100元以上</td><td>'+15350+'</td><td>'+153+'</td></tr>')
+						$('.info_left table').append('<tr><td>周投注天数</td><td>'+6+'</td><td>'+6+'</td></tr>')
+						$('.info_left table').append('<tr><td>周有效投注达</td><td>'+562820+'</td><td>'+1125+'</td></tr>')
+						$('.info_left table').append('<tr><td colspan="2">总计</td><td>'+1287+'</td></tr>')
+
+						$('.info_right table').append('<tr><th colspan="2">大榜金牌累积总数</th></tr>')
+						$('.info_right table').append('<tr><td>'+第一周（05.22-05.29）+'</td><td>'+6+'</td></tr>')
+						$('.info_right table').append('<tr><td>'+第二周（05.29-06.05）+'</td><td>'+6+'</td></tr>')
+						$('.info_right table').append('<tr><td>'+第三周（06.05-06.12）+'</td><td>'+6+'</td></tr>')
+						$('.info_right table').append('<tr><td>'+第四周（06.12-06.19）+'</td><td>'+6+'</td>></tr>')
+						$('.info_right table').append('<tr><td colspan="2">※以上区间为北京时间周一中午12点至隔周一中午12点※</td></tr>')
+	                }break;
+	            }
+	        });
+		}
+
+		var loginbox = function(){
+			$('.mask').fadeIn(300);
+			ispopopen = true;
+			$('.loginbox').addClass('magictime spaceInUp').fadeIn(300).one(animationEnd, function() {
+	            $(this).removeClass('magictime spaceInUp');
+	        });
+			loginopen = true;
+		}
+
+		var signbox = function(){
+			$('.mask').fadeIn(300);
+			ispopopen = true;
+			$('.signbox').addClass('magictime spaceInUp').fadeIn(300).one(animationEnd, function() {
+	            $(this).removeClass('magictime spaceInUp');
+	        });
+			signopen = true;
+		}
+
+		var init = function(){
+
+			if(!isLogin){
+				loginbox();
+			}
+
+			$('.closebtn').click(function(event) {
+				$('.mask, .popbox').fadeOut(300,function(){
+					$('.popbox input').html('')
+				});
+
+				ispopopen = loginopen = signopen = false;
+			});
+
+			$('.btn-login').click(function(event) {
+				loginbox();
+			});
+
+			$('.btn-sign').click(function(event) {
+				if(!isLogin){
+					alert('请先登入会员!');
+					loginbox();
+					return;
+				}
+				signbox();
+			});
+
+
+
+			$('#loginsend').click(function(event) {
+				login();
+			});
+
+			$('#signsend').click(function(event) {
+				sign();
+			});
+
+
+			getlist();
+
+		}
+
+		init();
+	}
+
+	var pfun = new fun();
+</script>
+	
+</html>
